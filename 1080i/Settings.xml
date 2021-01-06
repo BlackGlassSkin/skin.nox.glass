@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<include>NightMode</include>
+	<menucontrol>9051</menucontrol>
+	<controls>
+		<include>Topbar</include>
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1920</width>
+			<height>1080</height>
+			<texture colordiffuse="FF666666">pvr_info.jpg</texture>
+		</control>
+		<control type="group" id="50">
+			<top>66</top>
+			<left/>
+			<include>WindowOpenCloseAnimation</include>
+			<control type="panel" id="9000">
+				<visible>!Skin.HasSetting(Enable.ColoredIcon)</visible>
+				<left>90</left>
+				<width>1850</width>
+				<height>1120</height>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<pagecontrol>61</pagecontrol>
+				<scrolltime tween="quadratic">300</scrolltime>
+				<itemlayout width="255" height="350" condition="Integer.IsLessOrEqual(Container(9000).NumItems,10)">
+					<control type="group">
+						<control type="image"> #staly kolor i obraz
+							<left>-17</left>
+							<top>-18</top>
+							<width>240</width>
+							<height>240</height>
+							<texture colordiffuse="FF867979">views/settings/set_button2.png</texture>
+							<align>center</align>
+							<aspectratio>scale</aspectratio>
+						</control>
+						<control type="image">
+							<left>-7</left>
+							<top>-5</top>
+							<width>220</width>
+							<height>220</height>
+							<texture colordiffuse="-">$INFO[ListItem.Icon]</texture>
+							<align>center</align>
+						</control>
+						<control type="label">
+							<left>-14</left>
+							<top>220</top>
+							<width>240</width>
+							<height>90</height>
+							<textcolor>FF867979</textcolor>
+							<shadowcolor>shadow</shadowcolor>
+							<align>center</align>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout width="250" height="350" condition="Integer.IsLessOrEqual(Container(50).NumItems,10)">
+					<control type="group">
+						<animation effect="zoom" center="105,106" start="130" end="100" time="0" tween="back" reversible="false">Conditional</animation>
+						<!--	<control type="image"> #po najechaniu kolor i obraz
+							<left>-14</left>
+							<top>-13.7</top>
+							<width>230</width>
+							<height>230</height>
+							<texture>views/settings/ring.png</texture>
+							<align>center</align>
+						</control> -->
+						<control type="image">
+							<left>-17</left>
+							<top>-18</top>
+							<width>240</width>
+							<height>240</height>
+							<texture colordiffuse="FFFFFFFF">views/settings/set_button2.png</texture>
+							<align>center</align>
+							<aspectratio>scale</aspectratio>
+						</control>
+						<control type="image">
+							<left>-13</left>
+							<top>-9</top>
+							<width>230</width>
+							<height>230</height>
+							<texture colordiffuse="FF50B7BF">$INFO[ListItem.Icon]</texture>
+							<aspectratio>scale</aspectratio>
+						</control>
+						<control type="label">
+							<left>-14</left>
+							<top>220</top>
+							<width>240</width>
+							<height>90</height>
+							<label>$INFO[ListItem.Label]</label>
+							<align>center</align>
+							<textcolor>FF50B7BF</textcolor>
+							<shadowcolor>shadow</shadowcolor>
+						</control>
+					</control>
+				</focusedlayout>
+				<content>
+					<item>
+						<label>14206</label>
+						<!--<property name="description">31400</property>-->
+						<onclick>ActivateWindow(InterfaceSettings)</onclick>
+						<icon>views/settings/interface.png</icon>
+					</item>
+					<item>
+						<label>14200</label>
+						<!--<property name="description">31401</property>-->
+						<onclick>ActivateWindow(PlayerSettings)</onclick>
+						<icon>views/settings/player.png</icon>
+					</item>
+					<item>
+						<label>14211</label>
+						<!--<property name="description">31402</property>-->
+						<onclick>ActivateWindow(MediaSettings)</onclick>
+						<icon>views/settings/media.png</icon>
+					</item>
+					<item>
+						<label>24001</label>
+						<!--<property name="description">31448</property>-->
+						<onclick>ActivateWindow(addonbrowser)</onclick>
+						<icon>views/settings/addons.png</icon>
+					</item>
+					<item>
+						<label>14204</label>
+						<!--<property name="description">31409</property>-->
+						<onclick>ActivateWindow(PVRSettings)</onclick>
+						<icon>views/settings/pvr.png</icon>
+					</item>
+					<item>
+						<label>15016</label>
+						<!--<property name="description">31441</property>-->
+						<onclick>ActivateWindow(GameSettings)</onclick>
+						<icon>views/settings/games.png</icon>
+					</item>
+					<item>
+						<label>13200</label>
+						<!--<property name="description">31407</property>-->
+						<onclick>ActivateWindow(Profiles)</onclick>
+						<icon>views/settings/profiles.png</icon>
+					</item>
+					<item>
+						<label>14036</label>
+						<!--<property name="description">31410</property>-->
+						<onclick>ActivateWindow(ServiceSettings)</onclick>
+						<icon>views/settings/service.png</icon>
+					</item>
+					<item>
+						<label>13000</label>
+						<!--<property name="description">31406</property>-->
+						<onclick>ActivateWindow(SystemSettings)</onclick>
+						<icon>views/settings/system.png</icon>
+					</item>
+					<item>
+						<label>10511</label>
+						<!--<property name="description">31405</property>-->
+						<onclick>ActivateWindow(SystemInfo)</onclick>
+						<icon>views/settings/systeminfo.png</icon>
+					</item>
+					<item>
+						<label>File Manager</label>
+						<!--<property name="description">31318</property>-->
+						<onclick>ActivateWindow(10003)</onclick>
+						<icon>views/settings/File_Manager.png</icon>
+						<!--	<visible>System.HasAddon(service.libreelec.settings)</visible> -->
+					</item>
+					<item>
+						<label>Open VPN</label>
+						<!--<property name="description">31318</property>-->
+						<onclick>RunAddon(service.vpn.manager)</onclick>
+						<onclick>InstallAddon(service.vpn.manager)</onclick>
+						<icon>views/settings/vpn.png</icon>
+						<!--	<visible>System.HasAddon(service.libreelec.settings)</visible> -->
+					</item>
+					<item>
+						<label>Color's Settings</label>
+						<!--<property name="description">31490</property>-->
+						<onclick>ActivateWindow(1140)</onclick>
+						<icon>views/settings/color_settings.png</icon>
+						<!--	<visible>System.HasAddon(service.coreelec.settings)</visible> -->
+					</item>
+					<item>
+						<label>Backup &amp; Restore</label>
+						<!--<property name="description">31490</property>-->
+						<onclick>RunPlugin("plugin://script.ezmaintenanceplus/?url=ur&amp;action=backup_restore",return)</onclick>
+						<onclick>InstallAddon(script.ezmaintenanceplus)</onclick>
+						<icon>views/settings/backup.png</icon>
+						<!--	<visible>System.HasAddon(service.coreelec.settings)</visible> -->
+					</item>
+					<item>
+						<label>Skin Reset</label>
+						<!-- <property name="description">P</property>-->
+						<onclick>SetProperty(ResetSkinSettings,True,Home)</onclick>
+						<onclick>ActivateWindow(1126)</onclick>
+						<icon>views/settings/resetskin.png</icon>
+					</item>
+					<item>
+						<label>Panel Ustawień</label>
+						<!--<property name="description">31490</property>-->
+						<onclick>ActivateWindow(1101)</onclick>
+						<icon>views/settings/Kim_Repo.png</icon>
+					</item>
+					<item>
+						<label>LibreELEC</label>
+						<!--<property name="description">31318</property>-->
+						<onclick>RunAddon(service.libreelec.settings)</onclick>
+						<icon>views/settings/libreelec.png</icon>
+						<!--	<visible>System.HasAddon(service.libreelec.settings)</visible> -->
+					</item>
+					<item>
+						<label>CoreELEC</label>
+						<!--<property name="description">31490</property>-->
+						<onclick>RunAddon(service.coreelec.settings)</onclick>
+						<icon>views/settings/coreelec.png</icon>
+						<!--	<visible>System.HasAddon(service.coreelec.settings)</visible> -->
+					</item>
+					<item>
+						<label>CoreELEC</label>
+						<!--<property name="description">31490</property>-->
+						<onclick>RunAddon(service.coreelec.settings)</onclick>
+						<icon>views/settings/coreelec.png</icon>
+						<!--	<visible>System.HasAddon(service.coreelec.settings)</visible> -->
+					</item>
+					<item>
+						<label>LibreELEC</label>
+						<!--<property name="description">31318</property>-->
+						<onclick>RunAddon(service.libreelec.settings)</onclick>
+						<icon>views/settings/libreelec.png</icon>
+						<!--	<visible>System.HasAddon(service.libreelec.settings)</visible> -->
+					</item>
+					<item>
+						<label>CoreELEC</label>
+						<!--<property name="description">31490</property>-->
+						<onclick>RunAddon(service.coreelec.settings)</onclick>
+						<icon>views/settings/coreelec.png</icon>
+						<!--	<visible>System.HasAddon(service.coreelec.settings)</visible> -->
+					</item>
+				</content>
+			</control>
+		</control>
+		<control type="panel" id="9000">
+			<visible>Skin.HasSetting(Enable.ColoredIcon)</visible>
+			<left>75</left>
+			<top>70</top>
+			<width>1850</width>
+			<height>1260</height>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<pagecontrol>61</pagecontrol>
+			<scrolltime tween="quadratic">300</scrolltime>
+			<itemlayout width="260" height="340" condition="Integer.IsLessOrEqual(Container(9000).NumItems,10)">
+				<control type="image">
+					<left>-17</left>
+					<top>-18</top>
+					<width>240</width>
+					<height>240</height>
+					<texture colordiffuse="CC4d4db3">views/settings/set_button2.png</texture>
+					<align>center</align>
+					<aspectratio>scale</aspectratio>
+				</control>
+				<control type="image">
+					<left>-12</left>
+					<top>-7</top>
+					<width>230</width>
+					<height>230</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<align>center</align>
+					<aspectratio>scale</aspectratio>
+				</control>
+				<control type="label">
+					<left>-14</left>
+					<top>220</top>
+					<width>240</width>
+					<height>90</height>
+					<textcolor>white</textcolor>
+					<shadowcolor>shadow</shadowcolor>
+					<align>center</align>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout width="350" height="340" condition="Integer.IsLessOrEqual(Container(50).NumItems,10)">
+				<control type="group">
+					<animation effect="zoom" center="100,100" start="100" end="130" time="0" tween="back" reversible="false">Conditional</animation>
+					<!--		<control type="image"> #po najechaniu kolor i obraz
+						<left>-12</left>
+						<top>-3</top>
+						<width>235</width>
+						<height>235</height>
+						<texture>views/settings/ring.png</texture>
+						<align>center</align>
+						<aspectratio>scale</aspectratio>
+					</control> -->
+					<control type="image">
+						<left>-17</left>
+						<top>-18</top>
+						<width>240</width>
+						<height>240</height>
+						<texture colordiffuse="FF0000ff">views/settings/set_button2.png</texture>
+						<align>center</align>
+						<aspectratio>scale</aspectratio>
+					</control>
+					<control type="image">
+						<left>-16</left>
+						<top>-12</top>
+						<width>240</width>
+						<height>240</height>
+						<texture colordiffuse="-">$INFO[ListItem.Icon]</texture>
+						<align>center</align>
+						<aspectratio>scale</aspectratio>
+					</control>
+					<control type="label">
+						<left>-14</left>
+						<top>220</top>
+						<width>240</width>
+						<height>90</height>
+						<label>$INFO[ListItem.Label]</label>
+						<align>center</align>
+						<textcolor>FF29CEDA</textcolor>
+						<shadowcolor>shadow</shadowcolor>
+					</control>
+				</control>
+			</focusedlayout>
+			<content>
+				<item>
+					<label>14206</label>
+					<!--<property name="description">31400</property>-->
+					<onclick>ActivateWindow(InterfaceSettings)</onclick>
+					<icon>views/settings/colored/interface.png</icon>
+				</item>
+				<item>
+					<label>14200</label>
+					<!--<property name="description">31401</property>-->
+					<onclick>ActivateWindow(PlayerSettings)</onclick>
+					<icon>views/settings/colored/player.png</icon>
+				</item>
+				<item>
+					<label>14211</label>
+					<!--<property name="description">31402</property>-->
+					<onclick>ActivateWindow(MediaSettings)</onclick>
+					<icon>views/settings/colored/media.png</icon>
+				</item>
+				<item>
+					<label>24001</label>
+					<!--<property name="description">31448</property>-->
+					<onclick>ActivateWindow(addonbrowser)</onclick>
+					<icon>views/settings/colored/addons.png</icon>
+				</item>
+				<item>
+					<label>14204</label>
+					<!--<property name="description">31409</property>-->
+					<onclick>ActivateWindow(PVRSettings)</onclick>
+					<icon>views/settings/colored/pvr.png</icon>
+				</item>
+				<item>
+					<label>15016</label>
+					<!--<property name="description">31441</property>-->
+					<onclick>ActivateWindow(GameSettings)</onclick>
+					<icon>views/settings/colored/games.png</icon>
+				</item>
+				<item>
+					<label>13200</label>
+					<!--<property name="description">31407</property>-->
+					<onclick>ActivateWindow(Profiles)</onclick>
+					<icon>views/settings/colored/profiles.png</icon>
+				</item>
+				<item>
+					<label>14036</label>
+					<!--<property name="description">31410</property>-->
+					<onclick>ActivateWindow(ServiceSettings)</onclick>
+					<icon>views/settings/colored/service.png</icon>
+				</item>
+				<item>
+					<label>13000</label>
+					<!--<property name="description">31406</property>-->
+					<onclick>ActivateWindow(SystemSettings)</onclick>
+					<icon>views/settings/colored/system.png</icon>
+				</item>
+				<item>
+					<label>10511</label>
+					<!--<property name="description">31405</property>-->
+					<onclick>ActivateWindow(SystemInfo)</onclick>
+					<icon>views/settings/colored/systeminfo.png</icon>
+				</item>
+				<item>
+					<label>File Manager</label>
+					<!--<property name="description">31318</property>-->
+					<onclick>ActivateWindow(10003)</onclick>
+					<icon>views/settings/colored/File_Manager.png</icon>
+					<!--	<visible>System.HasAddon(service.libreelec.settings)</visible> -->
+				</item>
+				<item>
+					<label>Open VPN</label>
+					<!--<property name="description">31318</property>-->
+					<onclick>RunAddon(service.vpn.manager)</onclick>
+					<onclick>InstallAddon(service.vpn.manager)</onclick>
+					<icon>views/settings/colored/vpn.png</icon>
+					<!--	<visible>System.HasAddon(service.libreelec.settings)</visible> -->
+				</item>
+				<item>
+					<label>Color's Settings</label>
+					<!--<property name="description">31490</property>-->
+					<onclick>ActivateWindow(1140)</onclick>
+					<icon>views/settings/colored/color_settings.png</icon>
+					<!--	<visible>System.HasAddon(service.coreelec.settings)</visible> -->
+				</item>
+				<item>
+					<label>Backup &amp; Restore</label>
+					<!--<property name="description">31490</property>-->
+					<onclick>RunPlugin("plugin://script.ezmaintenanceplus/?url=ur&amp;action=backup_restore",return)</onclick>
+					<onclick>InstallAddon(script.ezmaintenanceplus)</onclick>
+					<icon>views/settings/colored/backup.png</icon>
+					<!--	<visible>System.HasAddon(service.coreelec.settings)</visible> -->
+				</item>
+				<item>
+					<label>Skin Reset</label>
+					<!-- <property name="description">P</property>-->
+					<onclick>SetProperty(ResetSkinSettings,True,Home)</onclick>
+					<onclick>ActivateWindow(1126)</onclick>
+					<icon>views/settings/colored/resetskin.png</icon>
+				</item>
+				<item>
+					<label>Panel Ustawień</label>
+					<!--<property name="description">31490</property>-->
+					<onclick>ActivateWindow(1101)</onclick>
+					<icon>views/settings/colored/Kim_Repo.png</icon>
+					<!--	<visible>System.HasAddon(service.coreelec.settings)</visible> -->
+				</item>
+				<item>
+					<label>6a</label>
+					<!--<property name="description">31490</property>-->
+					<onclick>RunAddon(service.coreelec.settings)</onclick>
+					<icon>views/settings/colored/coreelec.png</icon>
+					<!--	<visible>System.HasAddon(service.coreelec.settings)</visible> -->
+				</item>
+				<item>
+					<label>7a</label>
+					<!--<property name="description">31490</property>-->
+					<onclick>RunAddon(service.coreelec.settings)</onclick>
+					<icon>views/settings/colored/coreelec.png</icon>
+					<!--	<visible>System.HasAddon(service.coreelec.settings)</visible> -->
+				</item>
+				<item>
+					<label>8a</label>
+					<!--<property name="description">31490</property>-->
+					<onclick>ActivateWindow(1101)</onclick>
+					<icon>views/settings/colored/Kim_Repo.png</icon>
+					<!--	<visible>System.HasAddon(service.coreelec.settings)</visible> -->
+				</item>
+				<item>
+					<label>LibreELEC</label>
+					<!--<property name="description">31318</property>-->
+					<onclick>RunAddon(service.libreelec.settings)</onclick>
+					<icon>views/settings/colored/libreelec.png</icon>
+					<!--	<visible>System.HasAddon(service.libreelec.settings)</visible> -->
+				</item>
+				<item>
+					<label>CoreELEC</label>
+					<!--<property name="description">31490</property>-->
+					<onclick>RunAddon(service.coreelec.settings)</onclick>
+					<icon>views/settings/colored/coreelec.png</icon>
+					<!--	<visible>System.HasAddon(service.coreelec.settings)</visible> -->
+				</item>
+			</content>
+		</control>
+		<control type="label">
+			<left>20</left>
+			<top>1030</top>
+			<width>1930</width>
+			<height>40</height>
+			<angle>90</angle>
+			<textcolor>FFa3a3c2</textcolor>
+			<label>$INFO[System.Date(YYYY:MM:DD)]  [B]|[/B]  $INFO[System.Time(HH:MM:SS)]  [B]|[/B]  $INFO[System.AddonTitle(skin.nox.glass)]  [B]|[/B]  $INFO[System.AddonVersion(skin.nox.glass),v, ]</label>
+		</control>
+		<control type="group">
+			<top>32</top>
+			<!-- <control type="image">
+				<left>1844</left>
+				<top>-7</top>
+				<width>1.3</width>
+				<height>100</height>
+				<texture colordiffuse="black" border="5">new_pvr/osd_line_white_r.png</texture>
+				<bordertexture colordiffuse="grey" border="1.3">new_pvr/osd_line_white_r.png</bordertexture>
+			</control>
+			<control type="image">
+				<left>1844</left>
+				<top>585</top>
+				<width>1.3</width>
+				<height>200</height>
+				<texture colordiffuse="black" border="5">new_pvr/osd_line_white_r.png</texture>
+				<bordertexture colordiffuse="grey" border="1.3">new_pvr/osd_line_white_r.png</bordertexture>
+			</control>
+			<control type="image">
+				<left>75</left>
+				<top>225</top>
+				<width>1.3</width>
+				<height>200</height>
+				<texture colordiffuse="black" border="5">new_pvr/osd_line_white_r.png</texture>
+				<bordertexture colordiffuse="grey" border="1.3">new_pvr/osd_line_white_r.png</bordertexture>
+			</control>
+			<control type="image">
+				<left>75</left>
+				<top>915</top>
+				<width>1.3</width>
+				<height>100</height>
+				<texture colordiffuse="black" border="5">new_pvr/osd_line_white_r.png</texture>
+				<bordertexture colordiffuse="grey" border="1.3">new_pvr/osd_line_white_r.png</bordertexture>
+			</control> -->
+			<control type="image">
+				<left>75</left>
+				<top>-7</top>
+				<width>1770</width>
+				<height>1.3</height>
+				<texture colordiffuse="black" border="2">new_pvr/osd_line_white.png</texture>
+				<bordertexture colordiffuse="grey" border="1.3">new_pvr/osd_line_white.png</bordertexture>
+			</control>
+			<control type="image">
+				<left>75</left>
+				<top>325</top>
+				<width>1770</width>
+				<height>1.3</height>
+				<texture colordiffuse="black" border="2">new_pvr/osd_line_white.png</texture>
+				<bordertexture colordiffuse="grey" border="1.3">new_pvr/osd_line_white.png</bordertexture>
+			</control>
+			<control type="image">
+				<left>75</left>
+				<top>685</top>
+				<width>1770</width>
+				<height>1.3</height>
+				<texture colordiffuse="black" border="2">new_pvr/osd_line_white.png</texture>
+				<bordertexture colordiffuse="grey" border="1.3">new_pvr/osd_line_white.png</bordertexture>
+			</control>
+			<control type="image">
+				<left>75</left>
+				<top>1015</top>
+				<width>1770</width>
+				<height>1.3</height>
+				<texture colordiffuse="black" border="2">new_pvr/osd_line_white.png</texture>
+				<bordertexture colordiffuse="grey" border="1.5">new_pvr/osd_line_white.png</bordertexture>
+			</control>
+			<control type="image">
+				<left>75</left>
+				<top>1015</top>
+				<width>1770</width>
+				<height>1.3</height>
+				<texture colordiffuse="black" border="2">new_pvr/osd_line_white.png</texture>
+				<bordertexture colordiffuse="grey" border="1.5">new_pvr/osd_line_white.png</bordertexture>
+			</control>
+		</control>
+	</controls>
+</window>

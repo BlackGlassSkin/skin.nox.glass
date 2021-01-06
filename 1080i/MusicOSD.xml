@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<onload condition="Skin.HasSetting(Disable.MusicPlayerControlButtons)">SetFocus(703)</onload>
+	<onload condition="!Skin.HasSetting(Disable.MusicPlayerControlButtons)">SetFocus(602)</onload>
+	<controls>
+		<control type="group">
+			<animation effect="slide" end="0,-120" time="0" tween="quadratic" condition="Window.IsVisible(selectdialog)">Conditional</animation>
+			<animation effect="slide" start="0,-120" end="0,0" time="0" tween="quadratic">WindowOpen</animation>
+			<animation effect="slide" end="0,-120" start="0,0" time="0" tween="quadratic">WindowClose</animation>
+			<control type="image">
+				<left>-5%</left>
+				<top>-40</top>
+				<width>110%</width>
+				<height>147</height>
+				<texture border="40" flipy="true" colordiffuse="$VAR[ThemePanelColor]">dialogs/default/bg.png</texture>
+				<visible>!Pvr.IsPlayingRadio + !Player.IsInternetStream + !MusicPlayer.Content(livetv)</visible>
+			</control>
+			<control type="image">
+				<left>25.9%</left>
+				<top>-40</top>
+				<width>920</width>
+				<height>150</height>
+				<texture border="33" flipy="false" colordiffuse="$VAR[ThemePanelColor]">dialogs/default/streamplayer.png</texture>
+				<visible>Player.IsInternetStream</visible>
+			</control>
+			<control type="grouplist" id="202">
+				<visible>!Player.IsInternetStream + !MusicPlayer.Content(livetv)</visible>
+				<top>10</top>
+				<height>90</height>
+				<width>100%</width>
+				<align>center</align>
+				<scrolltime tween="sine">0</scrolltime>
+				<orientation>horizontal</orientation>
+				<onup>706</onup>
+				<ondown>802</ondown>
+				<onleft>202</onleft>
+				<onright>202</onright>
+				<control type="button" id="802">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDRatingFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDRatingFO.png</texturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<label/>
+					<width>72</width>
+					<height>72</height>
+					<font/>
+					<onclick>SetRating</onclick>
+				</control>
+				<control type="button" id="700">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDPlaylistFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDPlaylistFO.png</texturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<label/>
+					<width>72</width>
+					<height>72</height>
+					<font/>
+					<onclick>Close</onclick>
+					<onclick>ActivateWindow(MusicPlaylist)</onclick>
+				</control>
+				<control type="button" id="500">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDVizFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDVizFO.png</texturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<label/>
+					<width>72</width>
+					<height>72</height>
+					<font/>
+				</control>
+				<control type="button" id="702">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDSettingsFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDSettingsFO.png</texturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<label/>
+					<width>72</width>
+					<height>72</height>
+					<font/>
+					<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
+					<visible>Visualisation.Enabled</visible>
+				</control>
+				<control type="button" id="705">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDAudioVideoFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDAudioVideoFO.png</texturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<width>72</width>
+					<height>72</height>
+					<font/>
+					<onclick>ActivateWindow(visualisationpresetlist)</onclick>
+					<visible>Visualisation.HasPresets</visible>
+				</control>
+				<control type="button" id="600">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDAudioPrevTrackFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDAudioPrevTrackFO.png</texturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<label/>
+					<width>72</width>
+					<height>72</height>
+					<font/>
+					<onclick>PlayerControl(Previous)</onclick>
+					<visible>!Skin.HasSetting(Disable.MusicPlayerControlButtons)</visible>
+				</control>
+				<control type="button" id="601">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDAudioRewindFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDAudioRewindFO.png</texturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<label/>
+					<width>72</width>
+					<height>72</height>
+					<font/>
+					<onclick>PlayerControl(Rewind)</onclick>
+					<visible>!Skin.HasSetting(Disable.MusicPlayerControlButtons)</visible>
+				</control>
+				<control type="button" id="603">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDAudioStopFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDAudioStopFO.png</texturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<label/>
+					<width>72</width>
+					<height>72</height>
+					<font/>
+					<onclick>PlayerControl(Stop)</onclick>
+					<visible>!Skin.HasSetting(Disable.MusicPlayerControlButtons)</visible>
+				</control>
+				<control type="togglebutton" id="602">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDAudioPauseFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDAudioPauseFO.png</texturenofocus>
+					<alttexturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDAudioPlayFO.png</alttexturefocus>
+					<alttexturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDAudioPlayFO.png</alttexturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<label/>
+					<altlabel>208</altlabel>
+					<width>72</width>
+					<height>72</height>
+					<font/>
+					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+					<onclick>PlayerControl(Play)</onclick>
+					<visible>!Skin.HasSetting(Disable.MusicPlayerControlButtons)</visible>
+				</control>
+				<control type="button" id="604">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDAudioForwardFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDAudioForwardFO.png</texturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<label/>
+					<width>72</width>
+					<height>72</height>
+					<font/>
+					<onclick>PlayerControl(Forward)</onclick>
+					<visible>!Skin.HasSetting(Disable.MusicPlayerControlButtons)</visible>
+				</control>
+				<control type="button" id="605">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDAudioNextTrackFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDAudioNextTrackFO.png</texturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<label/>
+					<width>72</width>
+					<height>72</height>
+					<font/>
+					<onclick>PlayerControl(Next)</onclick>
+					<visible>!Skin.HasSetting(Disable.MusicPlayerControlButtons)</visible>
+				</control>
+				<control type="button" id="703">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDLyricsFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDLyricsFO.png</texturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<label/>
+					<width>72</width>
+					<height>72</height>
+					<font/>
+					<onclick>Close</onclick>
+					<onclick>RunScript(script.cu.lrclyrics)</onclick>
+				</control>
+				<control type="togglebutton" id="704">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDRandomOffFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDRandomOffFO.png</texturenofocus>
+					<alttexturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDRandomOnFO.png</alttexturefocus>
+					<alttexturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDRandomOnFO.png</alttexturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<label/>
+					<width>72</width>
+					<height>72</height>
+					<font/>
+					<usealttexture>Playlist.IsRandom</usealttexture>
+					<onclick>PlayerControl(Random)</onclick>
+					<visible>!MusicPartyMode.Enabled</visible>
+				</control>
+				<control type="button" id="707">
+					<width>0.1</width>
+					<height>0.1</height>
+					<texturefocus/>
+					<texturenofocus/>
+					<label>$LOCALIZE[486]$INFO[Playlist.Repeat, : ]</label>
+					<font/>
+					<onclick>PlayerControl(Repeat)</onclick>
+					<visible>!MusicPartyMode.Enabled</visible>
+				</control>
+				<control type="image" id="708">
+					<texture>$VAR[MusicOSDRepeatButtonVar]</texture>
+					<width>72</width>
+					<height>72</height>
+					<visible>!MusicPartyMode.Enabled</visible>
+				</control>
+				<control type="button" id="706">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDAudioSettingsFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDAudioSettingsFO.png</texturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<label/>
+					<width>72</width>
+					<height>72</height>
+					<font/>
+					<onclick>Dialog.Close(musicosd)</onclick>
+					<onclick>ActivateWindow(1120)</onclick>
+					<onclick>SetProperty(MusicOSD.Settings,True,Home)</onclick>
+				</control>
+				<control type="button" id="710">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/music_info.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/music_info.png</texturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<label/>
+					<width>72</width>
+					<height>72</height>
+					<font/>
+					<onclick>ActivateWindow(1142)</onclick>
+				</control>
+			</control>
+			<!-- my internet stream -->
+			<control type="grouplist" id="202">
+				<visible>Player.IsInternetStream + !Pvr.IsPlayingRadio</visible>
+				<top>10</top>
+				<height>90</height>
+				<width>100%</width>
+				<align>center</align>
+				<scrolltime tween="sine">0</scrolltime>
+				<orientation>horizontal</orientation>
+				<onup>706</onup>
+				<ondown>802</ondown>
+				<onleft>202</onleft>
+				<onright>202</onright>
+				<control type="button" id="700">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDPlaylistFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDPlaylistFO.png</texturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<label/>
+					<width>68</width>
+					<height>68</height>
+					<font/>
+					<onclick>Close</onclick>
+					<onclick>ActivateWindow(MusicPlaylist)</onclick>
+				</control>
+				<control type="button" id="500">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDVizFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDVizFO.png</texturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<label/>
+					<width>68</width>
+					<height>68</height>
+					<font/>
+				</control>
+				<control type="button" id="702">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDSettingsFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDSettingsFO.png</texturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<label/>
+					<width>68</width>
+					<height>68</height>
+					<font/>
+					<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
+					<visible>Visualisation.Enabled</visible>
+				</control>
+				<control type="button" id="705">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDAudioVideoFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDAudioVideoFO.png</texturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<width>68</width>
+					<height>68</height>
+					<font/>
+					<onclick>ActivateWindow(visualisationpresetlist)</onclick>
+					<visible>Visualisation.HasPresets</visible>
+				</control>
+				<control type="button" id="600">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDAudioPrevTrackFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDAudioPrevTrackFO.png</texturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<label/>
+					<width>68</width>
+					<height>68</height>
+					<font/>
+					<onclick>PlayerControl(Previous)</onclick>
+				</control>
+				<control type="button" id="601">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDAudioRewindFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDAudioRewindFO.png</texturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<label/>
+					<width>68</width>
+					<height>68</height>
+					<font/>
+					<onclick>PlayerControl(Rewind)</onclick>
+					<visible>!Skin.HasSetting(Disable.MusicPlayerControlButtons)</visible>
+					<visible>!Pvr.IsPlayingRadio + !Player.IsInternetStream</visible>
+				</control>
+				<control type="button" id="603">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDAudioStopFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDAudioStopFO.png</texturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<label/>
+					<width>68</width>
+					<height>68</height>
+					<font/>
+					<onclick>PlayerControl(Stop)</onclick>
+					<visible>!Skin.HasSetting(Disable.MusicPlayerControlButtons)</visible>
+				</control>
+				<control type="togglebutton" id="602">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDAudioPauseFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDAudioPauseFO.png</texturenofocus>
+					<alttexturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDAudioPlayFO.png</alttexturefocus>
+					<alttexturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDAudioPlayFO.png</alttexturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<label/>
+					<altlabel>208</altlabel>
+					<width>68</width>
+					<height>68</height>
+					<font/>
+					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+					<onclick>PlayerControl(Play)</onclick>
+					<visible>!Skin.HasSetting(Disable.MusicPlayerControlButtons)</visible>
+				</control>
+				<control type="button" id="604">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDAudioForwardFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDAudioForwardFO.png</texturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<label/>
+					<width>68</width>
+					<height>68</height>
+					<font/>
+					<onclick>PlayerControl(Forward)</onclick>
+					<visible>!Skin.HasSetting(Disable.MusicPlayerControlButtons)</visible>
+					<visible>!Pvr.IsPlayingRadio + !Player.IsInternetStream</visible>
+				</control>
+				<control type="button" id="605">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDAudioNextTrackFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDAudioNextTrackFO.png</texturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<label/>
+					<width>68</width>
+					<height>68</height>
+					<font/>
+					<onclick>PlayerControl(Next)</onclick>
+				</control>
+				<control type="button" id="703">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDLyricsFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDLyricsFO.png</texturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<label/>
+					<width>68</width>
+					<height>68</height>
+					<font/>
+					<onclick>Close</onclick>
+					<onclick>RunScript(script.cu.lrclyrics)</onclick>
+				</control>
+				<control type="image" id="708">
+					<texture>$VAR[MusicOSDRepeatButtonVar]</texture>
+					<width>68</width>
+					<height>68</height>
+					<visible>!MusicPartyMode.Enabled</visible>
+					<visible>!Pvr.IsPlayingRadio + !Player.IsInternetStream</visible>
+				</control>
+				<control type="button" id="706">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDAudioSettingsFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDAudioSettingsFO.png</texturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<label/>
+					<width>68</width>
+					<height>68</height>
+					<font/>
+					<onclick>Dialog.Close(musicosd)</onclick>
+					<onclick>ActivateWindow(1120)</onclick>
+					<onclick>SetProperty(MusicOSD.Settings,True,Home)</onclick>
+				</control>
+				<control type="button" id="710">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/music_info.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/music_info.png</texturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<label/>
+					<width>68</width>
+					<height>68</height>
+					<font/>
+					<onclick>ActivateWindow(1142)</onclick>
+				</control>
+				<control type="button" id="711">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/stream_home_a.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/stream_home_a.png</texturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<label/>
+					<width>68</width>
+					<height>68</height>
+					<font/>
+					<onclick>Dialog.Close(all,true)</onclick>
+					<onclick>ActivateWindow(home)</onclick>
+				</control>
+			</control>
+			<control type="grouplist" id="202">
+				<visible>Pvr.IsPlayingRadio</visible>
+				<top>10</top>
+				<height>90</height>
+				<width>100%</width>
+				<align>center</align>
+				<scrolltime tween="sine">0</scrolltime>
+				<orientation>horizontal</orientation>
+				<onup>706</onup>
+				<ondown>802</ondown>
+				<onleft>202</onleft>
+				<onright>202</onright>
+				<control type="button" id="700">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDPlaylistFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDPlaylistFO.png</texturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<label/>
+					<width>68</width>
+					<height>68</height>
+					<font/>
+					<onclick>Close</onclick>
+					<onclick>ActivateWindow(RadioChannels, return)</onclick>
+				</control>
+				<control type="button" id="500">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDVizFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDVizFO.png</texturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<label/>
+					<width>68</width>
+					<height>68</height>
+					<font/>
+				</control>
+				<control type="button" id="702">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDSettingsFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDSettingsFO.png</texturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<label/>
+					<width>68</width>
+					<height>68</height>
+					<font/>
+					<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
+					<visible>Visualisation.Enabled</visible>
+				</control>
+				<control type="button" id="705">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDAudioVideoFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDAudioVideoFO.png</texturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<width>68</width>
+					<height>68</height>
+					<font/>
+					<onclick>ActivateWindow(visualisationpresetlist)</onclick>
+					<visible>Visualisation.HasPresets</visible>
+				</control>
+				<control type="button" id="600">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDAudioPrevTrackFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDAudioPrevTrackFO.png</texturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<label/>
+					<width>68</width>
+					<height>68</height>
+					<font/>
+					<onclick>ChannelDown</onclick>
+				</control>
+				<control type="button" id="601">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDAudioRewindFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDAudioRewindFO.png</texturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<label/>
+					<width>68</width>
+					<height>68</height>
+					<font/>
+					<onclick>PlayerControl(Rewind)</onclick>
+					<visible>!Skin.HasSetting(Disable.MusicPlayerControlButtons)</visible>
+					<visible>!Pvr.IsPlayingRadio + !Player.IsInternetStream</visible>
+				</control>
+				<control type="button" id="603">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDAudioStopFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDAudioStopFO.png</texturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<label/>
+					<width>68</width>
+					<height>68</height>
+					<font/>
+					<onclick>PlayerControl(Stop)</onclick>
+					<visible>!Skin.HasSetting(Disable.MusicPlayerControlButtons)</visible>
+				</control>
+				<control type="togglebutton" id="602">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDAudioPauseFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDAudioPauseFO.png</texturenofocus>
+					<alttexturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDAudioPlayFO.png</alttexturefocus>
+					<alttexturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDAudioPlayFO.png</alttexturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<label/>
+					<altlabel>208</altlabel>
+					<width>68</width>
+					<height>68</height>
+					<font/>
+					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+					<onclick>PlayerControl(Play)</onclick>
+					<visible>!Skin.HasSetting(Disable.MusicPlayerControlButtons)</visible>
+				</control>
+				<control type="button" id="604">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDAudioForwardFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDAudioForwardFO.png</texturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<label/>
+					<width>68</width>
+					<height>68</height>
+					<font/>
+					<onclick>PlayerControl(Forward)</onclick>
+					<visible>!Skin.HasSetting(Disable.MusicPlayerControlButtons)</visible>
+					<visible>!Pvr.IsPlayingRadio + !Player.IsInternetStream</visible>
+				</control>
+				<control type="button" id="605">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDAudioNextTrackFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDAudioNextTrackFO.png</texturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<label/>
+					<width>68</width>
+					<height>68</height>
+					<font/>
+					<onclick>ChannelUp</onclick>
+				</control>
+				<control type="button" id="703">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDLyricsFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDLyricsFO.png</texturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<label/>
+					<width>68</width>
+					<height>68</height>
+					<font/>
+					<onclick>Close</onclick>
+					<onclick>RunScript(script.cu.lrclyrics)</onclick>
+				</control>
+				<control type="image" id="708">
+					<texture>$VAR[MusicOSDRepeatButtonVar]</texture>
+					<width>68</width>
+					<height>68</height>
+					<visible>!MusicPartyMode.Enabled</visible>
+					<visible>!Pvr.IsPlayingRadio + !Player.IsInternetStream</visible>
+				</control>
+				<control type="button" id="706">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/OSDAudioSettingsFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/OSDAudioSettingsFO.png</texturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<label/>
+					<width>68</width>
+					<height>68</height>
+					<font/>
+					<onclick>Dialog.Close(musicosd)</onclick>
+					<onclick>ActivateWindow(1120)</onclick>
+					<onclick>SetProperty(MusicOSD.Settings,True,Home)</onclick>
+				</control>
+				<control type="button" id="710">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/music_info.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/music_info.png</texturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<label/>
+					<width>68</width>
+					<height>68</height>
+					<font/>
+					<onclick>ActivateWindow(1142)</onclick>
+				</control>
+				<control type="button" id="711">
+					<texturefocus colordiffuse="$VAR[ThemeAudioOSDColorFo]">osd/buttons/stream_home_a.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[ThemeAudioOSDColorNoFo]">osd/buttons/stream_home_a.png</texturenofocus>
+					<animation effect="zoom" end="110" time="200">Focus</animation>
+					<label/>
+					<width>68</width>
+					<height>68</height>
+					<font/>
+					<onclick>Dialog.Close(all,true)</onclick>
+					<onclick>ActivateWindow(home)</onclick>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

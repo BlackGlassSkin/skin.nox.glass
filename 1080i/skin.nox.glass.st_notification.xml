@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog">
+	<defaultcontrol always="true">1154</defaultcontrol>
+	<include>DialogOpenCloseAnimation</include>
+	<controls>
+		<control type="group" id="1150">
+			<animation effect="slide" start="1200" end="0" time="1300" tween="cubic" easing="inout" delay="110">WindowOpen</animation>
+			<left>1030</left>
+			<top>510</top>
+			<control type="image" id="1">
+				<left>-865</left>
+				<top>15</top>
+				<width>1800</width>
+				<height>780</height>
+				<label>$ADDON[service.kn.switchtimer 30000</label>
+				<texture colordiffuse="FF000000">submenu_end_white.png</texture>
+			</control>
+			<control type="image">
+				<top>-100</top>
+				<left>-180</left>
+				<width>300</width>
+				<height>160</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Clearlogo)]</texture>
+			</control>
+			<control type="image" id="1156">
+				<left>-100</left>
+				<top>10</top>
+				<width>430</width>
+				<height>240</height>
+				<texture fallback="kodisplash.png" diffuse="image11.png">$INFO[VideoPlayer.Cover]</texture>
+			</control>
+			<control type="fadelabel">
+				<left>290</left>
+				<top>11</top>
+				<width>600</width>
+				<height>150</height>
+				<align>left</align>
+				<aligny>top</aligny>
+				<font>font20</font>
+				<label>[COLOR=blue]$INFO[ListItem.Channelname, , |] [/COLOR] [B]$INFO[ListItem.Title][/B]</label>
+				<wrapmultiline>false</wrapmultiline>
+				<scrollspeed>40</scrollspeed>
+			</control>
+			<control type="textbox" id="1151">
+				<left>320</left>
+				<top>50</top>
+				<width>553</width>
+				<height>241</height>
+				<align>left</align>
+				<aligny>top</aligny>
+				<font>font20</font>
+				<label>$INFO[ListItem.Plot]</label>
+			</control>
+			<control type="progress" id="1155">
+				<left>134</left>
+				<top>300</top>
+				<width>750</width>
+				<height>20</height>
+				<texturebg colordiffuse="$VAR[ThemeLabelColorProgres]" border="3">new_pvr/texturebg_border_white.png</texturebg>
+				<midtexture colordiffuse="$VAR[ThemeLabelColorProgresFrame]" border="3">new_pvr/texturebg_white.png</midtexture>
+			</control>
+			<control type="label">
+				<left>-210</left>
+				<top>15</top>
+				<width>480</width>
+				<height>150</height>
+				<align>left</align>
+				<aligny>top</aligny>
+				<font>font30</font>
+				<label>$INFO[System.Time(hh:mm:ss)]</label>
+			</control>
+			<control type="grouplist">
+				<orientation>horizontal</orientation>
+				<left>125</left>
+				<top>330</top>
+				<width>900</width>
+				<align>center</align>
+				<control type="button" id="1152">
+					<description>Record</description>
+					<width>200</width>
+					<height>34</height>
+					<textcolor>FF3E3E3E</textcolor>
+					<focusedcolor>$VAR[HighlightBarColor]</focusedcolor>
+					<textwidth>335</textwidth>
+					<textoffsetx>45</textoffsetx>
+					<texturenofocus/>
+					<texturefocus/>
+					<label>$ADDON[service.kn.switchtimer 30043]</label>
+					<align>center</align>
+				</control>
+				<control type="button" id="1154">
+					<description>Switch now</description>
+					<width>200</width>
+					<height>34</height>
+					<textcolor>FF3E3E3E</textcolor>
+					<focusedcolor>$VAR[HighlightBarColor]</focusedcolor>
+					<textwidth>335</textwidth>
+					<textoffsetx>45</textoffsetx>
+					<texturenofocus/>
+					<texturefocus/>
+					<label>$ADDON[service.kn.switchtimer 30045]</label>
+					<align>center</align>
+				</control>
+				<control type="button" id="1153">
+					<description>Cancel</description>
+					<width>200</width>
+					<height>34</height>
+					<textcolor>FF3E3E3E</textcolor>
+					<focusedcolor>$VAR[HighlightBarColor]</focusedcolor>
+					<textwidth>335</textwidth>
+					<textoffsetx>45</textoffsetx>
+					<texturenofocus/>
+					<texturefocus/>
+					<label>$ADDON[service.kn.switchtimer 30044]</label>
+					<align>center</align>
+				</control>
+				<onup>1</onup>
+				<ondown>1</ondown>
+			</control>
+		</control>
+	</controls>
+</window>

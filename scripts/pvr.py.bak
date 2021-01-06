@@ -1,0 +1,30 @@
+import xbmc, time
+
+#return to tv 
+xbmc.executebuiltin('ActivateWindow(10700)')
+
+#sleep long enough for the home screen to come up
+time.sleep(4)
+
+#stop PVR addon
+xbmc.executeJSONRPC('{"jsonrpc":"2.0", "method":"Addons.SetAddonEnabled", "params":{ "addonid": "pvr.iptvsimple", "enabled": false }, "id":1}')
+#start PVR addon
+xbmc.executeJSONRPC('{"jsonrpc":"2.0", "method":"Addons.SetAddonEnabled", "params":{ "addonid": "pvr.iptvsimple", "enabled": true }, "id":1}')
+
+================================================================================================================================================================
+
+import xbmc, time
+
+xbmc.executebuiltin('ActivateWindow(10700)')
+
+time.sleep(2)
+
+xbmc.executeJSONRPC('{"jsonrpc":"2.0", "method":"Addons.SetAddonEnabled", "params":{ "addonid": "pvr.iptvsimple", "enabled": false }, "id":1}')
+
+time.sleep(6)
+
+xbmc.executeJSONRPC('{"jsonrpc":"2.0", "method":"Addons.SetAddonEnabled", "params":{ "addonid": "pvr.iptvsimple", "enabled": true }, "id":1}')
+
+time.sleep(12)
+
+xbmc.executebuiltin('ReloadSkin()')
