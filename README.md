@@ -10,7 +10,7 @@ A modded version of [Aeon Nox 5 & SiLVO]
 
 https://github.com/AnonTester/kodi-repo/tree/master/repository.anontester
 
-and from repository install ***script.skin.helper.service*** ans ***script.skin.helper.widgets*** after install skin
+and from repository install ***script.skin.helper.service*** and ***script.skin.helper.widgets*** after install skin
 
 weather icon , weather fanart code ***"reduced package size"***
 
