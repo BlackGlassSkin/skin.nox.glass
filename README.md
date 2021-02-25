@@ -14,7 +14,7 @@ and from repository install ***script.skin.helper.service*** after install skin
 
 to download dependencies install the repository below 
 
-http://kim.cherrytv.webd.pl/MultiRepo/All/repository.Kim.Multi/repository.Kim.Multi-2.1.6.zip
+http://kim.cherrytv.webd.pl/MultiRepo/All/repository.Kim.Multi/repository.Kim.Multi-2.1.7.zip
 
 
 
