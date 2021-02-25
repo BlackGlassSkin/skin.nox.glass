@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="3003">
+	<defaultcontrol always="true">302</defaultcontrol>
+	<animation effect="slide" start="-520" end="1380" time="1300" tween="cubic" easing="inout" delay="10">WindowOpen</animation>
+	<animation effect="slide" start="0" end="-10,580" time="1300" tween="cubic" easing="inout" delay="10">WindowClose</animation>
+	<coordinates>
+		<left>10</left>
+		<top>0</top>
+	</coordinates>
+	<controls>
+		<control type="image" id="101">
+			<description>Background</description>
+			<width>520</width>
+			<height>225</height>
+			<visible>true</visible>
+			<colordiffuse>FFFFFFFF</colordiffuse>
+			<texture colordiffuse="CC696969" border="24">dialog_back.png</texture>
+		</control>
+		<control type="textbox" id="102">
+			<description>text</description>
+			<top>25</top>
+			<left>80</left>
+			<width>400</width>
+			<height>78</height>
+			<align>center</align>
+			<font>font14</font>
+			<textcolor>grey2</textcolor>
+			<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+		</control>
+		<control type="textbox" id="103">
+			<description>text</description>
+			<left>60</left>
+			<top>65</top>
+			<width>450</width>
+			<height>78</height>
+			<align>center</align>
+			<label/>
+			<font>font16</font>
+			<textcolor>$VAR[ThemeLabelColor]</textcolor>
+			<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+		</control>
+		<!--<control type="label">
+			<left>20</left>
+			<top>87</top>
+			<width>490</width>
+			<height>78</height>
+			<align>left</align>
+			<font>Lirabiefont_Rg</font>
+			<textcolor>$VAR[ThemeLabelColor]</textcolor>
+			<label>[B]$INFO[Player.Title][/B]</label>
+		</control> -->
+		<control type="progress" id="201">
+			<description>Progressbar</description>
+			<left>40</left>
+			<top>135</top>
+			<width>450</width>
+			<height>19</height>
+			<info/>
+			<texturebg colordiffuse="$VAR[ThemeLabelColorProgres]" border="3">new_pvr/texturebg_border_white.png</texturebg>
+			<midtexture colordiffuse="$VAR[ThemeLabelColorProgresFrame]" border="3">new_pvr/texturebg_white.png</midtexture>
+		</control>
+		<control type="button" id="301">
+			<description>Decrease Button</description>
+			<left>40</left>
+			<top>165</top>
+			<width>200</width>
+			<height>20</height>
+			<align>center</align>
+			<label>[B]-10[/B]</label>
+			<font>Lirabiefont_Rg</font>
+			<textcolor>$VAR[ThemeLabelColor]</textcolor>
+			<texturenofocus border="5">button-nofocus.png</texturenofocus>
+			<texturefocus border="5">button-focus.png</texturefocus>
+			<onright>302</onright>
+			<onleft>302</onleft>
+			<onup>304</onup>
+			<ondown>303</ondown>
+		</control>
+		<control type="button" id="302">
+			<description>Increase Button</description>
+			<left>290</left>
+			<top>165</top>
+			<width>200</width>
+			<height>20</height>
+			<align>center</align>
+			<label>[B]+10[/B]</label>
+			<font>Lirabiefont_Rg</font>
+			<textcolor>$VAR[ThemeLabelColor]</textcolor>
+			<texturenofocus border="5">button-nofocus.png</texturenofocus>
+			<texturefocus border="5">button-focus.png</texturefocus>
+			<onright>301</onright>
+			<onleft>301</onleft>
+			<onup>304</onup>
+			<ondown>303</ondown>
+		</control>
+		<control type="button" id="303">
+			<description>Cancel Button</description>
+			<left>40</left>
+			<top>190</top>
+			<width>450</width>
+			<height>23</height>
+			<align>center</align>
+			<label>[B]$ADDON[script.adzapper 32102][/B]</label>
+			<font>Lirabiefont_Rg</font>
+			<textcolor>$VAR[ThemeLabelColor]</textcolor>
+			<texturenofocus border="5">button-nofocus.png</texturenofocus>
+			<texturefocus border="5">button-focus.png</texturefocus>
+			<onright>304</onright>
+			<onleft>304</onleft>
+			<onup>303</onup>
+			<ondown>302</ondown>
+		</control>
+	</controls>
+</window>

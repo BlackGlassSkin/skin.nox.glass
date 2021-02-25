@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1142" type="dialog">
+	<controls>
+		<control type="group">
+			<control type="image">
+				<top>110</top>
+				<right>170</right>
+				<width>1599</width>
+				<height>520</height>
+				<texture>black-back.png</texture>
+			</control>
+			<control type="textbox">
+				<top>139</top>
+				<right>200</right>
+				<width>1180</width>
+				<height>455</height>
+				<font>font12</font>
+				<align>left</align>
+				<label>$INFO[Window(Home).Property(SkinHelper.Player.Plot)]</label>
+				<autoscroll time="4600" delay="6000" repeat="6000">!Skin.HasSetting(Enable.AutoScroll)</autoscroll>
+				<animation effect="fade" start="55400" end="100" time="4600" tween="sine" easing="inout">VisibleChange</animation>
+				<animation effect="zoom" start="-120" end="100" time="900" center="860" condition="">WindowOpen</animation>
+				<animation effect="zoom" start="100" end="0" time="220" condition="">WindowClose</animation>
+			</control>
+		</control>
+		<control type="group">
+			<control type="image">
+				<top>280</top>
+				<right>1400</right>
+				<width>334</width>
+				<height>334</height>
+				<texture>$VAR[PlayerArtworkDiscVar]</texture>
+				<aspectratio align="right">scale</aspectratio>
+			</control>
+			<control type="image">
+				<top>115</top>
+				<right>1400</right>
+				<width>340</width>
+				<height>340</height>
+				<texture>$VAR[RadioPlayerCover2Var]</texture>
+				<aspectratio align="right">scale</aspectratio>
+				<animation effect="zoom" start="-120" end="100" time="900" center="860" condition="">WindowOpen</animation>
+				<animation effect="zoom" start="100" end="0" time="220" condition="">WindowClose</animation>
+			</control>
+		</control>
+	</controls>
+</window>

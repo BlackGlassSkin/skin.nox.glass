@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol>9000</defaultcontrol>
+	<include>DialogOpenCloseAnimation</include>
+	<controls>
+		<control type="grouplist" id="9000">
+			<top>-85</top>
+			<left>705</left>
+			<width>510</width>
+			<height>1080</height>
+			<onleft>9000</onleft>
+			<onright>9000</onright>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<align>center</align>
+			<control type="image" id="1">
+				<width>510</width>
+				<height>45</height>
+				<texture colordiffuse="$VAR[ThemePanelBgColor]" border="30,20,30,2">dialogs\default\bg.png</texture>
+			</control>
+			<control type="button" id="2">
+				<description>Exit button</description>
+				<width>510</width>
+				<height>60</height>
+				<textcolor>FF929292</textcolor>
+				<focusedcolor>FF1ff8ff</focusedcolor>
+				<textwidth>435</textwidth>
+				<textoffsetx>45</textoffsetx>
+				<align>center</align>
+				<texturenofocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturefocus>
+				<onclick>Quit()</onclick>
+				<font>font14</font>
+				<label>13012</label>
+				<visible>System.ShowExitButton</visible>
+			</control>
+			<control type="button" id="3">
+				<description>Shutdown button</description>
+				<width>510</width>
+				<height>60</height>
+				<textcolor>FF929292</textcolor>
+				<focusedcolor>FF1ff8ff</focusedcolor>
+				<textwidth>435</textwidth>
+				<textoffsetx>45</textoffsetx>
+				<align>center</align>
+				<texturenofocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturefocus>
+				<onclick>Powerdown()</onclick>
+				<visible>System.CanPowerDown</visible>
+				<font>font14</font>
+				<label>13016</label>
+			</control>
+			<control type="button" id="4">
+				<description>Custom Shutdown Timer</description>
+				<width>510</width>
+				<height>60</height>
+				<textcolor>FF929292</textcolor>
+				<focusedcolor>FF1ff8ff</focusedcolor>
+				<textwidth>435</textwidth>
+				<textoffsetx>45</textoffsetx>
+				<align>center</align>
+				<texturenofocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturefocus>
+				<onclick>AlarmClock(shutdowntimer,Shutdown())</onclick>
+				<font>font14</font>
+				<label>20150</label>
+				<visible>!System.HasAlarm(shutdowntimer)</visible>
+				<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
+			</control>
+			<control type="button" id="5">
+				<description>Cancel Shutdown Timer</description>
+				<width>510</width>
+				<height>60</height>
+				<textcolor>FF929292</textcolor>
+				<focusedcolor>FF1ff8ff</focusedcolor>
+				<textwidth>435</textwidth>
+				<textoffsetx>45</textoffsetx>
+				<align>center</align>
+				<texturenofocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturefocus>
+				<onclick>CancelAlarm(shutdowntimer)</onclick>
+				<font>font14</font>
+				<label>$LOCALIZE[20151]$INFO[System.Alarmpos, (,)]</label>
+				<visible>System.HasAlarm(shutdowntimer)</visible>
+			</control>
+			<control type="button" id="6">
+				<description>Suspend button</description>
+				<width>510</width>
+				<height>60</height>
+				<textcolor>FF929292</textcolor>
+				<focusedcolor>FF1ff8ff</focusedcolor>
+				<textwidth>435</textwidth>
+				<textoffsetx>45</textoffsetx>
+				<align>center</align>
+				<texturenofocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturefocus>
+				<onclick>Suspend()</onclick>
+				<visible>System.CanSuspend</visible>
+				<font>font14</font>
+				<label>13011</label>
+			</control>
+			<control type="button" id="7">
+				<description>Hibernate button</description>
+				<width>510</width>
+				<height>60</height>
+				<textcolor>FF929292</textcolor>
+				<focusedcolor>FF1ff8ff</focusedcolor>
+				<textwidth>435</textwidth>
+				<textoffsetx>45</textoffsetx>
+				<align>center</align>
+				<texturenofocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturefocus>
+				<onclick>Hibernate()</onclick>
+				<visible>System.CanHibernate</visible>
+				<font>font14</font>
+				<label>13010</label>
+			</control>
+			<control type="button" id="8">
+				<description>Reboot button</description>
+				<width>510</width>
+				<height>60</height>
+				<textcolor>FF929292</textcolor>
+				<focusedcolor>FF1ff8ff</focusedcolor>
+				<textwidth>435</textwidth>
+				<textoffsetx>45</textoffsetx>
+				<align>center</align>
+				<texturenofocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturefocus>
+				<onclick>Reset()</onclick>
+				<visible>System.CanReboot</visible>
+				<font>font14</font>
+				<label>13013</label>
+			</control>
+			<control type="button" id="9">
+				<description>Logoff button</description>
+				<width>510</width>
+				<height>60</height>
+				<textcolor>FF929292</textcolor>
+				<focusedcolor>FF1ff8ff</focusedcolor>
+				<textwidth>435</textwidth>
+				<textoffsetx>45</textoffsetx>
+				<align>center</align>
+				<texturenofocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturefocus>
+				<onclick>dialog.close(all,true)</onclick>
+				<onclick>System.LogOff</onclick>
+				<font>font14</font>
+				<label>$LOCALIZE[20126] $INFO[system.profilename]</label>
+				<visible>System.HasLoginScreen | Integer.IsGreater(System.ProfileCount,1)</visible>
+				<visible>System.Loggedon</visible>
+			</control>
+			<control type="togglebutton" id="10">
+				<description>Master mode button</description>
+				<width>510</width>
+				<height>60</height>
+				<label>20046</label>
+				<altlabel>20045</altlabel>
+				<textwidth>435</textwidth>
+				<textoffsetx>45</textoffsetx>
+				<align>center</align>
+				<texturenofocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturefocus>
+				<usealttexture>!System.IsMaster</usealttexture>
+				<texturenofocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturefocus>
+				<onclick>xbmc.mastermode</onclick>
+				<visible>System.HasLocks</visible>
+			</control>
+			<control type="button" id="11">
+				<description>Inhibit idle shutdown</description>
+				<width>510</width>
+				<height>60</height>
+				<textcolor>FF929292</textcolor>
+				<focusedcolor>FF1ff8ff</focusedcolor>
+				<textwidth>435</textwidth>
+				<textoffsetx>45</textoffsetx>
+				<align>center</align>
+				<texturenofocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturefocus>
+				<onclick>InhibitIdleShutdown(true)</onclick>
+				<font>font14</font>
+				<label>13017</label>
+				<visible>System.HasShutdown +!System.IsInhibit</visible>
+			</control>
+			<control type="button" id="12">
+				<description>Allow idle shutdown</description>
+				<width>510</width>
+				<height>60</height>
+				<textcolor>FF929292</textcolor>
+				<focusedcolor>FF1ff8ff</focusedcolor>
+				<textwidth>435</textwidth>
+				<textoffsetx>45</textoffsetx>
+				<align>center</align>
+				<texturenofocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturefocus>
+				<onclick>InhibitIdleShutdown(false)</onclick>
+				<font>font14</font>
+				<label>13018</label>
+				<visible>System.HasShutdown + System.IsInhibit</visible>
+			</control>
+			<control type="button" id="13">
+				<description>Settings</description>
+				<width>510</width>
+				<height>60</height>
+				<textcolor>FF929292</textcolor>
+				<focusedcolor>FF1ff8ff</focusedcolor>
+				<textwidth>435</textwidth>
+				<textoffsetx>45</textoffsetx>
+				<align>center</align>
+				<texturenofocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturefocus>
+				<onclick>Dialog.Close(all,true)</onclick>
+				<onclick>ActivateWindow(settings)</onclick>
+				<font>font14</font>
+				<label>$LOCALIZE[5]</label>
+			</control>
+			<control type="button" id="14">
+				<description>Skin Settings</description>
+				<width>510</width>
+				<height>60</height>
+				<textcolor>FF929292</textcolor>
+				<focusedcolor>FF1ff8ff</focusedcolor>
+				<textwidth>435</textwidth>
+				<textoffsetx>45</textoffsetx>
+				<align>center</align>
+				<texturenofocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturefocus>
+				<onclick>Dialog.Close(all,true)</onclick>
+				<onclick>ActivateWindow(skinsettings)</onclick>
+				<font>font14</font>
+				<label>20077</label>
+			</control>
+			<control type="button" id="15">
+				<description>Favorites</description>
+				<width>510</width>
+				<height>60</height>
+				<textcolor>FF929292</textcolor>
+				<focusedcolor>FF1ff8ff</focusedcolor>
+				<textwidth>435</textwidth>
+				<textoffsetx>45</textoffsetx>
+				<align>center</align>
+				<texturenofocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturefocus>
+				<onclick>ActivateWindow(favourites)</onclick>
+				<font>font14</font>
+				<label>1036</label>
+			</control>
+			<control type="button" id="16">
+				<description>Favorites</description>
+				<width>510</width>
+				<height>60</height>
+				<textcolor>FF929292</textcolor>
+				<focusedcolor>FF1ff8ff</focusedcolor>
+				<textwidth>435</textwidth>
+				<textoffsetx>45</textoffsetx>
+				<align>center</align>
+				<texturenofocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturefocus>
+				<font>font14</font>
+				<onclick>System.ExecWait("/usr/sbin/rebootfromnand")</onclick>
+				<onclick>Reset()</onclick>
+				<visible>System.PathExist("/dev/env")</visible>
+				<label>Reboot To Android</label>
+			</control>
+			<control type="button" id="17">
+				<description>Reload Skin button</description>
+				<width>510</width>
+				<height>60</height>
+				<textcolor>FF929292</textcolor>
+				<focusedcolor>FF1ff8ff</focusedcolor>
+				<textwidth>435</textwidth>
+				<textoffsetx>45</textoffsetx>
+				<align>center</align>
+				<texturenofocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturefocus>
+				<onclick>Dialog.Close(all,true)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<font>font14</font>
+				<label>20183</label>
+			</control>
+			<control type="button" id="18">
+				<description>Reload Skin button</description>
+				<width>510</width>
+				<height>60</height>
+				<textcolor>FF929292</textcolor>
+				<focusedcolor>FF1ff8ff</focusedcolor>
+				<textwidth>435</textwidth>
+				<textoffsetx>45</textoffsetx>
+				<font>font14</font>
+				<align>center</align>
+				<texturenofocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturefocus>
+				<onclick>Dialog.Close(all,true)</onclick>
+				<onclick>PlayMedia(plugin://plugin.close.kodi/?mode=4&amp;name=Insta Kill&amp;url=fclose)</onclick>
+				<onclick condition="!System.HasAddon(plugin.close.kodi)">InstallAddon(plugin.close.kodi)</onclick>
+				<visible>[System.Platform.Android | System.Platform.Windows]</visible>
+				<label>Force Close</label>
+			</control>
+			<!--<control type="button" id="19">
+				<description>Media_Pair</description>
+				<width>510</width>
+				<height>60</height>
+				<textcolor>FF929292</textcolor>
+				<focusedcolor>FF1ff8ff</focusedcolor>
+				<textwidth>435</textwidth>
+				<textoffsetx>45</textoffsetx>
+				<align>center</align>
+				<texturenofocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturefocus>
+				<onclick>StartAndroidActivity(com.polishteamwizard.pair)</onclick>
+				<font>font14</font>
+				<visible>System.Platform.Android</visible>
+				<label>Media Pair</label>
+			</control> -->
+			<control type="image" id="19">
+				<width>510</width>
+				<height>45</height>
+				<texture flipy="true" colordiffuse="$VAR[ThemePanelBgColor]" border="30,2,30,20">dialogs\default\bg.png</texture>
+			</control>
+		</control>
+	</controls>
+</window>

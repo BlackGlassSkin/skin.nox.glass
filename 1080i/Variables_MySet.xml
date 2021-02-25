@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<variable name="VideoPlayerClearLogoVar">
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.Clearlogo))">$INFO[Window(Home).Property(SkinHelper.Player.Art.Clearlogo)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.ClearLogos))">$INFO[Window(Home).Property(SkinHelper.Player.Art.ClearLogos)]</value>
+		<value condition="!String.IsEmpty(Player.Art(tvshow.Clearlogo))">$INFO[Player.Art(tvshow.Clearlogo)]</value>
+		<value condition="!String.IsEmpty(Player.Art(Clearlogo))">$INFO[Player.Art(Clearlogo)]</value>
+	</variable>
+	<variable name="PlayerCharacterArtVar">
+		<!--<value condition="!String.IsEmpty(Player.Art(discart))">$INFO[Player.Art(discart)]</value>
+        <value condition="!String.IsEmpty(Player.Art(album.discart))">$INFO[Player.Art(album.discart)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.Discart))">$INFO[Window(Home).Property(SkinHelper.Player.Art.Discart)]</value>-->
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.Characterart))">$INFO[Window(Home).Property(SkinHelper.Player.Art.Characterart)]</value>
+		<value condition="!String.IsEmpty(Player.Art(tvshow.characterart))">$INFO[Player.Art(tvshow.characterart)]</value>
+		<value condition="!String.IsEmpty(Player.Art(characterart))">$INFO[Player.Art(characterart)]</value>
+	</variable>
+	<variable name="PVRVideoPlayerDiscartVar">
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.Discart))">$INFO[Window(Home).Property(SkinHelper.Player.Art.Discart)]</value>
+		<value condition="!String.IsEmpty(Player.Art(discart))">$INFO[Player.Art(discart)]</value>
+	</variable>
+	<variable name="PVRNoPlayerDiscartVar">
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Discart))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Discart)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.tvshow.discart)))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.tvshow.discart)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(tvshow.Clearlogo))">$INFO[ListItem.Art(tvshow.Discart)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(discart))">$INFO[ListItem.Art(discart)]</value>
+	</variable>
+	<variable name="PVRNoPlayerClearLogoVar">
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.ClearLogo))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.ClearLogo)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.tvshow.clearlogo))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.tvshow.clearlogo)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(tvshow.Clearlogo))">$INFO[ListItem.Art(tvshow.Clearlogo)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(Clearlogo))">$INFO[ListItem.Art(Clearlogo)]</value>
+	</variable>
+	<variable name="PVRNoPlayerClearArtVar">
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.ClearArt))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.ClearArt)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.tvshow.clearart))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.tvshow.clearart)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(tvshow.clearart))">$INFO[ListItem.Art(tvshow.clearart)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(clearart))">$INFO[ListItem.Art(clearart)]</value>
+	</variable>
+	<variable name="PVRPosterVar">
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Poster))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Poster)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.Poster))">$INFO[Window(Home).Property(SkinHelper.Player.Art.Poster)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
+		<value condition="!String.IsEmpty(Listitem.EpgEventIcon)">$INFO[ListItem.EpgEventIcon]</value>
+	</variable>
+	<variable name="VideoPlayerPosterCdMask">
+		<value condition="!Skin.HasSetting(PosterMask) + !String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.Discart))">thumbs\boxes\default\mask.png</value>
+	</variable>
+	<variable name="VideoPlayerPosterMask">
+		<value condition="!Skin.HasSetting(PosterMask) + !String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.Poster))">thumbs\boxes\default\thumb.png</value>
+	</variable>
+	<variable name="PVRPosterpvrinfoVar">
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Poster))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Poster)]</value>
+	</variable>
+	<variable name="PVRFanartVar">
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Thumb))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Thumb)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Fanart))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Fanart)]</value>
+		<value condition="!String.IsEmpty(Listitem.EpgEventIcon)">$INFO[ListItem.EpgEventIcon]</value>
+	</variable>
+	<variable name="PlayerPVRClearArtVar">
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.ClearArt))">$INFO[Window(Home).Property(SkinHelper.Player.Art.ClearArt)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.tvshow.clearart))">$INFO[Window(Home).Property(SkinHelper.Player.Art.tvshow.clearart)]</value>
+	</variable>
+	<variable name="PVRClearArtVar">
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.ClearArt))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.ClearArt)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.ClearArt))">$INFO[Window(Home).Property(SkinHelper.Player.Art.ClearArt)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.tvshow.clearart))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.tvshow.clearart)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.tvshow.clearart))">$INFO[Window(Home).Property(SkinHelper.Player.Art.tvshow.clearart)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(tvshow.clearart))">$INFO[ListItem.Art(tvshow.clearart)]</value>
+		<value condition="!String.IsEmpty(Player.Art(tvshow.clearart))">$INFO[Player.Art(tvshow.clearart)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(clearart))">$INFO[ListItem.Art(clearart)]</value>
+		<value condition="!String.IsEmpty(Player.Art(clearart))">$INFO[Player.Art(clearart)]</value>
+	</variable>
+	<variable name="NoPlayerPVRThumbVar">
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Thumb)) + !String.IsEmpty(Window(Home).Property(ListItem.Icon))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Thumb)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Fanart)) + !String.IsEmpty(Window(Home).Property(ListItem.Icon))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Fanart)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Landscape))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Landscape)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.tvshow.thumb))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.tvshow.thumb)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.tvshow.fanart))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.tvshow.fanart)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.tvshow.landscape))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.tvshow.landscape)]</value>
+		<value condition="!String.IsEmpty(Listitem.EpgEventIcon)">$INFO[ListItem.EpgEventIcon]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(tvshow.thumb))">$INFO[ListItem.Art(tvshow.thumb)]</value>
+		<value condition="!String.IsEmpty(ListItem.Icon)">$INFO[ListItem.Art(thumb)]</value>
+		<value>$INFO[ListItem.Icon]</value>
+	</variable>
+	<variable name="PremieredLabel">
+		<value condition="!String.IsEmpty(ListItem.Premiered) + ListItem.IsNew">[COLOR grey]$LOCALIZE[20416]:[/COLOR] $INFO[ListItem.Premiered] [B]([COLOR button_focus]$LOCALIZE[842][/COLOR])[/B][CR]</value>
+		<value>$INFO[ListItem.Premiered,[COLOR grey]$LOCALIZE[20416]:[/COLOR] ,[CR]]</value>
+	</variable>
+	<variable name="FlagLabel">
+		<value condition="ListItem.IsPremiere">[B][[COLOR button_focus]$LOCALIZE[838][/COLOR][/B] AA</value>
+		<value condition="ListItem.IsFinale">[B][COLOR button_focus]$LOCALIZE[849][/COLOR][/B] AA</value>
+		<value condition="ListItem.IsLive">[B][COLOR button_focus]$LOCALIZE[839][/COLOR][/B] CC</value>
+		<value condition="ListItem.IsNew">[B][COLOR button_focus]$LOCALIZE[842][/COLOR][/B] DD</value>
+	</variable>
+	<variable name="ListItemSongDiscart">
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.DiscArt))">$INFO[Window(Home).Property(SkinHelper.Player.Art.DiscArt)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.DiscArt))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.DiscArt)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.MusicPlaye.Art.DiscArt))">$INFO[Window(Home).Property(SkinHelper.MusicPlaye.Art.DiscArt)]</value>
+		<value condition="Skin.HasSetting(MusicDiscFallback.Vinyl)">special://skin/extras/cdart/vinyl.png</value>
+		<value>special://skin/extras/cdart/default.png</value>
+	</variable>
+	<variable name="RadioPlayerCover2Var">
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.AlbumThumb))">$INFO[Window(Home).Property(SkinHelper.Player.Art.AlbumThumb)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.Thumb))">$INFO[Window(Home).Property(SkinHelper.Player.Art.Thumb)]</value>
+		<value condition="!String.IsEmpty(Player.Art(thumb))">DefaultCover.jpg</value>
+		<value>$INFO[Player.Art(thumb)]</value>
+	</variable>
+	<variable name="MusicPlayerAtistTitleVar">
+		<value condition="!Pvr.IsPlayingRadio + !Player.IsInternetStream">$INFO[Window(Home).Property(SkinHelper.Player.Artist)]</value>
+		<value condition="!Pvr.IsPlayingRadio + !Player.IsInternetStream">$INFO[Window(Home).Property(SkinHelper.ListItem.Artist)]</value>
+		<value condition="Player.IsInternetStream">$INFO[Window(Home).Property(SkinHelper.Player.Artist)]</value>
+		<value condition="!String.IsEmpty(MusicPlayer.Artist)">$INFO[MusicPlayer.Artist]</value>
+		<value>$INFO[MusicPlayer.Artist]</value>
+	</variable>
+	<variable name="PlayerAllTitlesVar">
+		<value condition="Pvr.IsPlayingRadio + Player.IsInternetStream">$INFO[Window(Home).Property(SkinHelper.Player.Title)]</value>
+		<value condition="!Pvr.IsPlayingRadio + !Player.IsInternetStream">$INFO[Window(Home).Property(SkinHelper.Player.Title)]</value>
+		<value condition="!Pvr.IsPlayingRadio + !Player.IsInternetStream">$INFO[Window(Home).Property(SkinHelper.ListItem.Title)]</value>
+		<value condition="!String.IsEmpty(MusicPlayer.Title)">$INFO[MusicPlayer.Title]</value>
+		<value>$INFO[MusicPlayer.Title]</value>
+	</variable>
+	<variable name="PlayerAllAlbumsVar">
+		<!--  String.IsEmpty(Window(Home).Property(SkinHelper.Player.Title)) -->
+		<value condition="Pvr.IsPlayingRadio + Player.IsInternetStream + !String.IsEmpty(Window(Home).Property(SkinHelper.Player.Title))">$INFO[Window(Home).Property(SkinHelper.Player.Album)]</value>
+		<value condition="!Pvr.IsPlayingRadio + !Player.IsInternetStream">$INFO[Window(Home).Property(SkinHelper.Player.Album)]</value>
+		<value condition="!Pvr.IsPlayingRadio + !Player.IsInternetStream">$INFO[Window(Home).Property(SkinHelper.ListItem.Album)]</value>
+		<value condition="!String.IsEmpty(MusicPlayer.Genre)">$INFO[MusicPlayer.Album]</value>
+		<value>$INFO[MusicPlayer.Album]</value>
+	</variable>
+	<variable name="PlayerAllGenresVar">
+		<value condition="Pvr.IsPlayingRadio + Player.IsInternetStream">$INFO[Window(Home).Property(SkinHelper.Player.Genre)]</value>
+		<value condition="!Pvr.IsPlayingRadio + !Player.IsInternetStream">$INFO[Window(Home).Property(SkinHelper.Player.Genre)]</value>
+		<value condition="!Pvr.IsPlayingRadio + !Player.IsInternetStream">$INFO[Window(Home).Property(SkinHelper.ListItem.Genre)]</value>
+		<value condition="!String.IsEmpty(MusicPlayer.Genre)">$INFO[MusicPlayer.Genre]</value>
+		<!--<value condition="!String.IsEmpty(VideoPlayer.ChannelName)">$INFO[VideoPlayer.ChannelName]</value> -->
+		<value>$INFO[MusicPlayer.Genre]</value>
+	</variable>
+	<variable name="PlayerInfoClearLogoVar">
+		<value condition="!String.IsEmpty(Player.Art(tvshow.clearlogo))">$INFO[Player.Art(tvshow.clearlogo)]</value>
+		<value condition="!String.IsEmpty(Player.Art(clearlogo))">$INFO[Player.Art(clearlogo)]</value>
+		<value condition="!String.IsEmpty(Player.Art(artist.clearlogo))">$INFO[Player.Art(artist.clearlogo)]</value>
+		<value>$INFO[Window(Home).Property(SkinHelper.Player.Art.Clearlogo)]</value>
+	</variable>
+	<variable name="clockhours">
+		<value condition="[System.Time(00:00,00:15)]">clock\hours\00-0.png</value>
+		<value condition="[System.Time(00:15,00:30)]">clock\hours\00-1.png</value>
+		<value condition="[System.Time(00:30,00:45)]">clock\hours\00-2.png</value>
+		<value condition="[System.Time(00:45,01:00)]">clock\hours\00-3.png</value>
+		<value condition="[System.Time(01:00,01:15)]">clock\hours\01-0.png</value>
+		<value condition="[System.Time(01:15,01:30)]">clock\hours\01-1.png</value>
+		<value condition="[System.Time(01:30,01:45)]">clock\hours\01-2.png</value>
+		<value condition="[System.Time(01:45,02:00)]">clock\hours\01-3.png</value>
+		<value condition="[System.Time(02:00,02:15)]">clock\hours\02-0.png</value>
+		<value condition="[System.Time(02:15,02:30)]">clock\hours\02-1.png</value>
+		<value condition="[System.Time(02:30,02:45)]">clock\hours\02-2.png</value>
+		<value condition="[System.Time(02:45,03:00)]">clock\hours\02-3.png</value>
+		<value condition="[System.Time(03:00,03:15)]">clock\hours\03-0.png</value>
+		<value condition="[System.Time(03:15,03:30)]">clock\hours\03-1.png</value>
+		<value condition="[System.Time(03:30,03:45)]">clock\hours\03-2.png</value>
+		<value condition="[System.Time(03:45,04:00)]">clock\hours\03-3.png</value>
+		<value condition="[System.Time(04:00,04:15)]">clock\hours\04-0.png</value>
+		<value condition="[System.Time(04:15,04:30)]">clock\hours\04-1.png</value>
+		<value condition="[System.Time(04:30,04:45)]">clock\hours\04-2.png</value>
+		<value condition="[System.Time(04:45,05:00)]">clock\hours\04-3.png</value>
+		<value condition="[System.Time(05:00,05:15)]">clock\hours\05-0.png</value>
+		<value condition="[System.Time(05:15,05:30)]">clock\hours\05-1.png</value>
+		<value condition="[System.Time(05:30,05:45)]">clock\hours\05-2.png</value>
+		<value condition="[System.Time(05:45,06:00)]">clock\hours\05-3.png</value>
+		<value condition="[System.Time(06:00,06:15)]">clock\hours\06-0.png</value>
+		<value condition="[System.Time(06:15,06:30)]">clock\hours\06-1.png</value>
+		<value condition="[System.Time(06:30,06:45)]">clock\hours\06-2.png</value>
+		<value condition="[System.Time(06:45,07:00)]">clock\hours\06-3.png</value>
+		<value condition="[System.Time(07:00,07:15)]">clock\hours\07-0.png</value>
+		<value condition="[System.Time(07:15,07:30)]">clock\hours\07-1.png</value>
+		<value condition="[System.Time(07:30,07:45)]">clock\hours\07-2.png</value>
+		<value condition="[System.Time(07:45,08:00)]">clock\hours\07-3.png</value>
+		<value condition="[System.Time(08:00,08:15)]">clock\hours\08-0.png</value>
+		<value condition="[System.Time(08:15,08:30)]">clock\hours\08-1.png</value>
+		<value condition="[System.Time(08:30,08:45)]">clock\hours\08-2.png</value>
+		<value condition="[System.Time(08:45,09:00)]">clock\hours\08-3.png</value>
+		<value condition="[System.Time(09:00,09:15)]">clock\hours\09-0.png</value>
+		<value condition="[System.Time(09:15,09:30)]">clock\hours\09-1.png</value>
+		<value condition="[System.Time(09:30,09:45)]">clock\hours\09-2.png</value>
+		<value condition="[System.Time(09:45,10:00)]">clock\hours\09-3.png</value>
+		<value condition="[System.Time(10:00,10:15)]">clock\hours\10-0.png</value>
+		<value condition="[System.Time(10:15,10:30)]">clock\hours\10-1.png</value>
+		<value condition="[System.Time(10:30,10:45)]">clock\hours\10-2.png</value>
+		<value condition="[System.Time(10:45,11:00)]">clock\hours\10-2.png</value>
+		<value condition="[System.Time(11:00,11:15)]">clock\hours\11-0.png</value>
+		<value condition="[System.Time(11:15,11:30)]">clock\hours\11-1.png</value>
+		<value condition="[System.Time(11:30,11:45)]">clock\hours\11-2.png</value>
+		<value condition="[System.Time(11:45,12:00)]">clock\hours\11-2.png</value>
+		<value condition="[System.Time(12:00,12:15)]">clock\hours\00-0.png</value>
+		<value condition="[System.Time(12:15,12:30)]">clock\hours\00-1.png</value>
+		<value condition="[System.Time(12:30,12:45)]">clock\hours\00-2.png</value>
+		<value condition="[System.Time(12:45,13:00)]">clock\hours\00-3.png</value>
+		<value condition="[System.Time(13:00,13:15)]">clock\hours\01-0.png</value>
+		<value condition="[System.Time(13:15,13:30)]">clock\hours\01-1.png</value>
+		<value condition="[System.Time(13:30,13:45)]">clock\hours\01-2.png</value>
+		<value condition="[System.Time(13:45,14:00)]">clock\hours\01-3.png</value>
+		<value condition="[System.Time(14:00,14:15)]">clock\hours\02-0.png</value>
+		<value condition="[System.Time(14:15,14:30)]">clock\hours\02-1.png</value>
+		<value condition="[System.Time(14:30,14:45)]">clock\hours\02-2.png</value>
+		<value condition="[System.Time(14:45,15:00)]">clock\hours\02-3.png</value>
+		<value condition="[System.Time(15:00,15:15)]">clock\hours\03-0.png</value>
+		<value condition="[System.Time(15:15,15:30)]">clock\hours\03-1.png</value>
+		<value condition="[System.Time(15:30,15:45)]">clock\hours\03-2.png</value>
+		<value condition="[System.Time(15:45,16:00)]">clock\hours\03-3.png</value>
+		<value condition="[System.Time(16:00,16:15)]">clock\hours\04-0.png</value>
+		<value condition="[System.Time(16:15,16:30)]">clock\hours\04-1.png</value>
+		<value condition="[System.Time(16:30,16:45)]">clock\hours\04-2.png</value>
+		<value condition="[System.Time(16:45,17:00)]">clock\hours\04-3.png</value>
+		<value condition="[System.Time(17:00,17:15)]">clock\hours\05-0.png</value>
+		<value condition="[System.Time(17:15,17:30)]">clock\hours\05-1.png</value>
+		<value condition="[System.Time(17:30,17:45)]">clock\hours\05-2.png</value>
+		<value condition="[System.Time(17:45,18:00)]">clock\hours\05-3.png</value>
+		<value condition="[System.Time(18:00,18:15)]">clock\hours\06-0.png</value>
+		<value condition="[System.Time(18:15,18:30)]">clock\hours\06-1.png</value>
+		<value condition="[System.Time(18:30,18:45)]">clock\hours\06-2.png</value>
+		<value condition="[System.Time(18:45,19:00)]">clock\hours\06-3.png</value>
+		<value condition="[System.Time(19:00,19:15)]">clock\hours\07-0.png</value>
+		<value condition="[System.Time(19:15,19:30)]">clock\hours\07-1.png</value>
+		<value condition="[System.Time(19:30,19:45)]">clock\hours\07-2.png</value>
+		<value condition="[System.Time(19:45,20:00)]">clock\hours\07-3.png</value>
+		<value condition="[System.Time(20:00,20:15)]">clock\hours\08-0.png</value>
+		<value condition="[System.Time(20:15,20:30)]">clock\hours\08-1.png</value>
+		<value condition="[System.Time(20:30,20:45)]">clock\hours\08-2.png</value>
+		<value condition="[System.Time(20:45,21:00)]">clock\hours\08-3.png</value>
+		<value condition="[System.Time(21:00,21:15)]">clock\hours\09-0.png</value>
+		<value condition="[System.Time(21:15,21:30)]">clock\hours\09-1.png</value>
+		<value condition="[System.Time(21:30,21:45)]">clock\hours\09-2.png</value>
+		<value condition="[System.Time(21:45,22:00)]">clock\hours\09-3.png</value>
+		<value condition="[System.Time(22:00,22:15)]">clock\hours\10-0.png</value>
+		<value condition="[System.Time(22:15,22:30)]">clock\hours\10-1.png</value>
+		<value condition="[System.Time(22:30,22:45)]">clock\hours\10-2.png</value>
+		<value condition="[System.Time(22:45,23:00)]">clock\hours\10-3.png</value>
+		<value condition="[System.Time(23:00,23:15)]">clock\hours\11-0.png</value>
+		<value condition="[System.Time(23:15,23:30)]">clock\hours\11-1.png</value>
+		<value condition="[System.Time(23:30,23:45)]">clock\hours\11-2.png</value>
+		<value condition="[System.Time(23:45,24:00)]">clock\hours\11-3.png</value>
+	</variable>
+	<variable name="CpuPerCorevertical0VAR">
+		<value condition="!String.IsEmpty(System.CoreUsage(0))">resource://resource.images.cpuprogress/vertical/$INFO[System.CoreUsage(0),,.png]</value>
+	</variable>
+	<variable name="CpuPerCorevertical1VAR">
+		<value condition="!String.IsEmpty(System.CoreUsage(1))">resource://resource.images.cpuprogress/vertical/$INFO[System.CoreUsage(1),,.png]</value>
+	</variable>
+	<variable name="CpuPerCorevertical2VAR">
+		<value condition="!String.IsEmpty(System.CoreUsage(2))">resource://resource.images.cpuprogress/vertical/$INFO[System.CoreUsage(2),,.png]</value>
+	</variable>
+	<variable name="CpuPerCorevertical3VAR">
+		<value condition="!String.IsEmpty(System.CoreUsage(3))">resource://resource.images.cpuprogress/vertical/$INFO[System.CoreUsage(3),,.png]</value>
+	</variable>
+	<variable name="CpuPerCorevertical4VAR">
+		<value condition="!String.IsEmpty(System.CoreUsage(4))">resource://resource.images.cpuprogress/vertical/$INFO[System.CoreUsage(4),,.png]</value>
+	</variable>
+	<variable name="CpuPerCorevertical5VAR">
+		<value condition="!String.IsEmpty(System.CoreUsage(5))">resource://resource.images.cpuprogress/vertical/$INFO[System.CoreUsage(5),,.png]</value>
+	</variable>
+	<variable name="CpuPerCorevertical6VAR">
+		<value condition="!String.IsEmpty(System.CoreUsage(6))">resource://resource.images.cpuprogress/vertical/$INFO[System.CoreUsage(6),,.png]</value>
+	</variable>
+	<variable name="CpuPerCorevertical7VAR">
+		<value condition="!String.IsEmpty(System.CoreUsage(7))">resource://resource.images.cpuprogress/vertical/$INFO[System.CoreUsage(7),,.png]</value>
+	</variable>
+	<variable name="CpuPerCorehorizontal0VAR">
+		<value condition="!String.IsEmpty(System.CoreUsage(0))">resource://resource.images.cpuprogress/horizontal/$INFO[System.CoreUsage(0),,.png]</value>
+	</variable>
+	<variable name="CpuPerCorehorizontal1VAR">
+		<value condition="!String.IsEmpty(System.CoreUsage(1))">resource://resource.images.cpuprogress/horizontal/$INFO[System.CoreUsage(1),,.png]</value>
+	</variable>
+	<variable name="CpuPerCorehorizontal2VAR">
+		<value condition="!String.IsEmpty(System.CoreUsage(2))">resource://resource.images.cpuprogress/horizontal/$INFO[System.CoreUsage(2),,.png]</value>
+	</variable>
+	<variable name="CpuPerCorehorizontal3VAR">
+		<value condition="!String.IsEmpty(System.CoreUsage(3))">resource://resource.images.cpuprogress/horizontal/$INFO[System.CoreUsage(3),,.png]</value>
+	</variable>
+	<variable name="CpuPerCorehorizontal4VAR">
+		<value condition="!String.IsEmpty(System.CoreUsage(4))">resource://resource.images.cpuprogress/horizontal/$INFO[System.CoreUsage(4),,.png]</value>
+	</variable>
+	<variable name="CpuPerCorehorizontal5VAR">
+		<value condition="!String.IsEmpty(System.CoreUsage(5))">resource://resource.images.cpuprogress/horizontal/$INFO[System.CoreUsage(5),,.png]</value>
+	</variable>
+	<variable name="CpuPerCorehorizontal6VAR">
+		<value condition="!String.IsEmpty(System.CoreUsage(6))">resource://resource.images.cpuprogress/horizontal/$INFO[System.CoreUsage(6),,.png]</value>
+	</variable>
+	<variable name="CpuPerCorehorizontal7VAR">
+		<value condition="!String.IsEmpty(System.CoreUsage(7))">resource://resource.images.cpuprogress/horizontal/$INFO[System.CoreUsage(7),,.png]</value>
+	</variable>
+	<variable name="CpuPerCorecircle0VAR">
+		<value condition="!String.IsEmpty(System.CoreUsage(0))">resource://resource.images.cpuprogress/circle/$INFO[System.CoreUsage(0),,.png]</value>
+	</variable>
+	<variable name="CpuPerCorecircle1VAR">
+		<value condition="!String.IsEmpty(System.CoreUsage(1))">resource://resource.images.cpuprogress/circle/$INFO[System.CoreUsage(1),,.png]</value>
+	</variable>
+	<variable name="CpuPerCorecircle2VAR">
+		<value condition="!String.IsEmpty(System.CoreUsage(2))">resource://resource.images.cpuprogress/circle/$INFO[System.CoreUsage(2),,.png]</value>
+	</variable>
+	<variable name="CpuPerCorecircle3VAR">
+		<value condition="!String.IsEmpty(System.CoreUsage(3))">resource://resource.images.cpuprogress/circle/$INFO[System.CoreUsage(3),,.png]</value>
+	</variable>
+	<variable name="CpuPerCorecircle4VAR">
+		<value condition="!String.IsEmpty(System.CoreUsage(4))">resource://resource.images.cpuprogress/circle/$INFO[System.CoreUsage(4),,.png]</value>
+	</variable>
+	<variable name="CpuPerCorecircle5VAR">
+		<value condition="!String.IsEmpty(System.CoreUsage(5))">resource://resource.images.cpuprogress/circle/$INFO[System.CoreUsage(5),,.png]</value>
+	</variable>
+	<variable name="CpuPerCorecircle6VAR">
+		<value condition="!String.IsEmpty(System.CoreUsage(6))">resource://resource.images.cpuprogress/circle/$INFO[System.CoreUsage(6),,.png]</value>
+	</variable>
+	<variable name="CpuPerCorecircle7VAR">
+		<value condition="!String.IsEmpty(System.CoreUsage(7))">resource://resource.images.cpuprogress/circle/$INFO[System.CoreUsage(7),,.png]</value>
+	</variable>
+	<variable name="CpuAllCorecircleVAR">
+		<value condition="!String.IsEmpty(System.CPUUsage)">resource://resource.images.cpuprogress/circle/percent/$INFO[System.CPUUsage].png</value>
+	</variable>
+	<variable name="PVRGenreUnknownVar">
+		<value condition="String.Contains(ListItem.Genre,Unknown) | String.Contains(ListItem.Genre,Other) | String.Contains(ListItem.Genre,$LOCALIZE[29921]) | String.Contains(ListItem.Genre,$LOCALIZE[19499]) | String.Contains(ListItem.Genre,$LOCALIZE[010200000])">overlays/pvr/genres/144-fo.png</value>
+		<!-- Other / Unknown | Other -->
+	</variable>
+	<variable name="PVRGenreMovie1Var">
+		<value condition="$LOCALIZE[010200001]">overlays/pvr/genres/144-fo.png</value>
+		<!-- all Movies -->
+	</variable>
+	<variable name="PVRGenreSeries1Var">
+		<value condition="$LOCALIZE[010200002]">overlays/pvr/genres/144-fo.png</value>
+		<!-- all Series -->
+	</variable>
+	<variable name="PVRGenreParadocumentary1Var">
+		<value condition="$LOCALIZE[010200003]">overlays/pvr/genres/144-fo.png</value>
+		<!-- all Paradocumentary,natura,hostory -->
+	</variable>
+	<variable name="PVRGenreEntertainment1Var">
+		<value condition="$LOCALIZE[010200004]">overlays/pvr/genres/144-fo.png</value>
+		<!-- Entertainment -->
+	</variable>
+	<variable name="PVRGenreReportage1Var">
+		<value condition="$LOCALIZE[010200005]">overlays/pvr/genres/144-fo.png</value>
+		<!-- all Reportage -->
+	</variable>
+	<variable name="PVRGenreKids1Var">
+		<value condition="$LOCALIZE[010200006]">overlays/pvr/genres/144-fo.png</value>
+		<!-- Kids Series -->
+	</variable>
+	<variable name="PVRGenreMusic1Var">
+		<value condition="$LOCALIZE[010200007]">overlays/pvr/genres/144-fo.png</value>
+		<!-- Music -->
+	</variable>
+	<variable name="PVRGenreSport1Var">
+		<value condition="$LOCALIZE[010200008]">overlays/pvr/genres/144-fo.png</value>
+		<!-- Sport -->
+	</variable>
+	<variable name="PVRGenreReligious1Var">
+		<value condition="$LOCALIZE[010200009]">overlays/pvr/genres/144-fo.png</value>
+		<!-- Religious -->
+	</variable>
+	<variable name="PVRGenreErotic1Var">
+		<value condition="$LOCALIZE[010200010]">overlays/pvr/genres/144-fo.png</value>
+		<!-- Erotic -->
+	</variable>
+	<variable name="PVRGenreMagazine1Var">
+		<value condition="$LOCALIZE[010200011]">overlays/pvr/genres/144-fo.png</value>
+		<!-- Magazine -->
+	</variable>
+	
+</includes>

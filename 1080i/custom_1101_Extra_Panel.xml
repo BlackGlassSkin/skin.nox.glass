@@ -1,0 +1,962 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window id="1101">
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<controls>
+		<control type="group">
+			<control type="panel" id="9000">
+				<left>42</left>
+				<top>110</top>
+				<width>1920</width>
+				<height>1100</height>
+				<onleft condition="!Skin.HasSetting(quicknav)">9000</onleft>
+				<onleft condition="Skin.HasSetting(quicknav)">ActivateWindow(1521)</onleft>
+				<onright>9000</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<animation effect="slide" start="-729,0" end="0,0" time="0" tween="quadratic">WindowOpen</animation>
+				<animation effect="slide" end="-1929,0" time="0" tween="quadratic">WindowClose</animation>
+				<itemlayout height="80" width="458">
+					<control type="image">
+						<width>460</width>
+						<height>80</height>
+						<texture colordiffuse="FF330000">$INFO[ListItem.Icon]</texture>
+						<bordertexture colordiffuse="FF990000" border="2">media/border.png</bordertexture>
+						<bordersize>5</bordersize>
+					</control>
+					<control type="-">
+						<top>13</top>
+						<left>5</left>
+						<!-- Odpowiada za cień pod panelami (przyciskami) type="-"> ZAMIAST - PODAJEME image-->
+						<width>390</width>
+						<height>220</height>
+						<texture colordiffuse="55FFFFFF">common/bgcolor.png</texture>
+					</control>
+					<control type="label">
+						<width>460</width>
+						<height>80</height>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
+						<align>center</align>
+						<font>Lirabiefont_Rg31</font>
+						<textcolor>CC800000</textcolor>
+					</control>
+				</itemlayout>
+				<focusedlayout height="80" width="458">
+					<control type="group">
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="auto" start="100" end="101" time="0" tween="sine"/>
+						</animation>
+						<animation type="UnFocus" reversible="false">
+							<effect type="zoom" center="auto" start="100" end="101" time="0" tween="sine"/>
+						</animation>
+						<control type="image">
+							<width>460</width>
+							<height>80</height>
+							<texture colordiffuse="FF330000">$INFO[ListItem.Icon]</texture>
+							<bordertexture colordiffuse="red" border="2">media/border.png</bordertexture>
+							<bordersize>5</bordersize>
+						</control>
+						<control type="image">
+							<width>460</width>
+							<height>80</height>
+							<texture colordiffuse="black">$INFO[ListItem.Icon]</texture>
+							<bordertexture colordiffuse="black" border="2">button-nofocus.png</bordertexture>
+							<bordersize>5</bordersize>
+							<animation type="Focus" reversible="true">
+								<effect type="fade" start="0" end="100" delay="1000" time="0" tween="cubic"/>
+							</animation>
+							<animation type="UnFocus" reversible="true">
+								<effect type="fade" start="100" end="0" time="0" tween="cubic"/>
+							</animation>
+						</control>
+					</control>
+					<control type="textbox">
+						<left>10</left>
+						<top>20</top>
+						<width>620</width>
+						<height>140</height>
+						<font>Font_Reg25_2</font>
+						<align>center</align>
+					</control>
+					<control type="label">
+						<ontop>true</ontop>
+						<left>24</left>
+						<width>420</width>
+						<height>80</height>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
+						<font>Lirabiefont_Rg31</font>
+						<textcolor>B3BDC3C7</textcolor>
+						<shadowcolor>grey2</shadowcolor>
+						<align>center</align>
+					</control>
+				</focusedlayout>
+				<content>
+					<item>
+						<label>$LOCALIZE[5]</label>
+						<onclick>ActivateWindow(settings)</onclick>
+						<icon>media/button1.jpg</icon>
+					</item>
+					<item>
+						<label>13009</label>
+						<onclick>ActivateWindow(10111)</onclick>
+						<icon>media/button1.jpg</icon>
+					</item>
+					<item>
+						<label>Media Ustawienia</label>
+						<onclick>Dialog.Close(all,true)</onclick>
+						<onclick>ActivateWindow(10031)</onclick>
+						<icon>media/button1.jpg</icon>
+					</item>
+					<item>
+						<label>Odtwarzacz Ustawienia</label>
+						<onclick>Dialog.Close(all,true)</onclick>
+						<onclick>ActivateWindow(10030)</onclick>
+						<icon>media/button1.jpg</icon>
+					</item>
+					<item>
+						<label>20077</label>
+						<onclick>Dialog.Close(all,true)</onclick>
+						<onclick>ActivateWindow(skinsettings)</onclick>
+						<icon>media/button1.jpg</icon>
+					</item>
+					<item>
+						<label>20150</label>
+						<onclick>dialog.close(all,true)</onclick>
+						<onclick>Addon.OpenSettings(service.sleepy.watchdogs1)</onclick>
+						<onclick condition="!System.HasAddon(service.sleepy.watchdogs1)">InstallAddon(service.sleepy.watchdogs1)</onclick>
+						<icon>media/button1.jpg</icon>
+					</item>
+					<item>
+						<label>Restart All Addons</label>
+						<onclick>RunScript(special://skin/scripts/addonOnOff.py, return)</onclick>
+						<icon>media/button1.jpg</icon>
+					</item>
+					<item>
+						<label>Cache/Packages/Thumbs</label>
+						<onclick>RunScript(special://skin/scripts/clean.py,return)</onclick>
+						<onclick condition="!System.HasAddon(script.ezmaintenanceplus)">InstallAddon(script.ezmaintenanceplus)</onclick>
+						<icon>media/button1.jpg</icon>
+					</item>
+					<item>
+						<label>10016</label>
+						<onclick>ActivateWindow(SystemSettings)</onclick>
+						<icon>media/button1.jpg</icon>
+					</item>
+					<item>
+						<label>Keymap Editor</label>
+						<onclick>RunScript(script.keymap)</onclick>
+						<onclick condition="!System.HasAddon(script.keymap)">InstallAddon(script.keymap)</onclick>
+						<icon>media/button1.jpg</icon>
+					</item>
+					<item>
+						<label>Audio Profil</label>
+						<onclick>Addon.OpenSettings(script.audio.profiles)</onclick>
+						<onclick condition="!System.HasAddon(script.audio.profiles)">InstallAddon(script.audio.profiles)</onclick>
+						<icon>media/button1.jpg</icon>
+					</item>
+					<item>
+						<label>Backup / Restore</label>
+						<onclick>RunAddon(script.xbmcbackup)</onclick>
+						<onclick condition="!System.HasAddon(script.xbmcbackup)">InstallAddon(script.xbmcbackup)</onclick>
+						<icon>media/button1.jpg</icon>
+					</item>
+					<item id="1">
+						<label>[COLOR red]Wyłącz PVR[/COLOR]</label>
+						<onclick>RunScript(special://skin/scripts/pvr_OFF.py)</onclick>
+						<icon>media/button1.jpg</icon>
+						<visible>true</visible>
+					</item>
+					<item>
+						<label>Kodi Log</label>
+						<onclick>RunAddon(script.logviewer)</onclick>
+						<icon>media/button1.jpg</icon>
+					</item>
+					<item>
+						<label>$LOCALIZE[20126] $INFO[system.profilename]</label>
+						<onclick>dialog.close(all,true)</onclick>
+						<onclick>System.LogOff</onclick>
+						<visible>System.Loggedon</visible>
+						<icon>media/button1.jpg</icon>
+					</item>
+					<item>
+						<label>Update Addons &amp; Repos</label>
+						<onclick>Notification(Trwa Aktualizacja!!! ,[COLOR green][B]Cierpliwości proces za chwilę dobiegnie końca[/B][/COLOR],2000])</onclick>
+						<onclick>RunScript(special://skin/scripts/update.py, return)</onclick>
+						<icon>media/button1.jpg</icon>
+					</item>
+					<item id="1">
+						<label>[COLOR green]Włącz PVR[/COLOR]</label>
+						<onclick>RunScript(special://skin/scripts/pvr_ON.py)</onclick>
+						<icon>media/button1.jpg</icon>
+						<visible>true</visible>
+					</item>
+					<item>
+						<label>Menadżer Dodadków</label>
+						<onclick>ActivateWindow(addonbrowser)</onclick>
+						<icon>media/button1.jpg</icon>
+					</item>
+					<item>
+						<label>Speed Test</label>
+						<onclick>RunAddon(script.speedtester)</onclick>
+						<onclick condition="!System.HasAddon(script.speedtester)">InstallAddon(script.speedtester)</onclick>
+						<icon>media/button1.jpg</icon>
+					</item>
+					<!--<item>
+                        <label>Speed Test</label>
+                        <onclick>Runscript(special://home/addons/script.ezmaintenanceplus/resources/lib/modules/speedtest.py)</onclick>
+                        <onclick condition="!System.HasAddon(script.ezmaintenanceplus)">InstallAddon(script.ezmaintenanceplus)</onclick>
+                        <icon>media/button1.jpg</icon>
+                    </item> -->
+					<item>
+						<label>Ustaw Rozmiar Bufora</label>
+						<onclick>RunScript(special://skin/scripts/cache.py, return)</onclick>
+						<onclick condition="!System.HasAddon(script.ezmaintenanceplus)">InstallAddon(script.ezmaintenanceplus)</onclick>
+						<icon>media/button1.jpg</icon>
+					</item>
+					<item>
+						<label>Reset Epg Data</label>
+						<onclick>ActivateWindowAndFocus(PVRSettings, -98,10, -70,10)</onclick>
+						<onclick>Action(Select)</onclick>
+						<onclick>ActivateWindow(1101)</onclick>
+						<icon>media/button1.jpg</icon>
+					</item>
+					<item>
+						<label>20183</label>
+						<onclick>Dialog.Close(all,true)</onclick>
+						<onclick>ReloadSkin()</onclick>
+						<icon>media/button1.jpg</icon>
+					</item>
+					<item>
+						<label>Widevine Test</label>
+						<onclick>dialog.close(all,true)</onclick>
+						<onclick>RunAddon(plugin.video.tester)</onclick>
+						<onclick condition="!System.HasAddon(repository.slyguy)">InstallAddon(repository.slyguy)</onclick>
+						<onclick condition="!System.HasAddon(plugin.video.tester)">InstallAddon(plugin.video.tester)</onclick>
+						<icon>media/button1.jpg</icon>
+					</item>
+					<item>
+						<label>214</label>
+						<onclick>ActivateWindow(10011)</onclick>
+						<icon>media/button1.jpg</icon>
+					</item>
+					<item>
+						<label>Ustawienia Telewizji</label>
+						<onclick>ActivateWindow(pvrsettings)</onclick>
+						<icon>media/button1.jpg</icon>
+					</item>
+					<item>
+						<label>[COLOR red]Force Close - !?[/COLOR]</label>
+						<onclick>PlayMedia(plugin://plugin.close.kodi/?mode=4&amp;name=Insta Kill&amp;url=fclose ,return)</onclick>
+						<onclick condition="!System.HasAddon(plugin.close.kodi)">InstallAddon(plugin.close.kodi)</onclick>
+						<icon>media/button1.jpg</icon>
+					</item>
+					<item>
+						<label>Home</label>
+						<onclick>Dialog.Close(all,true)</onclick>
+						<onclick>ActivateWindow(Home)</onclick>
+						<icon>media/button1.jpg</icon>
+					</item>
+					<item>
+						<label>Resolve Url</label>
+						<onclick>Addon.OpenSettings(script.module.resolveurl)</onclick>
+						<icon>media/button1.jpg</icon>
+					</item>
+				</content>
+			</control>
+			<control type="panel" id="9000">
+				<left>42</left>
+				<top>910</top>
+				<width>1920</width>
+				<height>1100</height>
+				<onleft condition="!Skin.HasSetting(quicknav)">9000</onleft>
+				<onleft condition="Skin.HasSetting(quicknav)">ActivateWindow(1521)</onleft>
+				<onright>9000</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<animation effect="slide" start="-729,0" end="0,0" time="0" tween="quadratic">WindowOpen</animation>
+				<animation effect="slide" end="-1929,0" time="0" tween="quadratic">WindowClose</animation>
+				<itemlayout height="80" width="458">
+					<item id="104">
+						<label>OFF</label>
+					</item>
+					<item id="104">
+						<label>ON</label>
+					</item>
+				</itemlayout>
+			</control>
+			<control type="image">
+				<top>85</top>
+				<left>10</left>
+				<width>1900</width>
+				<height>854</height>
+				<texture colordiffuse="FF424242">media/border3.png</texture>
+				<bordersize>3</bordersize>
+			</control>
+			<control type="label">
+				<description>HDD Used</description>
+				<!-- wolne miejsce HDD -->
+				<left>180</left>
+				<top>665</top>
+				<width>730</width>
+				<height>40</height>
+				<font>Lirabiefont_Rg</font>
+				<label>HDD :$INFO[System.UsedSpace]</label>
+				<textcolor>FF848484</textcolor>
+				<shadowcolor>FF424242</shadowcolor>
+			</control>
+			<control type="label">
+				<description>HDD FREE</description>
+				<!-- Zajęte miejsce HDD -->
+				<left>180</left>
+				<top>714</top>
+				<width>730</width>
+				<height>40</height>
+				<label>HDD :$INFO[System.FreeSpace]</label>
+				<font>Lirabiefont_Rg</font>
+				<textcolor>FF848484</textcolor>
+				<shadowcolor>FF424242</shadowcolor>
+			</control>
+			<control type="progress">
+				<description>HDD</description>
+				<left>100</left>
+				<top>750</top>
+				<width>400</width>
+				<height>12</height>
+				<texturebg colordiffuse="FF2E2E2E" border="2">media/texturebg_border_white.png</texturebg>
+				<lefttexture border="0">media/</lefttexture>
+				<midtexture colordiffuse="-" border="3">media/ram.png</midtexture>
+				<righttexture colordiffuse="-" border="0">media/</righttexture>
+				<info>System.FreeSpace</info>
+			</control>
+			<control type="image">
+				<description>HDD pic.</description>
+				<left>50</left>
+				<top>715</top>
+				<width>32</width>
+				<height>45</height>
+				<texture>media/hdd.png</texture>
+				<animation effect="rotatey" center="0" start="-" end="-80" time="0" condition="true">Conditional</animation>
+			</control>
+			<control type="progress">
+				<description>HDD</description>
+				<left>100</left>
+				<top>700</top>
+				<width>400</width>
+				<height>12</height>
+				<texturebg colordiffuse="FF2E2E2E" border="2">media/texturebg_border_white.png</texturebg>
+				<lefttexture border="0">media/</lefttexture>
+				<midtexture colordiffuse="-" border="3">media/ram.png</midtexture>
+				<righttexture colordiffuse="-" border="0">media/</righttexture>
+				<info>System.UsedSpace</info>
+			</control>
+			<control type="fadelabel">
+				<top>57</top>
+				<left>40</left>
+				<width>1270</width>
+				<height>20</height>
+				<label>$INFO[System.memory(used.percent),[COLOR grey]$LOCALIZE[31309][/COLOR] ]$INFO[System.CPUUsage(used.percent),[COLOR grey] • $LOCALIZE[13271][/COLOR] ]</label>
+				<label>$INFO[Window(Home).Property(favourite.count),[COLOR grey]$LOCALIZE[31509]:[/COLOR] ]</label>
+				<label>$INFO[Window(Home).Property(RandomAddon.Count),[COLOR grey]$LOCALIZE[20161] $LOCALIZE[24001]:[/COLOR] ]</label>
+				<label>$INFO[Window(Weather).Property(Location),[COLOR grey], • $LOCALIZE[402]: [/COLOR]]$INFO[Window(weather).Property(Current.FeelsLike)] $INFO[System.TemperatureUnits,,[COLOR grey] • $LOCALIZE[406]:[/COLOR] ]$INFO[Window(weather).Property(Current.Humidity)]</label>
+				<label>$INFO[PVR.NextRecordingDateTime,$LOCALIZE[19157]  [B][COLOR=white], [/COLOR][/B]$LOCALIZE[19126] -  • ]$INFO[PVR.NextRecordingTitle, [B][COLOR=white],[/COLOR][/B]]$INFO[PVR.NextRecordingChannel, - [B][COLOR=white],[/COLOR][/B]]</label>
+				<label>$INFO[PVR.NowRecordingDateTime,$LOCALIZE[19158]  [B][COLOR=white], [/COLOR][/B]$LOCALIZE[19126] - ]$INFO[PVR.NowRecordingTitle, • [B][COLOR=FF48D1CC],[/COLOR][/B] ]$INFO[PVR.NowRecordingChannel,[B][COLOR=white]( ,)[/COLOR][/B]]</label>
+				<label>[COLOR grey]$LOCALIZE[133]:[/COLOR] $INFO[Window(Home).Property(Music.ArtistsCount)][COLOR grey]  •  $LOCALIZE[132]:[/COLOR] $INFO[Window(Home).Property(Music.AlbumsCount)][COLOR grey]  •  $LOCALIZE[134]:[/COLOR] $INFO[Window(Home).Property(Music.SongsCount)]</label>
+				<label>[COLOR grey]$LOCALIZE[20343]:[/COLOR] $INFO[Window(Home).Property(TVShows.Count)][COLOR grey]  •  $LOCALIZE[20360]:[/COLOR] $INFO[Window(Home).Property(Episodes.Count)][COLOR grey]  •  $LOCALIZE[16101]:[/COLOR] $INFO[Window(Home).Property(Episodes.UnWatched)]</label>
+				<label>$INFO[Window(Home).Property(Movies.Count),[COLOR grey]$LOCALIZE[31502]:[/COLOR] ,[COLOR grey]  •  $LOCALIZE[16102]:[/COLOR] ]$INFO[Window(Home).Property(Movies.Watched),,[COLOR grey]  •  $LOCALIZE[16101]:[/COLOR] ]$INFO[Window(Home).Property(Movies.UnWatched)]</label>
+				<font>Lirabiefont_Rg28</font>
+				<textcolor>gold</textcolor>
+				<pauseatend>8000</pauseatend>
+				<resetonlabelchange>false</resetonlabelchange>
+			</control>
+			<control type="image">
+				<description>CPU pic.</description>
+				<left>40</left>
+				<top>780</top>
+				<width>50</width>
+				<height>50</height>
+				<texture>media/cpu.png</texture>
+			</control>
+			<control type="progress">
+				<description>CPU BAR</description>
+				<left>100</left>
+				<top>800</top>
+				<width>400</width>
+				<height>12</height>
+				<texturebg colordiffuse="FF2E2E2E" border="2">media/texturebg_border_white.png</texturebg>
+				<lefttexture border="0">media/</lefttexture>
+				<midtexture colordiffuse="-" border="3">media/ram.png</midtexture>
+				<righttexture colordiffuse="red" border="0">media/</righttexture>
+				<info>System.CPUUsage</info>
+			</control>
+			<control type="grouplist">
+				<top>940</top>
+				<left>25</left>
+				<itemgap>15</itemgap>
+				<control type="image">
+					<include content="CPUANIMATION">
+						<param name="Core" value="0"/>
+					</include>
+					<width>400</width>
+					<height>20</height>
+					<texture background="true">media/processinfo.png</texture>
+					<include>System.CoreUsage(0)</include>
+				</control>
+				<control type="image">
+					<include content="CPUANIMATION">
+						<param name="Core" value="1"/>
+					</include>
+					<width>400</width>
+					<height>20</height>
+					<texture background="true">media/processinfo.png</texture>
+				</control>
+				<control type="image">
+					<include content="CPUANIMATION">
+						<param name="Core" value="2"/>
+					</include>
+					<width>400</width>
+					<height>20</height>
+					<texture background="true">media/processinfo.png</texture>
+				</control>
+				<control type="image">
+					<include content="CPUANIMATION">
+						<param name="Core" value="3"/>
+					</include>
+					<width>400</width>
+					<height>20</height>
+					<texture background="true">media/processinfo.png</texture>
+				</control>
+			</control>
+			<control type="grouplist">
+				<top>940</top>
+				<left>25</left>
+				<itemgap>15</itemgap>
+				<control type="image">
+					<width>400</width>
+					<height>20</height>
+					<texture background="true" colordiffuse="grey" border="3">media/texturebg_border_white.png</texture>
+				</control>
+				<control type="image">
+					<width>400</width>
+					<height>20</height>
+					<texture background="true" colordiffuse="grey" border="3">media/texturebg_border_white.png</texture>
+				</control>
+				<control type="image">
+					<width>400</width>
+					<height>20</height>
+					<texture background="true" colordiffuse="grey" border="3">media/texturebg_border_white.png</texture>
+				</control>
+				<control type="image">
+					<width>400</width>
+					<height>20</height>
+					<texture background="true" colordiffuse="grey" border="3">media/texturebg_border_white.png</texture>
+				</control>
+			</control>
+			<control type="grouplist">
+				<top>940</top>
+				<left>435</left>
+				<itemgap>15</itemgap>
+				<control type="label">
+					<width>400</width>
+					<height>20</height>
+					<font>Lirabiefont_Rg</font>
+				<textcolor>FF848484</textcolor>
+				<shadowcolor>FF424242</shadowcolor>
+					<label>$INFO[System.CoreUsage(0)]%</label>
+				</control>
+				<control type="label">
+					<width>400</width>
+					<height>20</height>
+					<font>Lirabiefont_Rg</font>
+				<textcolor>FF848484</textcolor>
+				<shadowcolor>FF424242</shadowcolor>
+					<label>$INFO[System.CoreUsage(1)]%</label>
+				</control>
+				<control type="label">
+					<width>400</width>
+					<height>20</height>
+					<font>Lirabiefont_Rg</font>
+				<textcolor>FF848484</textcolor>
+				<shadowcolor>FF424242</shadowcolor>
+					<label>$INFO[System.CoreUsage(2)]%</label>
+				</control>
+				<control type="label">
+					<width>400</width>
+					<height>20</height>
+					<font>Lirabiefont_Rg</font>
+				<textcolor>FF848484</textcolor>
+				<shadowcolor>FF424242</shadowcolor>
+					<label>$INFO[System.CoreUsage(3)]%</label>
+				</control>
+			</control>
+			<control type="label">
+				<description>ZEGAR</description>
+				<!-- ZEGAR -->
+				<left>1160</left>
+				<top>14</top>
+				<width>730</width>
+				<height>40</height>
+				<font>Lirabiefont_Rg34</font>
+				<align>right</align>
+				<label>[B]$INFO[System.Time(hh:mm:ss)][/B]</label>
+				<textcolor>grey</textcolor>
+				<shadowcolor>grey2</shadowcolor>
+			</control>
+			<control type="label">
+				<description>DATA</description>
+				<!-- DATA -->
+				<left>1110</left>
+				<top>50</top>
+				<width>780</width>
+				<height>40</height>
+				<font>Lirabiefont_Rg28</font>
+				<align>right</align>
+				<label>[B]$INFO[System.Date(dd:MMM:DDD:yyy)][/B]</label>
+				<textcolor>grey</textcolor>
+				<shadowcolor>grey2</shadowcolor>
+			</control>
+			<control type="label">
+				<description>Build Version</description>
+				<!-- WERSJA BUILDU -->
+				<left>510</left>
+				<top>740</top>
+				<width>570</width>
+				<height>40</height>
+				<font>Lirabiefont_Rg</font>
+				<label>[COLOR FFFFFF00][B]*[/B][/COLOR]  $INFO[System.BuildVersion]</label>
+				<textcolor>B3BDC3C7</textcolor>
+			</control>
+			<control type="label">
+				<!-- Dolny panel iformacje o cpu ,ram,etc linijka 262 do 339-->
+				<description>CPU TEMPERAURA Text</description>
+				<top>685</top>
+				<left>1100</left>
+				<width>700</width>
+				<height>90</height>
+				<label>[COLOR FFFFFF00][B]*[/B][/COLOR] CPU    : $INFO[System.CPUTemperature] $INFO[System.TemperatureUnits]</label>
+				<font>Lirabiefont_Rg</font>
+				<textcolor>B3BDC3C7</textcolor>
+			</control>
+			<control type="label">
+				<!-- Dolny panel iformacje o cpu ,ram,etc linijka 262 do 339-->
+				<description>GPU REMPERATURA Text</description>
+				<top>655</top>
+				<left>1100</left>
+				<width>700</width>
+				<height>90</height>
+				<label>[COLOR FFFFFF00][B]*[/B][/COLOR] GPU    : $INFO[System.GPUTemperature] $INFO[System.TemperatureUnits]</label>
+				<font>Lirabiefont_Rg</font>
+				<textcolor>B3BDC3C7</textcolor>
+			</control>
+			<control type="label">
+				<!-- Dolny panel iformacje o cpu ,ram,etc linijka 262 do 339-->
+				<description>adres sieci</description>
+				<top>775</top>
+				<left>1100</left>
+				<width>700</width>
+				<height>90</height>
+				<label>[COLOR FFFFFF00][B]* [/B][/COLOR]IP     : $INFO[Network.IPAddress]</label>
+				<font>Lirabiefont_Rg</font>
+				<textcolor>B3BDC3C7</textcolor>
+			</control>
+			<control type="label">
+				<description>fan speed</description>
+				<top>745</top>
+				<left>1100</left>
+				<width>700</width>
+				<height>90</height>
+				<font>Lirabiefont_Rg</font>
+				<label>[COLOR FFFFFF00][B]*[/B][/COLOR] Fan    : $INFO[System.FanSpeed] RPM</label>
+				<textcolor>B3BDC3C7</textcolor>
+			</control>
+			<control type="label">
+				<description>HDD TEMP.</description>
+				<top>715</top>
+				<left>1100</left>
+				<width>700</width>
+				<height>90</height>
+				<font>Lirabiefont_Rg</font>
+				<label>[COLOR FFFFFF00][B]*[/B][/COLOR] HDD    : $INFO[System.HddTemperature] $INFO[System.TemperatureUnits]</label>
+				<textcolor>B3BDC3C7</textcolor>
+			</control>
+			<control type="label">
+				<description>subnet mask</description>
+				<top>805</top>
+				<left>1100</left>
+				<width>700</width>
+				<height>90</height>
+				<font>Lirabiefont_Rg</font>
+				<label>[COLOR FFFFFF00][B]*[/B][/COLOR] Subnet : $INFO[Network.SubnetMask]</label>
+				<textcolor>B3BDC3C7</textcolor>
+			</control>
+			<control type="label">
+				<description>subnet mask</description>
+				<top>835</top>
+				<left>1100</left>
+				<width>700</width>
+				<height>90</height>
+				<font>Lirabiefont_Rg</font>
+				<label>[COLOR FFFFFF00][B]*[/B][/COLOR] FPS : $INFO[System.FPS]</label>
+				<textcolor>B3BDC3C7</textcolor>
+			</control>
+			<control type="label">
+				<description>GPU</description>
+				<!-- INFORMACJE O SPRZĘCIE grafika -->
+				<top>655</top>
+				<left>510</left>
+				<width>570</width>
+				<height>90</height>
+				<font>Lirabiefont_Rg</font>
+				<label>[COLOR FFFFFF00][B]*[/B][/COLOR]  $INFO[System.VideoEncoderInfo]</label>
+				<textcolor>B3BDC3C7</textcolor>
+			</control>
+			<control type="label">
+				<top>503</top>
+				<left>510</left>
+				<!-- System.OSVersionInfo -->
+				<width>570</width>
+				<height>450</height>
+				<font>Lirabiefont_Rg</font>
+				<label>[COLOR FFFFFF00][B]*[/B][/COLOR]  $INFO[System.OSVersionInfo]</label>
+				<textcolor>B3BDC3C7</textcolor>
+			</control>
+			<control type="label">
+				<top>590</top>
+				<left>510</left>
+				<!-- Mac Adress -->
+				<width>570</width>
+				<height>520</height>
+				<font>Lirabiefont_Rg</font>
+				<label>[COLOR FFFFFF00][B]*[/B][/COLOR]  Adres Mac   : $INFO[Network.MacAddress]</label>
+				<textcolor>B3BDC3C7</textcolor>
+			</control>
+			<control type="label">
+				<top>620</top>
+				<left>510</left>
+				<!-- ROZDZIELCZOĆ EKRANU -->
+				<width>570</width>
+				<height>520</height>
+				<font>Lirabiefont_Rg</font>
+				<label>[COLOR FFFFFF00][B]*[/B][/COLOR]  Ekran       : $INFO[System.ScreenWidth] x $INFO[System.ScreenHeight]</label>
+				<textcolor>B3BDC3C7</textcolor>
+			</control>
+			<control type="label">
+				<description>BUILD DATE</description>
+				<!-- DATA KOMPILACJI KODI -->
+				<top>745</top>
+				<left>510</left>
+				<width>570</width>
+				<height>90</height>
+				<font>Lirabiefont_Rg</font>
+				<label>[COLOR FFFFFF00][B]*[/B][/COLOR]  Build Date  : $INFO[System.BuildDate]</label>
+				<textcolor>B3BDC3C7</textcolor>
+			</control>
+			<control type="label">
+				<description>CZAS PRACY KODI</description>
+				<left>510</left>
+				<top>800</top>
+				<width>570</width>
+				<height>40</height>
+				<font>Lirabiefont_Rg</font>
+				<label>[COLOR FFFFFF00][B]*[/B][/COLOR]  Czas Pracy  : $INFO[System.TotalUptime]</label>
+				<textcolor>B3BDC3C7</textcolor>
+			</control>
+			<control type="label">
+				<description>Memory Text</description>
+				<left>115</left>
+				<top>860</top>
+				<width>730</width>
+				<height>40</height>
+				<font>Lirabiefont_Rg</font>
+				<label>Pamięc Ram: [COLOR red]$INFO[system.memory(used)][/COLOR] [COLOR orange][/COLOR] Total: [COLOR green]$INFO[system.memory(total)][/COLOR]</label>
+				<textcolor>FF848484</textcolor>
+				<shadowcolor>FF424242</shadowcolor>
+			</control>
+			<control type="progress">
+				<description>Memory BAR</description>
+				<left>100</left>
+				<top>850</top>
+				<width>400</width>
+				<height>12</height>
+				<texturebg colordiffuse="FF2E2E2E" border="2">media/texturebg_border_white.png</texturebg>
+				<lefttexture border="0">media/</lefttexture>
+				<midtexture colordiffuse="-" border="3">media/ram.png</midtexture>
+				<righttexture colordiffuse="red" border="0">media/</righttexture>
+				<info>system.memory(used)</info>
+			</control>
+			<control type="image">
+				<description>MEM RAM pic.</description>
+				<left>40</left>
+				<top>840</top>
+				<width>47</width>
+				<height>60</height>
+				<texture>media/memram.png</texture>
+			</control>
+			<control type="image">
+				<top>890</top>
+				<left>30</left>
+				<width>1860</width>
+				<height>35</height>
+				<texture colordiffuse="FF0101DF">media/sysinfo.gif</texture>
+				<bordersize>5</bordersize>
+			</control>
+			<control type="progress">
+				<description>Progress bateria</description>
+				<top>1450</top>
+				<left>-570</left>
+				<!-- PROGRESS BAR STAN BATERII -->
+				<width>165</width>
+				<height>95</height>
+				<label>[B]$INFO[System.BatteryLevel][/B]</label>
+				<texturebg colordiffuse="FF0000FF" border="3">media/bateria_bg.png</texturebg>
+				<lefttexture border="0">media/</lefttexture>
+				<midtexture colordiffuse="-" border="3">media/bateria2.png</midtexture>
+				<righttexture colordiffuse="-" border="0">media/</righttexture>
+				<info>System.BatteryLevel</info>
+				<animation effect="rotate" center="310" start="0" end="450" time="0" condition="true">Conditional</animation>
+				<visible>String.IsEmpty(System.BatteryLevel)</visible>
+			</control>
+			<control type="image">
+				<description>Bateria png</description>
+				<top>1430</top>
+				<!-- right -->
+				<left>-635</left>
+				<!-- down -->
+				<!-- GRAFIKA BATERII -->
+				<width>260</width>
+				<!-- top -->
+				<height>140</height>
+				<!-- left -->
+				<posyx>23</posyx>
+				<label>$INFO[System.BatteryLevel]</label>
+				<align>centerright</align>
+				<texture>media/batterybg.png</texture>
+				<animation effect="rotate" center="290" start="-45" end="450" time="0" condition="true">Conditional</animation>
+				<visible>String.IsEmpty(System.BatteryLevel)</visible>
+			</control>
+			<control type="label">
+				<description>Bateria %</description>
+				<top>740</top>
+				<left>1778</left>
+				<!-- PROCENT NAŁADOWANIA / ROZŁADOWANIA BATERII  -->
+				<width>350</width>
+				<height>100</height>
+				<textcolor>green</textcolor>
+				<label>[B]$INFO[System.BatteryLevel][/B]</label>
+				<font>font28</font>
+				<shadowcolor>black</shadowcolor>
+				<visible>String.IsEmpty(System.BatteryLevel)</visible>
+			</control>
+			<control type="label">
+				<top>595</top>
+				<left>45</left>
+				<!-- RDZENIE PROCESORA 0,1,2,3 etc.  -->
+				<width>500</width>
+				<height>420</height>
+				<textcolor>FF517F83</textcolor>
+				<label>[B]$INFO[System.CoreUsage(0)]   $INFO[System.CoreUsage(1)]     $INFO[System.CoreUsage(2)]    $INFO[System.CoreUsage(3)][CR][CR]$INFO[System.CoreUsage(4)]    $INFO[System.CoreUsage(5)]   $INFO[System.CoreUsage(6)]   $INFO[System.CoreUsage(7)][/B]</label>
+				<font>Lirabiefont_Rg</font>
+				<align>center</align>
+				<font/>
+				<shadowcolor>darkblue</shadowcolor>
+				<animation effect="pulse" center="290" start="-45" end="360" time="0" condition="true">Conditional</animation>
+			</control>
+			<control type="label">
+				<top>650</top>
+				<left>115</left>
+				<width>169.7</width>
+				<height>90</height>
+				<align>center</align>
+				<label>$INFO[System.Date,[COLOR grey], | [/COLOR]]$INFO[System.Time]</label>
+				<font>font10</font>
+				<textcolor>grey</textcolor>
+				<visible>!String.IsEmpty(Control.GetLabel(2)) + !Control.HasFocus(91000) + ![Control.HasFocus(1001) | Control.HasFocus(1002)]</visible>
+				<wrapmultiline>true</wrapmultiline>
+				<visible>String.IsEmpty(Control.GetLabel(800011))</visible>
+			</control>
+			<!-- iP > -->
+			<control type="group">
+				<visible>Weather.IsFetched</visible>
+				<control type="multiimage">
+					<!-- poniedziałek -->
+					<top>947</top>
+					<left>930</left>
+					<width>120</width>
+					<height>120</height>
+					<imagepath>resource://resource.images.weathericons.hd.animatedmods/$INFO[Window(Weather).Property(Day0.FanartCode)]</imagepath>
+					<timeperimage>180</timeperimage>
+					<fadetime>2</fadetime>
+					<randomize>false</randomize>
+				</control>
+				<control type="label">
+					<!-- poniedziałek -->
+					<top>940</top>
+					<left>916</left>
+					<width>188</width>
+					<height>20</height>
+					<textcolor>B3BDC3C7</textcolor>
+					<font>Lirabiefont_Rg</font>
+					<label>$LOCALIZE[11]</label>
+				</control>
+				<control type="multiimage">
+					<!-- wtorek -->
+					<top>947</top>
+					<left>1060</left>
+					<width>120</width>
+					<height>120</height>
+					<imagepath>resource://resource.images.weathericons.hd.animatedmods/$INFO[Window(Weather).Property(Day1.FanartCode)]</imagepath>
+					<timeperimage>180</timeperimage>
+					<fadetime>2</fadetime>
+					<randomize>false</randomize>
+				</control>
+				<control type="button">
+					<!-- wtorek -->
+					<top>940</top>
+					<left>1097</left>
+					<width>188</width>
+					<height>20</height>
+					<textcolor>B3BDC3C7</textcolor>
+					<font>Lirabiefont_Rg</font>
+					<label>$LOCALIZE[12]</label>
+				</control>
+				<control type="multiimage">
+					<!-- środa -->
+					<top>947</top>
+					<left>1200</left>
+					<width>120</width>
+					<height>120</height>
+					<imagepath>resource://resource.images.weathericons.hd.animatedmods/$INFO[Window(Weather).Property(Day2.FanartCode)]</imagepath>
+					<timeperimage>180</timeperimage>
+					<fadetime>2</fadetime>
+					<randomize>false</randomize>
+				</control>
+				<control type="label">
+					<!-- środa -->
+					<top>940</top>
+					<left>1235</left>
+					<width>1270</width>
+					<height>20</height>
+					<textcolor>B3BDC3C7</textcolor>
+					<font>Lirabiefont_Rg</font>
+					<label>$LOCALIZE[13]</label>
+				</control>
+				<control type="multiimage">
+					<!-- czwartek -->
+					<top>947</top>
+					<left>1345</left>
+					<width>120</width>
+					<height>120</height>
+					<imagepath>resource://resource.images.weathericons.hd.animatedmods/$INFO[Window(Weather).Property(Day3.FanartCode)]</imagepath>
+					<timeperimage>180</timeperimage>
+					<fadetime>2</fadetime>
+					<randomize>false</randomize>
+				</control>
+				<control type="label">
+					<!-- czwartek -->
+					<top>940</top>
+					<left>1370</left>
+					<width>1270</width>
+					<height>20</height>
+					<textcolor>B3BDC3C7</textcolor>
+					<font>Lirabiefont_Rg</font>
+					<label>$LOCALIZE[14]</label>
+				</control>
+				<control type="multiimage">
+					<!-- piątek -->
+					<top>947</top>
+					<left>1485</left>
+					<width>120</width>
+					<height>120</height>
+					<imagepath>resource://resource.images.weathericons.hd.animatedmods/$INFO[Window(Weather).Property(Day4.FanartCode)]</imagepath>
+					<timeperimage>180</timeperimage>
+					<fadetime>2</fadetime>
+					<randomize>false</randomize>
+				</control>
+				<control type="label">
+					<!-- piątek -->
+					<top>940</top>
+					<left>1515</left>
+					<width>1270</width>
+					<height>20</height>
+					<textcolor>B3BDC3C7</textcolor>
+					<font>Lirabiefont_Rg</font>
+					<label>$LOCALIZE[15]</label>
+				</control>
+				<control type="multiimage">
+					<!-- sobota -->
+					<top>947</top>
+					<left>1625</left>
+					<width>120</width>
+					<height>120</height>
+					<imagepath>resource://resource.images.weathericons.hd.animatedmods/$INFO[Window(Weather).Property(Day5.FanartCode)]</imagepath>
+					<timeperimage>180</timeperimage>
+					<fadetime>2</fadetime>
+					<randomize>false</randomize>
+				</control>
+				<control type="label">
+					<!-- sobota -->
+					<top>940</top>
+					<left>1660</left>
+					<width>1270</width>
+					<height>20</height>
+					<textcolor>B3BDC3C7</textcolor>
+					<font>Lirabiefont_Rg</font>
+					<label>$LOCALIZE[16]</label>
+				</control>
+				<control type="multiimage">
+					<!-- niedziela -->
+					<top>947</top>
+					<left>1765</left>
+					<width>120</width>
+					<height>120</height>
+					<imagepath>resource://resource.images.weathericons.hd.animatedmods/$INFO[Window(Weather).Property(Day6.FanartCode)]</imagepath>
+					<timeperimage>180</timeperimage>
+					<fadetime>2</fadetime>
+					<randomize>false</randomize>
+				</control>
+				<control type="image">
+					<!-- User Icon/Logo -->
+					<top>936</top>
+					<left>520</left>
+					<width>140</width>
+					<height>140</height>
+					<texture>$INFO[System.ProfileThumb]</texture>
+				</control>
+				<control type="label">
+					<top>940</top>
+					<left>1790</left>
+					<width>1270</width>
+					<height>20</height>
+					<!-- niedziela -->
+					<textcolor>B3BDC3C7</textcolor>
+					<font>Lirabiefont_Rg</font>
+					<label>$LOCALIZE[17]</label>
+				</control>
+			</control>
+			<control type="group">
+				<left>1065</left>
+				<top>866</top>
+				<control type="label">
+					<!-- IP -->
+					<width>780</width>
+					<height>90</height>
+					<align>right</align>
+					<textcolor>FFB30000</textcolor>
+					<label>[B][COLOR FF73FFDE]IP:[/COLOR] || $INFO[Window(Home).Property(publicnetworkformat)][/B]</label>
+					<onclick>RunScript(special://skin/resources/lib/publicip.py)</onclick>
+					<textoffsetx>-40</textoffsetx>
+					<font>Lirabiefont_Rg</font>
+					<shadowcolor>shadow</shadowcolor>
+				</control>
+				<control type="button">
+					<!--Refresh Label IP -->
+					<left>325</left>
+					<top>25</top>
+					<width>500</width>
+					<height>30</height>
+					<onclick>RunScript(special://skin/resources/lib/publicip.py)</onclick>
+					<texture/>
+					<alttexture/>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

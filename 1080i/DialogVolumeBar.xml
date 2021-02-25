@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<animation effect="rotate" center="310" start="0" end="450" time="0" condition="true">Conditional</animation>
+	<controls>
+		<control type="image">
+			<centertop>1500</centertop>
+			<centerleft>-200</centerleft>
+			<width>37%</width>
+			<height>90</height>
+			<texture colordiffuse="CC808080">media/vol_bar.png</texture>
+		</control>
+		<control type="progress" id="11">
+			<centertop>1500</centertop>
+			<centerleft>-200</centerleft>
+			<width>30%</width>
+			<height>30</height>
+			<lefttexture/>
+			<righttexture/>
+			<overlaytexture/>
+			<midtexture border="0.25" colordiffuse="$VAR[ThemeLabelColor]">media/hdewnmlo.png</midtexture>
+			<info>Player.Volume</info>
+		</control>
+		<control type="label">
+			<centertop>1528</centertop>
+			<centerleft>140</centerleft>
+			<angle>-90</angle>
+			<textcolor>8033cc33</textcolor>
+			<label></label>
+			<include>ButtonTopbarCommonvalues</include>
+			<visible>!Player.Muted</visible>
+		</control>
+		<control type="label">
+			<centertop>1528</centertop>
+			<centerleft>140</centerleft>
+			<angle>-90</angle>
+			<textcolor>80ff0000</textcolor>
+			<label></label>
+			<include>ButtonTopbarCommonvalues</include>
+			<visible>Player.Muted</visible>
+		</control>
+		<control type="label">
+			<centertop>1527</centertop>
+			<centerleft>-490</centerleft>
+			<angle>-90</angle>
+			<textcolor>8033cc33</textcolor>
+			<label></label>
+			<include>ButtonTopbarCommonvalues</include>
+			<visible>!Player.Passthrough + !Player.Muted</visible>
+		</control>
+		<control type="label">
+			<centertop>1527</centertop>
+			<centerleft>-490</centerleft>
+			<angle>-90</angle>
+			<textcolor>80ff0000</textcolor>
+			<label></label>
+			<include>ButtonTopbarCommonvalues</include>
+			<visible>Player.Muted</visible>
+		</control>
+		<control type="label">
+			<centertop>1475</centertop>
+			<centerleft>-220</centerleft>
+			<width>640</width>
+			<height>90</height>
+			<angle>-90</angle>
+			<font>Lirabiefont_Rg</font>
+			<textcolor>grey</textcolor>
+			<label>[B]$INFO[Control.GetLabel(11),,%][/B]</label>
+		</control>
+	</controls>
+</window>

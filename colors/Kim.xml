@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<colors>
+	<color name="white">FF999999</color>
+	<color name="white2">D0B3B3B3</color>
+	<color name="grey">CCCCCCCC</color>
+	<color name="grey2">CC8C8C8C</color>
+	<color name="grey3">B37F5939</color>
+	<color name="grey4">FF00ff99</color>
+	<color name="black">FF000000</color>
+	<color name="blue">FF6DB9E5</color>
+	<color name="invalid">FFFF0000</color>
+	<color name="dialogheader">FFA6A6A6</color>
+	<color name="shadow">FF000000</color>
+</colors>

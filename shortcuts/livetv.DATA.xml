@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shortcuts>
+	<shortcut>
+		<defaultID>19024</defaultID>
+		<label>19024</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>ActivateWindow(RadioChannels)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>19023</defaultID>
+		<label>19023</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>ActivateWindow(TVChannels)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>19069</defaultID>
+		<label>19069</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>ActivateWindow(TVGuide)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>19163</defaultID>
+		<label>19163</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>ActivateWindow(TVRecordings)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>19040</defaultID>
+		<label>19040</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>ActivateWindow(TVTimers)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>reminder</defaultID>
+		<label>Reminder</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>RunScript(service.kn.switchtimer)</action>
+		<visible>System.HasAddon(service.kn.switchtimer)</visible>
+	</shortcut>
+	<shortcut>
+		<defaultID>pvrsettings</defaultID>
+		<label>PVR Settings</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>Addon.OpenSettings(pvr.iptvsimple)</action>
+		<visible>System.HasAddon(pvr.iptvsimple)</visible>
+	</shortcut>
+	<shortcut>
+		<defaultID>epgdownloader</defaultID>
+		<label>Clean EPG Data</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>ActivateWindowAndFocus(PVRSettings, -98,10, -70,10)</action>
+		<action>Action(Select)</action>
+		<action>ActivateWindow(home)</action>
+	</shortcut>
+</shortcuts>

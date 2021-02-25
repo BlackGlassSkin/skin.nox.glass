@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shortcuts>
+	<shortcut>
+		<defaultID>multitapetyftp</defaultID>
+		<label>Multi Tapeta FTP</label>
+		<label2/>
+		<icon/>
+		<thumb/>
+		<action>Skin.SetPath(CustomDefaultBackground.path,http://kim.cherrytv.webd.pl/Tapety/)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>tapetyftp</defaultID>
+		<label>Tapeta FTP</label>
+		<label2/>
+		<icon/>
+		<thumb/>
+		<action>Skin.SetImage(CustomDefaultBackground.path,http://kim.cherrytv.webd.pl/Tapety/)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>24001</defaultID>
+		<label>24001</label>
+		<label2/>
+		<icon/>
+		<thumb/>
+		<action>ActivateWindow(Pictures,Addons,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>zmientapete</defaultID>
+		<label>Tapeta</label>
+		<label2/>
+		<icon/>
+		<thumb/>
+		<action>Skin.SetImage(CustomDefaultBackground.path,special://skin/backgrounds)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>color</defaultID>
+		<label>Kolor Tapet</label>
+		<label2/>
+		<icon/>
+		<thumb/>
+		<action>RunScript(script.skin.helper.colorpicker,skinstring=ThemeWallpapersColor)</action>
+		<action condition="!System.HasAddon(script.skin.helper.colorpicker)">InstallAddon(script.skin.helper.colorpicker)</action>
+	</shortcut>
+</shortcuts>

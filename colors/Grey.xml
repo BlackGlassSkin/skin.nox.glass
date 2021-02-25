@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<colors>
+	<color name="white">CCCCCCCC</color> <!-- Podswietlenie kolor tytuly https://encycolorpedia.pl/cccccc -->
+	<color name="white2">FF7C7C7C</color> <!-- WIDGETY OPISY TYTULY np. poniedzialek,opis filmu etc... https://encycolorpedia.pl/808080 -->
+	<color name="grey">FF4D4D4D</color> <!-- Staly kolor tytuly https://encycolorpedia.pl/4d4d4d -->
+	<color name="grey2">CCCCCCCC</color> <!-- GODZINA GORNY ROG KATEGOROA W TV,NASTEPNY https://encycolorpedia.pl/4d4d4d -->
+	<color name="grey3">CCCCCCCC</color> <!--  https://encycolorpedia.pl/cccccc -->
+	<color name="grey4">FFD10307</color> 
+	<color name="black">FF000000</color>
+	<color name="blue">FF071fe5</color>
+	<color name="invalid">FFFF0000</color>
+	<color name="dialogheader">FF808080</color> <!-- NAZWA W HEADER OKNA POPUP np. wybierz napisy, NAZWA NA SRODKU U GORY https://encycolorpedia.pl/808080 -->
+	<color name="shadow">FF717171</color> <!-- shadow godziny daty etc .. https://encycolorpedia.pl/a0a0a0 -->
+</colors>

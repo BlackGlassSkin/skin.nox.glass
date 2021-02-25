@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">996</defaultcontrol>
+	<animation type="WindowOpen" reversible="false">
+		<effect type="zoom" start="100" end="100" center="auto" time="0" tween="cubic" easing="out"/>
+		<effect type="fade" end="100" time="0"/>
+	</animation>
+	<animation type="WindowClose" reversible="false">
+		<effect type="fade" start="100" end="0" time="0" delay="100"/>
+		<effect type="zoom" start="100" end="100" center="auto" time="0" tween="cubic" easing="in"/>
+	</animation>
+	<coordinates>
+		<top>80</top>
+	</coordinates>
+	<controls>
+		<control type="image" id="999">
+			<top>-34</top>
+			<width>510</width>
+			<height>1133</height>
+			<texture colordiffuse="$VAR[ThemePanelBgColor]" border="40,20,40,20">dialogs\default\bg.png</texture>
+		</control>
+		<control type="grouplist" id="996">
+			<left>30</left>
+			<width>510</width>
+			<height min="60" max="1080">auto</height>
+			<control type="button" id="99999">
+				<label>$LOCALIZE[208]</label>
+				<height>60</height>
+				<font>font14</font>
+				<focusedcolor>$VAR[HighlightBarColor]</focusedcolor>
+				<textoffsetx>15</textoffsetx>
+				<onclick>Dialog.Close(musicinformation)</onclick>
+				<onclick>PlayMedia($VAR[ArtistAlbumInfoPathVar],isdir)</onclick>
+				<visible>Window.IsVisible(musicinformation)</visible>
+			</control>
+		</control>
+		<control type="button" id="1000">
+			<height>60</height>
+			<font>font14</font>
+			<textoffsetx>15</textoffsetx>
+			<focusedcolor>$VAR[HighlightBarColor]</focusedcolor>
+			<visible>!Window.IsVisible(musicinformation)</visible>
+			<texturenofocus border="5">dialogs/default/inner/inner2.png</texturenofocus>
+			<texturefocus colordiffuse="$VAR[HighlightBarColor]" border="5">dialogs/default/inner/inner.png</texturefocus>
+		</control>
+	</controls>
+</window>

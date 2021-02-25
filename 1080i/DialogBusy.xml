@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<defaultcontrol always="true"/>
+	<controls>
+		<control type="group">
+			<visible>!Window.IsVisible(startup) + String.IsEmpty(Window(Home).Property(script.cinemavision.running))</visible>
+			<control type="progress" id="10">
+				<description>progress control</description>
+				<width>1</width>
+				<height>1</height>
+				<texturebg/>
+				<lefttexture/>
+				<midtexture/>
+				<righttexture/>
+				<overlaytexture/>
+			</control>
+			<posx>960</posx>
+			<posy>540</posy>
+			<control type="multiimage">
+				<width>150</width>
+				<height>55</height>
+				<posx>-75</posx>
+				<posy>-75</posy>
+				<imagepath colordiffuse="grey2">special://skin/extras/busy_spinners/loading/</imagepath>
+				<timeperimage>135</timeperimage>
+				<fadetime>0</fadetime>
+			</control>
+		</control>
+	</controls>
+</window>

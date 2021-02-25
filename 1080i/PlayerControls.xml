@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">603</defaultcontrol>
+	<visible>Window.IsActive(PlayerControls) + !Window.IsActive(FullscreenVideo) + !Window.IsActive(Visualisation)</visible>
+	<onunload condition="Window.IsActive(home)">SetFocus(9000)</onunload>
+	<menucontrol>9051</menucontrol>
+	<controls>
+		<control type="button" id="9051">
+			<include>HiddenObject</include>
+			<onfocus>Dialog.Close(playercontrols)</onfocus>
+		</control>
+		<control type="group">
+			<animation effect="slide" start="0,-238" end="0,0" time="0" tween="quadratic">WindowOpen</animation>
+			<animation effect="slide" end="0,-238" start="0,0" time="0" tween="quadratic">WindowClose</animation>
+			<control type="image">
+				<left>25.9%</left>
+				<top>-40</top>
+				<width>920</width>
+				<height>150</height>
+				<texture border="33" flipy="false" colordiffuse="$VAR[ThemePanelColor]">dialogs/default/streamplayer.png</texture>
+			</control>
+			<control type="grouplist" id="202">
+				<top>10</top>
+				<height>144</height>
+				<width>100%</width>
+				<align>center</align>
+				<scrolltime tween="sine">0</scrolltime>
+				<orientation>horizontal</orientation>
+				<onup>700</onup>
+				<ondown>709</ondown>
+				<onleft>202</onleft>
+				<onright>202</onright>
+				<control type="button" id="700">
+					<textoffsety>60</textoffsety>
+					<texturefocus colordiffuse="$VAR[AVButtonColorFo]">osd/buttons/OSDPlaylistFO_home.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[AVButtonColorNoFo]">osd/buttons/OSDPlaylistFO_home.png</texturenofocus>
+					<label/>
+					<width>75</width>
+					<height>75</height>
+					<font/>
+					<onclick condition="Player.HasAudio">ActivateWindow(MusicPlaylist)</onclick>
+					<onclick condition="Player.HasVideo">ActivateWindow(VideoPlaylist)</onclick>
+					<visible>![Window.IsActive(home) + Player.HasVideo]</visible>
+				</control>
+				<control type="button" id="600">
+					<texturefocus colordiffuse="$VAR[AVButtonColorFo]">osd/buttons/OSDPrevTrackFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[AVButtonColorNoFo]">osd/buttons/OSDPrevTrackFO.png</texturenofocus>
+					<label/>
+					<width>75</width>
+					<height>75</height>
+					<font/>
+					<onclick>PlayerControl(Previous)</onclick>
+				</control>
+				<control type="button" id="601">
+					<texturefocus colordiffuse="$VAR[AVButtonColorFo]">osd/buttons/OSDRewindFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[AVButtonColorNoFo]">osd/buttons/OSDRewindFO.png</texturenofocus>
+					<label/>
+					<width>75</width>
+					<height>75</height>
+					<font/>
+					<onclick>PlayerControl(Rewind)</onclick>
+				</control>
+				<control type="togglebutton" id="602">
+					<texturefocus colordiffuse="$VAR[AVButtonColorFo]">osd/buttons/OSDPauseFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[AVButtonColorNoFo]">osd/buttons/OSDPauseFO.png</texturenofocus>
+					<alttexturefocus colordiffuse="$VAR[AVButtonColorFo]">osd/buttons/OSDPlayFO.png</alttexturefocus>
+					<alttexturenofocus colordiffuse="$VAR[AVButtonColorNoFo]">osd/buttons/OSDPlayFO.png</alttexturenofocus>
+					<label/>
+					<altlabel>208</altlabel>
+					<width>75</width>
+					<height>75</height>
+					<font/>
+					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+					<onclick>PlayerControl(Play)</onclick>
+				</control>
+				<control type="button" id="603">
+					<texturefocus colordiffuse="$VAR[AVButtonColorFo]">osd/buttons/OSDStopFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[AVButtonColorNoFo]">osd/buttons/OSDStopFO.png</texturenofocus>
+					<label/>
+					<width>75</width>
+					<height>75</height>
+					<font/>
+					<onclick>PlayerControl(Stop)</onclick>
+				</control>
+				<control type="button" id="604">
+					<texturefocus colordiffuse="$VAR[AVButtonColorFo]">osd/buttons/OSDForwardFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[AVButtonColorNoFo]">osd/buttons/OSDForwardFO.png</texturenofocus>
+					<label/>
+					<width>75</width>
+					<height>75</height>
+					<font/>
+					<onclick>PlayerControl(Forward)</onclick>
+				</control>
+				<control type="button" id="605">
+					<texturefocus colordiffuse="$VAR[AVButtonColorFo]">osd/buttons/OSDNextTrackFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[AVButtonColorNoFo]">osd/buttons/OSDNextTrackFO.png</texturenofocus>
+					<label/>
+					<width>75</width>
+					<height>75</height>
+					<font/>
+					<onclick>PlayerControl(Next)</onclick>
+				</control>
+				<control type="togglebutton" id="704">
+					<texturefocus colordiffuse="$VAR[AVButtonColorFo]">osd/buttons/OSDRandomOffFO_home.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[AVButtonColorNoFo]">osd/buttons/OSDRandomOffFO_home.png</texturenofocus>
+					<alttexturefocus colordiffuse="$VAR[AVButtonColorFo]">osd/buttons/OSDRandomOnFO.png</alttexturefocus>
+					<alttexturenofocus colordiffuse="$VAR[AVButtonColorNoFo]">osd/buttons/OSDRandomOnFO.png</alttexturenofocus>
+					<label/>
+					<width>75</width>
+					<height>75</height>
+					<font/>
+					<usealttexture>Playlist.IsRandom</usealttexture>
+					<onclick>PlayerControl(Random)</onclick>
+					<visible>![Window.IsActive(home) + Player.HasVideo] + !MusicPartyMode.Enabled</visible>
+				</control>
+				<control type="button" id="707">
+					<width>0.1</width>
+					<height>0.1</height>
+					<texturefocus/>
+					<texturenofocus/>
+					<label>$LOCALIZE[486]$INFO[Playlist.Repeat, : ]</label>
+					<font/>
+					<onclick>PlayerControl(Repeat)</onclick>
+					<visible>![Window.IsActive(home) + Player.HasVideo] + !MusicPartyMode.Enabled</visible>
+				</control>
+				<control type="image" id="708">
+					<texture>$VAR[MusicOSDRepeatButtonVar]</texture>
+					<width>75</width>
+					<height>75</height>
+					<visible>![Window.IsActive(home) + Player.HasVideo | Player.IsInternetStream] + !MusicPartyMode.Enabled</visible>
+				</control>
+				<control type="button" id="709">
+					<texturefocus colordiffuse="$VAR[AVButtonColorFo]">osd/buttons/OSDChannelListFO.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[AVButtonColorNoFo]">osd/buttons/OSDChannelListFO.png</texturenofocus>
+					<label/>
+					<width>75</width>
+					<height>75</height>
+					<font/>
+					<onclick>Dialog.Close(all,true)</onclick>
+					<onclick>fullscreen</onclick>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

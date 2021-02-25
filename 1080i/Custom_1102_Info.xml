@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1102" type="dialog">
+	<controls>
+		<control type="group" id="9999">
+			<visible>System.HasAddon(script.skinshortcuts) + [Integer.IsEqual(Container(9000).NumItems,0) | Container(9000).IsUpdating]</visible>
+			<control type="image">
+				<include>FullscreenDimensions</include>
+				<texture border="1">black.png</texture>
+			</control>
+			<control type="group">
+				<control type="fadelabel">
+					<top>140</top>
+					<width>100%</width>
+					<height>100</height>
+					<left>200</left>
+					<font>dialogpvrinfotitle</font>
+					<textcolor>blue</textcolor>
+					<shadowcolor>white</shadowcolor>
+					<label>$LOCALIZE[31526] </label>
+					<label>$LOCALIZE[31526] ►►►</label>
+					<label>$LOCALIZE[31526] ►►►►►►►</label>
+					<label>$LOCALIZE[31526] ►►►►►►►►►►►</label>
+					<label>$LOCALIZE[31526] ►►►►►►►►►►►►►►</label>
+					<label>$LOCALIZE[31526] ►►►►►►►►►►►►►►►</label>
+					<label>$LOCALIZE[31526] ►►►►►►►►►►►►►►►►►►►►►►</label>
+					<label>$LOCALIZE[31526] ►►►►►►►►►►►►►►►►►►►►►►►►►</label>
+					<scrollout>false</scrollout>
+					<pauseatend>600</pauseatend>
+				</control>
+				<control type="fadelabel">
+					<top>140</top>
+					<width>100%</width>
+					<height>100</height>
+					<left>1400</left>
+					<font>dialogpvrinfotitle</font>
+					<textcolor>blue</textcolor>
+					<shadowcolor>white</shadowcolor>
+					<label>$LOCALIZE[31527] !</label>
+					<label>$LOCALIZE[31527] !!</label>
+					<label>$LOCALIZE[31527] !!!</label>
+					<label>$LOCALIZE[31527] !!!!</label>
+					<label>$LOCALIZE[31527] !!!!!</label>
+					<scrollout>false</scrollout>
+					<pauseatend>600</pauseatend>
+				</control>
+				<control type="image">
+					<align>center</align>
+					<left>480</left>
+					<width>900</width>
+					<height>900</height>
+					<texture>media/skinhelper.png</texture>
+				</control>
+			</control>
+			<control type="group">
+				<height>158</height>
+				<align>center</align>
+				<top>960</top>
+				<control type="image">
+					<left>80</left>
+					<width>280</width>
+					<height>115</height>
+					<texture colordiffuse="-">xbmc-logo.png</texture>
+				</control>
+				<control type="image">
+					<left>830</left>
+					<width>300</width>
+					<height>115</height>
+					<aspectratio>keep</aspectratio>
+					<texture colordiffuse="-">libreelec/Logo.png</texture>
+				</control>
+				<control type="image">
+					<left>1180</left>
+					<width>300</width>
+					<height>115</height>
+					<aspectratio>keep</aspectratio>
+					<texture colordiffuse="-">coreelec/logo.png</texture>
+				</control>
+				<control type="image">
+					<top>12</top>
+					<left>460</left>
+					<width>300</width>
+					<height>115</height>
+					<aspectratio>keep</aspectratio>
+					<texture colordiffuse="-">custom/aeon-nox-logo.png</texture>
+				</control>
+				<control type="image">
+					<top>10</top>
+					<left>1560</left>
+					<width>270</width>
+					<height>95</height>
+					<texture colordiffuse="-">skin.nox.glass.png</texture>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

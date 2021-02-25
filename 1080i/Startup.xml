@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol condition="Skin.HasSetting(Enable.StartupIntro)">10</defaultcontrol>
+	<!--<onload condition="!Skin.HasSetting(Enable.TRripleMemu)">Skin.SetString(MainMenu.Layout,3)</onload>-->
+	<onload condition="!System.HasAddon(script.tv.show.next.aired)">Skin.SetBool(Disable.NextAired)</onload>
+	<!--<onload>AlarmClock(Take a Screenshot,ReloadSkin,00:00:30,silent)</onload>
+    <onload>RunScript(special://skin/resources/lib/weather.py)</onload> -->
+	<onload>Skin.SetString(ColorboxMain,main:)</onload>
+	<onload>Skin.SetString(ColorboxComp,comp:)</onload>
+	<onload>Skin.SetString(ColorboxBlursize,10)</onload>
+	<onload>SetProperty(FIVE_daemon_set,True,Home)</onload>
+	<onload>SetProperty(cfa_daemon_set,blur,Home)</onload>
+	<onload>SetProperty(FIVE_daemon_set,blur,Home)</onload>
+	<onload>SetProperty(NINE_manual_set,"var=main,set=$INFO[Skin.String(ColorboxMain)]|var=comp,set=$INFO[Skin.String(ColorboxComp)]|var=blursize,set=$INFO[Skin.String(ColorboxBlursize)]",Home)</onload>
+	<onload condition="String.IsEmpty(Skin.String(Overlay.Toggle))">SetProperty(Overlay.Path,overlays/showcase/,Home)</onload>
+	<onload condition="String.IsEqual(Skin.String(Overlay.Toggle),both) + !Skin.HasSetting(coloredflags)">SetProperty(Overlay.Path,overlays/showcase/1/,Home)</onload>
+	<onload condition="String.IsEqual(Skin.String(Overlay.Toggle),both) + Skin.HasSetting(coloredflags)">SetProperty(Overlay.Path,overlays/showcase/4/,Home)</onload>
+	<onload condition="String.IsEqual(Skin.String(Overlay.Toggle),watched) + !Skin.HasSetting(coloredflags)">SetProperty(Overlay.Path,overlays/showcase/2/,Home)</onload>
+	<onload condition="String.IsEqual(Skin.String(Overlay.Toggle),watched) + Skin.HasSetting(coloredflags)">SetProperty(Overlay.Path,overlays/showcase/5/,Home)</onload>
+	<onload condition="String.IsEqual(Skin.String(Overlay.Toggle),unwatched) + !Skin.HasSetting(coloredflags)">SetProperty(Overlay.Path,overlays/showcase/3/,Home)</onload>
+	<onload condition="String.IsEqual(Skin.String(Overlay.Toggle),unwatched) + Skin.HasSetting(coloredflags)">SetProperty(Overlay.Path,overlays/showcase/6/,Home)</onload>
+	<onload condition="!Skin.HasSetting(Disable.Resumable)">SetProperty(Overlay.Resumable,True,Home)</onload>
+	<onload condition="System.HasAddon(script.skin.info.service)">RunScript(script.skin.info.service)</onload>
+	<onload condition="System.HasAddon(script.colorbox)">RunScript(script.colorbox,daemon=True)</onload>
+	<onload condition="System.HasAddon(script.artistslideshow)">RunScript(script.artistslideshow,daemon=True)</onload>
+	<onload condition="!Skin.HasSetting(Enable.TRripleMemu)">Skin.SetString(MainMenu.Layout,3)</onload>
+	<onload>RunScript(special://skin/resources/lib/update.py)</onload>
+	<onload>RunScript(special://skin/resources/lib/publicip.py)</onload>
+	<onload>RunScript(special://skin/resources/lib/pihole.py)</onload>
+	<!-- Intro -->
+	<onload condition="Skin.HasSetting(Enable.StartupIntro)">ReplaceWindow($INFO[System.StartupWindow])</onload>
+	<onunload condition="Skin.HasSetting(Enable.StartupIntro)">PlayerControl(Stop)</onunload>
+	<controls>
+		<control type="button" id="10">
+			<include>HiddenObject</include>
+			<onfocus condition="Skin.HasSetting(Use_Startup_Playlist) + !String.IsEmpty(Skin.String(Startup_Playlist_Path)) + !String.StartsWith(Skin.String(Startup_Playlist_Path),RunScript)">PlayMedia($ESCINFO[Skin.String(Startup_Playlist_Path)])</onfocus>
+			<onfocus condition="Skin.HasSetting(Use_Startup_Playlist) + !String.IsEmpty(Skin.String(Startup_Playlist_Path)) + String.StartsWith(Skin.String(Startup_Playlist_Path),RunScript)">$ESCINFO[Skin.String(Startup_Playlist_Path)]</onfocus>
+			<onfocus>SetFocus(11)</onfocus>
+			<onclick/>
+		</control>
+		<control type="button" id="11">
+			<include>HiddenObject</include>
+			<onup>ReplaceWindow($INFO[System.StartupWindow])</onup>
+			<ondown>ReplaceWindow($INFO[System.StartupWindow])</ondown>
+			<onleft>ReplaceWindow($INFO[System.StartupWindow])</onleft>
+			<onright>ReplaceWindow($INFO[System.StartupWindow])</onright>
+			<onclick>ReplaceWindow($INFO[System.StartupWindow])</onclick>
+			<onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
+			<animation effect="fade" end="100" time="6000">Focus</animation>
+		</control>
+		<control type="image">
+			<texture>common/black.png</texture>
+			<include>FullscreenDimensions</include>
+		</control>
+		<control type="image">
+			<width>1920</width>
+			<height>1080</height>
+			<aspectratio scalediffuse="false">keep</aspectratio>
+			<texture colordiffuse="B5808080">kodisplash.png</texture>
+		</control>
+		<control type="image">
+			<posx>860</posx>
+			<posy>190</posy>
+			<width>290</width>
+			<height>290</height>
+			<texture>homewidgets/systeminfo/square/system.png</texture>
+			<animation effect="rotatey" end="-390" center="auto" time="6500" loop="true" reversible="false" condition="true">Conditional</animation>
+			<animation effect="fade" start="470" time="4000" condition="true" pulse="true">Conditional</animation>
+		</control>
+		<control type="multiimage">
+			<width>180</width>
+			<height>180</height>
+			<posx>900</posx>
+			<posy>740</posy>
+			<imagepath>special://skin/extras/busy_spinners/beach-ball/</imagepath>
+			<timeperimage>125</timeperimage>
+			<fadetime>0</fadetime>
+		</control>
+		<control type="image">
+			<posy>960</posy>
+			<width>450</width>
+			<height>105</height>
+			<texture>skin.nox.glass.png</texture>
+			<animation effect="slide" start="-729,0" end="0,0" time="5900" tween="quadratic">WindowOpen</animation>
+		</control>
+		<control type="videowindow">
+			<include>FullscreenDimensions</include>
+			<visible>Player.HasVideo</visible>
+		</control>
+	</controls>
+</window>

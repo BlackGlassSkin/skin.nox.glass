@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window type="dialog" id="1170">
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<controls>
+		<control type="group">
+			<control type="image">
+				<centerleft>26%</centerleft>
+				<top>10</top>
+				<width>1000</width>
+				<height>590</height>
+				<texture colordiffuse="$VAR[ThemePanelBgColor]" border="40">dialogs/default/bg.png</texture>
+			</control>
+			<control type="image">
+				<centerleft>26%</centerleft>
+				<top>77</top>
+				<width>960</width>
+				<height>2.4</height>
+				<texture colordiffuse="$VAR[ThemePanelColor]" border="1">new_pvr/osd_line_white.png</texture>
+			</control>
+			<control type="label">
+				<top>-237</top>
+				<centerleft>62%</centerleft>
+				<width>1780</width>
+				<height>580</height>
+				<label>$LOCALIZE[010210000]</label>
+				<align>centerleft</align>
+			</control>
+			<control type="grouplist" id="9000">
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<top>90</top>
+				<centerleft>46.5%</centerleft>
+				<width>1780</width>
+				<height>500</height>
+				<itemgap>0</itemgap>
+				<orientation>vertical</orientation>
+				<usecontrolcoords>false</usecontrolcoords>
+				<control type="radiobutton" id="9001">
+					<label>[B]1.»» $LOCALIZE[010210001][/B]</label>
+					<focusedcolor>FF1ff8ff</focusedcolor>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=PVRGenreMovieoneVar)</onclick>
+					<include content="CustomColorRadioButtonMy">
+						<param name="ColorStringVar">$VAR[PVRGenreMovieoneVar]</param>
+					</include>
+					<onleft>9012</onleft>
+					<onright>9012</onright>
+				</control>
+				<control type="radiobutton" id="9002">
+					<label>[B]2.»» $LOCALIZE[010210002][/B]</label>
+					<focusedcolor>FF1ff8ff</focusedcolor>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=PVRGenreSeriesVar)</onclick>
+					<include content="CustomColorRadioButtonMy">
+						<param name="ColorStringVar">$VAR[PVRGenreSeriesVar]</param>
+					</include>
+				</control>
+				<control type="radiobutton" id="9003">
+					<label>[B]3.»» $LOCALIZE[010210003][/B]</label>
+					<focusedcolor>FF1ff8ff</focusedcolor>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=PVRGenreEntertainmentVar)</onclick>
+					<include content="CustomColorRadioButtonMy">
+						<param name="ColorStringVar">$VAR[PVRGenreEntertainmentVar]</param>
+					</include>
+				</control>
+				<control type="radiobutton" id="9004">
+					<label>[B]4.»» $LOCALIZE[010210004][/B]</label>
+					<focusedcolor>FF1ff8ff</focusedcolor>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=PVRGenreReportageVar)</onclick>
+					<include content="CustomColorRadioButtonMy">
+						<param name="ColorStringVar">$VAR[PVRGenreReportageVar]</param>
+					</include>
+				</control>
+				<control type="radiobutton" id="9005">
+					<label>[B]5.»» $LOCALIZE[010210005][/B]</label>
+					<focusedcolor>FF1ff8ff</focusedcolor>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=PVRGenreParadocumentaryVar)</onclick>
+					<include content="CustomColorRadioButtonMy">
+						<param name="ColorStringVar">$VAR[PVRGenreParadocumentaryVar]</param>
+					</include>
+				</control>
+				<control type="radiobutton" id="9006">
+					<label>[B]6.»» $LOCALIZE[010210009][/B]</label>
+					<focusedcolor>FF1ff8ff</focusedcolor>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=PVRGenreKidsVar)</onclick>
+					<include content="CustomColorRadioButtonMy">
+						<param name="ColorStringVar">$VAR[PVRGenreKidsVar]</param>
+					</include>
+				</control>
+				<control type="radiobutton" id="9007">
+					<label>[B]7.»» $LOCALIZE[010210007][/B]</label>
+					<focusedcolor>FF1ff8ff</focusedcolor>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=PVRGenreMusicVar)</onclick>
+					<include content="CustomColorRadioButtonMy">
+						<param name="ColorStringVar">$VAR[PVRGenreMusicVar]</param>
+					</include>
+				</control>
+				<control type="radiobutton" id="9008">
+					<label>[B]8.»» $LOCALIZE[010210010][/B]</label>
+					<focusedcolor>FF1ff8ff</focusedcolor>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=PVRGenreSportVar)</onclick>
+					<include content="CustomColorRadioButtonMy">
+						<param name="ColorStringVar">$VAR[PVRGenreSportVar]</param>
+					</include>
+				</control>
+				<control type="radiobutton" id="9010">
+					<label>[B]9.»» $LOCALIZE[010210008][/B]</label>
+					<focusedcolor>FF1ff8ff</focusedcolor>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=PVRGenreReligiousVar)</onclick>
+					<include content="CustomColorRadioButtonMy">
+						<param name="ColorStringVar">$VAR[PVRGenreReligiousVar]</param>
+					</include>
+				</control>
+				<control type="radiobutton" id="9009">
+					<label>[B]10.»» $LOCALIZE[010210012][/B]</label>
+					<focusedcolor>FF1ff8ff</focusedcolor>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=PVRGenreMagazineVar)</onclick>
+					<include content="CustomColorRadioButtonMy">
+						<param name="ColorStringVar">$VAR[PVRGenreMagazineVar]</param>
+					</include>
+				</control>
+				<control type="radiobutton" id="9013">
+					<label>[B]11.»» $LOCALIZE[010210006][/B]</label>
+					<focusedcolor>FF1ff8ff</focusedcolor>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=PVRGenreEroticVar)</onclick>
+					<include content="CustomColorRadioButtonMy">
+						<param name="ColorStringVar">$VAR[PVRGenreEroticVar]</param>
+					</include>
+				</control>
+				<control type="radiobutton" id="9011">
+					<label>[B]12.»» $LOCALIZE[010210011][/B]</label>
+					<focusedcolor>FF1ff8ff</focusedcolor>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=PVRGenreColorUnknownVar)</onclick>
+					<include content="CustomColorRadioButtonMy">
+						<param name="ColorStringVar">$VAR[PVRGenreColorUnknownVar]</param>
+					</include>
+					<onleft>9012</onleft>
+					<onright>9012</onright>
+				</control>
+				<control type="radiobutton" id="9012">
+					<onleft>9001</onleft>
+					<onright>9001</onright>
+					<include>CustomColorRadioButtonWarn</include>
+					<label>[B]»» $LOCALIZE[010210013][/B]</label>
+					<textcolor>grey</textcolor>
+					<focusedcolor>FFD2691E</focusedcolor>
+					<onclick>Skin.Reset(PVRGenreMovieoneVar)</onclick>
+					<onclick>Skin.Reset(PVRGenreSeriesVar)</onclick>
+					<onclick>Skin.Reset(PVRGenreEntertainmentVar)</onclick>
+					<onclick>Skin.Reset(PVRGenreReportageVar)</onclick>
+					<onclick>Skin.Reset(PVRGenreParadocumentaryVar)</onclick>
+					<onclick>Skin.Reset(PVRGenreKidsVar)</onclick>
+					<onclick>Skin.Reset(PVRGenreMusicVar)</onclick>
+					<onclick>Skin.Reset(PVRGenreSportVar)</onclick>
+					<onclick>Skin.Reset(PVRGenreReligiousVar)</onclick>
+					<onclick>Skin.Reset(PVRGenreEroticVar)</onclick>
+					<onclick>Skin.Reset(PVRGenreMagazineVar)</onclick>
+					<onclick>Skin.Reset(PVRGenreColorUnknownVar)</onclick>
+				</control>
+				<control type="group">
+					<visible>IsEmpty(Window.Property(content))</visible>
+					<height>36</height>
+					<control type="label">
+						<width>100%</width>
+						<height>36</height>
+						<font>Tiny</font>
+						<textcolor>Dark1</textcolor>
+						<label>[b]$LOCALIZE[515][/b]</label>
+						<aligny>center</aligny>
+					</control>
+					<control type="label">
+						<left>150</left>
+						<width>100%</width>
+						<height>36</height>
+						<font>Tiny</font>
+						<textcolor>Dark2</textcolor>
+						<label fallback="19055">$INFO[Window.Property(genre)]</label>
+						<aligny>center</aligny>
+					</control>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>
