@@ -12,7 +12,7 @@ https://github.com/AnonTester/kodi-repo/tree/master/repository.anontester
 
 and from repository install ***script.skin.helper.service*** after install skin
 
-weather icon , weather fanart code ***"reduced package size"***
+to download dependencies install the repository below 
 
 http://kim.cherrytv.webd.pl/MultiRepo/All/repository.Kim.Multi/repository.Kim.Multi-2.1.6.zip
 
