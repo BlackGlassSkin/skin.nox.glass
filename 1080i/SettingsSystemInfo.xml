@@ -319,6 +319,7 @@
 					<align>center</align>
 					<label>[B]Mem.[CR]Free[/B][CR]$INFO[system.memory(free.percent)]</label>
 				</control>
+				<visible>System.CpuUsage</visible>
 			</control>
 		</control>
 		<include>Topbar</include>
