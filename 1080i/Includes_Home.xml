@@ -2196,9 +2196,9 @@
 		<control type="group">
 			<left>720r</left>
 			<top>45</top>
-			<!-- <include condition="!String.IsEmpty(Skin.String(Widget.Trans))">HomeWidgetFade</include> -->
-			<visible>!System.SupportsCPUUsage</visible>
-			<visible>String.IsEqual(Container(9000).ListItem.Property(path),ActivateWindow(Settings)) + String.IsEmpty(Container(9000).ListItem.Property(widgetType.2)) + !Skin.HasSetting(centermainmenu)</visible>
+			<!-- <include condition="!String.IsEmpty(Skin.String(Widget.Trans))">HomeWidgetFade</include>
+			<visible>System.SupportsCPUUsage</visible>-->
+			<visible>System.CpuUsage + String.IsEqual(Container(9000).ListItem.Property(path),ActivateWindow(Settings)) + String.IsEmpty(Container(9000).ListItem.Property(widgetType.2)) + !Skin.HasSetting(centermainmenu)</visible>
 			<animation effect="slide" start="-1790,0" time="330" tween="cubic" easing="inout" condition="String.IsEqual(Container(9000).ListItem.Property(path),ActivateWindow(Settings)) + String.IsEmpty(Container(9000).ListItem.Property(widgetType.2)) + !Skin.HasSetting(centermainmenu)">Conditional</animation>
 			<include>WindowOpenCloseAnimation</include>
 			<animation effect="fade" time="0">Visible</animation>
