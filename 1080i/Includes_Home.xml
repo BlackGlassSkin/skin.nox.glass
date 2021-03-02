@@ -2197,7 +2197,6 @@
 			<left>720r</left>
 			<top>45</top>
 			<!-- <include condition="!String.IsEmpty(Skin.String(Widget.Trans))">HomeWidgetFade</include> -->
-			<visible>System.CpuUsage</visible>
 			<visible>String.IsEqual(Container(9000).ListItem.Property(path),ActivateWindow(Settings)) + String.IsEmpty(Container(9000).ListItem.Property(widgetType.2)) + !Skin.HasSetting(centermainmenu)</visible>
 			<animation effect="slide" start="-1790,0" time="330" tween="cubic" easing="inout" condition="String.IsEqual(Container(9000).ListItem.Property(path),ActivateWindow(Settings)) + String.IsEmpty(Container(9000).ListItem.Property(widgetType.2)) + !Skin.HasSetting(centermainmenu)">Conditional</animation>
 			<include>WindowOpenCloseAnimation</include>
@@ -2307,8 +2306,14 @@
 					<top>340</top>
 					<width>120</width>
 					<height>120</height>
+					<texture background="true" border="0" colordiffuse="E6262626">clock\single0.png</texture>
+				</control>
+				<control type="image">
+					<left>-800</left>
+					<top>340</top>
+					<width>120</width>
+					<height>120</height>
 					<texture background="true" colordiffuse="E6FFFFFF">$VAR[CpuPerCorecircle0VAR]</texture>
-					<bordertexture colordiffuse="E6101010">clock\single0.png</bordertexture>
 				</control>
 				<control type="label">
 					<left>-766</left>
@@ -2323,8 +2328,14 @@
 					<top>340</top>
 					<width>120</width>
 					<height>120</height>
+					<texture background="true" border="0" colordiffuse="E6262626">clock\single0.png</texture>
+				</control>
+				<control type="image">
+					<left>-650</left>
+					<top>340</top>
+					<width>120</width>
+					<height>120</height>
 					<texture background="true" colordiffuse="E6FFFFFF">$VAR[CpuPerCorecircle1VAR]</texture>
-					<bordertexture colordiffuse="E6101010">clock\single0.png</bordertexture>
 				</control>
 				<control type="label">
 					<left>-615</left>
@@ -2339,8 +2350,14 @@
 					<top>340</top>
 					<width>120</width>
 					<height>120</height>
+					<texture background="true" border="0" colordiffuse="E6262626">clock\single0.png</texture>
+				</control>
+				<control type="image">
+					<left>-500</left>
+					<top>340</top>
+					<width>120</width>
+					<height>120</height>
 					<texture background="true" colordiffuse="E6FFFFFF">$VAR[CpuPerCorecircle2VAR]</texture>
-					<bordertexture colordiffuse="E6101010">clock\single0.png</bordertexture>
 				</control>
 				<control type="label">
 					<left>-466</left>
@@ -2355,8 +2372,14 @@
 					<top>340</top>
 					<width>120</width>
 					<height>120</height>
+					<texture background="true" border="0" colordiffuse="E6262626">clock\single0.png</texture>
+				</control>
+				<control type="image">
+					<left>-350</left>
+					<top>340</top>
+					<width>120</width>
+					<height>120</height>
 					<texture background="true" colordiffuse="E6FFFFFF">$VAR[CpuPerCorecircle3VAR]</texture>
-					<bordertexture colordiffuse="E6101010">clock\single0.png</bordertexture>
 				</control>
 				<control type="label">
 					<left>-316</left>
@@ -2372,8 +2395,14 @@
 					<top>490</top>
 					<width>120</width>
 					<height>120</height>
+					<texture background="true" border="0" colordiffuse="E6262626">clock\single0.png</texture>
+				</control>
+				<control type="image">
+					<left>-800</left>
+					<top>490</top>
+					<width>120</width>
+					<height>120</height>
 					<texture background="true" colordiffuse="E6FFFFFF">$VAR[CpuPerCorecircle0VAR]</texture>
-					<bordertexture colordiffuse="E6101010">clock\single0.png</bordertexture>
 				</control>
 				<control type="label">
 					<left>-766</left>
@@ -2388,8 +2417,14 @@
 					<top>490</top>
 					<width>120</width>
 					<height>120</height>
+					<texture background="true" border="0" colordiffuse="E6262626">clock\single0.png</texture>
+				</control>
+				<control type="image">
+					<left>-650</left>
+					<top>490</top>
+					<width>120</width>
+					<height>120</height>
 					<texture background="true" colordiffuse="E6FFFFFF">$VAR[CpuPerCorecircle1VAR]</texture>
-					<bordertexture colordiffuse="E6101010">clock\single0.png</bordertexture>
 				</control>
 				<control type="label">
 					<left>-615</left>
@@ -2404,8 +2439,14 @@
 					<top>490</top>
 					<width>120</width>
 					<height>120</height>
+					<texture background="true" border="0" colordiffuse="E6262626">clock\single0.png</texture>
+				</control>
+				<control type="image">
+					<left>-500</left>
+					<top>490</top>
+					<width>120</width>
+					<height>120</height>
 					<texture background="true" colordiffuse="E6FFFFFF">$VAR[CpuPerCorecircle2VAR]</texture>
-					<bordertexture colordiffuse="E6101010">clock\single0.png</bordertexture>
 				</control>
 				<control type="label">
 					<left>-466</left>
@@ -2420,8 +2461,14 @@
 					<top>490</top>
 					<width>120</width>
 					<height>120</height>
+					<texture background="true" border="0" colordiffuse="E6262626">clock\single0.png</texture>
+				</control>
+				<control type="image">
+					<left>-350</left>
+					<top>490</top>
+					<width>120</width>
+					<height>120</height>
 					<texture background="true" colordiffuse="E6FFFFFF">$VAR[CpuPerCorecircle3VAR]</texture>
-					<bordertexture colordiffuse="E6101010">clock\single0.png</bordertexture>
 				</control>
 				<control type="label">
 					<left>-316</left>
@@ -2437,7 +2484,7 @@
 					<width>175</width>
 					<height>175</height>
 					<texture background="true" border="0" colordiffuse="E6FFFFFF" diffuse="clock/single100.png">resource://resource.images.cpuprogress/circle/percent/$INFO[system.memory(used.percent)].png</texture>
-					<bordertexture colordiffuse="B3181818">clock/single1.png</bordertexture>
+					<bordertexture colordiffuse="E6262626">clock/single1.png</bordertexture>
 				</control>
 				<control type="label">
 					<left>0</left>
@@ -2454,7 +2501,7 @@
 					<width>175</width>
 					<height>175</height>
 					<texture background="true" border="0" colordiffuse="E6FFFFFF" diffuse="clock/single100.png">resource://resource.images.cpuprogress/circle/percent/$INFO[system.memory(free.percent)].png</texture>
-					<bordertexture colordiffuse="B3181818">clock/single1.png</bordertexture>
+					<bordertexture colordiffuse="E6262626">clock/single1.png</bordertexture>
 				</control>
 				<control type="label">
 					<left>-185</left>

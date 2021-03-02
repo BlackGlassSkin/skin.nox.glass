@@ -226,8 +226,14 @@
 					<top>340</top>
 					<width>120</width>
 					<height>120</height>
+					<texture background="true" border="0" colordiffuse="E6262626">clock\single0.png</texture>
+				</control>
+				<control type="image">
+					<left>-800</left>
+					<top>340</top>
+					<width>120</width>
+					<height>120</height>
 					<texture background="true" colordiffuse="E6FFFFFF">$VAR[CpuPerCorecircle0VAR]</texture>
-					<bordertexture colordiffuse="E6101010">clock\single0.png</bordertexture>
 				</control>
 				<control type="label">
 					<left>-766</left>
@@ -242,8 +248,14 @@
 					<top>340</top>
 					<width>120</width>
 					<height>120</height>
+					<texture background="true" border="0" colordiffuse="E6262626">clock\single0.png</texture>
+				</control>
+				<control type="image">
+					<left>-650</left>
+					<top>340</top>
+					<width>120</width>
+					<height>120</height>
 					<texture background="true" colordiffuse="E6FFFFFF">$VAR[CpuPerCorecircle1VAR]</texture>
-					<bordertexture colordiffuse="E6101010">clock\single0.png</bordertexture>
 				</control>
 				<control type="label">
 					<left>-615</left>
@@ -258,8 +270,14 @@
 					<top>340</top>
 					<width>120</width>
 					<height>120</height>
+					<texture background="true" border="0" colordiffuse="E6262626">clock\single0.png</texture>
+				</control>
+				<control type="image">
+					<left>-500</left>
+					<top>340</top>
+					<width>120</width>
+					<height>120</height>
 					<texture background="true" colordiffuse="E6FFFFFF">$VAR[CpuPerCorecircle2VAR]</texture>
-					<bordertexture colordiffuse="E6101010">clock\single0.png</bordertexture>
 				</control>
 				<control type="label">
 					<left>-466</left>
@@ -274,8 +292,14 @@
 					<top>340</top>
 					<width>120</width>
 					<height>120</height>
+					<texture background="true" border="0" colordiffuse="E6262626">clock\single0.png</texture>
+				</control>
+				<control type="image">
+					<left>-350</left>
+					<top>340</top>
+					<width>120</width>
+					<height>120</height>
 					<texture background="true" colordiffuse="E6FFFFFF">$VAR[CpuPerCorecircle3VAR]</texture>
-					<bordertexture colordiffuse="E6101010">clock\single0.png</bordertexture>
 				</control>
 				<control type="label">
 					<left>-316</left>
@@ -319,7 +343,6 @@
 					<align>center</align>
 					<label>[B]Mem.[CR]Free[/B][CR]$INFO[system.memory(free.percent)]</label>
 				</control>
-				<visible>System.CpuUsage</visible>
 			</control>
 		</control>
 		<include>Topbar</include>
