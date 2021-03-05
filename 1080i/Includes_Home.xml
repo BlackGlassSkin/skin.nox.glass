@@ -2194,6 +2194,7 @@
 	</include>
 	<include name="SystemInfoWidget">
 		<control type="group">
+		    <visible>!System.Platform.Android</visible>
 			<left>720r</left>
 			<top>45</top>
 			<!-- <include condition="!String.IsEmpty(Skin.String(Widget.Trans))">HomeWidgetFade</include> -->
@@ -2279,28 +2280,6 @@
 						<label colordiffuse="yellow">[B]$INFO[System.CoreUsage(3)][/B]</label>
 					</control>
 				</control>
-				<!-- top 
-				<control type="group">
-					<left>-1150</left>
-					<top>900</top>
-					<control type="progress">
-						<width>320</width>
-						<height>220</height>
-						<top>-26.7</top>
-						<align>right</align>
-						<lefttexture border="0">media/</lefttexture>
-						<midtexture colordiffuse="blue" border="3">media/processinfo.png</midtexture>
-						<righttexture colordiffuse="red" border="0">media/</righttexture>
-						<info>System.CpuUsage</info>
-					</control>
-					<control type="image">
-						<width>320</width>
-						<height>150</height>
-						<top>7</top>
-						<align>right</align>
-						<texture colordiffuse="grey" border="2">media/texturebg_border_white.png</texture>
-					</control>
-				</control>-->
 				<control type="image">
 					<left>-800</left>
 					<top>340</top>
@@ -2402,6 +2381,7 @@
 					<top>490</top>
 					<width>120</width>
 					<height>120</height>
+					<aspectratio>keep</aspectratio>
 					<texture background="true" colordiffuse="E6FFFFFF">$VAR[CpuPerCorecircle0VAR]</texture>
 				</control>
 				<control type="label">
@@ -2424,6 +2404,7 @@
 					<top>490</top>
 					<width>120</width>
 					<height>120</height>
+					<aspectratio>keep</aspectratio>
 					<texture background="true" colordiffuse="E6FFFFFF">$VAR[CpuPerCorecircle1VAR]</texture>
 				</control>
 				<control type="label">
@@ -2446,6 +2427,7 @@
 					<top>490</top>
 					<width>120</width>
 					<height>120</height>
+					<aspectratio>keep</aspectratio>
 					<texture background="true" colordiffuse="E6FFFFFF">$VAR[CpuPerCorecircle2VAR]</texture>
 				</control>
 				<control type="label">
@@ -2468,6 +2450,7 @@
 					<top>490</top>
 					<width>120</width>
 					<height>120</height>
+					<aspectratio>keep</aspectratio>
 					<texture background="true" colordiffuse="E6FFFFFF">$VAR[CpuPerCorecircle3VAR]</texture>
 				</control>
 				<control type="label">
@@ -2512,158 +2495,6 @@
 					<align>center</align>
 					<label>[B]Memory[CR]Free[/B][CR]$INFO[system.memory(free.percent)]</label>
 				</control>
-				<!--	<control type="grouplist">
-					<top>350</top>
-					<left>-1180</left>
-					<itemgap>10</itemgap>
-					<control type="progress">
-						<description>Memory BAR</description>
-						<left>0</left>
-						<width>400</width>
-						<height>30</height>
-						<texturebg background="true" colordiffuse="E6A9A9A9" border="3">media/texturebg_border_white.png</texturebg>
-						<midtexture colordiffuse="-" border="3">media/ram.png</midtexture>
-						<info>system.memory(free)</info>
-					</control>
-					<control type="progress">
-						<description>Memory BAR</description>
-						<left>0</left>
-						<width>400</width>
-						<height>30</height>
-						<texturebg background="true" colordiffuse="E6A9A9A9" border="3">media/texturebg_border_white.png</texturebg>
-						<midtexture colordiffuse="-" border="3">media/ram.png</midtexture>
-						<info>system.memory(used)</info>
-					</control>
-					<control type="image">
-						<include content="CPUANIMATION">
-							<param name="Core" value="0"/>
-						</include>
-						<left>0</left>
-						<top>440</top>
-						<width>400</width>
-						<height>30</height>
-						<texture background="true" colordiffuse="E61E90FF">media/processinfo.png</texture>
-					</control>
-					<control type="image">
-						<include content="CPUANIMATION">
-							<param name="Core" value="1"/>
-						</include>
-						<left>0</left>
-						<top>440</top>
-						<width>400</width>
-						<height>30</height>
-						<texture background="true" colordiffuse="E61E90FF">media/processinfo.png</texture>
-					</control>
-					<control type="image">
-						<include content="CPUANIMATION">
-							<param name="Core" value="2"/>
-						</include>
-						<left>0</left>
-						<top>440</top>
-						<width>400</width>
-						<height>30</height>
-						<texture background="true" colordiffuse="E61E90FF">media/processinfo.png</texture>
-					</control>
-					<control type="image">
-						<include content="CPUANIMATION">
-							<param name="Core" value="3"/>
-						</include>
-						<left>0</left>
-						<top>440</top>
-						<width>400</width>
-						<height>30</height>
-						<texture background="true" colordiffuse="E61E90FF">media/processinfo.png</texture>
-					</control>
-					<control type="progress">
-						<description>CPU BAR</description>
-						<top>440</top>
-						<width>400</width>
-						<height>40</height>
-						<texturebg background="true" colordiffuse="E6A9A9A9" border="3">media/texturebg_border_white.png</texturebg>
-						<midtexture border="0">media/ram.png</midtexture>
-						<info>System.CPUUsage</info>
-					</control>
-				</control>
-				<control type="grouplist">
-					<top>355</top>
-					<left>-770</left>
-					<itemgap>22</itemgap>
-					<control type="label">
-						<width>300</width>
-						<height>18</height>
-						<font>Lirabiefont_Rg</font>
-						<label>RAM Free: $INFO[system.memory(free)]</label>
-					</control>
-					<control type="label">
-						<width>300</width>
-						<height>18</height>
-						<font>Lirabiefont_Rg</font>
-						<label>RAM Usage: $INFO[system.memory(used)]</label>
-					</control>
-					<control type="label">
-						<width>300</width>
-						<height>18</height>
-						<font>Lirabiefont_Rg</font>
-						<label colordiffuse="yellow">CPU,0: $INFO[System.CoreUsage(0)]</label>
-					</control>
-					<control type="label">
-						<width>300</width>
-						<height>18</height>
-						<font>Lirabiefont_Rg</font>
-						<label colordiffuse="yellow">CPU,1: $INFO[System.CoreUsage(1)]</label>
-					</control>
-					<control type="label">
-						<width>300</width>
-						<height>18</height>
-						<font>Lirabiefont_Rg</font>
-						<label colordiffuse="yellow">CPU,2: $INFO[System.CoreUsage(2)]</label>
-					</control>
-					<control type="label">
-						<width>300</width>
-						<height>18</height>
-						<font>Lirabiefont_Rg</font>
-						<label colordiffuse="yellow">CPU,3: $INFO[System.CoreUsage(3)]</label>
-					</control>
-					<control type="label">
-						<width>300</width>
-						<height>28</height>
-						<font>Lirabiefont_Rg</font>
-						<label colordiffuse="yellow">CPU  : $INFO[System.CPUUsage,(,)]</label>
-					</control>
-				</control>
-				<control type="grouplist">
-					<top>430</top>
-					<left>-1180</left>
-					<itemgap>10</itemgap>
-					<control type="image">
-						<left>0</left>
-						<top>440</top>
-						<width>400</width>
-						<height>30</height>
-						<texture background="true" colordiffuse="E6A9A9A9" border="3">media/texturebg_border_white.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>440</top>
-						<width>400</width>
-						<height>30</height>
-						<texture background="true" colordiffuse="E6A9A9A9" border="3">media/texturebg_border_white.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>440</top>
-						<width>400</width>
-						<height>30</height>
-						<texture background="true" colordiffuse="E6A9A9A9" border="3">media/texturebg_border_white.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>440</top>
-						<width>400</width>
-						<height>30</height>
-						<texture background="true" colordiffuse="E6A9A9A9" border="3">media/texturebg_border_white.png</texture>
-					</control>
-				</control> -->
 				<control type="group">
 					<control type="multiimage">
 						<left>612</left>
@@ -2821,62 +2652,6 @@
 					</control>
 				</control>
 			</control>
-			<!-- CurrentlyRecording 
-		      <control type="group">
-				<height>120</height>
-				<control type="image">
-					<left>-200</left>
-					<width>800</width>
-					<height>120</height>
-					<texture flipx="true" border="40,0,0,0">side_fade.png</texture>
-				</control>
-				<control type="image">
-					<left>390</left>
-					<width>90</width>
-					<height>120</height>
-					<aspectratio>keep</aspectratio>
-					<texture background="true" fallback="DefaultTVShows.png">$INFO[PVR.NowRecordingChannelIcon]</texture>
-				</control>
-				<control type="image">
-					<left>340</left>
-					<top>6</top>
-					<width>40</width>
-					<height>40</height>
-					<texture>new_pvr/icons/PVR-IsRecording.png</texture>
-					<animation effect="fade" start="100" end="40" time="2000" pulse="true" condition="true">Conditional</animation>
-				</control>
-				<control type="label">
-					<left>-155</left>
-					<top>12</top>
-					<height>25</height>
-					<width>500</width>
-					<align>right</align>
-					<textcolor>$VAR[ThemeHomeLabelColor]</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<label>$LOCALIZE[19158][COLOR=grey]$INFO[PVR.NowRecordingChannel, - ,][/COLOR] $INFO[VideoPlayer.ChannelName]</label>
-				</control>
-				<control type="label">
-					<left>-120</left>
-					<top>48</top>
-					<height>25</height>
-					<width>500</width>
-					<align>right</align>
-					<scroll>true</scroll>
-					<shadowcolor>black</shadowcolor>
-					<label>$INFO[PVR.NowRecordingDateTime,$LOCALIZE[19126] - ]</label>
-				</control>
-				<control type="label">
-					<left>-120</left>
-					<top>85</top>
-					<height>25</height>
-					<width>500</width>
-					<label>$INFO[PVR.NowRecordingTitle]</label>
-					<align>right</align>
-					<font>font13_title</font>
-					<shadowcolor>black</shadowcolor>
-					<scroll>true</scroll>
-				</control>
-			</control>-->
 			<control type="group">
 				<include>Clock_Date</include>
 				<control type="image">
@@ -2911,7 +2686,7 @@
 				<include>Clock_Time</include>
 			</control>
 		</control>
-</include>
+    </include>
 	<include name="FanartTitle">
 		<control type="button">
 			<top>1000</top>
