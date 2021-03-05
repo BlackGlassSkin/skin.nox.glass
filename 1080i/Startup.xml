@@ -1,35 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol condition="Skin.HasSetting(Enable.StartupIntro)">10</defaultcontrol>
-	<!--<onload condition="!Skin.HasSetting(Enable.TRripleMemu)">Skin.SetString(MainMenu.Layout,3)</onload>-->
-	<onload condition="!System.HasAddon(script.tv.show.next.aired)">Skin.SetBool(Disable.NextAired)</onload>
-	<!--<onload>AlarmClock(Take a Screenshot,ReloadSkin,00:00:30,silent)</onload>
-    <onload>RunScript(special://skin/resources/lib/weather.py)</onload> -->
-	<onload>Skin.SetString(ColorboxMain,main:)</onload>
-	<onload>Skin.SetString(ColorboxComp,comp:)</onload>
-	<onload>Skin.SetString(ColorboxBlursize,10)</onload>
-	<onload>SetProperty(FIVE_daemon_set,True,Home)</onload>
-	<onload>SetProperty(cfa_daemon_set,blur,Home)</onload>
-	<onload>SetProperty(FIVE_daemon_set,blur,Home)</onload>
-	<onload>SetProperty(NINE_manual_set,"var=main,set=$INFO[Skin.String(ColorboxMain)]|var=comp,set=$INFO[Skin.String(ColorboxComp)]|var=blursize,set=$INFO[Skin.String(ColorboxBlursize)]",Home)</onload>
-	<onload condition="String.IsEmpty(Skin.String(Overlay.Toggle))">SetProperty(Overlay.Path,overlays/showcase/,Home)</onload>
-	<onload condition="String.IsEqual(Skin.String(Overlay.Toggle),both) + !Skin.HasSetting(coloredflags)">SetProperty(Overlay.Path,overlays/showcase/1/,Home)</onload>
-	<onload condition="String.IsEqual(Skin.String(Overlay.Toggle),both) + Skin.HasSetting(coloredflags)">SetProperty(Overlay.Path,overlays/showcase/4/,Home)</onload>
-	<onload condition="String.IsEqual(Skin.String(Overlay.Toggle),watched) + !Skin.HasSetting(coloredflags)">SetProperty(Overlay.Path,overlays/showcase/2/,Home)</onload>
-	<onload condition="String.IsEqual(Skin.String(Overlay.Toggle),watched) + Skin.HasSetting(coloredflags)">SetProperty(Overlay.Path,overlays/showcase/5/,Home)</onload>
-	<onload condition="String.IsEqual(Skin.String(Overlay.Toggle),unwatched) + !Skin.HasSetting(coloredflags)">SetProperty(Overlay.Path,overlays/showcase/3/,Home)</onload>
-	<onload condition="String.IsEqual(Skin.String(Overlay.Toggle),unwatched) + Skin.HasSetting(coloredflags)">SetProperty(Overlay.Path,overlays/showcase/6/,Home)</onload>
-	<onload condition="!Skin.HasSetting(Disable.Resumable)">SetProperty(Overlay.Resumable,True,Home)</onload>
+	<onload condition="System.HasAddon(plugin.video.themoviedb.helper)">Skin.SetBool(TMDbHelper.Service)</onload>
+	<onload condition="!System.HasAddon(plugin.video.themoviedb.helper)">Skin.SetBool(Disable.NextAired)</onload>
 	<onload condition="System.HasAddon(script.skin.info.service)">RunScript(script.skin.info.service)</onload>
-	<onload condition="System.HasAddon(script.colorbox)">RunScript(script.colorbox,daemon=True)</onload>
 	<onload condition="System.HasAddon(script.artistslideshow)">RunScript(script.artistslideshow,daemon=True)</onload>
-	<onload condition="!Skin.HasSetting(Enable.TRripleMemu)">Skin.SetString(MainMenu.Layout,3)</onload>
+	<onload condition="!Skin.HasSetting(Enable.StartupIntro)">ReplaceWindow($INFO[System.StartupWindow])</onload>
+	<onunload condition="Skin.HasSetting(Enable.StartupIntro)">PlayerControl(Stop)</onunload>
 	<onload>RunScript(special://skin/resources/lib/update.py)</onload>
 	<onload>RunScript(special://skin/resources/lib/publicip.py)</onload>
 	<onload>RunScript(special://skin/resources/lib/pihole.py)</onload>
-	<!-- Intro -->
-	<onload condition="Skin.HasSetting(Enable.StartupIntro)">ReplaceWindow($INFO[System.StartupWindow])</onload>
-	<onunload condition="Skin.HasSetting(Enable.StartupIntro)">PlayerControl(Stop)</onunload>
 	<controls>
 		<control type="button" id="10">
 			<include>HiddenObject</include>
@@ -46,9 +26,9 @@
 			<onright>ReplaceWindow($INFO[System.StartupWindow])</onright>
 			<onclick>ReplaceWindow($INFO[System.StartupWindow])</onclick>
 			<onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
-			<animation effect="fade" end="100" time="6000">Focus</animation>
+			<animation effect="fade" end="100" time="5950">Focus</animation>
 		</control>
-		<control type="image">
+				<control type="image">
 			<texture>common/black.png</texture>
 			<include>FullscreenDimensions</include>
 		</control>

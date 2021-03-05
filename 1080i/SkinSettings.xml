@@ -391,7 +391,7 @@
 							<include>SettingsButtonCommonValues</include>
 							<label>$LOCALIZE[31282]</label>
 							<onclick>Skin.ToggleSetting(Enable.StartupIntro)</onclick>
-							<selected>!Skin.HasSetting(Enable.StartupIntro)</selected>
+							<selected>Skin.HasSetting(Enable.StartupIntro)</selected>
 						</control>
 						<control type="radiobutton" id="3005">
 							<include>SettingsButtonCommonValues</include>
