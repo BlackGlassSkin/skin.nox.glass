@@ -36,7 +36,7 @@
 						<width>110%</width>
 						<height>100</height>
 						<left>-25</left>
-						<texture border="40" colordiffuse="FFff0000">dialogs/default/bg.png</texture>
+						<texture border="40" colordiffuse="$VAR[ThemePanelAudioVideoColor]">dialogs/default/bg.png</texture>
 					</control>
 				</control>
 				<control type="image">

@@ -2,7 +2,7 @@
 A modded version of [Aeon Nox 5 & SiLVO]
 
 **Branches guide:**
- - **Kodi v19 Codename Matrix**
+ - **master:** Kodi v19 Codename Matrix
  
 
 # Before Installing skin.nox.glass
@@ -12,9 +12,9 @@ https://github.com/AnonTester/kodi-repo/tree/master/repository.anontester
 
 and from repository install ***script.skin.helper.service*** after install skin
 
-to download dependencies install the repository below 
+weather icon , weather fanart code ***"reduced package size"***
 
-http://kim.cherrytv.webd.pl/MultiRepo/All/repository.Kim.Multi/repository.Kim.Multi-2.1.7.zip
+http://kim.cherrytv.webd.pl/MultiRepo/All/repository.Kim.Multi/repository.Kim.Multi-2.1.6.zip
 
 
 

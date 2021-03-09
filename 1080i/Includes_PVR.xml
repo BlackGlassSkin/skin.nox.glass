@@ -11,7 +11,7 @@
 				<left>-21</left>
 				<width>105%</width>
 				<height>400</height>
-				<texture border="40" colordiffuse="red">dialogs/default/bg.png</texture>
+				<texture border="40" colordiffuse="$VAR[ThemePanelAudioVideoColor]">dialogs/default/bg.png</texture>
 				<visible>String.IsEmpty(Skin.String(LiveTV.InfobarType))</visible>
 			</control>
 			<control type="image">
@@ -19,7 +19,7 @@
 				<left>-21</left>
 				<width>105%</width>
 				<height>295</height>
-				<texture border="40" colordiffuse="red">dialogs/default/bg.png</texture>
+				<texture border="40" colordiffuse="$VAR[ThemePanelAudioVideoColor]">dialogs/default/bg.png</texture>
 				<visible>String.IsEqual(Skin.String(LiveTV.InfobarType),1)</visible>
 			</control>
 			<control type="group">

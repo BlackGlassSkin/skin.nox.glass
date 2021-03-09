@@ -627,16 +627,24 @@
 						</control>
 						<control type="radiobutton" id="6011">
 							<include>SettingsButtonCommonValues</include>
-							<label>Disable / Enable Extra Weather Widget</label>
+							<label>$LOCALIZE[32008]</label>
 							<onclick>Skin.ToggleSetting(Enable.MyWeather)</onclick>
 							<selected>Skin.HasSetting(Enable.MyWeather)</selected>
 							<onclick condition="!System.HasAddon(resource.images.weathericons.hd.animatedmods)">InstallAddon(resource.images.weathericons.hd.animatedmods)</onclick>
 						</control>
-						<control type="radiobutton" id="6009">
+						<control type="radiobutton" id="6012">
 							<include>SettingsButtonCommonValues</include>
-							<label>Disable / Enable Extra Weather Widget Backround</label>
+							<label>$LOCALIZE[32009]</label>
 							<onclick>Skin.ToggleSetting(DisableWidgerBackround)</onclick>
 							<selected>!Skin.HasSetting(DisableWidgerBackround)</selected>
+						</control>
+						<control type="radiobutton" id="6009">
+							<include>SettingsButtonCommonValues</include>
+							<label>$LOCALIZE[32010]</label>
+							<onclick>Skin.ToggleSetting(Enable.MysystemWidget)</onclick>
+							<selected>Skin.HasSetting(Enable.MysystemWidget)</selected>
+							<onclick condition="!System.HasAddon(resource.images.cpuprogress)">InstallAddon(resource.images.cpuprogress)</onclick>
+							<visible>!System.Platform.Android</visible>
 						</control>
 					</control>
 					<control type="grouplist" id="9008">

@@ -4,7 +4,7 @@
 	<coordinates>
 		<system>1</system>
 		<left>199</left>
-		<top>210</top>
+		<top>100</top>
 	</coordinates>
 	<include>DialogOpenCloseAnimation</include>
 	<controls>
@@ -176,12 +176,19 @@
 					<selected>Skin.HasSetting(Disable.MusicPlayerNextTrack)</selected>
 					<visible>String.IsEqual(Skin.String(MusicVizLayout),1)</visible>
 				</control>
-				<control type="radiobutton" id="90915">
+				<control type="radiobutton" id="90917">
 					<width>1452</width>
 					<radioposx>1350</radioposx>
 					<label>Enable / Disable Kim Wiz</label>
 					<onclick>Skin.ToggleSetting(Enable.KimVizMod)</onclick>
 					<selected>!Skin.HasSetting(Enable.KimVizMod)</selected>
+				</control>
+				<control type="button" id="90215">
+					<label>$LOCALIZE[32007]</label>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=ThemePanelAudioVideoColor)</onclick>
+					<param name="ColorStringVar">$VAR[ThemePanelAudioVideoColor]</param>
+					<width>1452</width>
+					<radioposx>1350</radioposx>
 				</control>
 			</control>
 			<control type="scrollbar" id="6">

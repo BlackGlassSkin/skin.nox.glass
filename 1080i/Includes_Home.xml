@@ -2194,7 +2194,7 @@
 	</include>
 	<include name="SystemInfoWidget">
 		<control type="group">
-		    <visible>!System.Platform.Android</visible>
+		    <visible>!System.Platform.Android + Skin.HasSetting(Enable.MysystemWidget)</visible>
 			<left>720r</left>
 			<top>45</top>
 			<!-- <include condition="!String.IsEmpty(Skin.String(Widget.Trans))">HomeWidgetFade</include> -->

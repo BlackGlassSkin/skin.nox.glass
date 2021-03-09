@@ -2222,6 +2222,10 @@
 		<value condition="!String.IsEmpty(Skin.String(ThemePanelBgColor)) + !String.IsEqual(Skin.String(ThemePanelBgColor),None)">$INFO[Skin.String(ThemePanelBgColor)]</value>
 		<value>FFB00000</value>
 	</variable>
+	<variable name="ThemePanelAudioVideoColor">
+		<value condition="!String.IsEmpty(Skin.String(ThemePanelAudioVideoColor)) + !String.IsEqual(Skin.String(ThemePanelAudioVideoColor),None)">$INFO[Skin.String(ThemePanelAudioVideoColor)]</value>
+		<value>FFB00000</value>
+	</variable>
 	<!-- Panele -->
 	<!-- paski -->
 	<variable name="ThemeHomeMenuColor1">
@@ -2290,8 +2294,6 @@
 		<value condition="!String.IsEmpty(Skin.String(PVRGenreMagazineVar)) + !String.IsEqual(Skin.String(PVRGenreMagazineVar),None)">$INFO[Skin.String(PVRGenreMagazineVar)]</value>
 		<value>brown</value>
 	</variable>
-	
-	
 	<variable name="PVRGenreColorUnknownVar">
 		<value condition="!String.IsEmpty(Skin.String(PVRGenreColorUnknownVar)) + !String.IsEqual(Skin.String(PVRGenreColorUnknownVar),None)">$INFO[Skin.String(PVRGenreColorUnknownVar)]</value>
 		<value>BF9D6E48</value>

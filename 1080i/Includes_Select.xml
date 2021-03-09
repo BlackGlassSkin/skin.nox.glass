@@ -1187,6 +1187,7 @@
 		<onclick>Skin.SetString(ThemeHomeMenuColor4,FF1700F0)</onclick>
 		<onclick>Skin.SetString(ThemeHomeMenuColor5,FF1700F0)</onclick>
 		<onclick>Skin.SetString(RSSFeedColor,B3635FBC)</onclick>
+		<onclick>Skin.SetString(ThemePanelAudioVideoColor,B31700F0)</onclick>
 		<onclick>RunScript(special://skin/scripts/color/Defaults.py)</onclick>
 	</include>
 	<include name="SetPresetOrangeTheme">
@@ -1199,6 +1200,7 @@
 		<onclick>Skin.SetString(HighlightBarColor,FFFF9800)</onclick>
 		<onclick>Skin.SetString(ThemeHomeSystemBarsColor,FF000000)</onclick>
 		<onclick>Skin.SetString(WidgetHighlightBarColor,FFFF9800)</onclick>
+		<onclick>Skin.SetString(ThemePanelAudioVideoColor,B3FF9800)</onclick>
 	</include>
 	<include name="SetPresetRedTheme">
 		<include>ResetSkinColorsOnclick</include>
@@ -1210,6 +1212,7 @@
 		<onclick>Skin.SetString(HighlightBarColor,FFD50000)</onclick>
 		<onclick>Skin.SetString(ThemeHomeSystemBarsColor,FF000000)</onclick>
 		<onclick>Skin.SetString(WidgetHighlightBarColor,FFD50000)</onclick>
+		<onclick>Skin.SetString(ThemePanelAudioVideoColor,FFB00000)</onclick>
 	</include>
 	<include name="SetPresetKimTransparent">
 		<include>ResetSkinColorsOnclick</include>
@@ -1246,6 +1249,7 @@
 		<onclick>Skin.SetString(ThemeHomeMenuColor4,669E9E9E)</onclick>
 		<onclick>Skin.SetString(ThemeHomeMenuColor5,669E9E9E)</onclick>
 		<onclick>Skin.SetString(RSSFeedColor,66BEBEBE)</onclick>
+		<onclick>Skin.SetString(ThemePanelAudioVideoColor,FFBEBEBE)</onclick>
 		<onclick>RunScript(special://skin/scripts/color/Transparent.py)</onclick>
 	</include>
 	<include name="ResetSkinColorsOnclick">
@@ -1282,6 +1286,7 @@
 		<onclick>Skin.Reset(ThemeOSDCacheColor)</onclick>
 		<onclick>Skin.Reset(ThemeOSDProgressColor)</onclick>
 		<onclick>Skin.Reset(RSSFeedColor)</onclick>
+		<onclick>Skin.SetString(ThemePanelAudioVideoColor)</onclick>
 		<onclick>RunScript(special://skin/scripts/color/Defaults.py)</onclick>
 	</include>
 </includes>

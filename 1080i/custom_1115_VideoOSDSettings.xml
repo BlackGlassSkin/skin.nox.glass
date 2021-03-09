@@ -61,7 +61,7 @@
 				<control type="radiobutton" id="90204">
 					<width>1452</width>
 					<radioposx>1350</radioposx>
-					<label>   - $LOCALIZE[31609]</label>
+					<label>- $LOCALIZE[31609]</label>
 					<onclick>Skin.ToggleSetting(Disable.FullscreenDiscart)</onclick>
 					<selected>!Skin.HasSetting(Disable.FullscreenDiscart)</selected>
 					<visible>!Skin.HasSetting(Disable.FullscreenPoster)</visible>
@@ -164,20 +164,28 @@
 					<visible>!String.IsEqual(Skin.String(LiveTV.InfobarType),1) + VideoPlayer.Content(livetv)</visible>
 				</control>
 				<control type="radiobutton" id="90216">
-					<width>1452</width>
-					<radioposx>1350</radioposx>
 					<label>Disable / Enable ArtMask</label>
 					<onclick>Skin.ToggleSetting(PosterMask)</onclick>
 					<selected>!Skin.HasSetting(PosterMask)</selected>
+					<width>1452</width>
+					<radioposx>1350</radioposx>
 					<visible>VideoPlayer.Content(livetv)</visible>
 				</control>
 				<control type="radiobutton" id="90217">
-					<width>1452</width>
-					<radioposx>1350</radioposx>
 					<label>Disable / Enable DiscArt</label>
 					<onclick>Skin.ToggleSetting(DisablePalyerDiscArt)</onclick>
 					<selected>Skin.HasSetting(DisablePalyerDiscArt)</selected>
+					<width>1452</width>
+					<radioposx>1350</radioposx>
 					<visible>VideoPlayer.Content(livetv)</visible>
+				</control>
+				<control type="button" id="90218">
+					<label>$LOCALIZE[32007]</label>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=ThemePanelAudioVideoColor)</onclick>
+					<param name="ColorStringVar">$VAR[ThemePanelAudioVideoColor]</param>
+					<width>1452</width>
+					<radioposx>1350</radioposx>
+					<onclick>Dialog.Close(All,true)</onclick>
 				</control>
 			</control>
 			<control type="scrollbar" id="6">

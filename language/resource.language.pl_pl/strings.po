@@ -3050,7 +3050,23 @@ msgctxt "#32006"
 msgid "Tv Genres default | color:"
 msgstr "Gatunki Tv default | kolor:"
 
-# Empty #32007 to 32017
+msgctxt "#32007"
+msgid "Set the color of the audio and video panels"
+msgstr "Ustaw kolor paneli audio i video"
+
+msgctxt "#32008"
+msgid "Disable / Enable Extra Weather Widget"
+msgstr "Wyłącz / wyłącz dodatkowy widżet pogody"
+
+msgctxt "#32009"
+msgid "Disable / Enable Extra Weather Widget Backround"
+msgstr "Wyłącz / wyłącz dodatkowe tło widżetu pogody"
+
+msgctxt "#32010"
+msgid "Disable / Enable Extra System Widget"
+msgstr "Wyłącz / wyłącz dodatkowy widżet systemu"
+
+# Empty #32010 to 32017
 
 msgctxt "#32018"
 msgid "Enable | Disable colorful "Bob" stripe effect"
@@ -3149,8 +3165,8 @@ msgid "Set the color or darken the wallpaper"
 msgstr "Ustaw kolor,  rozjaśnij lub przyciemnij tapety"
 
 msgctxt "#32042"
-msgid " Set Multi Wallpapers®"
-msgstr " Ustaw wiele tapet z foderu FTP®"
+msgid " Set Multi Wallpapers from FTP®"
+msgstr " Ustaw wiele obrazów tła z folderu FTP®"
 
 msgctxt "#32043"
 msgid "Wind Degree"
@@ -3263,14 +3279,14 @@ msgstr "Resetuj kolory gatunków do domyślnych"
 # PVRGenreUnknownVar ↓ # All Unknown
 
 msgctxt "#010200000"
-msgid "Other / Unknown"
-msgstr "Inny / Nieznany"
+msgid "Other / Unknown / Telezakupy"
+msgstr "Inny / Nieznany / Telezakupy"
 
 # PVRGenreMovie1Var ↓ # All Movies
 
 #msgctxt "#010200001"
-#msgid "String.Contains(ListItem.Genre,Film) | String.Contains(ListItem.Genre,Filmy)"
-#msgstr "String.Contains(ListItem.Genre,Film) | String.Contains(ListItem.Genre,Filmy)"
+#msgid "String.Contains(ListItem.Genre,Film ) | String.Contains(ListItem.Genre,Film) | String.Contains(ListItem.Genre,Filmy)"
+#msgstr "String.Contains(ListItem.Genre,Film ) | String.Contains(ListItem.Genre,Film) | String.Contains(ListItem.Genre,Filmy)"
 
 msgctxt "#010200001"
 msgid "String.Contains(ListItem.Genre,Film / Muzyczny) | String.Contains(ListItem.Genre,Film / Felieton) | String.Contains(ListItem.Genre,Film / Baśń) | String.Contains(ListItem.Genre,Film / Katastroficzny) | String.Contains(ListItem.Genre,Film / Fantasy) | String.Contains(ListItem.Genre,Film / Familijny) | String.Contains(ListItem.Genre,Film / Familijny) | String.Contains(ListItem.Genre,Film / Obyczajowy) | String.Contains(ListItem.Genre,Film / Biograficzny) | String.Contains(ListItem.Genre,Film / Komedia Romantyczna) | String.Contains(ListItem.Genre,Film / Przygodowy) | String.Contains(ListItem.Genre,Film / Kryminalny) | String.Contains(ListItem.Genre,Film Sf) | String.Contains(ListItem.Genre,Film / Thriller) | String.Contains(ListItem.Genre,Film / Horror) | String.Contains(ListItem.Genre,Film / Komediodramat) | String.Contains(ListItem.Genre,Film / Dramat) | String.Contains(ListItem.Genre,Dramat Sensacyjny) | String.Contains(ListItem.Genre,Dramat Psychologiczny) | String.Contains(ListItem.Genre,Film / Melodramat) | String.Contains(ListItem.Genre,Dramat Kryminalny) | String.Contains(ListItem.Genre,Dramat Obyczajowy) | String.Contains(ListItem.Genre,Film Kryminalny) | String.Contains(ListItem.Genre,Film / Sensacyjny) | String.Contains(ListItem.Genre,Horror Komediowy) | String.Contains(ListItem.Genre,Film / Komedia) | String.Contains(ListItem.Genre,Komediodramat) | String.Contains(ListItem.Genre,Komedia Romantyczna) | String.Contains(ListItem.Genre,Komedia Familijna) | String.Contains(ListItem.Genre,Etiuda Filmowa) | String.Contains(ListItem.Genre,Film / Sf) | String.Contains(ListItem.Genre,Film / Wojenny) | String.Contains(ListItem.Genre,Film / Western) | String.Contains(ListItem.Genre,Film / Krótkometrażowy)"
@@ -3279,8 +3295,8 @@ msgstr "String.Contains(ListItem.Genre,Film / Muzyczny) | String.Contains(ListIt
 # PVRGenreSeries1Var All Series ↓
 
 msgctxt "#010200002"
-msgid "String.Contains(ListItem.Genre,Serial / Wojenny) | String.Contains(ListItem.Genre,Serial / Obyczajowo) | String.Contains(ListItem.Genre,Serial / Historyczny) | String.Contains(ListItem.Genre,Serial / Kostiumowy) | String.Contains(ListItem.Genre,Serial / Przygodowy) | String.Contains(ListItem.Genre,Serial / Telenowela) | String.Contains(ListItem.Genre,Serial / Sensacyjny) | String.Contains(ListItem.Genre,Serial / Sf) | String.Contains(ListItem.Genre,Serial / Komediowy) | String.Contains(ListItem.Genre,Serial / Akcji) | String.Contains(ListItem.Genre,Serial / Obyczajowy) | String.Contains(ListItem.Genre,Serial / Kryminalny) | String.Contains(ListItem.Genre,Serial / Szpiegowski) | String.Contains(ListItem.Genre,Serial / Grozy) | String.Contains(ListItem.Genre,Serial / Familijny) | String.Contains(ListItem.Genre,Serial / Fantasy)"
-msgstr "String.Contains(ListItem.Genre,Serial / Wojenny) | String.Contains(ListItem.Genre,Serial / Obyczajowo) | String.Contains(ListItem.Genre,Serial / Historyczny) | String.Contains(ListItem.Genre,Serial / Kostiumowy) | String.Contains(ListItem.Genre,Serial / Przygodowy) | String.Contains(ListItem.Genre,Serial / Telenowela) | String.Contains(ListItem.Genre,Serial / Sensacyjny) | String.Contains(ListItem.Genre,Serial / Sf) | String.Contains(ListItem.Genre,Serial / Komediowy) | String.Contains(ListItem.Genre,Serial / Akcji) | String.Contains(ListItem.Genre,Serial / Obyczajowy) | String.Contains(ListItem.Genre,Serial / Kryminalny) | String.Contains(ListItem.Genre,Serial / Szpiegowski) | String.Contains(ListItem.Genre,Serial / Grozy) | String.Contains(ListItem.Genre,Serial / Familijny) | String.Contains(ListItem.Genre,Serial / Fantasy)"
+msgid "String.Contains(ListItem.Genre,Seriale) | String.Contains(ListItem.Genre,Serial / Wojenny) | String.Contains(ListItem.Genre,Serial / Obyczajowo) | String.Contains(ListItem.Genre,Serial / Historyczny) | String.Contains(ListItem.Genre,Serial / Kostiumowy) | String.Contains(ListItem.Genre,Serial / Przygodowy) | String.Contains(ListItem.Genre,Serial / Telenowela) | String.Contains(ListItem.Genre,Serial / Sensacyjny) | String.Contains(ListItem.Genre,Serial / Sf) | String.Contains(ListItem.Genre,Serial / Komediowy) | String.Contains(ListItem.Genre,Serial / Akcji) | String.Contains(ListItem.Genre,Serial / Obyczajowy) | String.Contains(ListItem.Genre,Serial / Kryminalny) | String.Contains(ListItem.Genre,Serial / Szpiegowski) | String.Contains(ListItem.Genre,Serial / Grozy) | String.Contains(ListItem.Genre,Serial / Familijny) | String.Contains(ListItem.Genre,Serial / Fantasy)"
+msgstr "String.Contains(ListItem.Genre,Seriale) | String.Contains(ListItem.Genre,Serial / Wojenny) | String.Contains(ListItem.Genre,Serial / Obyczajowo) | String.Contains(ListItem.Genre,Serial / Historyczny) | String.Contains(ListItem.Genre,Serial / Kostiumowy) | String.Contains(ListItem.Genre,Serial / Przygodowy) | String.Contains(ListItem.Genre,Serial / Telenowela) | String.Contains(ListItem.Genre,Serial / Sensacyjny) | String.Contains(ListItem.Genre,Serial / Sf) | String.Contains(ListItem.Genre,Serial / Komediowy) | String.Contains(ListItem.Genre,Serial / Akcji) | String.Contains(ListItem.Genre,Serial / Obyczajowy) | String.Contains(ListItem.Genre,Serial / Kryminalny) | String.Contains(ListItem.Genre,Serial / Szpiegowski) | String.Contains(ListItem.Genre,Serial / Grozy) | String.Contains(ListItem.Genre,Serial / Familijny) | String.Contains(ListItem.Genre,Serial / Fantasy)"
 
 # PVRGenreParadocumentary1Var Paradocumentary,natura,hostory ↓
 
@@ -3291,14 +3307,14 @@ msgstr "String.Contains(ListItem.Genre,Program / Krajoznawczy) | String.Contains
 # PVRGenreEntertainment1Var  Entertainment, Magazine ↓ String.Contains(ListItem.Genre,Magazyn) | 
 
 msgctxt "#010200004"
-msgid "String.Contains(ListItem.Genre,Serial Reality) | String.Contains(ListItem.Genre,Serial / Reality) | String.Contains(ListItem.Genre,Rozrywka) | String.Contains(ListItem.Genre,Program / Rozrywkowy)"
-msgstr "String.Contains(ListItem.Genre,Serial Reality) | String.Contains(ListItem.Genre,Serial / Reality) | String.Contains(ListItem.Genre,Rozrywka) | String.Contains(ListItem.Genre,Program / Rozrywkowy)"
+msgid "String.Contains(ListItem.Genre,Felieton) | String.Contains(ListItem.Genre,Talk Show) | String.Contains(ListItem.Genre,Serial Reality) | String.Contains(ListItem.Genre,Serial / Reality) | String.Contains(ListItem.Genre,Rozrywka) | String.Contains(ListItem.Genre,Program / Rozrywkowy)"
+msgstr "String.Contains(ListItem.Genre,Felieton) | String.Contains(ListItem.Genre,Talk Show) | String.Contains(ListItem.Genre,Serial Reality) | String.Contains(ListItem.Genre,Serial / Reality) | String.Contains(ListItem.Genre,Rozrywka) | String.Contains(ListItem.Genre,Program / Rozrywkowy)"
 
 # PVRGenreReportage1Var Information, news etc... ↓
 
 msgctxt "#010200005"
-msgid "String.Contains(ListItem.Genre,Magazyn / Wywiad) | String.Contains(ListItem.Genre,Magazyn / Debata) | String.Contains(ListItem.Genre,Magazyn / Informacyjny) | String.Contains(ListItem.Genre,Program / Informacyjny) | String.Contains(ListItem.Genre,Magazyn / Swrwis Informacyjny) | String.Contains(ListItem.Genre,Reportaż) | String.Contains(ListItem.Genre,Program / Publicystyczny) | String.Contains(ListItem.Genre,Magazyn / Serwis Informacyjny)"
-msgstr "String.Contains(ListItem.Genre,Magazyn / Wywiad) | String.Contains(ListItem.Genre,Magazyn / Debata) | String.Contains(ListItem.Genre,Magazyn / Informacyjny) | String.Contains(ListItem.Genre,Program / Informacyjny) | String.Contains(ListItem.Genre,Magazyn / Swrwis Informacyjny) | String.Contains(ListItem.Genre,Reportaż) | String.Contains(ListItem.Genre,Program / Publicystyczny) | String.Contains(ListItem.Genre,Magazyn / Serwis Informacyjny)"
+msgid "String.Contains(ListItem.Genre,Publicystyka) | String.Contains(ListItem.Genre,Magazyn / Rolniczy) | String.Contains(ListItem.Genre,Magazyn / Wywiad) | String.Contains(ListItem.Genre,Magazyn / Debata) | String.Contains(ListItem.Genre,Magazyn / Informacyjny) | String.Contains(ListItem.Genre,Program / Informacyjny) | String.Contains(ListItem.Genre,Magazyn / Swrwis Informacyjny) | String.Contains(ListItem.Genre,Reportaż) | String.Contains(ListItem.Genre,Program / Publicystyczny) | String.Contains(ListItem.Genre,Magazyn / Serwis Informacyjny)"
+msgstr "String.Contains(ListItem.Genre,Publicystyka) | String.Contains(ListItem.Genre,Magazyn / Rolniczy) | String.Contains(ListItem.Genre,Magazyn / Wywiad) | String.Contains(ListItem.Genre,Magazyn / Debata) | String.Contains(ListItem.Genre,Magazyn / Informacyjny) | String.Contains(ListItem.Genre,Program / Informacyjny) | String.Contains(ListItem.Genre,Magazyn / Swrwis Informacyjny) | String.Contains(ListItem.Genre,Reportaż) | String.Contains(ListItem.Genre,Program / Publicystyczny) | String.Contains(ListItem.Genre,Magazyn / Serwis Informacyjny)"
 
 # PVRGenreKids1Var Kids all... ↓
 
@@ -3321,8 +3337,8 @@ msgstr "String.Contains(ListItem.Genre,Serial / Sportowy) | String.Contains(List
 # PVRGenreReligious1Var All Religious  ↓
 
 msgctxt "#010200009"
-msgid "String.Contains(ListItem.Genre,Film / Religijny) | String.Contains(ListItem.Genre,Magazyn / Religijny) | String.Contains(ListItem.Genre,Program / Religijny)"
-msgstr "String.Contains(ListItem.Genre,Film / Religijny) | String.Contains(ListItem.Genre,Magazyn / Religijny) | String.Contains(ListItem.Genre,Program / Religijny)"
+msgid "String.Contains(ListItem.Genre,Telezakupy) | String.Contains(ListItem.Genre,Film / Religijny) | String.Contains(ListItem.Genre,Magazyn / Religijny) | String.Contains(ListItem.Genre,Program / Religijny)"
+msgstr "String.Contains(ListItem.Genre,Telezakupy) | String.Contains(ListItem.Genre,Film / Religijny) | String.Contains(ListItem.Genre,Magazyn / Religijny) | String.Contains(ListItem.Genre,Program / Religijny)"
 
 # PVRGenreErotic1Var All Erotic's  ↓
 
@@ -3333,5 +3349,5 @@ msgstr "String.Contains(ListItem.Genre,Erotyczny) | String.Contains(ListItem.Gen
 # PVRGenreMagazineVar All Magazine (without sport , religious just all uncategorized)  ↓
 
 msgctxt "#010200011"
-msgid "String.Contains(ListItem.Genre,Magazyn / Zagranica) | String.Contains(ListItem.Genre,Magazyn / Ekonomiczny) | String.Contains(ListItem.Genre,Magazyn / Polonijny) | String.Contains(ListItem.Genre,Magazyn / Polaków) | String.Contains(ListItem.Genre,Program / Kulturalny) | String.Contains(ListItem.Genre,Magazyn / Poranek W Tv Republika) | String.Contains(ListItem.Genre,Magazyn / Cykl Felietonów) | String.Contains(ListItem.Genre,Magazyn / Ogrodniczy) | String.Contains(ListItem.Genre,Magazyn / Międzynarodowy) | String.Contains(ListItem.Genre,Magazyn / Kulturalny) | String.Contains(ListItem.Genre,Magazyn / Publicystyczny) | String.Contains(ListItem.Genre,Magazyn / Policyjny) | String.Contains(ListItem.Genre,Magazyn / Sportów) | String.Contains(ListItem.Genre,Magazyn / Turystyczny) | String.Contains(ListItem.Genre,Magazyn / Filmowy) | String.Contains(ListItem.Genre,Magazyn / Reklamowy) | String.Contains(ListItem.Genre,Magazyn / Komputerowy) | String.Contains(ListItem.Genre,Magazyn / Poradnikowy) | String.Contains(ListItem.Genre,Magazyn / Popularnonaukowy) | String.Contains(ListItem.Genre,Magazyn / Fitness) | String.Contains(ListItem.Genre,Magazyn / Wędkarski) | String.Contains(ListItem.Genre,Kulinarny) | String.Contains(ListItem.Genre,Magazyn.) | String.Contains(ListItem.Genre,Motoryzacyjny)"
-msgstr "String.Contains(ListItem.Genre,Magazyn / Zagranica) | String.Contains(ListItem.Genre,Magazyn / Ekonomiczny) | String.Contains(ListItem.Genre,Magazyn / Polonijny) | String.Contains(ListItem.Genre,Magazyn / Polaków) | String.Contains(ListItem.Genre,Program / Kulturalny) | String.Contains(ListItem.Genre,Magazyn / Poranek W Tv Republika) | String.Contains(ListItem.Genre,Magazyn / Cykl Felietonów) | String.Contains(ListItem.Genre,Magazyn / Ogrodniczy) | String.Contains(ListItem.Genre,Magazyn / Międzynarodowy) | String.Contains(ListItem.Genre,Magazyn / Kulturalny) | String.Contains(ListItem.Genre,Magazyn / Publicystyczny) | String.Contains(ListItem.Genre,Magazyn / Policyjny) | String.Contains(ListItem.Genre,Magazyn / Sportów) | String.Contains(ListItem.Genre,Magazyn / Turystyczny) | String.Contains(ListItem.Genre,Magazyn / Filmowy) | String.Contains(ListItem.Genre,Magazyn / Reklamowy) | String.Contains(ListItem.Genre,Magazyn / Komputerowy) | String.Contains(ListItem.Genre,Magazyn / Poradnikowy) | String.Contains(ListItem.Genre,Magazyn / Popularnonaukowy) | String.Contains(ListItem.Genre,Magazyn / Fitness) | String.Contains(ListItem.Genre,Magazyn / Wędkarski) | String.Contains(ListItem.Genre,Kulinarny) | String.Contains(ListItem.Genre,Magazyn.) | String.Contains(ListItem.Genre,Motoryzacyjny)"
+msgid "String.Contains(ListItem.Genre,Magazyn / Kryminalny) | String.Contains(ListItem.Genre,Magazyn / Zagranica) | String.Contains(ListItem.Genre,Magazyn / Ekonomiczny) | String.Contains(ListItem.Genre,Magazyn / Polonijny) | String.Contains(ListItem.Genre,Magazyn / Polaków) | String.Contains(ListItem.Genre,Program / Kulturalny) | String.Contains(ListItem.Genre,Magazyn / Poranek W Tv Republika) | String.Contains(ListItem.Genre,Magazyn / Cykl Felietonów) | String.Contains(ListItem.Genre,Magazyn / Ogrodniczy) | String.Contains(ListItem.Genre,Magazyn / Międzynarodowy) | String.Contains(ListItem.Genre,Magazyn / Kulturalny) | String.Contains(ListItem.Genre,Magazyn / Publicystyczny) | String.Contains(ListItem.Genre,Magazyn / Policyjny) | String.Contains(ListItem.Genre,Magazyn / Sportów) | String.Contains(ListItem.Genre,Magazyn / Turystyczny) | String.Contains(ListItem.Genre,Magazyn / Filmowy) | String.Contains(ListItem.Genre,Magazyn / Reklamowy) | String.Contains(ListItem.Genre,Magazyn / Komputerowy) | String.Contains(ListItem.Genre,Magazyn / Poradnikowy) | String.Contains(ListItem.Genre,Magazyn / Popularnonaukowy) | String.Contains(ListItem.Genre,Magazyn / Fitness) | String.Contains(ListItem.Genre,Magazyn / Wędkarski) | String.Contains(ListItem.Genre,Kulinarny) | String.Contains(ListItem.Genre,Magazyn.) | String.Contains(ListItem.Genre,Motoryzacyjny)"
+msgstr "String.Contains(ListItem.Genre,Magazyn / Kryminalny) | String.Contains(ListItem.Genre,Magazyn / Zagranica) | String.Contains(ListItem.Genre,Magazyn / Ekonomiczny) | String.Contains(ListItem.Genre,Magazyn / Polonijny) | String.Contains(ListItem.Genre,Magazyn / Polaków) | String.Contains(ListItem.Genre,Program / Kulturalny) | String.Contains(ListItem.Genre,Magazyn / Poranek W Tv Republika) | String.Contains(ListItem.Genre,Magazyn / Cykl Felietonów) | String.Contains(ListItem.Genre,Magazyn / Ogrodniczy) | String.Contains(ListItem.Genre,Magazyn / Międzynarodowy) | String.Contains(ListItem.Genre,Magazyn / Kulturalny) | String.Contains(ListItem.Genre,Magazyn / Publicystyczny) | String.Contains(ListItem.Genre,Magazyn / Policyjny) | String.Contains(ListItem.Genre,Magazyn / Sportów) | String.Contains(ListItem.Genre,Magazyn / Turystyczny) | String.Contains(ListItem.Genre,Magazyn / Filmowy) | String.Contains(ListItem.Genre,Magazyn / Reklamowy) | String.Contains(ListItem.Genre,Magazyn / Komputerowy) | String.Contains(ListItem.Genre,Magazyn / Poradnikowy) | String.Contains(ListItem.Genre,Magazyn / Popularnonaukowy) | String.Contains(ListItem.Genre,Magazyn / Fitness) | String.Contains(ListItem.Genre,Magazyn / Wędkarski) | String.Contains(ListItem.Genre,Kulinarny) | String.Contains(ListItem.Genre,Magazyn.) | String.Contains(ListItem.Genre,Motoryzacyjny)"
