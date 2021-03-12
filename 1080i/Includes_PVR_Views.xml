@@ -209,7 +209,7 @@
 					<top>60</top>
 					<width>730</width>
 					<height>400</height>
-					<texture diffuse="homewidgets/cases/glass/landscape_e.png">kodisplash.png</texture>
+					<texture diffuse="homewidgets/cases/glass/landscape_e.png">pvr_info.jpg</texture>
 					<visible>!Player.HasVideo</visible>
 				</control>
 				<control type="image">
@@ -942,7 +942,7 @@
 						<control type="image">
 							<width>750</width>
 							<height>405</height>
-							<texture diffuse="homewidgets/cases/glass/landscape_e.png">kodisplash.png</texture>
+							<texture diffuse="homewidgets/cases/glass/landscape_e.png">pvr_info.jpg</texture>
 							<visible>!Player.HasVideo</visible>
 						</control>
 						<control type="image">

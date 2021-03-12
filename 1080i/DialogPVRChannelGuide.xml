@@ -15,7 +15,7 @@
 				<top>80</top>
 				<width>800</width>
 				<height>400</height>
-				<texture diffuse="homewidgets/cases/glass/landscape_e.png">kodisplash.png</texture>
+				<texture diffuse="homewidgets/cases/glass/landscape_e.png">pvr_info.jpg</texture>
 			</control>
 			<control type="image">
 				<left>1110</left>

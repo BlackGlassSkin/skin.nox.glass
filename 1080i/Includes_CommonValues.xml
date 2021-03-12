@@ -766,6 +766,22 @@
 			<texturefocus colordiffuse="$VAR[HighlightBarColor]" border="1">listselect_fo.png</texturefocus>
 		</definition>
 	</include>
+	<include name="CustomColorAudioVideoButton">
+		<param name="ColorStringVar"/>
+		<definition>
+			<width>1452</width>
+			<height>60</height>
+			<radiowidth>110</radiowidth>
+			<radioheight>50</radioheight>
+			<textoffsetx>15</textoffsetx>
+			<font>font15</font>
+			<textureradioonfocus colordiffuse="$PARAM[ColorStringVar]">image11.png</textureradioonfocus>
+			<textureradioonnofocus colordiffuse="$PARAM[ColorStringVar]">image11.png</textureradioonnofocus>
+			<textureradioofffocus colordiffuse="$PARAM[ColorStringVar]">image11.png</textureradioofffocus>
+			<textureradiooffnofocus colordiffuse="$PARAM[ColorStringVar]">image11.png</textureradiooffnofocus>
+			<texturefocus colordiffuse="$VAR[HighlightBarColor]" border="1">listselect_fo.png</texturefocus>
+		</definition>
+	</include>
 	<include name="CustomColorRadioButtonMy">
 		<param name="ColorStringVar"/>
 		<definition>

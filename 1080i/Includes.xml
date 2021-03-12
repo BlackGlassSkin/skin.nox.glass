@@ -3303,8 +3303,8 @@
 				<left>-5%</left>
 				<top>-30</top>
 				<width>110%</width>
-				<height>147</height>
-				<texture border="20" flipy="true" colordiffuse="$VAR[ThemePanelColor]">dialogs/default/bg.png</texture>
+				<height>117</height>
+				<texture border="20" flipy="true" colordiffuse="$VAR[ThemePanelAudioVideoColor]">dialogs/default/bg.png</texture>
 				<visible>!Window.IsVisible(playerprocessinfo)</visible>
 				<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDSubtitleSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(SubtitleSearch) | Window.IsVisible(1115)]</visible>
 				<animation effect="fade" end="100" time="0">Visible</animation>
@@ -3312,7 +3312,7 @@
 			<!-- Media Flags -->
 			<control type="grouplist">
 				<left>15</left>
-				<top>5</top>
+				<top>-12</top>
 				<width>1890</width>
 				<height>100</height>
 				<align>center</align>
@@ -3385,7 +3385,7 @@
 				<top>755</top>
 				<width>110%</width>
 				<height>400</height>
-				<texture border="40" colordiffuse="$VAR[ThemePanelColor]">dialogs/default/bg.png</texture>
+				<texture border="40" colordiffuse="$VAR[ThemePanelAudioVideoColor]">dialogs/default/bg.png</texture>
 				<visible>VideoPlayer.HasInfo + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes) | VideoPlayer.Content(musicvideos)] | [VideoPlayer.HasInfo + Skin.HasSetting(Enable.RecordingInfo) + Pvr.IsPlayingRecording] | VideoPlayer.HasInfo + Skin.HasSetting(Enable.AddonInfo) + !Pvr.IsPlayingRecording</visible>
 				<animation effect="slide" end="0,-90" time="0" tween="quadratic" condition="Window.IsActive(videoosd) + !Skin.HasSetting(VideoOSDOnTop)">Conditional</animation>
 			</control>

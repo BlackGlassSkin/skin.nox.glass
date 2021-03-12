@@ -5,7 +5,7 @@
 	<controls>
 		<control type="group">
 			<left>199</left>
-			<top>150</top>
+			<top>50</top>
 			<control type="image">
 				<height>800</height>
 				<width>1500</width>

@@ -2197,8 +2197,7 @@
 		    <visible>!System.Platform.Android + Skin.HasSetting(Enable.MysystemWidget)</visible>
 			<left>720r</left>
 			<top>45</top>
-			<!-- <include condition="!String.IsEmpty(Skin.String(Widget.Trans))">HomeWidgetFade</include> -->
-			<visible>String.IsEqual(Container(9000).ListItem.Property(path),ActivateWindow(Settings)) + String.IsEmpty(Container(9000).ListItem.Property(widgetType.2)) + !Skin.HasSetting(centermainmenu)</visible>
+			<visible>!String.IsEqual(Skin.String(MainMenu.Layout),vertical) + String.IsEqual(Container(9000).ListItem.Property(path),ActivateWindow(Settings)) + String.IsEmpty(Container(9000).ListItem.Property(widgetType.2)) + !Skin.HasSetting(centermainmenu)</visible>
 			<animation effect="slide" start="-1790,0" time="330" tween="cubic" easing="inout" condition="String.IsEqual(Container(9000).ListItem.Property(path),ActivateWindow(Settings)) + String.IsEmpty(Container(9000).ListItem.Property(widgetType.2)) + !Skin.HasSetting(centermainmenu)">Conditional</animation>
 			<include>WindowOpenCloseAnimation</include>
 			<animation effect="fade" time="0">Visible</animation>
@@ -2517,6 +2516,43 @@
 						<shadowcolor>black</shadowcolor>
 						<label>[B]$INFO[System.Date][CR]$INFO[Window(Weather).Property(Current.Condition)][CR]Min. [COLOR red]$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits] [/COLOR][COLOR green]|[/COLOR] Max. [COLOR red]$INFO[Window(Weather).Property(Day0.HighTemp)]$INFO[System.TemperatureUnits][/COLOR][/B]</label>
 					</control>
+					<control type="group">
+					    <visible>System.HasAddon(script.ezmaintenanceplus)</visible>
+						<control type="image">
+							<left>-170</left>
+							<top>-22</top>
+							<width>190</width>
+							<height>190</height>
+							<texture background="true" border="0">media/bin.png</texture>
+						</control>
+						<top>102</top>
+						<left>-650</left>
+						<itemgap>31</itemgap>
+						<align>left</align>
+						<control type="label">
+							<height>20</height>
+							<width>500</width>
+							<font>font12b</font>
+							<textcolor>ff3333ff</textcolor>
+							<label>$INFO[Window().Property(str(count)) ,[COLOR green]Package :[/COLOR] [B],[/B]/Files]</label>
+						</control>
+						<control type="label">
+							<top>62</top>
+							<height>20</height>
+							<width>500</width>
+							<font>font12b</font>
+							<textcolor>ff3333ff</textcolor>
+							<label>$INFO[Window().Property(total_sizetext),[COLOR green]Package :[/COLOR] [B],[/B]/MB]</label>
+						</control>
+						<control type="label">
+							<top>122</top>
+							<height>20</height>
+							<width>500</width>
+							<font>font12b</font>
+							<textcolor>ff3333ff</textcolor>
+							<label>$INFO[Window().Property(total_sizetext2),[COLOR green]Thumb    :[/COLOR] [B],[/B]/MB]</label>
+						</control>
+					</control>
 					<control type="grouplist">
 						<left>230</left>
 						<top>130</top>
@@ -2653,7 +2689,6 @@
 				</control>
 			</control>
 			<control type="group">
-				<include>Clock_Date</include>
 				<control type="image">
 					<top>-58</top>
 					<posx>-1150</posx>

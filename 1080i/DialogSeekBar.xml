@@ -49,7 +49,7 @@
 					<top>16.9</top>
 					<width>101%</width>
 					<height>50</height>
-					<texturebg border="2" colordiffuse="$VAR[ThemePanelColor]">osd/texturebg.png</texturebg>
+					<texturebg border="2" colordiffuse="$VAR[ThemePanelAudioVideoColor]">osd/texturebg.png</texturebg>
 					<lefttexture/>
 					<midtexture colordiffuse="$VAR[ThemeOSDCacheColor]" border="2">osd/midtexture_cache.png</midtexture>
 					<righttexture/>

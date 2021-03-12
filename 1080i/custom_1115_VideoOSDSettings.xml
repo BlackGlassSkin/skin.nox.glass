@@ -179,13 +179,32 @@
 					<radioposx>1350</radioposx>
 					<visible>VideoPlayer.Content(livetv)</visible>
 				</control>
-				<control type="button" id="90218">
+				<control type="radiobutton" id="90218">
 					<label>$LOCALIZE[32007]</label>
 					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=ThemePanelAudioVideoColor)</onclick>
 					<param name="ColorStringVar">$VAR[ThemePanelAudioVideoColor]</param>
-					<width>1452</width>
-					<radioposx>1350</radioposx>
-					<onclick>Dialog.Close(All,true)</onclick>
+					<include content="CustomColorAudioVideoButton">
+						<param name="ColorStringVar">$VAR[ThemePanelAudioVideoColor]</param>
+					</include>
+					<onclick>Dialog.Close(1115)</onclick>
+				</control>
+				<control type="radiobutton" id="90219">
+					<label>$LOCALIZE[32033]</label>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=AVButtonColorNoFo)</onclick>
+					<param name="ColorStringVar">$VAR[ThemePanelAudioVideoColor]</param>
+					<include content="CustomColorAudioVideoButton">
+						<param name="ColorStringVar">$VAR[AVButtonColorNoFo]</param>
+					</include>
+					<onclick>Dialog.Close(1115)</onclick>
+				</control>
+				<control type="radiobutton" id="90220">
+					<label>$LOCALIZE[32034]</label>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=AVButtonColorFo)</onclick>
+					<param name="ColorStringVar">$VAR[AVButtonColorFo]</param>
+					<include content="CustomColorAudioVideoButton">
+						<param name="ColorStringVar">$VAR[AVButtonColorFo]</param>
+					</include>
+					<onclick>Dialog.Close(1115)</onclick>
 				</control>
 			</control>
 			<control type="scrollbar" id="6">

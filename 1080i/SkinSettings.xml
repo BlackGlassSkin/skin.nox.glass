@@ -124,7 +124,7 @@
 							<icon/>
 						</item>
 						<item id="5">
-							<label>Kim $LOCALIZE[31014]</label>
+							<label>$LOCALIZE[31014]</label>
 							<icon/>
 						</item>
 						<item id="11">
