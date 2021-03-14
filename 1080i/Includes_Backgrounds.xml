@@ -66,13 +66,13 @@
 				<animation effect="slide" start="0,0" end="0,94" time="320" tween="cubic" easing="out" condition="Control.IsVisible(506) | Window.IsActive(script-globalsearch.xml)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,151" time="320" tween="cubic" easing="out" condition="Window.IsActive(addoninformation)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,50" time="320" tween="cubic" easing="out" condition="Control.IsVisible(509) | Window.IsVisible(weather) | Window.IsVisible(SettingsCategory.xml) | Window.IsActive(skinsettings) | Window.IsActive(systeminfo) | Window.IsActive(profiles) | Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(script-NextAired-TVGuide2.xml)">Conditional</animation>
-				<control type="image">
-					<top>825</top>
-					<left>-13.6</left>
-					<width>101.5%</width>
-					<height>280</height>
-					<texture colordiffuse="$VAR[ThemePanelColor]" border="40">floor.png</texture>
-				</control>
+				<!--   <control type="image">
+                    <top>825</top>
+                    <left>-13.6</left>
+                    <width>101.5%</width>
+                    <height>280</height>
+                    <texture colordiffuse="$VAR[ThemePanelColor]" border="40">floor.png</texture>
+                </control> -->
 			</control>
 			<control type="group">
 				<visible>Window.IsActive(settings) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(1140) | Window.IsActive(1117) | Window.IsActive(systeminfo) | Window.IsActive(profiles) <!--| Window.IsActive(weather)--> | Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(script-NextAired-TVGuide2.xml)</visible>
@@ -168,14 +168,29 @@
 			<imagepath background="true" colordiffuse="$VAR[ThemeWallpapersColor]">$VAR[HomeBackgroundVar]</imagepath>
 			<include>MultiImageTime</include>
 			<fadetime>1300</fadetime>
-			<visible>![Player.HasAudio + Skin.HasSetting(Enable.ArtistSlideshowOnHome) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))]</visible>
+			<visible>![Player.HasAudio + Skin.HasSetting(Enable.ArtistSlideshowOnHome) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image)) + String.IsEmty(VizBackgroundVar)]</visible>
 		</control>
 		<control type="image">
 			<include condition="Skin.HasSetting(Enable.AnimatedBackgrounds)">AnimatedBackgroundAnimation</include>
 			<fadetime>2000</fadetime>
 			<aspectratio>keep</aspectratio>
 			<texture background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow.Image)]</texture>
-			<visible>Player.HasAudio + Skin.HasSetting(Enable.ArtistSlideshowOnHome) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))</visible>
+			<visible>Player.HasAudio + Skin.HasSetting(Enable.ArtistSlideshowOnHome) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image)) + String.IsEmty(VizBackgroundVar)</visible>
+		</control>
+		<control type="multiimage">
+			<include>FullscreenDimensions</include>
+			<include condition="Skin.HasSetting(Enable.AnimatedBackgrounds)">AnimatedBackgroundAnimation</include>
+			<imagepath background="true" colordiffuse="FF666666">$VAR[VizBackgroundVar]</imagepath>
+			<include>MultiImageTime</include>
+			<fadetime>1300</fadetime>
+			<visible>![Player.HasAudio + Skin.HasSetting(Enable.ArtistSlideshowOnHome) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image)) + !String.IsEmty(VizBackgroundVar)]</visible>
+		</control> <!-- zmiany -->
+		<control type="image">
+			<include condition="Skin.HasSetting(Enable.AnimatedBackgrounds)">AnimatedBackgroundAnimation</include>
+			<fadetime>2000</fadetime>
+			<aspectratio>keep</aspectratio>
+			<texture background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow.Image)]</texture>
+			<visible>Player.HasAudio + Skin.HasSetting(Enable.ArtistSlideshowOnHome) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image)) + !String.IsEmty(ArtistSlideshow.Image)</visible>
 		</control>
 	</include>
 	<include name="HomeFanartLists">

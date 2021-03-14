@@ -107,13 +107,12 @@
 							<visible>ListItem.IsRecording</visible>
 						</control>
 						<control type="image">
-							<top>75</top>
-							<left>80</left>
-							<width>40</width>
-							<height>40</height>
+							<top>85</top>
+							<left>90</left>
+							<width>30</width>
+							<height>30</height>
 							<texture colordiffuse="green">media/archive.png</texture>
 							<visible>ListItem.IsPlayable</visible>
-							<!-- <visible>PVR.IsRecordingPlayingChannel | PVR.IsPlayingActiveRecording</visible> -->
 						</control>
 					</control>
 				</itemlayout>
@@ -123,7 +122,6 @@
 						<height>120</height>
 						<texture colordiffuse="$VAR[HighlightBarColor]" border="4">listselect_fo.png</texture>
 						<visible>Control.HasFocus(50)</visible>
-						<!-- <include>VisibleFadeAnimation</include> -->
 					</control>
 					<control type="image">
 						<left>15</left>
@@ -191,13 +189,12 @@
 							<visible>ListItem.IsRecording</visible>
 						</control>
 						<control type="image">
-							<top>75</top>
-							<left>80</left>
-							<width>40</width>
-							<height>40</height>
+							<top>85</top>
+							<left>90</left>
+							<width>30</width>
+							<height>30</height>
 							<texture colordiffuse="green">media/archive.png</texture>
 							<visible>ListItem.IsPlayable</visible>
-							<!-- <visible>PVR.IsRecordingPlayingChannel | PVR.IsPlayingActiveRecording</visible> -->
 						</control>
 					</control>
 				</focusedlayout>

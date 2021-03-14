@@ -163,7 +163,7 @@
 				<usealttexture>!System.IsMaster</usealttexture>
 				<texturenofocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturenofocus>
 				<texturefocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturefocus>
-				<onclick>xbmc.mastermode</onclick>
+				<onclick>Mastermode</onclick>
 				<visible>System.HasLocks</visible>
 			</control>
 			<control type="button" id="11">

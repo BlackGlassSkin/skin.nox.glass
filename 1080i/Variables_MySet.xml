@@ -362,5 +362,12 @@
 		<value condition="$LOCALIZE[010200011]">overlays/pvr/genres/144-fo.png</value>
 		<!-- Magazine -->
 	</variable>
-	
+	<variable name="AddonsOriginVar">
+		<value condition="ListItem.Property(Addon.IsFromOfficialRepo) + ListItem.IsAutoUpdateable">flags/addonstatus/official.png</value>
+		<value condition="ListItem.Property(Addon.IsFromOfficialRepo)">flags/addonstatus/official-pinned.png</value>
+		<value condition="String.IsEqual(ListItem.AddonOrigin,$LOCALIZE[25014]) + ListItem.IsAutoUpdateable">flags/addonstatus/manual.png</value>
+		<value condition="String.IsEqual(ListItem.AddonOrigin,$LOCALIZE[25014])">flags/addonstatus/manual-pinned.png</value>
+		<value condition="ListItem.IsAutoUpdateable">flags/addonstatus/install.png</value>
+		<value>flags/addonstatus/install-pinned.png</value>
+	</variable>
 </includes>
