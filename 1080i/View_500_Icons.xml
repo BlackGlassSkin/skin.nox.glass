@@ -87,7 +87,7 @@
 						<width>240</width>
 						<height>360</height>
 						<aspectratio>scale</aspectratio>
-						<texture colordiffuse="BAFFFFFF" background="true" fallback="special://skin/extras/moviegenres/default/Default.jpg">$VAR[GenreIconVar]</texture>
+						<texture colordiffuse="BAFFFFFF" background="true" fallback="resource://resource.images.moviegenreicons.noxglass/default/Default.jpg">$VAR[GenreIconVar]</texture>
 						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
 						<bordersize>2</bordersize>
 					</control>
@@ -102,7 +102,7 @@
 							<width>240</width>
 							<height>360</height>
 							<aspectratio>scale</aspectratio>
-							<texture colordiffuse="BAFFFFFF" background="true" fallback="special://skin/extras/moviegenres/default/Default.jpg">$VAR[GenreIconVar]</texture>
+							<texture colordiffuse="BAFFFFFF" background="true" fallback="resource://resource.images.moviegenreicons.noxglass/default/Default.jpg">$VAR[GenreIconVar]</texture>
 							<bordertexture colordiffuse="$VAR[ThemeLabelColor]" border="8">thumbs/thumbnail_focused.png</bordertexture>
 							<bordersize>8</bordersize>
 						</control>

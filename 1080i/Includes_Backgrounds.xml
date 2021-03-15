@@ -105,7 +105,7 @@
 			<include condition="Skin.HasSetting(Enable.AnimatedBackgrounds)">AnimatedBackgroundAnimation</include>
 			<aspectratio>scale</aspectratio>
 			<fadetime>FanartCrossfadeTime</fadetime>
-			<texture background="true" fallback="special://skin/backgrounds/fallback_movies.jpg">$INFO[Skin.String(VideoGenreFanartPath)]$INFO[ListItem.Label,,.jpg]</texture>
+			<texture background="true" fallback="http://dl.dropboxusercontent.com/s/ujfex29xn8btapl/fallback_movies.jpg">$INFO[Skin.String(VideoGenreFanartPath)]$INFO[ListItem.Label,,.jpg]</texture>
 			<visible>Container.Content(genres)</visible>
 		</control>
 	</include>
@@ -115,7 +115,7 @@
 			<include condition="Skin.HasSetting(Enable.AnimatedBackgrounds)">AnimatedBackgroundAnimation</include>
 			<aspectratio>scale</aspectratio>
 			<fadetime>FanartCrossfadeTime</fadetime>
-			<texture background="true" fallback="special://skin/backgrounds/fallback_music.jpg">$INFO[Skin.String(MusicGenreFanartPath)]$INFO[ListItem.Label,,.jpg]</texture>
+			<texture background="true" fallback="http://dl.dropboxusercontent.com/s/8zqxhgps1q4grqv/fallback_music.jpg">$INFO[Skin.String(MusicGenreFanartPath)]$INFO[ListItem.Label,,.jpg]</texture>
 			<visible>Container.Content(genres)</visible>
 		</control>
 	</include>
@@ -228,14 +228,14 @@
 			<include condition="Skin.HasSetting(Enable.AnimatedBackgrounds)">AnimatedBackgroundAnimation</include>
 			<animation effect="fade" time="0">WindowClose</animation>
 			<control type="image">
-				<texture background="true" fallback="special://skin/backgrounds/fallback_movies.jpg">$INFO[Skin.String(CustomDefaultBackground.path)]</texture>
+				<texture background="true" fallback="http://dl.dropboxusercontent.com/s/ujfex29xn8btapl/fallback_movies.jpg">$INFO[Skin.String(CustomDefaultBackground.path)]</texture>
 				<aspectratio>scale</aspectratio>
 				<fadetime>600</fadetime>
 				<visible>!ControlGroup(9001).HasFocus</visible>
 				<animation effect="fade" time="0">VisibleChange</animation>
 			</control>
 			<control type="image">
-				<texture background="true" fallback="special://skin/backgrounds/fallback_movies.jpg">$INFO[Container.ListItem.Property(Fanart)]</texture>
+				<texture background="true" fallback="http://dl.dropboxusercontent.com/s/ujfex29xn8btapl/fallback_movies.jpg">$INFO[Container.ListItem.Property(Fanart)]</texture>
 				<aspectratio>scale</aspectratio>
 				<fadetime>600</fadetime>
 				<visible>ControlGroup(9001).HasFocus</visible>
@@ -250,14 +250,14 @@
 			<include condition="Skin.HasSetting(Enable.AnimatedBackgrounds)">AnimatedBackgroundAnimation</include>
 			<animation effect="fade" time="0">WindowClose</animation>
 			<control type="image">
-				<texture background="true" fallback="special://skin/backgrounds/fallback_movies.jpg">$INFO[Skin.String(CustomDefaultBackground.path)]</texture>
+				<texture background="true" fallback="http://dl.dropboxusercontent.com/s/ujfex29xn8btapl/fallback_movies.jpg">$INFO[Skin.String(CustomDefaultBackground.path)]</texture>
 				<aspectratio>scale</aspectratio>
 				<fadetime>600</fadetime>
 				<visible>!Control.HasFocus(50)</visible>
 				<animation effect="fade" time="0">VisibleChange</animation>
 			</control>
 			<control type="image">
-				<texture background="true" fallback="special://skin/backgrounds/fallback_movies.jpg">$VAR[GlobalBackgroundVar]</texture>
+				<texture background="true" fallback="http://dl.dropboxusercontent.com/s/ujfex29xn8btapl/fallback_movies.jpg">$VAR[GlobalBackgroundVar]</texture>
 				<aspectratio>scale</aspectratio>
 				<fadetime>600</fadetime>
 				<visible>Control.HasFocus(50)</visible>
@@ -571,7 +571,7 @@
 	</include>
 	<include name="LibreELECBG">
 		<control type="image">
-			<texture background="true" colordiffuse="66404040">special://skin/backgrounds/le_bg.jpg</texture>
+			<texture background="true" colordiffuse="66404040">http://dl.dropboxusercontent.com/s/7epeeravzv6m75o/le_bg.jpg</texture>
 			<aspectratio>scale</aspectratio>
 			<fadetime>600</fadetime>
 			<animation effect="fade" time="600">Visible</animation>
@@ -581,7 +581,7 @@
 	</include>
 	<include name="CoreELECBG">
 		<control type="image">
-			<texture background="true" colordiffuse="66404040">special://skin/backgrounds/ce_bg.jpg</texture>
+			<texture background="true" colordiffuse="66404040">http://dl.dropboxusercontent.com/s/ziotl7zc83sphd8/ce_bg.jpg</texture>
 			<aspectratio>scale</aspectratio>
 			<fadetime>600</fadetime>
 			<animation effect="fade" time="600">Visible</animation>

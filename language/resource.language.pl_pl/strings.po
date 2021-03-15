@@ -2320,10 +2320,18 @@ msgctxt "#31575"
 msgid "Kodi random music video fanart"
 msgstr "Losowy fanart teledysku"
 
-# empty strings from id 31578 to 31600
+# empty strings from id 31580 to 31600
 msgctxt "#31577"
 msgid "Auto hide OSD after 10 seconds of inactivity"
 msgstr "Automatyczne ukrywanie OSD po 10 sekundach braku aktywności"
+
+msgctxt "#31578"
+msgid "Enable / Disable Kim Wiz"
+msgstr "Włącz / Wyłącz Kim Wiz"
+
+msgctxt "#31579"
+msgid "Enable / Disable CD visualization in the main menu"
+msgstr "Włącz / Wyłącz wizualizację płyty CD w menu głównym"
 
 msgctxt "#31601"
 msgid "Show discart in movie information"
@@ -3130,15 +3138,15 @@ msgstr "Kolory Przyciskow Video i TV"
 
 msgctxt "#32033"
 msgid "Video & PVR buttons"
-msgstr "Przyciski video i pvr staly kolor"
+msgstr "Przyciski video oraz pvr stały kolor"
 
 msgctxt "#32034"
 msgid "Video & pvr buttons focused"
-msgstr "Przyciski video i pvr podswietlone"
+msgstr "Przyciski video oraz pvr podświetlone"
 
 msgctxt "#32035"
 msgid "Progress & Buffer Color"
-msgstr "Kolor pasków postępu i buferowania"
+msgstr "Kolor pasków postępu oraz buffer"
 
 msgctxt "#32036"
 msgid "Progres EPG Frame"

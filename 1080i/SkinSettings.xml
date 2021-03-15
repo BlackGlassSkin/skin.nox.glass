@@ -124,7 +124,7 @@
 							<icon/>
 						</item>
 						<item id="5">
-							<label>$LOCALIZE[31014]</label>
+							<label>$LOCALIZE[31014] +</label>
 							<icon/>
 						</item>
 						<item id="11">
@@ -234,12 +234,12 @@
 							<selected>!Skin.HasSetting(Enable.VisibleSubmenu)</selected>
 							<visible>!String.IsEqual(Skin.String(MainMenu.Layout),vertical) + !system.getbool(lookandfeel.enablerssfeeds)</visible>
 						</control>
-						<control type="radiobutton" id="10101">
+						<!--<control type="radiobutton" id="10101">
 							<include>SettingsButtonCommonValues</include>
 							<label>[***32052***]</label>
-							<!--<onclick>Skin.ToggleSetting(Enable.TRripleMemu)</onclick>
-							<selected>!Skin.HasSetting(Enable.TRripleMemu)</selected> -->
-						</control>
+							<onclick>Skin.ToggleSetting(Enable.TRripleMemu)</onclick>
+							<selected>!Skin.HasSetting(Enable.TRripleMemu)</selected>
+						</control> -->
 						<control type="radiobutton" id="1019">
 							<include>SettingsButtonCommonValues</include>
 							<label>$LOCALIZE[31158]</label>
@@ -305,7 +305,7 @@
 						</control>
 						<control type="radiobutton" id="1017">
 							<include>SettingsButtonCommonValues</include>
-							<label>Enable / Disable CD effect in home menu</label>
+							<label>$LOCALIZE[31579]</label>
 							<onclick>Skin.ToggleSetting(Enable.CDWall)</onclick>
 							<selected>Skin.HasSetting(Enable.CDWall)</selected>
 						</control>
@@ -550,6 +550,7 @@
 							<label>$LOCALIZE[31975]</label>
 							<onclick condition="System.HasAddon(resource.images.studios.coloured)">Skin.ToggleSetting(coloredflags)</onclick>
 							<onclick condition="!System.HasAddon(resource.images.studios.coloured)">InstallAddon(resource.images.studios.coloured)</onclick>
+							<onclick condition="!System.HasAddon(resource.images.moviegenreicons.noxglass)">InstallAddon(resource.images.moviegenreicons.noxglass)</onclick>
 							<selected>Skin.HasSetting(coloredflags)</selected>
 						</control>
 						<control type="radiobutton" id="5008">

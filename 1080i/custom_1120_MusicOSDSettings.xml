@@ -179,14 +179,17 @@
 				<control type="radiobutton" id="90917">
 					<width>1452</width>
 					<radioposx>1350</radioposx>
-					<label>Enable / Disable Kim Wiz</label>
+					<label>$LOCALIZE[31578]</label>
 					<onclick>Skin.ToggleSetting(Enable.KimVizMod)</onclick>
 					<selected>!Skin.HasSetting(Enable.KimVizMod)</selected>
 				</control>
-				<control type="button" id="90215">
+				<control type="radiobutton" id="90215">
 					<label>$LOCALIZE[32007]</label>
 					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=ThemePanelAudioVideoColor)</onclick>
 					<param name="ColorStringVar">$VAR[ThemePanelAudioVideoColor]</param>
+					<include content="CustomColorAudioVideoButton">
+						<param name="ColorStringVar">$VAR[ThemePanelAudioVideoColor]</param>
+					</include>
 					<width>1452</width>
 					<radioposx>1350</radioposx>
 				</control>

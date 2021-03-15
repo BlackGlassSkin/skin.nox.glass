@@ -52,7 +52,7 @@
 			<visible>String.StartsWith(Container(9000).ListItem.Property(background),s:live) | [Control.HasFocus(9010) + String.StartsWith(Container(9010).ListItem.Property(background),s:live)]</visible>
 			<include>FullscreenDimensions</include>
 			<aspectratio align="center" aligny="top">scale</aspectratio>
-			<texture background="true">special://skin/backgrounds/default_livecases.jpg</texture>
+			<texture background="true">http://dl.dropboxusercontent.com/s/qblmbzvhf05uej4/default_livecases.jpg</texture>
 		</control>
 		<control type="group">
 			<visible>String.StartsWith(Container(9000).ListItem.Property(background),s:live) + ![String.EndsWith(Container(9000).ListItem.Property(background),i:songs) | String.EndsWith(Container(9000).ListItem.Property(background),i:albums)] | Control.HasFocus(9010) + String.StartsWith(Container(9010).ListItem.Property(background),s:live) + ![String.EndsWith(Container(9010).ListItem.Property(background),i:songs) | String.EndsWith(Container(9010).ListItem.Property(background),i:albums)]</visible>

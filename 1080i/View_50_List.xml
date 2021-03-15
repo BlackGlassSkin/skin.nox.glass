@@ -1042,7 +1042,7 @@
 					<height>835</height>
 					<aspectratio aligny="top">keep</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
-					<texture diffuse="thumbs/thumb_reflect.png" flipy="true" background="true" fallback="special://skin/extras/moviegenres/default/Default.jpg">$VAR[GenreIconVar]</texture>
+					<texture diffuse="thumbs/thumb_reflect.png" flipy="true" background="true" fallback="resource://resource.images.moviegenreicons.noxglass/default/Default.jpg">$VAR[GenreIconVar]</texture>
 					<bordersize>20</bordersize>
 				</control>
 			</control>
@@ -1085,7 +1085,7 @@
 					<width>570</width>
 					<height>348</height>
 					<aspectratio>stretch</aspectratio>
-					<texture background="true" fallback="special://skin/extras/moviegenres/default/Default.jpg">$VAR[NoSpoilerIconVar]</texture>
+					<texture background="true" fallback="resource://resource.images.moviegenreicons.noxglass/default/Default.jpg">$VAR[NoSpoilerIconVar]</texture>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<bordersize>32</bordersize>
 					<visible>Container.Content(episodes) | Container.Content(videos)</visible>

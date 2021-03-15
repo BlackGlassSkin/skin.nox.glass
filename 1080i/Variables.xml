@@ -182,11 +182,11 @@
 	</variable>
 	<variable name="LoginProfileBackgroundVar">
 		<value condition="!String.IsEmpty(Skin.String(Profiles.Fallback))">$INFO[Skin.String(Profiles.Fallback)]</value>
-		<value>special://skin/backgrounds/default_login.jpg</value>
+		<value>http://dl.dropboxusercontent.com/s/jblnoy1qnrapw6o/default_login.jpg</value>
 	</variable>
 	<variable name="SystemBackgroundVar">
 		<value condition="!String.IsEmpty(Skin.String(System.Fallback))">$INFO[Skin.String(System.Fallback)]</value>
-		<value>special://skin/backgrounds/default_settings.jpg</value>
+		<value>http://dl.dropboxusercontent.com/s/jizjth24pgsexr0/default_settings.jpg</value>
 	</variable>
 	<variable name="ArtistInfoPathVar">
 		<value condition="!System.GetBool(musiclibrary.showcompilationartists)">musicdb://artists/$INFO[ListItem.DBID]/?albumartistsonly=true</value>
@@ -402,8 +402,8 @@
 		<value condition="!String.IsEmpty(Player.Art(poster))">$INFO[Player.Art(poster)]</value>
 	</variable>
 	<variable name="GenreIconVar">
-		<value condition="!Skin.HasSetting(coloredflags)">$INFO[ListItem.Label,special://skin/extras/moviegenres/default/,.jpg]</value>
-		<value condition="Skin.HasSetting(coloredflags)">$INFO[ListItem.Label,special://skin/extras/moviegenres/colored/,.jpg]</value>
+		<value condition="!Skin.HasSetting(coloredflags)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.noxglass/default/,.jpg]</value>
+		<value condition="Skin.HasSetting(coloredflags)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.noxglass/colored/,.jpg]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="RatingAndVotesVar">
@@ -719,8 +719,8 @@
 		<value condition="Container.Content(tvshows) | Container.Content(episodes) | Container.Content(seasons)">[COLOR $VAR[ThemeLabelColor]]$LOCALIZE[20416]:[/COLOR][CR]$INFO[ListItem.Premiered]</value>
 	</variable>
 	<variable name="PosterThumbVar">
-		<value condition="Container.Content(genres) + !Skin.HasSetting(coloredflags)">$INFO[ListItem.Label,special://skin/extras/moviegenres/default/,.jpg]</value>
-		<value condition="Container.Content(genres) + Skin.HasSetting(coloredflags)">$INFO[ListItem.Label,special://skin/extras/moviegenres/colored/,.jpg]</value>
+		<value condition="Container.Content(genres) + !Skin.HasSetting(coloredflags)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.noxglass/default/,.jpg]</value>
+		<value condition="Container.Content(genres) + Skin.HasSetting(coloredflags)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.noxglass/colored/,.jpg]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(season.poster)]</value>
 		<value condition="!String.IsEmpty(Container.ListItem.Art(season.poster))">$INFO[Container.ListItem.Art(season.poster)]</value>
 		<value condition="!String.IsEmpty(Container.ListItem.Art(poster))">$INFO[Container.ListItem.Art(poster)]</value>
@@ -731,8 +731,8 @@
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="FocusedPosterThumbVar">
-		<value condition="Container.Content(genres) + !Skin.HasSetting(coloredflags)">$INFO[ListItem.Label,special://skin/extras/moviegenres/default/,.jpg]</value>
-		<value condition="Container.Content(genres) + Skin.HasSetting(coloredflags)">$INFO[ListItem.Label,special://skin/extras/moviegenres/colored/,.jpg]</value>
+		<value condition="Container.Content(genres) + !Skin.HasSetting(coloredflags)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.noxglass/default/,.jpg]</value>
+		<value condition="Container.Content(genres) + Skin.HasSetting(coloredflags)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.noxglass/colored/,.jpg]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(poster1))">$INFO[Control.GetLabel(4412)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(season.poster)]</value>
 		<value condition="!String.IsEmpty(Container.ListItem.Art(season.poster))">$INFO[Container.ListItem.Art(season.poster)]</value>

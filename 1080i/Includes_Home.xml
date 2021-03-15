@@ -2194,7 +2194,7 @@
 	</include>
 	<include name="SystemInfoWidget">
 		<control type="group">
-		    <visible>!System.Platform.Android + Skin.HasSetting(Enable.MysystemWidget)</visible>
+		    <visible>!Player.HasMedia + [!System.Platform.Android + Skin.HasSetting(Enable.MysystemWidget)]</visible>
 			<left>720r</left>
 			<top>45</top>
 			<visible>!String.IsEqual(Skin.String(MainMenu.Layout),vertical) + String.IsEqual(Container(9000).ListItem.Property(path),ActivateWindow(Settings)) + String.IsEmpty(Container(9000).ListItem.Property(widgetType.2)) + !Skin.HasSetting(centermainmenu)</visible>

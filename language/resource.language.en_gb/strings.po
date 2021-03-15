@@ -2320,9 +2320,17 @@ msgctxt "#31575"
 msgid "Kodi random music video fanart"
 msgstr ""
 
-# empty strings from id 31578 to 31600
+# empty strings from id 31580 to 31600
 msgctxt "#31577"
 msgid "Auto hide OSD after 10 seconds of inactivity"
+msgstr ""
+
+msgctxt "#31578"
+msgid "Enable / Disable Kim Wiz"
+msgstr ""
+
+msgctxt "#31579"
+msgid "Enable / Disable CD visualization in the main menu"
 msgstr ""
 
 msgctxt "#31601"
