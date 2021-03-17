@@ -1075,7 +1075,7 @@
 				</animation>
 				<width>auto</width>
 				<height>100</height>
-				<label> $INFO[Container(110).ListItem.Property(part1)]</label>
+				<label>$INFO[Container(110).ListItem.Property(part1)]</label>
 				<font>lyr1</font>
 				<shadowcolor>black</shadowcolor>
 				<align>center</align>
@@ -1089,7 +1089,7 @@
 				<visible>String.IsEqual(Container(110).Currentitem,1) | String.EndsWith(Container(110).Currentitem,21) | String.EndsWith(Container(110).Currentitem,41) | String.EndsWith(Container(110).Currentitem,61) | String.EndsWith(Container(110).Currentitem,81) | String.EndsWith(Container(110).Currentitem,01)</visible>
 				<width>auto</width>
 				<height>100</height>
-				<label> $INFO[Container(110).ListItem.Property(part2)]</label>
+				<label>$INFO[Container(110).ListItem.Property(part2)]</label>
 				<font>lyr1</font>
 				<shadowcolor>black</shadowcolor>
 				<align>center</align>
@@ -1103,7 +1103,7 @@
 				</animation>
 				<width>auto</width>
 				<height>100</height>
-				<label> $INFO[Container(110).ListItem.Property(part3)]</label>
+				<label>$INFO[Container(110).ListItem.Property(part3)]</label>
 				<font>lyr1</font>
 				<shadowcolor>black</shadowcolor>
 				<align>center</align>
@@ -1166,7 +1166,7 @@
 						</animation>
 						<width>auto</width>
 						<height>125</height>
-						<label> $INFO[Container(110).ListItem.Property(part1)]</label>
+						<label>$INFO[Container(110).ListItem.Property(part1)]</label>
 						<font>lyr2</font>
 						<shadowcolor>black</shadowcolor>
 						<align>center</align>
@@ -1179,7 +1179,7 @@
 						</animation>
 						<width>auto</width>
 						<height>125</height>
-						<label> $INFO[Container(110).ListItem.Property(part2)]</label>
+						<label>$INFO[Container(110).ListItem.Property(part2)]</label>
 						<font>lyr2</font>
 						<align>center</align>
 						<textcolor>$PARAM[col22]</textcolor>
@@ -1201,7 +1201,7 @@
 						</animation>
 						<width>auto</width>
 						<height>125</height>
-						<label> $INFO[Container(110).ListItem.Property(part3)]</label>
+						<label>$INFO[Container(110).ListItem.Property(part3)]</label>
 						<font>lyr2</font>
 						<shadowcolor>black</shadowcolor>
 						<align>right</align>
@@ -1242,7 +1242,7 @@
 				</animation>
 				<width>auto</width>
 				<height>115</height>
-				<label> $INFO[Container(110).ListItem.Property(part1)]</label>
+				<label>$INFO[Container(110).ListItem.Property(part1)]</label>
 				<font>lyr3</font>
 				<shadowcolor>black</shadowcolor>
 				<align>center</align>
@@ -1332,7 +1332,7 @@
 					<top>500</top>
 					<width>1135</width>
 					<height>125</height>
-					<label> $INFO[Container(110).ListItem.Property(part1)]</label>
+					<label>$INFO[Container(110).ListItem.Property(part1)]</label>
 					<font>lyr4</font>
 					<shadowcolor>black</shadowcolor>
 					<align>right</align>
@@ -1349,7 +1349,7 @@
 					<top>500</top>
 					<width>1135</width>
 					<height>125</height>
-					<label> $INFO[Container(110).ListItem.Property(part2)]</label>
+					<label>$INFO[Container(110).ListItem.Property(part2)]</label>
 					<font>lyr4</font>
 					<shadowcolor>black</shadowcolor>
 					<align>right</align>
@@ -1365,7 +1365,7 @@
 					<top>500</top>
 					<width>1135</width>
 					<height>125</height>
-					<label> $INFO[Container(110).ListItem.Property(part3)]</label>
+					<label>$INFO[Container(110).ListItem.Property(part3)]</label>
 					<font>lyr4</font>
 					<shadowcolor>black</shadowcolor>
 					<textcolor>$PARAM[col43]</textcolor>
@@ -1482,7 +1482,7 @@
 					<top>520</top>
 					<width>1820</width>
 					<height>125</height>
-					<label> $INFO[Container(110).ListItem.Property(part1)]</label>
+					<label>$INFO[Container(110).ListItem.Property(part1)]</label>
 					<font>lyr6</font>
 					<shadowcolor>black</shadowcolor>
 					<align>center</align>
@@ -1499,7 +1499,7 @@
 					<top>520</top>
 					<width>1820</width>
 					<height>125</height>
-					<label> $INFO[Container(110).ListItem.Property(part2)]</label>
+					<label>$INFO[Container(110).ListItem.Property(part2)]</label>
 					<font>lyr6a</font>
 					<shadowcolor>black</shadowcolor>
 					<align>center</align>
@@ -1524,7 +1524,7 @@
 						</animation>
 						<width>auto</width>
 						<height>600</height>
-						<label> $INFO[Container(110).ListItem.Property(part3)]</label>
+						<label>$INFO[Container(110).ListItem.Property(part3)]</label>
 						<font>lyr6b</font>
 						<shadowcolor>black</shadowcolor>
 						<align>right</align>
@@ -1565,7 +1565,7 @@
 				</animation>
 				<width>auto</width>
 				<height>100</height>
-				<label> $INFO[Container(110).ListItem.Property(part1)]</label>
+				<label>$INFO[Container(110).ListItem.Property(part1)]</label>
 				<font>lyr7</font>
 				<shadowcolor>black</shadowcolor>
 				<align>center</align>
@@ -1580,7 +1580,7 @@
 				<visible>String.IsEqual(Container(110).Currentitem,7) | String.EndsWith(Container(110).Currentitem,27) | String.EndsWith(Container(110).Currentitem,47) | String.EndsWith(Container(110).Currentitem,67) | String.EndsWith(Container(110).Currentitem,87) | String.EndsWith(Container(110).Currentitem,07)</visible>
 				<width>auto</width>
 				<height>100</height>
-				<label> $INFO[Container(110).ListItem.Property(part2)]</label>
+				<label>$INFO[Container(110).ListItem.Property(part2)]</label>
 				<font>lyr7</font>
 				<shadowcolor>black</shadowcolor>
 				<align>center</align>
@@ -1595,7 +1595,7 @@
 				</animation>
 				<width>auto</width>
 				<height>100</height>
-				<label> $INFO[Container(110).ListItem.Property(part3)]</label>
+				<label>$INFO[Container(110).ListItem.Property(part3)]</label>
 				<font>lyr7</font>
 				<shadowcolor>black</shadowcolor>
 				<align>center</align>
@@ -1731,7 +1731,7 @@
 					<top>395</top>
 					<width>940</width>
 					<height>125</height>
-					<label> $INFO[Container(110).ListItem.Property(part3)]</label>
+					<label>$INFO[Container(110).ListItem.Property(part3)]</label>
 					<font>lyr9</font>
 					<shadowcolor>black</shadowcolor>
 					<align>right</align>
@@ -1746,7 +1746,7 @@
 					<top>270</top>
 					<width>940</width>
 					<height>125</height>
-					<label> $INFO[Container(110).ListItem.Property(part2)]</label>
+					<label>$INFO[Container(110).ListItem.Property(part2)]</label>
 					<font>lyr9</font>
 					<shadowcolor>black</shadowcolor>
 					<align>right</align>
@@ -1761,7 +1761,7 @@
 					<top>145</top>
 					<width>940</width>
 					<height>125</height>
-					<label> $INFO[Container(110).ListItem.Property(part1)]</label>
+					<label>$INFO[Container(110).ListItem.Property(part1)]</label>
 					<font>lyr9</font>
 					<shadowcolor>black</shadowcolor>
 					<align>right</align>
@@ -1891,7 +1891,7 @@
 						<animation effect="slide" end="0,0" condition="true">Conditional</animation>
 						<width>auto</width>
 						<height>125</height>
-						<label> $INFO[Container(110).ListItem.Property(part1)]</label>
+						<label>$INFO[Container(110).ListItem.Property(part1)]</label>
 						<font>lyr11</font>
 						<shadowcolor>black</shadowcolor>
 						<align>center</align>
@@ -1900,7 +1900,7 @@
 					<control type="label">
 						<width>auto</width>
 						<height>125</height>
-						<label> $INFO[Container(110).ListItem.Property(part2)]</label>
+						<label>$INFO[Container(110).ListItem.Property(part2)]</label>
 						<font>lyr11</font>
 						<align>center</align>
 						<textcolor>00fFFFFF</textcolor>
@@ -1922,7 +1922,7 @@
 					<control type="label">
 						<width>auto</width>
 						<height>125</height>
-						<label> $INFO[Container(110).ListItem.Property(part1)]</label>
+						<label>$INFO[Container(110).ListItem.Property(part1)]</label>
 						<font>lyr11</font>
 						<align>center</align>
 						<textcolor>00fFFFFF</textcolor>
@@ -1930,7 +1930,7 @@
 					<control type="label">
 						<width>auto</width>
 						<height>125</height>
-						<label> $INFO[Container(110).ListItem.Property(part2)]</label>
+						<label>$INFO[Container(110).ListItem.Property(part2)]</label>
 						<font>lyr11</font>
 						<shadowcolor>black</shadowcolor>
 						<align>center</align>
@@ -1953,7 +1953,7 @@
 					<control type="label">
 						<width>auto</width>
 						<height>125</height>
-						<label> $INFO[Container(110).ListItem.Property(part3)]</label>
+						<label>$INFO[Container(110).ListItem.Property(part3)]</label>
 						<font>lyr11</font>
 						<shadowcolor>black</shadowcolor>
 						<align>right</align>
@@ -1987,7 +1987,7 @@
 					<control type="label">
 						<width>auto</width>
 						<height>125</height>
-						<label> $INFO[Container(110).ListItem.Property(part3)]</label>
+						<label>$INFO[Container(110).ListItem.Property(part3)]</label>
 						<font>lyr11</font>
 						<align>right</align>
 						<aligny>top</aligny>
@@ -2328,7 +2328,7 @@
 					<top>125</top>
 					<width>925</width>
 					<height>125</height>
-					<label> $INFO[Container(110).ListItem.Property(part1)]</label>
+					<label>$INFO[Container(110).ListItem.Property(part1)]</label>
 					<font>lyr15</font>
 					<shadowcolor>black</shadowcolor>
 					<align>right</align>
@@ -2344,7 +2344,7 @@
 					<top>250</top>
 					<width>925</width>
 					<height>125</height>
-					<label> $INFO[Container(110).ListItem.Property(part2)]</label>
+					<label>$INFO[Container(110).ListItem.Property(part2)]</label>
 					<font>lyr15</font>
 					<shadowcolor>black</shadowcolor>
 					<align>right</align>
@@ -2360,7 +2360,7 @@
 					<top>375</top>
 					<width>925</width>
 					<height>125</height>
-					<label> $INFO[Container(110).ListItem.Property(part3)]</label>
+					<label>$INFO[Container(110).ListItem.Property(part3)]</label>
 					<font>lyr15</font>
 					<shadowcolor>black</shadowcolor>
 					<align>right</align>
@@ -2398,7 +2398,7 @@
 				</animation>
 				<width>auto</width>
 				<height>100</height>
-				<label> $INFO[Container(110).ListItem.Property(part1)]</label>
+				<label>$INFO[Container(110).ListItem.Property(part1)]</label>
 				<font>lyr16</font>
 				<shadowcolor>black</shadowcolor>
 				<align>center</align>
@@ -2414,7 +2414,7 @@
 				<visible>String.EndsWith(Container(110).Currentitem,16) | String.EndsWith(Container(110).Currentitem,36) | String.EndsWith(Container(110).Currentitem,56) | String.EndsWith(Container(110).Currentitem,76) | String.EndsWith(Container(110).Currentitem,96)</visible>
 				<width>auto</width>
 				<height>100</height>
-				<label> $INFO[Container(110).ListItem.Property(part2)]</label>
+				<label>$INFO[Container(110).ListItem.Property(part2)]</label>
 				<font>lyr16</font>
 				<shadowcolor>black</shadowcolor>
 				<align>center</align>
@@ -2429,7 +2429,7 @@
 				</animation>
 				<width>auto</width>
 				<height>100</height>
-				<label> $INFO[Container(110).ListItem.Property(part3)]</label>
+				<label>$INFO[Container(110).ListItem.Property(part3)]</label>
 				<font>lyr16</font>
 				<shadowcolor>black</shadowcolor>
 				<align>center</align>
@@ -2485,7 +2485,7 @@
 					<top>70</top>
 					<width>1820</width>
 					<height>125</height>
-					<label> $INFO[Container(110).ListItem.Property(part1)]</label>
+					<label>$INFO[Container(110).ListItem.Property(part1)]</label>
 					<font>lyr17</font>
 					<shadowcolor>black</shadowcolor>
 					<align>center</align>
@@ -2500,7 +2500,7 @@
 					<top>193</top>
 					<width>1820</width>
 					<height>125</height>
-					<label> $INFO[Container(110).ListItem.Property(part2)]</label>
+					<label>$INFO[Container(110).ListItem.Property(part2)]</label>
 					<font>lyr17a</font>
 					<shadowcolor>black</shadowcolor>
 					<align>center</align>
@@ -2524,7 +2524,7 @@
 						</animation>
 						<width>auto</width>
 						<height>600</height>
-						<label> $INFO[Container(110).ListItem.Property(part3)]</label>
+						<label>$INFO[Container(110).ListItem.Property(part3)]</label>
 						<font>lyr17b</font>
 						<shadowcolor>black</shadowcolor>
 						<align>right</align>
@@ -2581,7 +2581,7 @@
 						</animation>
 						<width>auto</width>
 						<height>125</height>
-						<label> $INFO[Container(110).ListItem.Property(part1)]</label>
+						<label>$INFO[Container(110).ListItem.Property(part1)]</label>
 						<font>lyr18</font>
 						<shadowcolor>black</shadowcolor>
 						<align>center</align>
@@ -2612,7 +2612,7 @@
 						<visible>String.EndsWith(Container(110).Currentitem,18) | String.EndsWith(Container(110).Currentitem,38) | String.EndsWith(Container(110).Currentitem,58) | String.EndsWith(Container(110).Currentitem,78) | String.EndsWith(Container(110).Currentitem,98)</visible>
 						<width>auto</width>
 						<height>125</height>
-						<label> $INFO[Container(110).ListItem.Property(part1)]</label>
+						<label>$INFO[Container(110).ListItem.Property(part1)]</label>
 						<font>lyr18</font>
 						<shadowcolor>black</shadowcolor>
 						<align>center</align>
@@ -2654,7 +2654,7 @@
 						</animation>
 						<width>auto</width>
 						<height>600</height>
-						<label> $INFO[Container(110).ListItem.Property(part3)]</label>
+						<label>$INFO[Container(110).ListItem.Property(part3)]</label>
 						<font>lyr18</font>
 						<shadowcolor>black</shadowcolor>
 						<align>center</align>
@@ -2666,7 +2666,7 @@
 						<height>600</height>
 						<wrapmultiline>true</wrapmultiline>
 						<visible>String.EndsWith(Container(110).Currentitem,18) | String.EndsWith(Container(110).Currentitem,38) | String.EndsWith(Container(110).Currentitem,58) | String.EndsWith(Container(110).Currentitem,78) | String.EndsWith(Container(110).Currentitem,98)</visible>
-						<label> $INFO[Container(110).ListItem.Property(part4)]</label>
+						<label>$INFO[Container(110).ListItem.Property(part4)]</label>
 						<font>lyr18b</font>
 						<shadowcolor>black</shadowcolor>
 						<aligny>top</aligny>
@@ -2687,7 +2687,7 @@
 						<visible>String.EndsWith(Container(110).Currentitem,18) | String.EndsWith(Container(110).Currentitem,38) | String.EndsWith(Container(110).Currentitem,58) | String.EndsWith(Container(110).Currentitem,78) | String.EndsWith(Container(110).Currentitem,98)</visible>
 						<width>auto</width>
 						<height>600</height>
-						<label> $INFO[Container(110).ListItem.Property(part3)]</label>
+						<label>$INFO[Container(110).ListItem.Property(part3)]</label>
 						<font>lyr18</font>
 						<shadowcolor>black</shadowcolor>
 						<align>center</align>
@@ -2703,7 +2703,7 @@
 							<effect type="slide" delay="900" end="0,47" time="0" tween="sine" easing="out"/>
 							<effect type="zoom" center="0,0" delay="900" start="0" end="100" time="0" tween="sine" easing="out"/>
 						</animation>
-						<label> $INFO[Container(110).ListItem.Property(part4)]</label>
+						<label>$INFO[Container(110).ListItem.Property(part4)]</label>
 						<font>lyr18b</font>
 						<shadowcolor>black</shadowcolor>
 						<aligny>top</aligny>
@@ -2807,7 +2807,7 @@
 					<top>154</top>
 					<width>1920</width>
 					<height>115</height>
-					<label> $INFO[Container(110).ListItem.Property(part1)]</label>
+					<label>$INFO[Container(110).ListItem.Property(part1)]</label>
 					<font>lyr20</font>
 					<shadowcolor>black</shadowcolor>
 					<align>center</align>
@@ -2830,7 +2830,7 @@
 						</animation>
 						<width>auto</width>
 						<height>125</height>
-						<label> $INFO[Container(110).ListItem.Property(part2)]</label>
+						<label>$INFO[Container(110).ListItem.Property(part2)]</label>
 						<font>lyr20</font>
 						<shadowcolor>black</shadowcolor>
 						<align>center</align>
@@ -2861,7 +2861,7 @@
 						<effect type="slide" delay="1200" start="400,0" end="0,0" time="0" tween="sine" easing="out"/>
 						<effect type="rotate" delay="1200" center="auto" start="4" end="0" time="0" tween="bounce" easing="out"/>
 					</animation>
-					<label> $INFO[Container(110).ListItem.Property(part4)]</label>
+					<label>$INFO[Container(110).ListItem.Property(part4)]</label>
 					<font>lyr20b</font>
 					<shadowcolor>black</shadowcolor>
 					<align>center</align>
@@ -2882,7 +2882,7 @@
 				<animation effect="fade" start="0" end="0" time="0">Hidden</animation>
 				<width>auto</width>
 				<height>100</height>
-				<label> $INFO[Container(110).ListItem.Property(part1)]</label>
+				<label>$INFO[Container(110).ListItem.Property(part1)]</label>
 				<font>lyr1</font>
 				<shadowcolor>black</shadowcolor>
 				<align>center</align>
@@ -2894,7 +2894,7 @@
 				<visible>String.EndsWith(Container(110).Currentitem,1)</visible>
 				<width>auto</width>
 				<height>100</height>
-				<label> $INFO[Container(110).ListItem.Property(part2)]</label>
+				<label>$INFO[Container(110).ListItem.Property(part2)]</label>
 				<font>lyr1</font>
 				<shadowcolor>black</shadowcolor>
 				<align>center</align>
@@ -2906,7 +2906,7 @@
 				<animation effect="fade" start="0" end="0" time="0">Hidden</animation>
 				<width>auto</width>
 				<height>100</height>
-				<label> $INFO[Container(110).ListItem.Property(part3)]</label>
+				<label>$INFO[Container(110).ListItem.Property(part3)]</label>
 				<font>lyr1</font>
 				<shadowcolor>black</shadowcolor>
 				<align>center</align>
@@ -2958,7 +2958,7 @@
 					<top>70</top>
 					<width>1820</width>
 					<height>125</height>
-					<label> $INFO[Container(110).ListItem.Property(part1)]</label>
+					<label>$INFO[Container(110).ListItem.Property(part1)]</label>
 					<font>lyr17</font>
 					<shadowcolor>black</shadowcolor>
 					<align>center</align>
@@ -2972,7 +2972,7 @@
 					<top>193</top>
 					<width>1820</width>
 					<height>125</height>
-					<label> $INFO[Container(110).ListItem.Property(part2)]</label>
+					<label>$INFO[Container(110).ListItem.Property(part2)]</label>
 					<font>lyr17a</font>
 					<shadowcolor>black</shadowcolor>
 					<align>center</align>
@@ -2994,7 +2994,7 @@
 						<animation effect="fade" start="0" end="0" time="0">Hidden</animation>
 						<width>auto</width>
 						<height>600</height>
-						<label> $INFO[Container(110).ListItem.Property(part3)]</label>
+						<label>$INFO[Container(110).ListItem.Property(part3)]</label>
 						<font>lyr17b</font>
 						<shadowcolor>black</shadowcolor>
 						<align>right</align>
@@ -3030,7 +3030,7 @@
 				<animation effect="fade" start="0" end="0" time="0">Hidden</animation>
 				<width>auto</width>
 				<height>115</height>
-				<label> $INFO[Container(110).ListItem.Property(part1)]</label>
+				<label>$INFO[Container(110).ListItem.Property(part1)]</label>
 				<font>lyr3</font>
 				<shadowcolor>black</shadowcolor>
 				<align>center</align>
@@ -3115,7 +3115,7 @@
 						<animation effect="fade" start="0" end="0" time="0">Hidden</animation>
 						<width>auto</width>
 						<height>125</height>
-						<label> $INFO[Container(110).ListItem.Property(part1)]</label>
+						<label>$INFO[Container(110).ListItem.Property(part1)]</label>
 						<font>lyr2</font>
 						<shadowcolor>black</shadowcolor>
 						<align>center</align>
@@ -3148,7 +3148,7 @@
 						<animation effect="fade" start="0" end="0" time="0">Hidden</animation>
 						<width>auto</width>
 						<height>125</height>
-						<label> $INFO[Container(110).ListItem.Property(part3)]</label>
+						<label>$INFO[Container(110).ListItem.Property(part3)]</label>
 						<font>lyr2</font>
 						<shadowcolor>black</shadowcolor>
 						<align>right</align>
@@ -3247,7 +3247,7 @@
 				<animation effect="fade" start="0" end="0" time="0">Hidden</animation>
 				<width>auto</width>
 				<height>100</height>
-				<label> $INFO[Container(110).ListItem.Property(part1)]</label>
+				<label>$INFO[Container(110).ListItem.Property(part1)]</label>
 				<font>lyr1</font>
 				<shadowcolor>black</shadowcolor>
 				<align>center</align>
@@ -3259,7 +3259,7 @@
 				<visible>String.EndsWith(Container(110).Currentitem,6)</visible>
 				<width>auto</width>
 				<height>100</height>
-				<label> $INFO[Container(110).ListItem.Property(part2)]</label>
+				<label>$INFO[Container(110).ListItem.Property(part2)]</label>
 				<font>lyr1</font>
 				<shadowcolor>black</shadowcolor>
 				<align>center</align>
@@ -3271,7 +3271,7 @@
 				<animation effect="fade" start="0" end="0" time="0">Hidden</animation>
 				<width>auto</width>
 				<height>100</height>
-				<label> $INFO[Container(110).ListItem.Property(part3)]</label>
+				<label>$INFO[Container(110).ListItem.Property(part3)]</label>
 				<font>lyr1</font>
 				<shadowcolor>black</shadowcolor>
 				<align>center</align>
@@ -3323,7 +3323,7 @@
 					<top>70</top>
 					<width>1820</width>
 					<height>125</height>
-					<label> $INFO[Container(110).ListItem.Property(part1)]</label>
+					<label>$INFO[Container(110).ListItem.Property(part1)]</label>
 					<font>lyr17</font>
 					<shadowcolor>black</shadowcolor>
 					<align>center</align>
@@ -3337,7 +3337,7 @@
 					<top>193</top>
 					<width>1820</width>
 					<height>125</height>
-					<label> $INFO[Container(110).ListItem.Property(part2)]</label>
+					<label>$INFO[Container(110).ListItem.Property(part2)]</label>
 					<font>lyr17a</font>
 					<shadowcolor>black</shadowcolor>
 					<align>center</align>
@@ -3359,7 +3359,7 @@
 						<animation effect="fade" start="0" end="0" time="0">Hidden</animation>
 						<width>auto</width>
 						<height>600</height>
-						<label> $INFO[Container(110).ListItem.Property(part3)]</label>
+						<label>$INFO[Container(110).ListItem.Property(part3)]</label>
 						<font>lyr17b</font>
 						<shadowcolor>black</shadowcolor>
 						<align>right</align>
@@ -3395,7 +3395,7 @@
 				<animation effect="fade" start="0" end="0" time="0">Hidden</animation>
 				<width>auto</width>
 				<height>115</height>
-				<label> $INFO[Container(110).ListItem.Property(part1)]</label>
+				<label>$INFO[Container(110).ListItem.Property(part1)]</label>
 				<font>lyr3</font>
 				<shadowcolor>black</shadowcolor>
 				<align>center</align>
@@ -3480,7 +3480,7 @@
 						<animation effect="fade" start="0" end="0" time="0">Hidden</animation>
 						<width>auto</width>
 						<height>125</height>
-						<label> $INFO[Container(110).ListItem.Property(part1)]</label>
+						<label>$INFO[Container(110).ListItem.Property(part1)]</label>
 						<font>lyr2</font>
 						<shadowcolor>black</shadowcolor>
 						<align>center</align>
@@ -3513,7 +3513,7 @@
 						<animation effect="fade" start="0" end="0" time="0">Hidden</animation>
 						<width>auto</width>
 						<height>125</height>
-						<label> $INFO[Container(110).ListItem.Property(part3)]</label>
+						<label>$INFO[Container(110).ListItem.Property(part3)]</label>
 						<font>lyr2</font>
 						<shadowcolor>black</shadowcolor>
 						<align>right</align>

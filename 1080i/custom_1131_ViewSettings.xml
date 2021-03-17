@@ -104,7 +104,7 @@
 				<!-- InfoPopup Delay -->
 				<control type="button" id="1550">
 					<include>ButtonCommonValues</include>
-					<label>  - $LOCALIZE[303]</label>
+					<label>- $LOCALIZE[303]</label>
 					<label2>[COLOR $VAR[ThemeLabelColor]]$INFO[Skin.String(InfoPopup.Delay),, $LOCALIZE[31090]][/COLOR]</label2>
 					<onclick>$VAR[InfoPopupDelayOnClickVar]</onclick>
 					<visible>[String.IsEqual(Window(Home).Property(actualViewtype),FullscreenWall) + Skin.HasSetting(Enable.FullscreenWallInfoPopup)] | [String.IsEqual(Window(Home).Property(actualViewtype),RightList) + Skin.HasSetting(Enable.RightlistInfoPopup) + Skin.HasSetting(inforightlist)] | [String.IsEqual(Window(Home).Property(actualViewtype),Icons) + Skin.HasSetting(Enable.IconsInfoPopup)] | [String.IsEqual(Window(Home).Property(actualViewtype),SmallIcons) + Skin.HasSetting(Enable.SmallIconsInfoPopup)] | [String.IsEqual(Window(Home).Property(actualViewtype),BannerWall) + Skin.HasSetting(Disable.BannerWallInfo) + Skin.HasSetting(Enable.BannerWallInfoPopup)] + !Window.IsActive(music)</visible>

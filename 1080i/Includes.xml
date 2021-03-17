@@ -499,7 +499,7 @@
 			<description>Watched toggle</description>
 			<include>HiddenObject</include>
 		</control>
-	</include>
+</include>
 	<include name="NoMediaMenu">
 		<top>100</top>
 		<width>400</width>
@@ -1188,12 +1188,12 @@
 				<include>CastPanelContent</include>
 			</content>
 		</control>
-	</include>
+</include>
 	<include name="HiddenActorList">
 		<control type="list" id="50">
 			<include>HiddenList</include>
 		</control>
-	</include>
+</include>
 	<include name="ExtendedMovieSetPanel">
 		<control type="panel" id="90017">
 			<onclick>Dialog.Close(all,true)</onclick>
@@ -2560,7 +2560,7 @@
 						<height>45</height>
 						<font>font14</font>
 						<textcolor>$VAR[ThemeLabelColor]</textcolor>
-						<label>$INFO[ListItem.Rating,$LOCALIZE[31146]: [COLOR grey],[/COLOR]]$INFO[ListItem.Top250,[COLOR grey] / $LOCALIZE[13409] # ,[/COLOR]]$INFO[ListItem.Year,   $LOCALIZE[345]: [COLOR grey],[/COLOR]]$INFO[ListItem.Duration(mins),   $LOCALIZE[2050]: [COLOR grey], $LOCALIZE[12391][/COLOR]]$INFO[Window(Home).Property(SkinInfo.Set.Movies.Runtime),   $LOCALIZE[2050]: [COLOR grey], $LOCALIZE[12391][/COLOR]]</label>
+						<label>$INFO[ListItem.Rating,$LOCALIZE[31146]: [COLOR grey],[/COLOR]]$INFO[ListItem.Top250,[COLOR grey] / $LOCALIZE[13409] # ,[/COLOR]]$INFO[ListItem.Year, $LOCALIZE[345]: [COLOR grey],[/COLOR]]$INFO[ListItem.Duration(mins), $LOCALIZE[2050]: [COLOR grey], $LOCALIZE[12391][/COLOR]]$INFO[Window(Home).Property(SkinInfo.Set.Movies.Runtime), $LOCALIZE[2050]: [COLOR grey], $LOCALIZE[12391][/COLOR]]</label>
 						<visible>!Container.Content(episodes)</visible>
 					</control>
 					<control type="label">
@@ -3392,7 +3392,7 @@
 			<include condition="VideoPlayer.Content(movies) | VideoPlayer.Content(episodes) | VideoPlayer.Content(musicvideos)">LibraryFullscreenInfo</include>
 			<include condition="VideoPlayer.HasInfo + Skin.HasSetting(Enable.AddonInfo) + ![VideoPlayer.Content(LiveTV) | Pvr.IsPlayingRecording | VideoPlayer.Content(movies) | VideoPlayer.Content(episodes) | VideoPlayer.Content(musicvideos)] | [VideoPlayer.HasInfo + Skin.HasSetting(Enable.RecordingInfo) + Pvr.IsPlayingRecording]">OtherFullscreenInfo</include>
 		</control>
-	</include>
+</include>
 	<include name="LibraryFullscreenInfo">
 		<control type="group">
 			<top>600</top>
@@ -3484,7 +3484,7 @@
 							<height>60</height>
 							<font>font15</font>
 							<textcolor>$VAR[ThemeLabelColor]</textcolor>
-							<label>$INFO[VideoPlayer.Season,$LOCALIZE[20373] ,: ]$INFO[VideoPlayer.Episode,$LOCALIZE[20359] ]$INFO[VideoPlayer.Title,  -  ]$INFO[VideoPlayer.Premiered, (,)]</label>
+							<label>$INFO[VideoPlayer.Season,$LOCALIZE[20373] ,: ]$INFO[VideoPlayer.Episode,$LOCALIZE[20359] ]$INFO[VideoPlayer.Title, - ]$INFO[VideoPlayer.Premiered, (,)]</label>
 							<visible>VideoPlayer.Content(episodes)</visible>
 						</control>
 						<control type="grouplist">
@@ -3499,7 +3499,7 @@
 								<height>60</height>
 								<font>font15</font>
 								<textcolor>grey</textcolor>
-								<label>$INFO[Player.FinishTime,$LOCALIZE[31393]: ,]  •  $VAR[PlayerTimeRemainingHourVar,, ]$VAR[PlayerTimeRemainingMinuteVar]</label>
+								<label>$INFO[Player.FinishTime,$LOCALIZE[31393]: ,] • $VAR[PlayerTimeRemainingHourVar,, ]$VAR[PlayerTimeRemainingMinuteVar]</label>
 							</control>
 							<control type="grouplist">
 								<width>1420</width>
@@ -3667,7 +3667,7 @@
 							<font>font15</font>
 							<textcolor>$VAR[ThemeLabelColor]</textcolor>
 							<scroll>true</scroll>
-							<label>$INFO[Container(9143).ListItem.Property(Budget),$LOCALIZE[31850]: [COLOR grey],[/COLOR]]$INFO[Container(9143).ListItem.Property(Revenue),[COLOR grey]  •  [/COLOR]$LOCALIZE[31851]: [COLOR grey],[/COLOR]]</label>
+							<label>$INFO[Container(9143).ListItem.Property(Budget),$LOCALIZE[31850]: [COLOR grey],[/COLOR]]$INFO[Container(9143).ListItem.Property(Revenue),[COLOR grey] • [/COLOR]$LOCALIZE[31851]: [COLOR grey],[/COLOR]]</label>
 							<visible>VideoPlayer.Content(movies) + [!String.IsEmpty(Container(9143).ListItem.Property(Budget)) | !String.IsEmpty(Container(9143).ListItem.Property(Revenue))]</visible>
 						</control>
 						<control type="label">
@@ -3685,7 +3685,7 @@
 							<font>font15</font>
 							<textcolor>$VAR[ThemeLabelColor]</textcolor>
 							<scroll>true</scroll>
-							<label>$INFO[VideoPlayer.LastPlayed,$LOCALIZE[568]: [COLOR grey],[/COLOR]]$INFO[VideoPlayer.PlayCount,[COLOR grey]  •  [/COLOR]$LOCALIZE[567]: [COLOR grey],[/COLOR]]</label>
+							<label>$INFO[VideoPlayer.LastPlayed,$LOCALIZE[568]: [COLOR grey],[/COLOR]]$INFO[VideoPlayer.PlayCount,[COLOR grey] • [/COLOR]$LOCALIZE[567]: [COLOR grey],[/COLOR]]</label>
 							<visible>!String.IsEmpty(VideoPlayer.LastPlayed)</visible>
 						</control>
 					</control>
@@ -3729,7 +3729,7 @@
 				</control>
 			</control>
 		</control>
-	</include>
+</include>
 	<include name="OtherFullscreenInfo">
 		<control type="group">
 			<animation effect="slide" end="0,-90" time="0" tween="quadratic" condition="Window.IsActive(videoosd) + !Skin.HasSetting(VideoOSDOnTop)">Conditional</animation>
@@ -3746,7 +3746,7 @@
 				<top>780</top>
 				<width>400</width>
 				<height>240</height>
-				<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.Art.Poster)] </texture>
+				<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.Art.Poster)]</texture>
 				<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 			</control>
@@ -3778,7 +3778,7 @@
 						<height>60</height>
 						<font>font15</font>
 						<textcolor>$VAR[ThemeLabelColor]</textcolor>
-						<label>$INFO[VideoPlayer.Season,$LOCALIZE[20373] ,: ]$INFO[VideoPlayer.Episode,$LOCALIZE[20359] ]$INFO[VideoPlayer.Title,  -  ]$INFO[VideoPlayer.Premiered, (,)]</label>
+						<label>$INFO[VideoPlayer.Season,$LOCALIZE[20373] ,: ]$INFO[VideoPlayer.Episode,$LOCALIZE[20359] ]$INFO[VideoPlayer.Title, - ]$INFO[VideoPlayer.Premiered, (,)]</label>
 						<visible>!String.IsEmpty(VideoPlayer.Episode) + !String.IsEqual(Player.Title,VideoPlayer.Title)</visible>
 					</control>
 					<control type="label">
@@ -3809,7 +3809,7 @@
 						<height>60</height>
 						<font>font15</font>
 						<textcolor>grey</textcolor>
-						<label>$INFO[Player.FinishTime,$LOCALIZE[31393]: ,]  •  $VAR[PlayerTimeRemainingHourVar,, ]$VAR[PlayerTimeRemainingMinuteVar]</label>
+						<label>$INFO[Player.FinishTime,$LOCALIZE[31393]: ,] • $VAR[PlayerTimeRemainingHourVar,, ]$VAR[PlayerTimeRemainingMinuteVar]</label>
 					</control>
 				</control>
 				<control type="grouplist">
@@ -3850,7 +3850,7 @@
 		<control type="scrollbar" id="61">
 			<include>HiddenObject</include>
 		</control>
-	</include>
+</include>
 	<include name="LiveTVFullscreenInfo">
 		<!-- LiveTV Plot-->
 		<control type="group">

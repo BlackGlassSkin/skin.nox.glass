@@ -36,7 +36,7 @@
 				<control type="radiobutton" id="901002">
 					<description>Extrafanart</description>
 					<include>ButtonCommonValues</include>
-					<label>   - $LOCALIZE[31020]</label>
+					<label>- $LOCALIZE[31020]</label>
 					<onclick>Skin.ToggleSetting(Disable.Extrafanart)</onclick>
 					<selected>!Skin.HasSetting(Disable.Extrafanart)</selected>
 					<enable>!Skin.HasSetting(Disable.Fanart)</enable>

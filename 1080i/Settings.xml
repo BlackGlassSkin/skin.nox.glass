@@ -27,7 +27,7 @@
 				<scrolltime tween="quadratic">300</scrolltime>
 				<itemlayout width="255" height="350" condition="Integer.IsLessOrEqual(Container(9000).NumItems,10)">
 					<control type="group">
-						<control type="image"> #staly kolor i obraz
+						<control type="image">#staly kolor i obraz
 							<left>-17</left>
 							<top>-18</top>
 							<width>240</width>
@@ -469,7 +469,7 @@
 			<height>40</height>
 			<angle>90</angle>
 			<textcolor>FFa3a3c2</textcolor>
-			<label>$INFO[System.Date(YYYY:MM:DD)]  [B]|[/B]  $INFO[System.Time(HH:MM:SS)]  [B]|[/B]  $INFO[System.AddonTitle(skin.nox.glass)]  [B]|[/B]  $INFO[System.AddonVersion(skin.nox.glass),v, ]</label>
+			<label>$INFO[System.Date(YYYY:MM:DD)] [B]|[/B] $INFO[System.Time(HH:MM:SS)] [B]|[/B] $INFO[System.AddonTitle(skin.nox.glass)] [B]|[/B] $INFO[System.AddonVersion(skin.nox.glass),v, ]</label>
 		</control>
 		<control type="group">
 			<top>32</top>

@@ -173,7 +173,7 @@
 						</control>
 						<control type="radiobutton" id="1003">
 							<include>SettingsButtonCommonValues</include>
-							<label>   - $LOCALIZE[31263]</label>
+							<label>- $LOCALIZE[31263]</label>
 							<onclick>Skin.ToggleSetting(Disable.IconsMenuLabel)</onclick>
 							<selected>Skin.HasSetting(Disable.IconsMenuLabel)</selected>
 							<visible>String.IsEqual(Skin.String(MainMenu.Layout),icons)</visible>
@@ -200,7 +200,7 @@
 						</control>
 						<control type="radiobutton" id="1008">
 							<include>SettingsButtonCommonValues</include>
-							<label>   - $LOCALIZE[31157]</label>
+							<label>- $LOCALIZE[31157]</label>
 							<onclick>Skin.ToggleSetting(Enable.VisibleSubmenu)</onclick>
 							<selected>Skin.HasSetting(Enable.VisibleSubmenu)</selected>
 							<visible>[system.getbool(lookandfeel.enablerssfeeds) + !String.IsEqual(Skin.String(MainMenu.Layout),vertical) + !String.IsEmpty(Skin.String(HorizontalRSSPosition))]</visible>
@@ -416,7 +416,7 @@
 						</control>
 						<control type="button" id="3008">
 							<include>SettingsButtonCommonValues</include>
-							<label>   - $LOCALIZE[5]</label>
+							<label>- $LOCALIZE[5]</label>
 							<onclick>Addon.OpenSettings(plugin.program.autocompletion)</onclick>
 							<visible>Skin.HasSetting(Enable.Autocomplete) + System.HasAddon(plugin.program.autocompletion)</visible>
 						</control>
@@ -428,7 +428,7 @@
 						</control>
 						<control type="button" id="3002">
 							<include>SettingsButtonCommonValues</include>
-							<label>   - $LOCALIZE[13007]</label>
+							<label>- $LOCALIZE[13007]</label>
 							<onclick>Skin.Reset(VideoGenreFanartPath)</onclick>
 							<visible>!String.IsEmpty(Skin.String(VideoGenreFanartPath))</visible>
 						</control>
@@ -449,7 +449,7 @@
 						</control>
 						<control type="button" id="3003">
 							<include>SettingsButtonCommonValues</include>
-							<label>   - $LOCALIZE[13007]</label>
+							<label>- $LOCALIZE[13007]</label>
 							<onclick>Skin.Reset(MusicGenreFanartPath)</onclick>
 							<visible>!String.IsEmpty(Skin.String(MusicGenreFanartPath))</visible>
 						</control>
@@ -669,7 +669,7 @@
 							<include>SettingsButtonCommonValues</include>
 						</control>
 						<control type="button" id="8003">
-							<label>   - $LOCALIZE[31702]</label>
+							<label>- $LOCALIZE[31702]</label>
 							<label2>[COLOR $VAR[ThemeLabelColor]]$VAR[WidgetBackLabelVar][/COLOR]</label2>
 							<visible>Skin.HasSetting(Enable.GlobalWidgetBack)</visible>
 							<onclick>SetProperty(CustomSelectWidgetBack,True)</onclick>
@@ -712,7 +712,7 @@
 							<align>center</align>
 							<textcolor>grey</textcolor>
 							<font>font_skinversion</font>
-							<label>[B]$INFO[System.AddonTitle(skin.nox.glass)][/B]  $INFO[System.AddonVersion(skin.nox.glass) ,v ,]</label>
+							<label>[B]$INFO[System.AddonTitle(skin.nox.glass)][/B] $INFO[System.AddonVersion(skin.nox.glass) ,v ,]</label>
 						</control>
 						<control type="group" id="7900">
 							<height>148</height>

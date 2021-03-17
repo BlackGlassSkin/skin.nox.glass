@@ -511,7 +511,7 @@
 				<include>FlixPosterCaseReflection</include>
 			</control>
 		</control>
-	</include>
+</include>
 	<include name="FlixPoster">
 		<control type="image">
 			<left>10</left>

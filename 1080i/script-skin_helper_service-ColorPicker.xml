@@ -218,7 +218,7 @@
 					</control>
 					<!-- Exit Button -->
 					<control type="button" id="3013">
-					    <left>900</left>
+						<left>900</left>
 						<width>auto</width>
 						<height>60</height>
 						<onup>3110</onup>

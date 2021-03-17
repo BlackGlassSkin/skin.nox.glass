@@ -1151,7 +1151,7 @@
 					<description>InfoPanel Settings button</description>
 					<textwidth>352</textwidth>
 					<include>ButtonCommonValues</include>
-					<label>   - $LOCALIZE[413]</label>
+					<label>- $LOCALIZE[413]</label>
 					<onclick>Skin.ToggleSetting(Enable.ManualInfoPanel)</onclick>
 					<onclick condition="!Skin.HasSetting(Enable.ManualInfoPanel)">Skin.Reset(InfoPanel.Delay)</onclick>
 					<selected>Skin.HasSetting(Enable.ManualInfoPanel)</selected>

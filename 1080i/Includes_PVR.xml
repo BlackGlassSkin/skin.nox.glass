@@ -201,7 +201,7 @@
 						<font>font16</font>
 						<textcolor>white2</textcolor>
 						<align>right</align>
-						<label>$VAR[PlayerTimeRemainingAltVar,+,  ]$INFO[VideoPlayer.EndTime]</label>
+						<label>$VAR[PlayerTimeRemainingAltVar,+, ]$INFO[VideoPlayer.EndTime]</label>
 					</control>
 					<control type="group">
 						<left>330</left>
@@ -211,7 +211,7 @@
 							<height>38</height>
 							<font>font13</font>
 							<textcolor>$VAR[ThemeLabelColor]</textcolor>
-							<label>$INFO[PVR.TimeshiftCur,$LOCALIZE[31364]: [COLOR grey],[/COLOR]]$INFO[PVR.TimeshiftOffset, [COLOR grey](-,)[/COLOR]]$INFO[VideoPlayer.NextTitle,  $LOCALIZE[19031]: [COLOR grey],[/COLOR]]$INFO[VideoPlayer.NextStartTime, [COLOR grey](,]$INFO[VideoPlayer.NextEndTime, - ,)[/COLOR]]</label>
+							<label>$INFO[PVR.TimeshiftCur,$LOCALIZE[31364]: [COLOR grey],[/COLOR]]$INFO[PVR.TimeshiftOffset, [COLOR grey](-,)[/COLOR]]$INFO[VideoPlayer.NextTitle, $LOCALIZE[19031]: [COLOR grey],[/COLOR]]$INFO[VideoPlayer.NextStartTime, [COLOR grey](,]$INFO[VideoPlayer.NextEndTime, - ,)[/COLOR]]</label>
 							<visible>!Player.ChannelPreviewActive + Pvr.IsTimeShift</visible>
 						</control>
 						<control type="label">
@@ -361,7 +361,7 @@
 							<align>center</align>
 							<font>font24_bold</font>
 							<textcolor>$VAR[ThemeLabelColor]</textcolor>
-							<label>$INFO[Weather.Temperature]$INFO[Weather.Conditions,  ,]</label>
+							<label>$INFO[Weather.Temperature]$INFO[Weather.Conditions, ,]</label>
 						</control>
 					</control>
 					<!-- No Weather -->
@@ -942,7 +942,7 @@
 						<font>font15</font>
 						<textcolor>$VAR[ThemeLabelColor]</textcolor>
 						<textoffsetx>15</textoffsetx>
-						<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ,: ]$INFO[ListItem.Title,[COLOR grey],[/COLOR]]$INFO[ListItem.Genre,  $LOCALIZE[515]: [COLOR grey],[/COLOR]]</label>
+						<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ,: ]$INFO[ListItem.Title,[COLOR grey],[/COLOR]]$INFO[ListItem.Genre, $LOCALIZE[515]: [COLOR grey],[/COLOR]]</label>
 					</control>
 					<control type="textbox">
 						<left>15</left>
@@ -958,7 +958,7 @@
 			</control>
 		</control>
 		<include>Topbar</include>
-	</include>
+</include>
 	<include name="EpgTimelineMinified">
 		<control type="image">
 			<top>-640</top>
@@ -1339,7 +1339,7 @@
 					<height>30</height>
 					<font>font36</font>
 					<textcolor>$VAR[ThemeLabelColor]</textcolor>
-					<label>Genre: $INFO[ListItem.Genre]  |  Start: $INFO[ListItem.StartTime]  |  End: $INFO[ListItem.EndTime]</label>
+					<label>Genre: $INFO[ListItem.Genre] | Start: $INFO[ListItem.StartTime] | End: $INFO[ListItem.EndTime]</label>
 					<visible>![String.IsEmpty(ListItem.Genre) + String.IsEmpty(ListItem.StartTime) + String.IsEmpty(ListItem.EndTime)]</visible>
 					<scroll>true</scroll>
 				</control>
@@ -1387,7 +1387,7 @@
 			</control>
 		</control>
 		<include>Topbar</include>
-	</include>
+</include>
 	<include name="DefaultChannelLayout">
 		<control type="image">
 			<top>2</top>

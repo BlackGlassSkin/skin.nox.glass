@@ -4,12 +4,12 @@
 		<control type="fixedlist" id="53">
 			<include>contents53list</include>
 		</control>
-	</include>
+</include>
 	<include name="scmwrap">
 		<control type="wraplist" id="53">
 			<include>contents53list</include>
 		</control>
-	</include>
+</include>
 	<include name="contents53list">
 		<left>-69</left>
 		<top>540</top>
@@ -115,7 +115,7 @@
 				</control>
 			</control>
 		</focusedlayout>
-	</include>
+</include>
 	<include name="View_53_ShowCase">
 		<control type="group">
 			<visible>Control.IsVisible(53) + !Container.Content(genres)</visible>
@@ -573,7 +573,7 @@
 				<include>BoxsetMod</include>
 			</control>
 		</control>
-	</include>
+</include>
 	<include name="MovieShowcaseThumb">
 		<left>-4</left>
 		<top>-10</top>
@@ -734,7 +734,7 @@
 			<texture background="true">$VAR[IconOverlay-1Var]</texture>
 			<include>WatchedOverlayShowCase</include>
 		</control>
-	</include>
+</include>
 	<include name="MovieShowCaseItem0">
 		<control type="group">
 			<visible>!listItem.IsCollection + Skin.HasSetting(boxsetmod) | !Skin.HasSetting(boxsetmod)</visible>
@@ -825,7 +825,7 @@
 			</control>
 		</control>
 		<include>BoxsetMod</include>
-	</include>
+</include>
 	<include name="MovieShowCaseItem1">
 		<include content="ShowCaseItemContent">
 			<param name="ListItem.Position">1</param>
@@ -836,7 +836,7 @@
 			<texture background="true">$VAR[IconOverlay1Var]</texture>
 			<include>WatchedOverlayShowCase</include>
 		</control>
-	</include>
+</include>
 	<include name="MovieShowCaseItem2">
 		<include content="ShowCaseItemContent">
 			<param name="ListItem.Position">2</param>
@@ -847,7 +847,7 @@
 			<texture background="true">$VAR[IconOverlay2Var]</texture>
 			<include>WatchedOverlayShowCase</include>
 		</control>
-	</include>
+</include>
 	<include name="MovieShowCaseItem3">
 		<include content="ShowCaseItemContent">
 			<param name="ListItem.Position">3</param>
@@ -858,7 +858,7 @@
 			<texture background="true">$VAR[IconOverlay3Var]</texture>
 			<include>WatchedOverlayShowCase</include>
 		</control>
-	</include>
+</include>
 	<include name="MovieShowCaseItem4">
 		<include content="ShowCaseItemContent">
 			<param name="ListItem.Position">4</param>
@@ -869,7 +869,7 @@
 			<texture background="true">$VAR[IconOverlay4Var]</texture>
 			<include>WatchedOverlayShowCase</include>
 		</control>
-	</include>
+</include>
 	<include name="MovieShowCaseItem5">
 		<include content="ShowCaseItemContent">
 			<param name="ListItem.Position">5</param>
@@ -880,7 +880,7 @@
 			<texture background="true">$VAR[IconOverlay5Var]</texture>
 			<include>WatchedOverlayShowCase</include>
 		</control>
-	</include>
+</include>
 	<include name="MovieShowCaseItem6">
 		<include content="ShowCaseItemContent">
 			<param name="ListItem.Position">6</param>
@@ -891,7 +891,7 @@
 			<texture background="true">$VAR[IconOverlay6Var]</texture>
 			<include>WatchedOverlayShowCase</include>
 		</control>
-	</include>
+</include>
 	<include name="MovieShowCaseItem7">
 		<include content="ShowCaseItemContent">
 			<param name="ListItem.Position">7</param>
@@ -902,7 +902,7 @@
 			<texture background="true">$VAR[IconOverlay7Var]</texture>
 			<include>WatchedOverlayShowCase</include>
 		</control>
-	</include>
+</include>
 	<variable name="ShowcaseItem-7Var">
 		<value condition="!String.IsEmpty(ListItem(-7).Art(poster))">$INFO[ListItem(-7).Art(poster)]</value>
 		<value condition="Container.Content(genres) + !Skin.HasSetting(coloredflags)">$INFO[ListItem(-7).Label,resource://resource.images.moviegenreicons.noxglass/default/,.jpg]</value>
@@ -1810,5 +1810,5 @@
 				</control>
 			</control>
 		</control>
-	</include>
+</include>
 </includes>

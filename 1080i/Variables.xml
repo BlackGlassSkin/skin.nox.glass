@@ -271,7 +271,7 @@
 		<value>$INFO[ListItem.Overlay,overlays/list/]</value>
 	</variable>
 	<variable name="ListOverlayEpisodesVar">
-		<value condition="Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),99)">   99 +</value>
+		<value condition="Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),99)">99 +</value>
 		<value>$INFO[ListItem.Property(UnWatchedEpisodes)]</value>
 	</variable>
 	<variable name="PlayerProgressIconVar">
@@ -298,16 +298,16 @@
 	<variable name="BreadcrumbsFillerVar">
 		<value condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies) | Container.Content(genres) | Window.IsActive(music) | Window.IsActive(games) | Window.IsActive(programs) | Window.IsActive(tvchannels) | Window.IsActive(TVRecordings) | Window.IsActive(TVTimers) | Window.IsActive(TVSearch)"/>
 		<value condition="Window.IsActive(profiles)">$LOCALIZE[13200]</value>
-		<value condition="Window.IsVisible(1133) + Window.IsActive(addoninformation)">$LOCALIZE[31957]: </value>
+		<value condition="Window.IsVisible(1133) + Window.IsActive(addoninformation)">$LOCALIZE[31957]:</value>
 		<value condition="Window.IsActive(1133)">$LOCALIZE[31957]</value>
 		<value condition="Window.IsActive(script-skinshortcuts.xml)">$LOCALIZE[20077]: $LOCALIZE[31345]</value>
 		<value condition="Window.IsActive(1140)">$LOCALIZE[20077]: $LOCALIZE[31340]</value>
 		<value condition="Window.IsActive(1117)">$LOCALIZE[20077]: $LOCALIZE[31279]</value>
-		<value condition="Window.IsActive(1112) + !String.IsEmpty(Window(Home).Property(AddonNews))">$LOCALIZE[24054]: </value>
+		<value condition="Window.IsActive(1112) + !String.IsEmpty(Window(Home).Property(AddonNews))">$LOCALIZE[24054]:</value>
 		<value condition="Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(script-NextAired-TVGuide2.xml)">$INFO[System.AddonTitle(script.tv.show.next.aired)]</value>
 		<value condition="Window.IsActive(skinsettings)">$LOCALIZE[20077]</value>
-		<value condition="Window.IsActive(RadioChannels) | Window.IsActive(RadioGuide) | Window.IsActive(RadioRecordings) | Window.IsActive(RadioSearch)">$LOCALIZE[19183]: </value>
-		<value condition="!String.IsEmpty(Container.FolderName) + !String.IsEqual(System.CurrentWindow,Container.FolderName)">$INFO[System.CurrentWindow]: </value>
+		<value condition="Window.IsActive(RadioChannels) | Window.IsActive(RadioGuide) | Window.IsActive(RadioRecordings) | Window.IsActive(RadioSearch)">$LOCALIZE[19183]:</value>
+		<value condition="!String.IsEmpty(Container.FolderName) + !String.IsEqual(System.CurrentWindow,Container.FolderName)">$INFO[System.CurrentWindow]:</value>
 		<value condition="!Window.IsActive(settings) + !String.IsEqual(System.CurrentWindow,Container.FolderName)">$INFO[System.CurrentWindow]</value>
 	</variable>
 	<variable name="BreadcrumbsVar">
@@ -327,24 +327,24 @@
 		<value>$VAR[BreadcrumbsFillerVar]$INFO[Container.FolderName]</value>
 	</variable>
 	<variable name="LibraryStatsVar">
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),$LOCALIZE[31052])">$INFO[Window(Home).Property(Movies.Count),[COLOR grey]$LOCALIZE[20342]:[/COLOR] ]$INFO[Window(Home).Property(Movies.Watched),[COLOR grey]  |  $LOCALIZE[16102]:[/COLOR] ]$INFO[Window(Home).Property(Movies.UnWatched),[COLOR grey]  |  $LOCALIZE[16101]:[/COLOR] ]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),$LOCALIZE[31053])">$INFO[Window(Home).Property(TVShows.Count),[COLOR grey]$LOCALIZE[20343]:[/COLOR] ]$INFO[Window(Home).Property(Episodes.Count),[COLOR grey]  |  $LOCALIZE[20360]:[/COLOR] ]$INFO[Window(Home).Property(Episodes.UnWatched),[COLOR grey]  |  $LOCALIZE[16101]:[/COLOR] ]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),$LOCALIZE[31054])">$INFO[Window(Home).Property(Music.ArtistsCount),[COLOR grey]$LOCALIZE[133]:[/COLOR] ]$INFO[Window(Home).Property(Music.AlbumsCount),[COLOR grey]  |  $LOCALIZE[132]:[/COLOR] ]$INFO[Window(Home).Property(Music.SongsCount),[COLOR grey]  |  $LOCALIZE[134]:[/COLOR] ]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),$LOCALIZE[31058]) + PVR.IsRecording">$LOCALIZE[19158] $INFO[PVR.NowRecordingDateTime,[COLOR=white]]  |  [/COLOR][COLOR=FF48D1CC]$INFO[PVR.NowRecordingTitle][/COLOR][COLOR=white]$INFO[PVR.NowRecordingChannel, (,)][/COLOR]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),$LOCALIZE[31058]) + PVR.HasNonRecordingTimer">$LOCALIZE[19157] $INFO[PVR.NextRecordingDateTime,[COLOR=white]]  |  [/COLOR]$INFO[PVR.NextRecordingTitle,[COLOR=white],[/COLOR]]$INFO[PVR.NextRecordingChannel,[COLOR=white] - ,[/COLOR]]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),$LOCALIZE[31058])">$INFO[Pvr.BackendChannels,[COLOR grey]$LOCALIZE[19019]:[/COLOR] ]$INFO[Pvr.BackendRecordings,[COLOR grey]  |  $LOCALIZE[19163]:[/COLOR] ]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),$LOCALIZE[31052])">$INFO[Window(Home).Property(Movies.Count),[COLOR grey]$LOCALIZE[20342]:[/COLOR] ]$INFO[Window(Home).Property(Movies.Watched),[COLOR grey] | $LOCALIZE[16102]:[/COLOR] ]$INFO[Window(Home).Property(Movies.UnWatched),[COLOR grey] | $LOCALIZE[16101]:[/COLOR] ]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),$LOCALIZE[31053])">$INFO[Window(Home).Property(TVShows.Count),[COLOR grey]$LOCALIZE[20343]:[/COLOR] ]$INFO[Window(Home).Property(Episodes.Count),[COLOR grey] | $LOCALIZE[20360]:[/COLOR] ]$INFO[Window(Home).Property(Episodes.UnWatched),[COLOR grey] | $LOCALIZE[16101]:[/COLOR] ]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),$LOCALIZE[31054])">$INFO[Window(Home).Property(Music.ArtistsCount),[COLOR grey]$LOCALIZE[133]:[/COLOR] ]$INFO[Window(Home).Property(Music.AlbumsCount),[COLOR grey] | $LOCALIZE[132]:[/COLOR] ]$INFO[Window(Home).Property(Music.SongsCount),[COLOR grey] | $LOCALIZE[134]:[/COLOR] ]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),$LOCALIZE[31058]) + PVR.IsRecording">$LOCALIZE[19158] $INFO[PVR.NowRecordingDateTime,[COLOR=white]] | [/COLOR][COLOR=FF48D1CC]$INFO[PVR.NowRecordingTitle][/COLOR][COLOR=white]$INFO[PVR.NowRecordingChannel, (,)][/COLOR]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),$LOCALIZE[31058]) + PVR.HasNonRecordingTimer">$LOCALIZE[19157] $INFO[PVR.NextRecordingDateTime,[COLOR=white]] | [/COLOR]$INFO[PVR.NextRecordingTitle,[COLOR=white],[/COLOR]]$INFO[PVR.NextRecordingChannel,[COLOR=white] - ,[/COLOR]]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),$LOCALIZE[31058])">$INFO[Pvr.BackendChannels,[COLOR grey]$LOCALIZE[19019]:[/COLOR] ]$INFO[Pvr.BackendRecordings,[COLOR grey] | $LOCALIZE[19163]:[/COLOR] ]</value>
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),$LOCALIZE[20088])">$INFO[Weather.Location,[COLOR grey],:[/COLOR] ]$INFO[Weather.Conditions]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),$LOCALIZE[31061])">$INFO[Window(Home).Property(SkinHelper.TotalAddons),[COLOR grey]$LOCALIZE[20161] $LOCALIZE[24001]: [/COLOR],[COLOR grey]  |  [/COLOR]]$INFO[Window(Home).Property(SkinHelper.TotalFavourites), [COLOR grey]$LOCALIZE[1036]:[/COLOR] ]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),$LOCALIZE[31802])">$INFO[Window(Home).Property(SkinHelper.TotalVideoAddons),[COLOR grey]$LOCALIZE[31800]: [/COLOR],[COLOR grey]  |  [/COLOR]]$INFO[Window(Home).Property(SkinHelper.TotalAudioAddons),[COLOR grey]$LOCALIZE[31801]: [/COLOR]]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),$LOCALIZE[31061])">$INFO[Window(Home).Property(SkinHelper.TotalAddons),[COLOR grey]$LOCALIZE[20161] $LOCALIZE[24001]: [/COLOR],[COLOR grey] | [/COLOR]]$INFO[Window(Home).Property(SkinHelper.TotalFavourites), [COLOR grey]$LOCALIZE[1036]:[/COLOR] ]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),$LOCALIZE[31802])">$INFO[Window(Home).Property(SkinHelper.TotalVideoAddons),[COLOR grey]$LOCALIZE[31800]: [/COLOR],[COLOR grey] | [/COLOR]]$INFO[Window(Home).Property(SkinHelper.TotalAudioAddons),[COLOR grey]$LOCALIZE[31801]: [/COLOR]]</value>
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),$LOCALIZE[31800])">$INFO[Window(Home).Property(SkinHelper.TotalVideoAddons),[COLOR grey]$LOCALIZE[31800]: [/COLOR]]</value>
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),$LOCALIZE[31801])">$INFO[Window(Home).Property(SkinHelper.TotalAudioAddons),[COLOR grey]$LOCALIZE[31801]: [/COLOR]]</value>
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),$LOCALIZE[31803])">$INFO[Window(Home).Property(SkinHelper.TotalProgramAddons),[COLOR grey]$LOCALIZE[31803]: [/COLOR]]</value>
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),$LOCALIZE[31804])">$INFO[Window(Home).Property(SkinHelper.TotalPicturesAddons),[COLOR grey]$LOCALIZE[31804]: [/COLOR]]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),$LOCALIZE[31085])">$INFO[Window(Home).Property(MusicVideos.Count),[COLOR grey]$LOCALIZE[20389]:[/COLOR] ]$INFO[Window(Home).Property(MusicVideos.Watched),[COLOR grey]  |  $LOCALIZE[16102]:[/COLOR] ]$INFO[Window(Home).Property(MusicVideos.UnWatched),[COLOR grey]  |  $LOCALIZE[16101]:[/COLOR] ]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),$LOCALIZE[130])">$INFO[System.memory(used.percent),[COLOR grey]$LOCALIZE[31309]: [/COLOR]]$INFO[System.CPUUsage,[COLOR grey]  |  $LOCALIZE[13271] [/COLOR]]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),$LOCALIZE[31097])">$INFO[Window(Home).Property(PlaylistCount),[COLOR grey]$LOCALIZE[20342]:[/COLOR] ]$INFO[Window(Home).Property(PlaylistWatched),[COLOR grey]  |  $LOCALIZE[16102]:[/COLOR] ]$INFO[Window(Home).Property(PlaylistUnWatched),[COLOR grey]  |  $LOCALIZE[16101]:[/COLOR] ]$INFO[Window(Home).Property(PlaylistInProgress),[COLOR grey]  |  $LOCALIZE[575]:[/COLOR] ]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),$LOCALIZE[31098])">$INFO[Window(Home).Property(PlaylistTVShowCount),[COLOR grey]$LOCALIZE[20343]:[/COLOR] ]$INFO[Window(Home).Property(PlaylistEpisodes),[COLOR grey]  |  $LOCALIZE[20360]:[/COLOR] ]$INFO[Window(Home).Property(PlaylistEpisodesUnWatched),[COLOR grey]  |  $LOCALIZE[16101]:[/COLOR] ]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),$LOCALIZE[31099])">$INFO[Window(Home).Property(PlaylistCount),[COLOR grey]$LOCALIZE[20389]:[/COLOR] ]$INFO[Window(Home).Property(PlaylistWatched),[COLOR grey]  |  $LOCALIZE[16102]:[/COLOR] ]$INFO[Window(Home).Property(PlaylistUnWatched),[COLOR grey]  |  $LOCALIZE[16101]:[/COLOR] ]$INFO[Window(Home).Property(PlaylistInProgress),[COLOR grey]  |  $LOCALIZE[575]:[/COLOR] ]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),$LOCALIZE[31085])">$INFO[Window(Home).Property(MusicVideos.Count),[COLOR grey]$LOCALIZE[20389]:[/COLOR] ]$INFO[Window(Home).Property(MusicVideos.Watched),[COLOR grey] | $LOCALIZE[16102]:[/COLOR] ]$INFO[Window(Home).Property(MusicVideos.UnWatched),[COLOR grey] | $LOCALIZE[16101]:[/COLOR] ]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),$LOCALIZE[130])">$INFO[System.memory(used.percent),[COLOR grey]$LOCALIZE[31309]: [/COLOR]]$INFO[System.CPUUsage,[COLOR grey] | $LOCALIZE[13271] [/COLOR]]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),$LOCALIZE[31097])">$INFO[Window(Home).Property(PlaylistCount),[COLOR grey]$LOCALIZE[20342]:[/COLOR] ]$INFO[Window(Home).Property(PlaylistWatched),[COLOR grey] | $LOCALIZE[16102]:[/COLOR] ]$INFO[Window(Home).Property(PlaylistUnWatched),[COLOR grey] | $LOCALIZE[16101]:[/COLOR] ]$INFO[Window(Home).Property(PlaylistInProgress),[COLOR grey] | $LOCALIZE[575]:[/COLOR] ]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),$LOCALIZE[31098])">$INFO[Window(Home).Property(PlaylistTVShowCount),[COLOR grey]$LOCALIZE[20343]:[/COLOR] ]$INFO[Window(Home).Property(PlaylistEpisodes),[COLOR grey] | $LOCALIZE[20360]:[/COLOR] ]$INFO[Window(Home).Property(PlaylistEpisodesUnWatched),[COLOR grey] | $LOCALIZE[16101]:[/COLOR] ]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),$LOCALIZE[31099])">$INFO[Window(Home).Property(PlaylistCount),[COLOR grey]$LOCALIZE[20389]:[/COLOR] ]$INFO[Window(Home).Property(PlaylistWatched),[COLOR grey] | $LOCALIZE[16102]:[/COLOR] ]$INFO[Window(Home).Property(PlaylistUnWatched),[COLOR grey] | $LOCALIZE[16101]:[/COLOR] ]$INFO[Window(Home).Property(PlaylistInProgress),[COLOR grey] | $LOCALIZE[575]:[/COLOR] ]</value>
 	</variable>
 	<variable name="PlaylistStatsContentVar">
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),$LOCALIZE[31097])">plugin://service.library.data.provider?type=playliststats&amp;id=$INFO[Container(9000).ListItem.Property(path)]</value>
@@ -783,8 +783,8 @@
 		<value condition="Skin.HasSetting(Enable.HourMinuteDuration) + [Container.Content(movies) + Skin.HasSetting(rightlistalternate)] + !String.IsEmpty(ListItem.Duration)">[COLOR white]$INFO[ListItem.Year,, • ]$INFO[ListItem.RatingAndVotes,, • ]$VAR[ItemDurationVar]$INFO[ListItem.EndTimeResume, • $LOCALIZE[31393]: ,][/COLOR]</value>
 		<value condition="[Container.Content(tvshows) + !Skin.HasSetting(rightlistalternatetv)]">$INFO[ListItem.RatingAndVotes]</value>
 		<value condition="[Container.Content(tvshows) + Skin.HasSetting(rightlistalternatetv)]">$INFO[ListItem.Year]$INFO[ListItem.RatingAndVotes, • ,]</value>
-		<value condition="Container.Content(episodes) + !Skin.HasSetting(Enable.HourMinuteDuration) + !String.IsEmpty(ListItem.Duration)">$INFO[ListItem.RatingAndVotes,, • ]$INFO[ListItem.Duration(mins),, $LOCALIZE[12391]]$INFO[ListItem.EndTimeResume, •  $LOCALIZE[31393]: ]</value>
-		<value condition="Container.Content(episodes) + Skin.HasSetting(Enable.HourMinuteDuration) + !String.IsEmpty(ListItem.Duration)">$INFO[ListItem.RatingAndVotes,, • ]$VAR[ItemDurationVar]$INFO[ListItem.EndTimeResume, •  $LOCALIZE[31393]: ]</value>
+		<value condition="Container.Content(episodes) + !Skin.HasSetting(Enable.HourMinuteDuration) + !String.IsEmpty(ListItem.Duration)">$INFO[ListItem.RatingAndVotes,, • ]$INFO[ListItem.Duration(mins),, $LOCALIZE[12391]]$INFO[ListItem.EndTimeResume, • $LOCALIZE[31393]: ]</value>
+		<value condition="Container.Content(episodes) + Skin.HasSetting(Enable.HourMinuteDuration) + !String.IsEmpty(ListItem.Duration)">$INFO[ListItem.RatingAndVotes,, • ]$VAR[ItemDurationVar]$INFO[ListItem.EndTimeResume, • $LOCALIZE[31393]: ]</value>
 		<value condition="Container.Content(albums)">$INFO[ListItem.Year,, / ]$INFO[ListItem.Artist]</value>
 		<value condition="Container.Content(songs)">$INFO[ListItem.Artist]$INFO[ListItem.Duration, / ]</value>
 	</variable>
@@ -1149,7 +1149,7 @@
 		<value condition="String.Contains(Container(4500).ListItem(0).MPAA,US:PG) | String.Contains(Container(4500).ListItem(0).MPAA,USA:PG) | String.IsEqual(Container(4500).ListItem(0).MPAA,Rated PG) | String.IsEqual(Container(4500).ListItem(0).MPAA,PG)">PG.png</value>
 		<value condition="String.Contains(Container(4500).ListItem(0).MPAA,US:G) | String.Contains(Container(4500).ListItem(0).MPAA,USA:G) | String.IsEqual(Container(4500).ListItem(0).MPAA,Rated G) | String.IsEqual(Container(4500).ListItem(0).MPAA,G) | String.IsEqual(Container(4500).ListItem(0).MPAA,Rated Approved) | String.IsEqual(Container(4500).ListItem(0).MPAA,Approved) | String.IsEqual(Container(4500).ListItem(0).MPAA,Rated Passed) | String.IsEqual(Container(4500).ListItem(0).MPAA,Passed)">G.png</value>
 		<value condition="String.Contains(Container(4500).ListItem(0).MPAA,UK:U)| String.Contains(Container(4500).ListItem(0).MPAA,United Kingdom:U)">BBFC_U_Certificate_UK.png</value>
-		<value condition="String.Contains(Container(4500).ListItem(0).MPAA,UK:PG) | String.Contains(Container(4500).ListItem(0).MPAA,United Kingdom:PG)"> BBFC_PG_Certificate_UK.png</value>
+		<value condition="String.Contains(Container(4500).ListItem(0).MPAA,UK:PG) | String.Contains(Container(4500).ListItem(0).MPAA,United Kingdom:PG)">BBFC_PG_Certificate_UK.png</value>
 		<value condition="String.Contains(Container(4500).ListItem(0).MPAA,UK:12A) | String.Contains(Container(4500).ListItem(0).MPAA,United Kingdom:12A)">BBFC_12A_Certificate_UK.png</value>
 		<value condition="String.Contains(Container(4500).ListItem(0).MPAA,UK:12) | String.Contains(Container(4500).ListItem(0).MPAA,United Kingdom:12)">BBFC_12_Certificate_UK.png</value>
 		<value condition="String.Contains(Container(4500).ListItem(0).MPAA,UK:15) | String.Contains(Container(4500).ListItem(0).MPAA,United Kingdom:15)">BBFC_15_Certificate_UK.png</value>
@@ -1208,7 +1208,7 @@
 		<value condition="String.Contains(Container(10051).ListItem.MPAA,US:PG) | String.Contains(Container(10051).ListItem.MPAA,USA:PG) | String.IsEqual(Container(10051).ListItem.MPAA,Rated PG) | String.IsEqual(Container(10051).ListItem.MPAA,PG)">PG.png</value>
 		<value condition="String.Contains(Container(10051).ListItem.MPAA,US:G) | String.Contains(Container(10051).ListItem.MPAA,USA:G) | String.IsEqual(Container(10051).ListItem.MPAA,Rated G) | String.IsEqual(Container(10051).ListItem.MPAA,G) | String.IsEqual(Container(10051).ListItem.MPAA,Rated Approved) | String.IsEqual(Container(10051).ListItem.MPAA,Approved) | String.IsEqual(Container(10051).ListItem.MPAA,Rated Passed) | String.IsEqual(Container(10051).ListItem.MPAA,Passed)">G.png</value>
 		<value condition="String.Contains(Container(10051).ListItem.MPAA,UK:U)| String.Contains(Container(10051).ListItem.MPAA,United Kingdom:U)">BBFC_U_Certificate_UK.png</value>
-		<value condition="String.Contains(Container(10051).ListItem.MPAA,UK:PG) | String.Contains(Container(10051).ListItem.MPAA,United Kingdom:PG)"> BBFC_PG_Certificate_UK.png</value>
+		<value condition="String.Contains(Container(10051).ListItem.MPAA,UK:PG) | String.Contains(Container(10051).ListItem.MPAA,United Kingdom:PG)">BBFC_PG_Certificate_UK.png</value>
 		<value condition="String.Contains(Container(10051).ListItem.MPAA,UK:12A) | String.Contains(Container(10051).ListItem.MPAA,United Kingdom:12A)">BBFC_12A_Certificate_UK.png</value>
 		<value condition="String.Contains(Container(10051).ListItem.MPAA,UK:12) | String.Contains(Container(10051).ListItem.MPAA,United Kingdom:12)">BBFC_12_Certificate_UK.png</value>
 		<value condition="String.Contains(Container(10051).ListItem.MPAA,UK:15) | String.Contains(Container(10051).ListItem.MPAA,United Kingdom:15)">BBFC_15_Certificate_UK.png</value>
@@ -1977,7 +1977,7 @@
 		<value condition="String.IsEqual(Skin.String(MyFlix.Dimmer),0%)">00FFFFFF</value>
 	</variable>
 	<variable name="ShortcutsDisabledVar">
-		<value condition="String.IsEqual(ListItem.Property(skinshortcuts-disabled),True)">[COLOR invalid]×[/COLOR] </value>
+		<value condition="String.IsEqual(ListItem.Property(skinshortcuts-disabled),True)">[COLOR invalid]×[/COLOR]</value>
 		<value/>
 	</variable>
 	<variable name="DialogInfoDimmerLabelVar">
@@ -2072,8 +2072,8 @@
 		<value condition="String.IsEqual(Window(Home).Property(actualViewtype),MusicJukeBox) + !String.IsEmpty(Skin.String(603.NoTopBar))">Skin.Reset(603.NoTopBar)</value>
 	</variable>
 	<variable name="TopBarRightLabelVar">
-		<value condition="Pvr.IsPlayingTv">$INFO[System.Date][COLOR grey2]$INFO[System.Time, | ][/COLOR][COLOR white]$INFO[PVR.EpgEventRemainingTime,   - ][/COLOR]</value>
-		<value>$INFO[System.Date][COLOR grey2]$INFO[System.Time, | ][/COLOR][COLOR white]$INFO[Player.TimeRemaining,   - ][/COLOR]</value>
+		<value condition="Pvr.IsPlayingTv">$INFO[System.Date][COLOR grey2]$INFO[System.Time, | ][/COLOR][COLOR white]$INFO[PVR.EpgEventRemainingTime, - ][/COLOR]</value>
+		<value>$INFO[System.Date][COLOR grey2]$INFO[System.Time, | ][/COLOR][COLOR white]$INFO[Player.TimeRemaining, - ][/COLOR]</value>
 	</variable>
 	<variable name="PVRTimerIcon">
 		<value condition="ListItem.IsRecording">new_pvr/icons/PVR-IsRecording.png</value>
@@ -2250,47 +2250,59 @@
 	</variable>
 	<!-- paski -->
 	<!-- ustawienia EPG -->
-	<variable name="PVRGenreMovieoneVar"> <!-- Movie -->
+	<variable name="PVRGenreMovieoneVar">
+		<!-- Movie -->
 		<value condition="!String.IsEmpty(Skin.String(PVRGenreMovieoneVar)) + !String.IsEqual(Skin.String(PVRGenreMovieoneVar),None)">$INFO[Skin.String(PVRGenreMovieoneVar)]</value>
 		<value>99009900</value>
 	</variable>
-	<variable name="PVRGenreSeriesVar"> <!-- Series -->
+	<variable name="PVRGenreSeriesVar">
+		<!-- Series -->
 		<value condition="!String.IsEmpty(Skin.String(PVRGenreSeriesVar)) + !String.IsEqual(Skin.String(PVRGenreSeriesVar),None)">$INFO[Skin.String(PVRGenreSeriesVar)]</value>
 		<value>4D009900</value>
 	</variable>
-	<variable name="PVRGenreEntertainmentVar"> <!-- Entertainment -->
+	<variable name="PVRGenreEntertainmentVar">
+		<!-- Entertainment -->
 		<value condition="!String.IsEmpty(Skin.String(PVRGenreEntertainmentVar)) + !String.IsEqual(Skin.String(PVRGenreEntertainmentVar),None)">$INFO[Skin.String(PVRGenreEntertainmentVar)]</value>
 		<value>99ffffcc</value>
 	</variable>
-	<variable name="PVRGenreReportageVar"> <!-- Reportage -->
+	<variable name="PVRGenreReportageVar">
+		<!-- Reportage -->
 		<value condition="!String.IsEmpty(Skin.String(PVRGenreReportageVar)) + !String.IsEqual(Skin.String(PVRGenreReportageVar),None)">$INFO[Skin.String(PVRGenreReportageVar)]</value>
-		<value>603399ff</value> <!-- blue -->
+		<value>603399ff</value>
+		<!-- blue -->
 	</variable>
-	<variable name="PVRGenreParadocumentaryVar"> <!-- Paradocumentary,natura,hostory -->
+	<variable name="PVRGenreParadocumentaryVar">
+		<!-- Paradocumentary,natura,hostory -->
 		<value condition="!String.IsEmpty(Skin.String(PVRGenreParadocumentaryVar)) + !String.IsEqual(Skin.String(PVRGenreParadocumentaryVar),None)">$INFO[Skin.String(PVRGenreParadocumentaryVar)]</value>
 		<value>4D996633</value>
 	</variable>
-	<variable name="PVRGenreKidsVar"> <!-- Kids -->
+	<variable name="PVRGenreKidsVar">
+		<!-- Kids -->
 		<value condition="!String.IsEmpty(Skin.String(PVRGenreKidsVar)) + !String.IsEqual(Skin.String(PVRGenreKidsVar),None)">$INFO[Skin.String(PVRGenreKidsVar)]</value>
 		<value>99ffff00</value>
 	</variable>
-	<variable name="PVRGenreMusicVar"> <!-- Music -->
+	<variable name="PVRGenreMusicVar">
+		<!-- Music -->
 		<value condition="!String.IsEmpty(Skin.String(PVRGenreMusicVar)) + !String.IsEqual(Skin.String(PVRGenreMusicVar),None)">$INFO[Skin.String(PVRGenreMusicVar)]</value>
 		<value>FFd2a92d</value>
 	</variable>
-	<variable name="PVRGenreSportVar"> <!-- Sport -->
+	<variable name="PVRGenreSportVar">
+		<!-- Sport -->
 		<value condition="!String.IsEmpty(Skin.String(PVRGenreSportVar)) + !String.IsEqual(Skin.String(PVRGenreSportVar),None)">$INFO[Skin.String(PVRGenreSportVar)]</value>
 		<value>FFd2562d</value>
 	</variable>
-	<variable name="PVRGenreReligiousVar"> <!-- Religous -->
+	<variable name="PVRGenreReligiousVar">
+		<!-- Religous -->
 		<value condition="!String.IsEmpty(Skin.String(PVRGenreReligiousVar)) + !String.IsEqual(Skin.String(PVRGenreReligiousVar),None)">$INFO[Skin.String(PVRGenreReligiousVar)]</value>
 		<value>A600ffff</value>
 	</variable>
-	<variable name="PVRGenreEroticVar"> <!-- Erotic -->
+	<variable name="PVRGenreEroticVar">
+		<!-- Erotic -->
 		<value condition="!String.IsEmpty(Skin.String(PVRGenreEroticVar)) + !String.IsEqual(Skin.String(PVRGenreEroticVar),None)">$INFO[Skin.String(PVRGenreEroticVar)]</value>
 		<value>FFff51ff</value>
 	</variable>
-	<variable name="PVRGenreMagazineVar"> <!-- Magazine -->
+	<variable name="PVRGenreMagazineVar">
+		<!-- Magazine -->
 		<value condition="!String.IsEmpty(Skin.String(PVRGenreMagazineVar)) + !String.IsEqual(Skin.String(PVRGenreMagazineVar),None)">$INFO[Skin.String(PVRGenreMagazineVar)]</value>
 		<value>brown</value>
 	</variable>

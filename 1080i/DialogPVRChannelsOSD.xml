@@ -79,7 +79,7 @@
 							<font>font14_textbox</font>
 							<width>690</width>
 							<height>60</height>
-							<label>[B][COLOR white]$INFO[ListItem.Label][/COLOR][/B]$INFO[ListItem.Title,  ]</label>
+							<label>[B][COLOR white]$INFO[ListItem.Label][/COLOR][/B]$INFO[ListItem.Title, ]</label>
 						</control>
 						<control type="image">
 							<left>850</left>
@@ -140,7 +140,7 @@
 							<font>font14_textbox</font>
 							<width>690</width>
 							<height>60</height>
-							<label>[B]$INFO[ListItem.Label][/B]$INFO[ListItem.Title,  ]</label>
+							<label>[B]$INFO[ListItem.Label][/B]$INFO[ListItem.Title, ]</label>
 						</control>
 						<control type="image">
 							<left>850</left>

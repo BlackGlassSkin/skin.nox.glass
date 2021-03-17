@@ -502,12 +502,12 @@
 			<focusposition>5</focusposition>
 			<include>contents506list</include>
 		</control>
-	</include>
+</include>
 	<include name="listrightlist">
 		<control type="list" id="506">
 			<include>contents506list</include>
 		</control>
-	</include>
+</include>
 	<include name="contents506list">
 		<left>1010</left>
 		<top>74</top>

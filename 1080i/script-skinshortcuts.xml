@@ -285,7 +285,7 @@
 									<description>Setup custom widget 1</description>
 									<width>1125</width>
 									<include>SettingsButtonCommonValues</include>
-									<label>   - $LOCALIZE[31760]</label>
+									<label>- $LOCALIZE[31760]</label>
 									<visible>String.IsEqual(Window.Property(groupname),mainmenu) + String.IsEqual(Container(211).ListItem.Property(widgetType),custom)</visible>
 								</control>
 								<control type="button" id="801">
@@ -303,7 +303,7 @@
 									<description>Setup custom widget 2</description>
 									<width>1125</width>
 									<include>SettingsButtonCommonValues</include>
-									<label>   - $LOCALIZE[31761]</label>
+									<label>- $LOCALIZE[31761]</label>
 									<visible>String.IsEqual(Window.Property(groupname),mainmenu) + String.IsEqual(Container(211).ListItem.Property(widgetType.2),custom)</visible>
 								</control>
 								<control type="radiobutton" id="520">

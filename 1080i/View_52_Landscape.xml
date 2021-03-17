@@ -4,12 +4,12 @@
 		<control type="fixedlist" id="52">
 			<include>contents52list</include>
 		</control>
-	</include>
+</include>
 	<include name="LandscapeWrap">
 		<control type="wraplist" id="52">
 			<include>contents52list</include>
 		</control>
-	</include>
+</include>
 	<include name="contents52list">
 		<width>100%</width>
 		<height>960</height>
@@ -201,7 +201,7 @@
 				</control>
 			</control>
 		</control>
-	</include>
+</include>
 	<include name="LandscapeThumbCommonValues">
 		<width>700</width>
 		<height>410</height>
@@ -239,7 +239,7 @@
 			<top>42</top>
 			<include condition="Skin.HasSetting(Disable.UnwatchedIcon)">UnwatchedIcon-3</include>
 		</control>
-	</include>
+</include>
 	<include name="LandscapeItem-2">
 		<control type="image">
 			<include>LandscapeThumbCommonValues</include>
@@ -256,7 +256,7 @@
 			<top>42</top>
 			<include condition="Skin.HasSetting(Disable.UnwatchedIcon)">UnwatchedIcon-2</include>
 		</control>
-	</include>
+</include>
 	<include name="LandscapeItem-1">
 		<control type="image">
 			<include>LandscapeThumbCommonValues</include>
@@ -277,7 +277,7 @@
 			<top>42</top>
 			<include condition="Skin.HasSetting(Disable.UnwatchedIcon)">UnwatchedIcon-1</include>
 		</control>
-	</include>
+</include>
 	<include name="LandscapeItem0">
 		<control type="image">
 			<include>LandscapeThumbCommonValues</include>
@@ -296,7 +296,7 @@
 			<top>42</top>
 			<include condition="Skin.HasSetting(Disable.UnwatchedIcon)">UnwatchedIcon</include>
 		</control>
-	</include>
+</include>
 	<include name="LandscapeItem1">
 		<control type="image">
 			<include>LandscapeThumbCommonValues</include>
@@ -318,7 +318,7 @@
 			<top>42</top>
 			<include condition="Skin.HasSetting(Disable.UnwatchedIcon)">UnwatchedIcon1</include>
 		</control>
-	</include>
+</include>
 	<include name="LandscapeItem2">
 		<control type="image">
 			<include>LandscapeThumbCommonValues</include>

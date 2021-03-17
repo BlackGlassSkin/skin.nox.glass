@@ -219,7 +219,7 @@
 						<height>60</height>
 						<font>font12</font>
 						<textcolor>$VAR[ThemeLabelColor]</textcolor>
-						<label> $VAR[SeasonLabel]$VAR[EpisodeLabel, - ]</label>
+						<label>$VAR[SeasonLabel]$VAR[EpisodeLabel, - ]</label>
 					</control>
 					<control type="image">
 						<left>980</left>
@@ -288,7 +288,7 @@
 						<width>880</width>
 						<height>60</height>
 						<font>font12</font>
-						<label> $VAR[SeasonLabel]$VAR[EpisodeLabel, - ]</label>
+						<label>$VAR[SeasonLabel]$VAR[EpisodeLabel, - ]</label>
 					</control>
 					<control type="image">
 						<left>980</left>
