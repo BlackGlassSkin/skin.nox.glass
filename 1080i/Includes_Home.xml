@@ -65,7 +65,7 @@
 				<include>skinshortcuts-submenu</include>
 			</content>
 		</control>
-		<control type="group" id="1">
+		<!--<control type="group" id="1">
 			<top>-1040</top>
 			<visible>!Player.HasMedia + !String.IsEqual(Container(9000).ListItem.Property(WidgetType.2),weather) + String.IsEqual(Container(9000).ListItem.Property(path),ActivateWindow(Weather)) + !Skin.HasSetting(centermainmenu) + !ControlGroup(90010).HasFocus + Skin.HasSetting(Enable.MyWeather)</visible>
 			<visible>String.IsEmpty(Window.Property(Daily.IsFetched)) + Weather.IsFetched + !String.IsEmpty(Weather.Plugin)</visible>
@@ -172,7 +172,7 @@
 					<font>Lirabiefont_Rg35TEMP</font>
 					<textcolor>grey</textcolor>
 					<label>[COLOR blue][B]$INFO[Window(Weather).Property(Day1.Title)][/B][/COLOR][CR][COLOR blue][B]Temp.[/B][/COLOR] Min. [COLOR blue]$INFO[Window(Weather).Property(Day1.LowTemp)] $INFO[System.TemperatureUnits] [/COLOR]| Max. [COLOR red]$INFO[Window(Weather).Property(Day1.HighTemp)] $INFO[System.TemperatureUnits][/COLOR][CR][COLOR blue][B]$LOCALIZE[32044]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.1.WindSpeed)][/COLOR][COLOR blue][B] $INFO[Window(Weather).Property(Daily.1.WindDirection)][/B][/COLOR][CR][COLOR blue][B]$LOCALIZE[406]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.1.Humidity)][/COLOR][CR][COLOR blue][B]$LOCALIZE[405]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.1.DewPoint)][/COLOR][CR][COLOR blue][B]$LOCALIZE[33030]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.1.Outlook)][/COLOR][CR][COLOR blue][B]$LOCALIZE[1448]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.1.Precipitation)][/COLOR][CR][COLOR blue][B]$LOCALIZE[1376]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.1.Pressure)][/COLOR][CR][COLOR blue][B]$LOCALIZE[32043]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.1.WindDegree)][/COLOR][CR][COLOR blue][B]Ozone[/B]:[/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.1.Ozone)][/COLOR][CR][COLOR blue][B]$LOCALIZE[387][/B]:[/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.1.Cloudiness)][/COLOR]</label>
-					<!--[CR][COLOR blue][B]$LOCALIZE[403][/B]:[/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.1.UVIndex)][/COLOR]-->
+					
 				</control>
 				<control type="textbox">
 					<top>255</top>
@@ -183,7 +183,7 @@
 					<font>Lirabiefont_Rg35TEMP</font>
 					<textcolor>grey</textcolor>
 					<label>[COLOR blue][B]$INFO[Window(Weather).Property(Day2.Title)][/B][/COLOR][CR][COLOR blue][B]Temp.[/B][/COLOR] Min. [COLOR blue]$INFO[Window(Weather).Property(Day2.LowTemp)] $INFO[System.TemperatureUnits] [/COLOR]| Max. [COLOR red]$INFO[Window(Weather).Property(Day2.HighTemp)] $INFO[System.TemperatureUnits][/COLOR][CR][COLOR blue][B]$LOCALIZE[32044]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.2.WindSpeed)][/COLOR][COLOR blue][B] $INFO[Window(Weather).Property(Daily.2.WindDirection)][/B][/COLOR][CR][COLOR blue][B]$LOCALIZE[406]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.2.Humidity)][/COLOR][CR][COLOR blue][B]$LOCALIZE[405]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.2.DewPoint)][/COLOR][CR][COLOR blue][B]$LOCALIZE[33030]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.2.Outlook)][/COLOR][CR][COLOR blue][B]$LOCALIZE[1448]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.2.Precipitation)][/COLOR][CR][COLOR blue][B]$LOCALIZE[1376]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.2.Pressure)][/COLOR][CR][COLOR blue][B]$LOCALIZE[32043]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.2.WindDegree)][/COLOR][CR][COLOR blue][B]Ozone[/B]:[/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.2.Ozone)][/COLOR][CR][COLOR blue][B]$LOCALIZE[387][/B]:[/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.2.Cloudiness)][/COLOR]</label>
-					<!--[CR][COLOR blue][B]$LOCALIZE[403][/B]:[/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.2.UVIndex)][/COLOR]-->
+					
 				</control>
 				<control type="textbox">
 					<top>255</top>
@@ -194,7 +194,7 @@
 					<font>Lirabiefont_Rg35TEMP</font>
 					<textcolor>grey</textcolor>
 					<label>[COLOR blue][B]$INFO[Window(Weather).Property(Day3.Title)][/B][/COLOR][CR][COLOR blue][B]Temp.[/B][/COLOR] Min. [COLOR blue]$INFO[Window(Weather).Property(Day3.LowTemp)] $INFO[System.TemperatureUnits] [/COLOR]| Max. [COLOR red]$INFO[Window(Weather).Property(Day3.HighTemp)] $INFO[System.TemperatureUnits][/COLOR][CR][COLOR blue][B]$LOCALIZE[32044]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.3.WindSpeed)][/COLOR][COLOR blue][B] $INFO[Window(Weather).Property(Daily.3.WindDirection)][/B][/COLOR][CR][COLOR blue][B]$LOCALIZE[406]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.3.Humidity)][/COLOR][CR][COLOR blue][B]$LOCALIZE[405]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.3.DewPoint)][/COLOR][CR][COLOR blue][B]$LOCALIZE[33030]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.3.Outlook)][/COLOR][CR][COLOR blue][B]$LOCALIZE[1448]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.3.Precipitation)][/COLOR][CR][COLOR blue][B]$LOCALIZE[1376]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.3.Pressure)][/COLOR][CR][COLOR blue][B]$LOCALIZE[32043]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.3.WindDegree)][/COLOR][CR][COLOR blue][B]Ozone[/B]:[/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.3.Ozone)][/COLOR][CR][COLOR blue][B]$LOCALIZE[387][/B]:[/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.3.Cloudiness)][/COLOR]</label>
-					<!--[CR][COLOR blue][B]$LOCALIZE[403][/B]:[/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.3.UVIndex)][/COLOR]-->
+					
 				</control>
 				<control type="textbox">
 					<top>255</top>
@@ -205,7 +205,7 @@
 					<font>Lirabiefont_Rg35TEMP</font>
 					<textcolor>grey</textcolor>
 					<label>[COLOR blue][B]$INFO[Window(Weather).Property(Day4.Title)][/B][/COLOR][CR][COLOR blue][B]Temp.[/B][/COLOR] Min. [COLOR blue]$INFO[Window(Weather).Property(Day4.LowTemp)] $INFO[System.TemperatureUnits] [/COLOR]| Max. [COLOR red]$INFO[Window(Weather).Property(Day4.HighTemp)] $INFO[System.TemperatureUnits][/COLOR][CR][COLOR blue][B]$LOCALIZE[32044]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.4.WindSpeed)][/COLOR][COLOR blue][B] $INFO[Window(Weather).Property(Daily.4.WindDirection)][/B][/COLOR][CR][COLOR blue][B]$LOCALIZE[406]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.4.Humidity)][/COLOR][CR][COLOR blue][B]$LOCALIZE[405]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.4.DewPoint)][/COLOR][CR][COLOR blue][B]$LOCALIZE[33030]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.4.Outlook)][/COLOR][CR][COLOR blue][B]$LOCALIZE[1448]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.4.Precipitation)][/COLOR][CR][COLOR blue][B]$LOCALIZE[1376]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.4.Pressure)][/COLOR][CR][COLOR blue][B]$LOCALIZE[32043]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.4.WindDegree)][/COLOR][CR][COLOR blue][B]Ozone[/B]:[/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.4.Ozone)][/COLOR][CR][COLOR blue][B]$LOCALIZE[387][/B]:[/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.4.Cloudiness)][/COLOR]</label>
-					<!--[CR][COLOR blue][B]$LOCALIZE[403][/B]:[/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.4.UVIndex)][/COLOR]-->
+					
 				</control>
 				<control type="textbox">
 					<top>255</top>
@@ -216,7 +216,7 @@
 					<font>Lirabiefont_Rg35TEMP</font>
 					<textcolor>grey</textcolor>
 					<label>[COLOR blue][B]$INFO[Window(Weather).Property(Day5.Title)][/B][/COLOR][CR][COLOR blue][B]Temp.[/B][/COLOR] Min. [COLOR blue]$INFO[Window(Weather).Property(Day5.LowTemp)] $INFO[System.TemperatureUnits] [/COLOR]| Max. [COLOR red]$INFO[Window(Weather).Property(Day5.HighTemp)] $INFO[System.TemperatureUnits][/COLOR][CR][COLOR blue][B]$LOCALIZE[32044]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.5.WindSpeed)][/COLOR][COLOR blue][B] $INFO[Window(Weather).Property(Daily.5.WindDirection)][/B][/COLOR][CR][COLOR blue][B]$LOCALIZE[406]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.5.Humidity)][/COLOR][CR][COLOR blue][B]$LOCALIZE[405]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.5.DewPoint)][/COLOR][CR][COLOR blue][B]$LOCALIZE[33030]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.5.Outlook)][/COLOR][CR][COLOR blue][B]$LOCALIZE[1448]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.5.Precipitation)][/COLOR][CR][COLOR blue][B]$LOCALIZE[1376]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.5.Pressure)][/COLOR][CR][COLOR blue][B]$LOCALIZE[32043]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.5.WindDegree)][/COLOR][CR][COLOR blue][B]Ozone[/B]:[/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.5.Ozone)][/COLOR][CR][COLOR blue][B]$LOCALIZE[387][/B]:[/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.5.Cloudiness)][/COLOR]</label>
-					<!--[CR][COLOR blue][B]$LOCALIZE[403][/B]:[/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.5.UVIndex)][/COLOR]-->
+					
 				</control>
 			</control>
 			<control type="group" id="4">
@@ -256,8 +256,8 @@
 					<texture colordiffuse="$VAR[WidgetHighlightBarColor]">separator_vertical.png</texture>
 					<visible>!Skin.HasSetting(DisableWidgerBackround)</visible>
 				</control>
-			</control>
-		</control>
+			</control> 
+		</control>-->
 		<control type="button">
 			<left>15</left>
 			<top>8</top>
@@ -2192,6 +2192,130 @@
 			</control>
 		</control>
 	</include>
+	<include name="MyWeatherWidget">
+		<control type="group">
+		<left>30</left>
+			<top>1050</top>
+			<visible>!Player.HasMedia + Skin.HasSetting(Enable.MyWeather) + !String.IsEqual(Skin.String(MainMenu.Layout),vertical) + String.IsEqual(Container(9000).ListItem.Property(path),ActivateWindow(weather)) + String.IsEmpty(Container(9000).ListItem.Property(widgetType.2)) + !Skin.HasSetting(centermainmenu)</visible>
+			<!--<include condition="!String.IsEmpty(Skin.String(Widget.Trans)) + [!Skin.HasSetting(DisableWidgerBackround) | String.IsEmpty(Skin.String(Widget.Trans)]">HomeWidgetFade</include>-->
+			<control type="group">
+				<top>-1100</top>
+				<left>-1133</left>
+				<control type="image">
+					<top>30</top>
+					<left>950</left>
+					<width>2999</width>
+					<height>1100</height>
+					<texture flipx="false" colordiffuse="black">views/myflix/fanart_diffuse_left.png</texture>
+				</control>
+				<!--<control type="image">
+					<top>30</top>
+					<left>1250</left>
+					<width>200</width>
+					<height>100</height>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<texture>$INFO[Window(Weather).Property(WeatherProviderLogo)]</texture>
+				</control>-->
+				<control type="multiimage">
+					<top>20</top>
+					<left>1080</left>
+					<width>550</width>
+					<height>550</height>
+					<imagepath>resource://resource.images.weathericons.hd.animatedmods/$INFO[Window(Weather).Property(Current.FanartCode)]</imagepath>
+					<timeperimage>70</timeperimage>
+					<fadetime>1</fadetime>
+					<randomize>false</randomize>
+				</control>
+				<control type="label">
+					<top>416</top>
+					<left>1135</left>
+					<width>450</width>
+					<height>330</height>
+					<align>center</align>
+					<font>font10</font>
+					<textcolor>$VAR[ThemeLabelColor]</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<label>[COLOR blue][B]$INFO[Window(Weather).Property(Day0.Title)][/B][/COLOR] [CR][B]$INFO[Window(Weather).Property(Location)][CR][B]$INFO[System.Date][CR]$INFO[Window(Weather).Property(Day0.Outlook)][CR][B]Min. [COLOR red]$INFO[Window(Weather).Property(Day0.LowTemp)] $INFO[System.TemperatureUnits] [/COLOR][COLOR green]|[/COLOR] Max. [COLOR red]$INFO[Window(Weather).Property(Day0.HighTemp)] $INFO[System.TemperatureUnits][/COLOR][CR]$LOCALIZE[402]: [COLOR red]$INFO[Window(Weather).Property(Current.FeelsLike)]$INFO[System.TemperatureUnits][/COLOR][CR]Wschód [COLOR green]|[/COLOR] Zachód: [COLOR red]$INFO[Window(weather).Property(Today.Sunrise)] [COLOR green]|[/COLOR] $INFO[Window(weather).Property(Today.Sunset)][/COLOR][/B]</label>
+				</control>
+			</control>
+			<control type="grouplist">
+				<top>-1050</top>
+				<left>500</left>
+				<itemgap>-150</itemgap>
+				<orientation>horizontal</orientation>
+				<control type="multiimage">
+					<top>-8</top>
+					<left>18</left>
+					<width>350</width>
+					<height>350</height>
+					<imagepath>resource://resource.images.weathericons.hd.animatedmods/$INFO[Window(Weather).Property(Day1.FanartCode)]</imagepath>
+					<timeperimage>70</timeperimage>
+					<fadetime>1</fadetime>
+					<randomize>false</randomize>
+				</control>
+				<control type="multiimage">
+					<top>-8</top>
+					<left>315</left>
+					<width>350</width>
+					<height>350</height>
+					<imagepath>resource://resource.images.weathericons.hd.animatedmods/$INFO[Window(Weather).Property(Day2.FanartCode)]</imagepath>
+					<timeperimage>70</timeperimage>
+					<fadetime>1</fadetime>
+					<randomize>false</randomize>
+				</control>
+				<control type="multiimage">
+					<top>-8</top>
+					<left>612</left>
+					<width>350</width>
+					<height>350</height>
+					<imagepath>resource://resource.images.weathericons.hd.animatedmods/$INFO[Window(Weather).Property(Day3.FanartCode)]</imagepath>
+					<timeperimage>70</timeperimage>
+					<fadetime>1</fadetime>
+					<randomize>false</randomize>
+				</control>
+			</control>
+			<control type="grouplist">
+				<top>-730</top>
+				<left>470</left>
+				<width>1700</width>
+				<itemgap>50</itemgap>
+				<orientation>horizontal</orientation>
+				<control type="textbox">
+					<top>416</top>
+					<width>450</width>
+					<height>330</height>
+					<left>10</left>
+					<align>center</align>
+					<font>font10</font>
+					<textcolor>$VAR[ThemeLabelColor]</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<label>[COLOR blue][B]$INFO[Window(Weather).Property(Day1.Title)][/B][/COLOR][CR][COLOR blue][B]Temp.[/B][/COLOR] Min. [COLOR red]$INFO[Window(Weather).Property(Day1.LowTemp)] $INFO[System.TemperatureUnits] [/COLOR]| Max. [COLOR red]$INFO[Window(Weather).Property(Day1.HighTemp)] $INFO[System.TemperatureUnits][/COLOR][CR][COLOR blue][B]$LOCALIZE[383]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.1.WindSpeed)][/COLOR][COLOR blue][B] $INFO[Window(Weather).Property(Daily.1.WindDirection)][/B][/COLOR][CR][COLOR blue][B]$LOCALIZE[406]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.1.Humidity)][/COLOR][CR][COLOR blue][B]$LOCALIZE[405]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.1.DewPoint)][/COLOR][CR][COLOR blue][B]$LOCALIZE[33030]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.1.Outlook)][/COLOR][CR][COLOR blue][B]$LOCALIZE[1448]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.1.Precipitation)][/COLOR][CR][COLOR blue][B]$LOCALIZE[1376]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.1.Pressure)][/COLOR]</label>
+				</control>
+				<control type="textbox">
+					<top>416</top>
+					<width>450</width>
+					<height>330</height>
+					<left>10</left>
+					<align>center</align>
+					<font>font10</font>
+					<textcolor>$VAR[ThemeLabelColor]</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<label>[COLOR blue][B]$INFO[Window(Weather).Property(Day2.Title)][/B][/COLOR][CR][COLOR blue][B]Temp.[/B][/COLOR] Min. [COLOR red]$INFO[Window(Weather).Property(Day2.LowTemp)] $INFO[System.TemperatureUnits] [/COLOR]| Max. [COLOR red]$INFO[Window(Weather).Property(Day2.HighTemp)] $INFO[System.TemperatureUnits][/COLOR][CR][COLOR blue][B]$LOCALIZE[383]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.2.WindSpeed)][/COLOR][COLOR blue][B] $INFO[Window(Weather).Property(Daily.2.WindDirection)][/B][/COLOR][CR][COLOR blue][B]$LOCALIZE[406]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.2.Humidity)][/COLOR][CR][COLOR blue][B]$LOCALIZE[405]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.2.DewPoint)][/COLOR][CR][COLOR blue][B]$LOCALIZE[33030]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.2.Outlook)][/COLOR][CR][COLOR blue][B]$LOCALIZE[1448]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.2.Precipitation)][/COLOR][CR][COLOR blue][B]$LOCALIZE[1376]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.2.Pressure)][/COLOR]</label>
+				</control>
+				<control type="textbox">
+					<top>416</top>
+					<width>450</width>
+					<height>330</height>
+					<left>10</left>
+					<align>center</align>
+					<font>font10</font>
+					<textcolor>$VAR[ThemeLabelColor]</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<label>[COLOR blue][B]$INFO[Window(Weather).Property(Day3.Title)][/B][/COLOR][CR][COLOR blue][B]Temp.[/B][/COLOR] Min. [COLOR red]$INFO[Window(Weather).Property(Day3.LowTemp)] $INFO[System.TemperatureUnits] [/COLOR]| Max. [COLOR red]$INFO[Window(Weather).Property(Day3.HighTemp)] $INFO[System.TemperatureUnits][/COLOR][CR][COLOR blue][B]$LOCALIZE[383]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.3.WindSpeed)][/COLOR][COLOR blue][B] $INFO[Window(Weather).Property(Daily.3.WindDirection)][/B][/COLOR][CR][COLOR blue][B]$LOCALIZE[406]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.3.Humidity)][/COLOR][CR][COLOR blue][B]$LOCALIZE[405]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.3.DewPoint)][/COLOR][CR][COLOR blue][B]$LOCALIZE[33030]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.3.Outlook)][/COLOR][CR][COLOR blue][B]$LOCALIZE[1448]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.3.Precipitation)][/COLOR][CR][COLOR blue][B]$LOCALIZE[1376]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.3.Pressure)][/COLOR]</label>
+				</control>
+			</control>
+		</control>
+		</include>
 	<include name="SystemInfoWidget">
 		<control type="group">
 		    <visible>!Player.HasMedia + [!System.Platform.Android + Skin.HasSetting(Enable.MysystemWidget)]</visible>
@@ -2639,6 +2763,7 @@
 							<font>Lirabiefont_Rg</font>
 							<textcolor>ffbfbfbf</textcolor>
 							<label>$INFO[Window(Home).Property(status), [COLOR green][B]Pi-Hole Status:[/COLOR] [COLOR ff3385ff](,)[/B][/COLOR]]</label>
+							<visible>String.IsEmpty(Window(Home).Property(status))</visible>
 						</control>
 						<control type="label">
 							<height>20</height>
@@ -2647,7 +2772,7 @@
 							<font>Lirabiefont_Rg</font>
 							<textcolor>ffbfbfbf</textcolor>
 							<label>$INFO[Window(Home).Property(queries), [COLOR green][B]Dns Queries Today:[/COLOR] [COLOR ff3385ff](,)[/B][/COLOR]]</label>
-							<!-- <label>$INFO[Window(Home).Property(total_sizetext)] MB $INFO[Window(Home).Property(total_size2)] MB</label> -->
+							<visible>String.IsEmpty(Window(Home).Property(queries))</visible>
 						</control>
 						<control type="label">
 							<height>20</height>
@@ -2656,6 +2781,7 @@
 							<font>Lirabiefont_Rg</font>
 							<textcolor>ffbfbfbf</textcolor>
 							<label>$INFO[Window(Home).Property(adsblocked), [COLOR green][B]Ads Blocked:[/COLOR] [COLOR ff3385ff](,)[/B][/COLOR]]</label>
+							<visible>String.IsEmpty(Window(Home).Property(adsblocked))</visible>
 						</control>
 						<control type="label">
 							<height>20</height>
@@ -2664,6 +2790,7 @@
 							<font>Lirabiefont_Rg</font>
 							<textcolor>ffbfbfbf</textcolor>
 							<label>$INFO[Window(Home).Property(clients), [COLOR green][B]Clients:[/COLOR] [COLOR ff3385ff](,)[/B][/COLOR]]</label>
+							<visible>String.IsEmpty(Window(Home).Property(clients))</visible>
 						</control>
 						<control type="label">
 							<height>20</height>
@@ -2671,19 +2798,25 @@
 							<align>center</align>
 							<font>Lirabiefont_Rg</font>
 							<textcolor>ffbfbfbf</textcolor>
-							<label>$INFO[Window(Home).Property(relative), [COLOR green][B]Blocked Domain:[/COLOR] [COLOR ff3385ff](,)[/B][/COLOR]]$INFO[Window(Home).Property(SkinHelper.cputemp)]</label>
+							<label>$INFO[Window(Home).Property(relative), [COLOR green][B]Blocked Domain:[/COLOR] [COLOR ff3385ff](,)[/B][/COLOR]]</label>
+							<visible>String.IsEmpty(Window(Home).Property(relative))</visible>
 						</control>
+						<control type="group">
 						<control type="button" id="90020">
 							<height>20</height>
-							<width>500</width>
+							<width>170</width>
+							<centerleft>260</centerleft>
 							<align>center</align>
 							<font>Lirabiefont_Rg</font>
 							<textcolor>ffbfbfbf</textcolor>
 							<label>Reset Info</label>
 							<onclick>RunScript(special://skin/resources/lib/publicip.py)</onclick>
 							<onclick>RunScript(special://skin/resources/lib/pihole.py)</onclick>
+							<texturebg />
+				            <midtexture />
 							<onright>9000</onright>
 							<onleft>9000</onleft>
+						</control>
 						</control>
 					</control>
 				</control>

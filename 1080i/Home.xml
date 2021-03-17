@@ -149,6 +149,7 @@
 			<include>Widget2</include>
 			<include>LiveTVWidget</include>
 			<include>SystemInfoWidget</include>
+			<include>MyWeatherWidget</include>
 			<!-- Horizontal Menu -->
 			<!-- RSS Feeds -->
 			<include condition="!String.IsEqual(Skin.String(MainMenu.Layout),vertical)">HorizontalMenuSystemBars</include>
