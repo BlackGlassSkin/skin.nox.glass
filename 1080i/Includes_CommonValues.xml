@@ -94,14 +94,14 @@
 		<texturefocus colordiffuse="$VAR[HighlightBarColor]" border="1.5,0.9,1.5,0.9">new_pvr/texturebg_border_white.png</texturefocus>
 		<texturenofocus colordiffuse="blue" border="2">new_pvr/texturebg_border_white.png</texturenofocus>
 		<include>Objects_KeyOff</include>
-</include>
+	</include>
 	<include name="Objects_SingleKeyOff">
 		<width>80</width>
 		<height>80</height>
 		<texturefocus colordiffuse="$VAR[HighlightBarColor]" border="0.5">new_pvr/texturebg_border_white.png</texturefocus>
 		<texturenofocus colordiffuse="blue" border="3">new_pvr/texturebg_border_white.png</texturenofocus>
 		<include>Objects_KeyOff</include>
-</include>
+	</include>
 	<include name="ShowCaseInfoPanelButtonsValues">
 		<height>85</height>
 		<width>501</width>

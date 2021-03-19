@@ -59,17 +59,17 @@
 			<top>300</top>
 			<include condition="Skin.HasSetting(Disable.UnwatchedIcon)">UnwatchedIcon</include>
 		</control>
-</include>
+	</include>
 	<include name="LogoFixed">
 		<control type="fixedlist" id="59">
 			<include>contents59list</include>
 		</control>
-</include>
+	</include>
 	<include name="LogoWrap">
 		<control type="wraplist" id="59">
 			<include>contents59list</include>
 		</control>
-</include>
+	</include>
 	<include name="contents59list">
 		<left>-277</left>
 		<top>565</top>
@@ -103,7 +103,7 @@
 				<include>LandscapeLogoLayout</include>
 			</control>
 		</focusedlayout>
-</include>
+	</include>
 	<include name="View_59_Logo">
 		<control type="group">
 			<visible>Control.IsVisible(59) + !Window.IsActive(addoninformation)</visible>
@@ -206,7 +206,7 @@
 						<width>1120</width>
 						<align>center</align>
 						<font>font14_bold</font>
-						<label>$INFO[ListItem.Property(TotalEpisodes),$LOCALIZE[20360]: ][COLOR $VAR[UnWatchedEpColor]]$INFO[ListItem.Property(UnWatchedEpisodes), ($LOCALIZE[16101]: ,)][/COLOR]</label>
+						<label>$INFO[ListItem.Property(TotalEpisodes),$LOCALIZE[20360]: ][COLOR $VAR[UnWatchedEpColor]]$INFO[ListItem.Property(UnWatchedEpisodes),  ($LOCALIZE[16101]: ,)][/COLOR]</label>
 					</control>
 					<control type="label">
 						<left>460</left>

@@ -97,7 +97,7 @@
 					<font>font15</font>
 					<textoffsetx>15</textoffsetx>
 					<textcolor>grey</textcolor>
-					<label>[B]$INFO[VideoPlayer.Season,$LOCALIZE[20373] ,: ]$INFO[VideoPlayer.Episode,$LOCALIZE[20359] ]$INFO[VideoPlayer.Title, - ][/B]</label>
+					<label>[B]$INFO[VideoPlayer.Season,$LOCALIZE[20373] ,: ]$INFO[VideoPlayer.Episode,$LOCALIZE[20359] ]$INFO[VideoPlayer.Title,  -  ][/B]</label>
 					<visible>VideoPlayer.Content(episodes)</visible>
 				</control>
 				<control type="group">
@@ -137,7 +137,7 @@
 						<font>font15</font>
 						<textoffsetx>15</textoffsetx>
 						<textcolor>grey</textcolor>
-						<label>$INFO[VideoPlayer.Top250,$LOCALIZE[13409] #]</label>
+						<label>$INFO[VideoPlayer.Top250,$LOCALIZE[13409]  #]</label>
 						<visible>!String.IsEmpty(VideoPlayer.Top250)</visible>
 					</control>
 				</control>
@@ -156,7 +156,7 @@
 					<font>font15</font>
 					<textoffsetx>15</textoffsetx>
 					<textcolor>grey</textcolor>
-					<label>$INFO[VideoPlayer.Year]$INFO[VideoPlayer.MPAA, • ] • $VAR[PlayerDurationVar]</label>
+					<label>$INFO[VideoPlayer.Year]$INFO[VideoPlayer.MPAA,  •  ]  •  $VAR[PlayerDurationVar]</label>
 				</control>
 				<control type="label">
 					<width>1720</width>
@@ -164,7 +164,7 @@
 					<font>font15</font>
 					<textoffsetx>15</textoffsetx>
 					<textcolor>grey</textcolor>
-					<label>$INFO[Player.FinishTime,$LOCALIZE[31393]: ,] • $VAR[PlayerTimeRemainingHourVar,, ]$VAR[PlayerTimeRemainingMinuteVar]</label>
+					<label>$INFO[Player.FinishTime,$LOCALIZE[31393]: ,]  •  $VAR[PlayerTimeRemainingHourVar,, ]$VAR[PlayerTimeRemainingMinuteVar]</label>
 				</control>
 				<control type="textbox">
 					<left>15</left>

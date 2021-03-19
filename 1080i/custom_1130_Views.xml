@@ -58,8 +58,7 @@
 							<height>60</height>
 							<textoffsetx>15</textoffsetx>
 							<label>$INFO[ListItem.Label]</label>
-							`
-							<animation effect="fade" start="100" end="70" time="0" tween="sine" easing="inout" condition="!Control.HasFocus(9000)">Conditional</animation>
+							`<animation effect="fade" start="100" end="70" time="0" tween="sine" easing="inout" condition="!Control.HasFocus(9000)">Conditional</animation>
 						</control>
 					</focusedlayout>
 					<content>
@@ -117,8 +116,7 @@
 						</item>
 						<item>
 							<label>$LOCALIZE[31242]</label>
-							<onclick>Container.SetViewMode(507)</onclick>
-							7
+							<onclick>Container.SetViewMode(507)</onclick>7
 							<visible>Window.IsActive(videos)</visible>
 							<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)] + !Skin.HasSetting(Disable.BigListView)</visible>
 						</item>

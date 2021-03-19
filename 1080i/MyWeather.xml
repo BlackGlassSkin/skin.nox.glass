@@ -759,7 +759,7 @@
 								<property name="Precipitation">$INFO[Window.Property(36Hour.1.Precipitation)]</property>
 								<property name="FeelsLike">$INFO[Window.Property(36Hour.1.FeelsLike)]</property>
 								<property name="Humidity">$INFO[Window.Property(36Hour.1.Humidity)]</property>
-								<property name="Wind">$INFO[Window.Property(36Hour.1.WindSpeed)]$INFO[Window.Property(36Hour.1.WindDirection), ]$INFO[Window.Property(36Hour.1.WindDegree), ]</property>
+								<property name="Wind">$INFO[Window.Property(36Hour.1.WindSpeed)]$INFO[Window.Property(36Hour.1.WindDirection),  ]$INFO[Window.Property(36Hour.1.WindDegree),  ]</property>
 								<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched))</visible>
 							</item>
 							<item>
@@ -771,7 +771,7 @@
 								<property name="Precipitation">$INFO[Window.Property(36Hour.2.Precipitation)]</property>
 								<property name="FeelsLike">$INFO[Window.Property(36Hour.2.FeelsLike)]</property>
 								<property name="Humidity">$INFO[Window.Property(36Hour.2.Humidity)]</property>
-								<property name="Wind">$INFO[Window.Property(36Hour.2.WindSpeed)]$INFO[Window.Property(36Hour.2.WindDirection), ]$INFO[Window.Property(36Hour.2.WindDegree), ]</property>
+								<property name="Wind">$INFO[Window.Property(36Hour.2.WindSpeed)]$INFO[Window.Property(36Hour.2.WindDirection),  ]$INFO[Window.Property(36Hour.2.WindDegree),  ]</property>
 								<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched))</visible>
 							</item>
 							<item>
@@ -783,7 +783,7 @@
 								<property name="Precipitation">$INFO[Window.Property(36Hour.3.Precipitation)]</property>
 								<property name="FeelsLike">$INFO[Window.Property(36Hour.3.FeelsLike)]</property>
 								<property name="Humidity">$INFO[Window.Property(36Hour.3.Humidity)]</property>
-								<property name="Wind">$INFO[Window.Property(36Hour.3.WindSpeed)]$INFO[Window.Property(36Hour.3.WindDirection), ]$INFO[Window.Property(36Hour.3.WindDegree), ]</property>
+								<property name="Wind">$INFO[Window.Property(36Hour.3.WindSpeed)]$INFO[Window.Property(36Hour.3.WindDirection),  ]$INFO[Window.Property(36Hour.3.WindDegree),  ]</property>
 								<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched))</visible>
 							</item>
 						</content>
@@ -849,7 +849,7 @@
 								<font>font15</font>
 								<align>center</align>
 								<textcolor>grey</textcolor>
-								<label>$INFO[ListItem.Property(WindSpeed),$LOCALIZE[383]: ]$INFO[ListItem.Property(WindDirection), ]</label>
+								<label>$INFO[ListItem.Property(WindSpeed),$LOCALIZE[383]: ]$INFO[ListItem.Property(WindDirection),  ]</label>
 							</control>
 							<control type="label">
 								<top>648</top>
@@ -916,7 +916,7 @@
 								<font>font15</font>
 								<align>center</align>
 								<textcolor>grey</textcolor>
-								<label>$INFO[ListItem.Property(WindSpeed),$LOCALIZE[383]: ]$INFO[ListItem.Property(WindDirection), ]</label>
+								<label>$INFO[ListItem.Property(WindSpeed),$LOCALIZE[383]: ]$INFO[ListItem.Property(WindDirection),  ]</label>
 							</control>
 							<control type="label">
 								<top>648</top>

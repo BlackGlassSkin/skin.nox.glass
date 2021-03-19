@@ -437,7 +437,7 @@
 						<height>420</height>
 						<textcolor>ffcecece</textcolor>
 						<shadowcolor>ff000000</shadowcolor>
-						<label>[B]$INFO[System.CoreUsage(0)] $INFO[System.CoreUsage(1)] $INFO[System.CoreUsage(2)] $INFO[System.CoreUsage(3)][CR][CR]$INFO[System.CoreUsage(4)] $INFO[System.CoreUsage(5)] $INFO[System.CoreUsage(6)] $INFO[System.CoreUsage(7)][/B]</label>
+						<label>[B]$INFO[System.CoreUsage(0)]   $INFO[System.CoreUsage(1)]   $INFO[System.CoreUsage(2)]   $INFO[System.CoreUsage(3)][CR][CR]$INFO[System.CoreUsage(4)]   $INFO[System.CoreUsage(5)]   $INFO[System.CoreUsage(6)]   $INFO[System.CoreUsage(7)][/B]</label>
 						<font>Font_Bold24</font>
 						<align>center</align>
 					</control>
@@ -457,7 +457,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<visible>[[Pvr.IsPlayingTv + Window.IsActive(FullscreenVideo)] | [Pvr.IsPlayingRadio | Window.IsActive(visualisation)]] + system.getbool(pvrplayback.signalquality) + ![Player.ShowInfo | Window.IsActive(OSDVideoSettings) | Window.IsActive(OSDAudioSettings) | Window.IsActive(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(pvrchannelguide) | Window.IsActive(subtitlesearch) | Window.IsActive(osdcmssettings)]</visible>
+			<visible>[[Pvr.IsPlayingTv + Window.IsActive(FullscreenVideo)]  | [Pvr.IsPlayingRadio | Window.IsActive(visualisation)]] + system.getbool(pvrplayback.signalquality) + ![Player.ShowInfo | Window.IsActive(OSDVideoSettings) | Window.IsActive(OSDAudioSettings) | Window.IsActive(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(pvrchannelguide) | Window.IsActive(subtitlesearch) | Window.IsActive(osdcmssettings)]</visible>
 			<left>25</left>
 			<top>250</top>
 			<control type="image">
@@ -500,7 +500,7 @@
 						<font>Font_Bold24</font>
 						<textcolor>ffcecece</textcolor>
 						<shadowcolor>ff000000</shadowcolor>
-						<label>[UPPERCASE]$LOCALIZE[19019]: $INFO[Pvr.BackendChannels] [COLOR ff1573d4]|[/COLOR] $LOCALIZE[19163]: $INFO[Pvr.BackendRecordings] [/UPPERCASE]</label>
+						<label>[UPPERCASE]$LOCALIZE[19019]:  $INFO[Pvr.BackendChannels]  [COLOR ff1573d4]|[/COLOR]  $LOCALIZE[19163]:  $INFO[Pvr.BackendRecordings] [/UPPERCASE]</label>
 					</control>
 					<control type="label">
 						<description>Backend</description>

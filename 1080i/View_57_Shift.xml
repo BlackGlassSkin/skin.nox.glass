@@ -52,7 +52,7 @@
 			<top>170</top>
 			<include condition="Skin.HasSetting(Disable.UnwatchedIcon)">UnwatchedIcon</include>
 		</control>
-</include>
+	</include>
 	<include name="ShiftPosterThumbsSmall">
 		<control type="image">
 			<left>120</left>
@@ -95,7 +95,7 @@
 			<top>368</top>
 			<include condition="Skin.HasSetting(Disable.UnwatchedIcon)">UnwatchedIcon</include>
 		</control>
-</include>
+	</include>
 	<include name="ShiftSquareThumbs">
 		<control type="image">
 			<left>-12</left>
@@ -135,7 +135,7 @@
 			<animation effect="zoom" center="230,500" start="140" end="100" time="200" tween="quadratic">Unfocus</animation>
 			<include>ShiftPosterThumbsSmall</include>
 		</control>
-</include>
+	</include>
 	<include name="PosterShift">
 		<control type="group">
 			<include>ViewAnimation</include>
@@ -207,7 +207,7 @@
 				</focusedlayout>
 			</control>
 		</control>
-</include>
+	</include>
 	<include name="AlbumShift">
 		<control type="group">
 			<include>ViewAnimation</include>
@@ -344,5 +344,5 @@
 				</focusedlayout>
 			</control>
 		</control>
-</include>
+	</include>
 </includes>

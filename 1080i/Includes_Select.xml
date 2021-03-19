@@ -1038,7 +1038,7 @@
 			<onclick>Dialog.Close(1129)</onclick>
 			<include condition="Window.IsActive(tvguide) + !String.IsEmpty(Skin.String(PVRGuide.Logos))">ReloadWindowOnClick</include>
 		</item>
-</include>
+	</include>
 	<include name="SelectMusicGenreIconPath">
 		<item>
 			<label>$LOCALIZE[31561]</label>
@@ -1180,8 +1180,7 @@
 		<onclick>Skin.SetString(ThemeLabelColorProgres,990b00f0)</onclick>
 		<onclick>Skin.SetString(ThemeLabelColorProgresFrame,B32b92de)</onclick>
 		<onclick>Skin.SetString(ThemeOSDCacheColor,FFb3d9ff)</onclick>
-		<onclick>Skin.SetString(ThemeOSDProgressColor,800b00f0)</onclick>
-		???
+		<onclick>Skin.SetString(ThemeOSDProgressColor,800b00f0)</onclick>???
 		<onclick>Skin.SetString(ThemeHomeMenuColor1,FF1700F0)</onclick>
 		<onclick>Skin.SetString(ThemeHomeMenuColor2,FF1700F0)</onclick>
 		<onclick>Skin.SetString(ThemeHomeMenuColor3,FF1700F0)</onclick>
@@ -1243,8 +1242,7 @@
 		<onclick>Skin.SetString(ThemeLabelColorProgres,668E8E8E)</onclick>
 		<onclick>Skin.SetString(ThemeLabelColorProgresFrame,66D1D1D1)</onclick>
 		<onclick>Skin.SetString(ThemeOSDCacheColor,668E8E8E)</onclick>
-		<onclick>Skin.SetString(ThemeOSDProgressColor,66D1D1D1)</onclick>
-		???
+		<onclick>Skin.SetString(ThemeOSDProgressColor,66D1D1D1)</onclick>???
 		<onclick>Skin.SetString(ThemeHomeMenuColor1,669E9E9E)</onclick>
 		<onclick>Skin.SetString(ThemeHomeMenuColor2,669E9E9E)</onclick>
 		<onclick>Skin.SetString(ThemeHomeMenuColor3,669E9E9E)</onclick>

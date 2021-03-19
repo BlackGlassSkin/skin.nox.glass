@@ -183,7 +183,7 @@
 					<control type="label">
 						<width>auto</width>
 						<height>90</height>
-						<label>$INFO[ListItem.Property(Artist_YearsActive),[B][LOWERCASE], [/LOWERCASE][/B]]</label>
+						<label>$INFO[ListItem.Property(Artist_YearsActive),[B][LOWERCASE],  [/LOWERCASE][/B]]</label>
 						<font>font35_title</font>
 						<textcolor>grey</textcolor>
 						<visible>!String.IsEmpty(ListItem.Property(Artist_YearsActive)) + String.IsEqual(ListItem.DBTYPE,artist)</visible>

@@ -345,7 +345,7 @@
 				</control>
 			</control>
 		</control>
-</include>
+	</include>
 	<!-- Live Background Sets -->
 	<include name="LiveBackgroundSets">
 		<control type="group">

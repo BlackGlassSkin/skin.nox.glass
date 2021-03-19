@@ -262,7 +262,7 @@
 			<include condition="Skin.HasSetting(ShowCaseWrapList)">scqfixed</include>
 			<include condition="!Skin.HasSetting(ShowCaseWrapList)">scqwrap</include>
 		</control>
-</include>
+	</include>
 	<include name="contents54list">
 		<left>-368</left>
 		<top>580</top>
@@ -289,12 +289,12 @@
 		<control type="fixedlist" id="54">
 			<include>contents54list</include>
 		</control>
-</include>
+	</include>
 	<include name="scqwrap">
 		<control type="wraplist" id="54">
 			<include>contents54list</include>
 		</control>
-</include>
+	</include>
 	<include name="MusicShowcaseThumb">
 		<left>11</left>
 		<top>11</top>
@@ -366,7 +366,7 @@
 				<include>MusicShowcaseCDCaseReflection</include>
 			</control>
 		</control>
-</include>
+	</include>
 	<include name="MusicShowcaseItem-5">
 		<control type="group">
 			<visible>!String.IsEmpty(Container(54).ListItemNoWrap(-5).FolderPath) | !Skin.HasSetting(ShowCaseWrapList)</visible>
@@ -387,7 +387,7 @@
 				<include>MusicShowcaseCDCaseReflection</include>
 			</control>
 		</control>
-</include>
+	</include>
 	<include name="MusicShowcaseItem-4">
 		<control type="group">
 			<visible>!String.IsEmpty(Container(54).ListItemNoWrap(-4).FolderPath) | !Skin.HasSetting(ShowCaseWrapList)</visible>
@@ -408,7 +408,7 @@
 				<include>MusicShowcaseCDCaseReflection</include>
 			</control>
 		</control>
-</include>
+	</include>
 	<include name="MusicShowcaseItem-3">
 		<control type="group">
 			<visible>!String.IsEmpty(Container(54).ListItemNoWrap(-3).FolderPath) | !Skin.HasSetting(ShowCaseWrapList)</visible>
@@ -429,7 +429,7 @@
 				<include>MusicShowcaseCDCaseReflection</include>
 			</control>
 		</control>
-</include>
+	</include>
 	<include name="MusicShowcaseItem-2">
 		<control type="group">
 			<visible>!String.IsEmpty(Container(54).ListItemNoWrap(-2).FolderPath) | !Skin.HasSetting(ShowCaseWrapList)</visible>
@@ -450,7 +450,7 @@
 				<include>MusicShowcaseCDCaseReflection</include>
 			</control>
 		</control>
-</include>
+	</include>
 	<include name="MusicShowcaseItem-1">
 		<control type="group">
 			<visible>!String.IsEmpty(Container(54).ListItemNoWrap(-1).FolderPath) | !Skin.HasSetting(ShowCaseWrapList)</visible>
@@ -474,7 +474,7 @@
 				<include>MusicShowcaseCDCaseReflection</include>
 			</control>
 		</control>
-</include>
+	</include>
 	<include name="MusicShowcaseItem0">
 		<control type="group">
 			<visible>!String.IsEmpty(Container(54).ListItemNoWrap(0).FolderPath) | !Skin.HasSetting(ShowCaseWrapList)</visible>
@@ -533,7 +533,7 @@
 				</control>
 			</control>
 		</control>
-</include>
+	</include>
 	<include name="MusicShowcaseItem1">
 		<control type="group">
 			<visible>!String.IsEmpty(Container(54).ListItemNoWrap(1).FolderPath) | !Skin.HasSetting(ShowCaseWrapList)</visible>
@@ -558,7 +558,7 @@
 				<include>MusicShowcaseCDCaseReflection</include>
 			</control>
 		</control>
-</include>
+	</include>
 	<include name="MusicShowcaseItem2">
 		<control type="group">
 			<visible>!String.IsEmpty(Container(54).ListItemNoWrap(2).FolderPath) | !Skin.HasSetting(ShowCaseWrapList)</visible>
@@ -583,7 +583,7 @@
 				<include>MusicShowcaseCDCaseReflection</include>
 			</control>
 		</control>
-</include>
+	</include>
 	<include name="MusicShowcaseItem3">
 		<control type="group">
 			<visible>!String.IsEmpty(Container(54).ListItemNoWrap(3).FolderPath) | !Skin.HasSetting(ShowCaseWrapList)</visible>
@@ -608,7 +608,7 @@
 				<include>MusicShowcaseCDCaseReflection</include>
 			</control>
 		</control>
-</include>
+	</include>
 	<include name="MusicShowcaseItem4">
 		<control type="group">
 			<visible>!String.IsEmpty(Container(54).ListItemNoWrap(4).FolderPath) | !Skin.HasSetting(ShowCaseWrapList)</visible>
@@ -633,7 +633,7 @@
 				<include>MusicShowcaseCDCaseReflection</include>
 			</control>
 		</control>
-</include>
+	</include>
 	<include name="MusicShowcaseItem5">
 		<control type="group">
 			<visible>!String.IsEmpty(Container(54).ListItemNoWrap(5).FolderPath) | !Skin.HasSetting(ShowCaseWrapList)</visible>
@@ -658,7 +658,7 @@
 				<include>MusicShowcaseCDCaseReflection</include>
 			</control>
 		</control>
-</include>
+	</include>
 	<include name="MusicShowcaseItem6">
 		<control type="group">
 			<visible>!String.IsEmpty(Container(54).ListItemNoWrap(6).FolderPath) | !Skin.HasSetting(ShowCaseWrapList)</visible>
@@ -680,7 +680,7 @@
 				<include>MusicShowcaseCDCaseReflection</include>
 			</control>
 		</control>
-</include>
+	</include>
 	<variable name="MusicShowcaseItem-6Var">
 		<value condition="Container.Content(genres) + !String.IsEmpty(Skin.String(musicgenreicons.path))">$INFO[Skin.String(musicgenreicons.path)]$INFO[ListItem(-6).Label,,.jpg]</value>
 		<value condition="Container.Content(genres) + !String.IsEmpty(Skin.String(MusicGenreIconPath))">$INFO[Skin.String(MusicGenreIconPath)]$INFO[ListItem(-6).Label,,.jpg]</value>

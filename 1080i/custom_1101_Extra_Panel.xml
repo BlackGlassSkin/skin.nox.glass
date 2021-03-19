@@ -201,11 +201,11 @@
 						<icon>media/button1.jpg</icon>
 					</item>
 					<!--<item>
-						<label>Speed Test</label>
-						<onclick>Runscript(special://home/addons/script.ezmaintenanceplus/resources/lib/modules/speedtest.py)</onclick>
-						<onclick condition="!System.HasAddon(script.ezmaintenanceplus)">InstallAddon(script.ezmaintenanceplus)</onclick>
-						<icon>media/button1.jpg</icon>
-					</item> -->
+                        <label>Speed Test</label>
+                        <onclick>Runscript(special://home/addons/script.ezmaintenanceplus/resources/lib/modules/speedtest.py)</onclick>
+                        <onclick condition="!System.HasAddon(script.ezmaintenanceplus)">InstallAddon(script.ezmaintenanceplus)</onclick>
+                        <icon>media/button1.jpg</icon>
+                    </item> -->
 					<item>
 						<label>Ustaw Rozmiar Bufora</label>
 						<onclick>RunScript(special://skin/scripts/cache.py, return)</onclick>
@@ -215,7 +215,7 @@
 					<item>
 						<label>Reset Epg Data</label>
 						<action>ActivateWindowAndFocus(PVRSettings, -98,10, -71,10)</action>
-						<action>Action(Select)</action>
+		                <action>Action(Select)</action>
 						<onclick>ActivateWindow(1101)</onclick>
 						<icon>media/button1.jpg</icon>
 					</item>
@@ -357,11 +357,11 @@
 				<label>$INFO[Window(Home).Property(favourite.count),[COLOR grey]$LOCALIZE[31509]:[/COLOR] ]</label>
 				<label>$INFO[Window(Home).Property(RandomAddon.Count),[COLOR grey]$LOCALIZE[20161] $LOCALIZE[24001]:[/COLOR] ]</label>
 				<label>$INFO[Window(Weather).Property(Location),[COLOR grey], • $LOCALIZE[402]: [/COLOR]]$INFO[Window(weather).Property(Current.FeelsLike)] $INFO[System.TemperatureUnits,,[COLOR grey] • $LOCALIZE[406]:[/COLOR] ]$INFO[Window(weather).Property(Current.Humidity)]</label>
-				<label>$INFO[PVR.NextRecordingDateTime,$LOCALIZE[19157] [B][COLOR=white], [/COLOR][/B]$LOCALIZE[19126] - • ]$INFO[PVR.NextRecordingTitle, [B][COLOR=white],[/COLOR][/B]]$INFO[PVR.NextRecordingChannel, - [B][COLOR=white],[/COLOR][/B]]</label>
-				<label>$INFO[PVR.NowRecordingDateTime,$LOCALIZE[19158] [B][COLOR=white], [/COLOR][/B]$LOCALIZE[19126] - ]$INFO[PVR.NowRecordingTitle, • [B][COLOR=FF48D1CC],[/COLOR][/B] ]$INFO[PVR.NowRecordingChannel,[B][COLOR=white]( ,)[/COLOR][/B]]</label>
-				<label>[COLOR grey]$LOCALIZE[133]:[/COLOR] $INFO[Window(Home).Property(Music.ArtistsCount)][COLOR grey] • $LOCALIZE[132]:[/COLOR] $INFO[Window(Home).Property(Music.AlbumsCount)][COLOR grey] • $LOCALIZE[134]:[/COLOR] $INFO[Window(Home).Property(Music.SongsCount)]</label>
-				<label>[COLOR grey]$LOCALIZE[20343]:[/COLOR] $INFO[Window(Home).Property(TVShows.Count)][COLOR grey] • $LOCALIZE[20360]:[/COLOR] $INFO[Window(Home).Property(Episodes.Count)][COLOR grey] • $LOCALIZE[16101]:[/COLOR] $INFO[Window(Home).Property(Episodes.UnWatched)]</label>
-				<label>$INFO[Window(Home).Property(Movies.Count),[COLOR grey]$LOCALIZE[31502]:[/COLOR] ,[COLOR grey] • $LOCALIZE[16102]:[/COLOR] ]$INFO[Window(Home).Property(Movies.Watched),,[COLOR grey] • $LOCALIZE[16101]:[/COLOR] ]$INFO[Window(Home).Property(Movies.UnWatched)]</label>
+				<label>$INFO[PVR.NextRecordingDateTime,$LOCALIZE[19157]  [B][COLOR=white], [/COLOR][/B]$LOCALIZE[19126] -  • ]$INFO[PVR.NextRecordingTitle, [B][COLOR=white],[/COLOR][/B]]$INFO[PVR.NextRecordingChannel, - [B][COLOR=white],[/COLOR][/B]]</label>
+				<label>$INFO[PVR.NowRecordingDateTime,$LOCALIZE[19158]  [B][COLOR=white], [/COLOR][/B]$LOCALIZE[19126] - ]$INFO[PVR.NowRecordingTitle, • [B][COLOR=FF48D1CC],[/COLOR][/B] ]$INFO[PVR.NowRecordingChannel,[B][COLOR=white]( ,)[/COLOR][/B]]</label>
+				<label>[COLOR grey]$LOCALIZE[133]:[/COLOR] $INFO[Window(Home).Property(Music.ArtistsCount)][COLOR grey]  •  $LOCALIZE[132]:[/COLOR] $INFO[Window(Home).Property(Music.AlbumsCount)][COLOR grey]  •  $LOCALIZE[134]:[/COLOR] $INFO[Window(Home).Property(Music.SongsCount)]</label>
+				<label>[COLOR grey]$LOCALIZE[20343]:[/COLOR] $INFO[Window(Home).Property(TVShows.Count)][COLOR grey]  •  $LOCALIZE[20360]:[/COLOR] $INFO[Window(Home).Property(Episodes.Count)][COLOR grey]  •  $LOCALIZE[16101]:[/COLOR] $INFO[Window(Home).Property(Episodes.UnWatched)]</label>
+				<label>$INFO[Window(Home).Property(Movies.Count),[COLOR grey]$LOCALIZE[31502]:[/COLOR] ,[COLOR grey]  •  $LOCALIZE[16102]:[/COLOR] ]$INFO[Window(Home).Property(Movies.Watched),,[COLOR grey]  •  $LOCALIZE[16101]:[/COLOR] ]$INFO[Window(Home).Property(Movies.UnWatched)]</label>
 				<font>Lirabiefont_Rg28</font>
 				<textcolor>gold</textcolor>
 				<pauseatend>8000</pauseatend>
@@ -458,32 +458,32 @@
 					<width>400</width>
 					<height>20</height>
 					<font>Lirabiefont_Rg</font>
-					<textcolor>FF848484</textcolor>
-					<shadowcolor>FF424242</shadowcolor>
+				<textcolor>FF848484</textcolor>
+				<shadowcolor>FF424242</shadowcolor>
 					<label>$INFO[System.CoreUsage(0)]%</label>
 				</control>
 				<control type="label">
 					<width>400</width>
 					<height>20</height>
 					<font>Lirabiefont_Rg</font>
-					<textcolor>FF848484</textcolor>
-					<shadowcolor>FF424242</shadowcolor>
+				<textcolor>FF848484</textcolor>
+				<shadowcolor>FF424242</shadowcolor>
 					<label>$INFO[System.CoreUsage(1)]%</label>
 				</control>
 				<control type="label">
 					<width>400</width>
 					<height>20</height>
 					<font>Lirabiefont_Rg</font>
-					<textcolor>FF848484</textcolor>
-					<shadowcolor>FF424242</shadowcolor>
+				<textcolor>FF848484</textcolor>
+				<shadowcolor>FF424242</shadowcolor>
 					<label>$INFO[System.CoreUsage(2)]%</label>
 				</control>
 				<control type="label">
 					<width>400</width>
 					<height>20</height>
 					<font>Lirabiefont_Rg</font>
-					<textcolor>FF848484</textcolor>
-					<shadowcolor>FF424242</shadowcolor>
+				<textcolor>FF848484</textcolor>
+				<shadowcolor>FF424242</shadowcolor>
 					<label>$INFO[System.CoreUsage(3)]%</label>
 				</control>
 			</control>
@@ -521,7 +521,7 @@
 				<width>570</width>
 				<height>40</height>
 				<font>Lirabiefont_Rg</font>
-				<label>[COLOR FFFFFF00][B]*[/B][/COLOR] $INFO[System.BuildVersion]</label>
+				<label>[COLOR FFFFFF00][B]*[/B][/COLOR]  $INFO[System.BuildVersion]</label>
 				<textcolor>B3BDC3C7</textcolor>
 			</control>
 			<control type="label">
@@ -531,7 +531,7 @@
 				<left>1100</left>
 				<width>700</width>
 				<height>90</height>
-				<label>[COLOR FFFFFF00][B]*[/B][/COLOR] CPU : $INFO[System.CPUTemperature] $INFO[System.TemperatureUnits]</label>
+				<label>[COLOR FFFFFF00][B]*[/B][/COLOR] CPU    : $INFO[System.CPUTemperature] $INFO[System.TemperatureUnits]</label>
 				<font>Lirabiefont_Rg</font>
 				<textcolor>B3BDC3C7</textcolor>
 			</control>
@@ -542,7 +542,7 @@
 				<left>1100</left>
 				<width>700</width>
 				<height>90</height>
-				<label>[COLOR FFFFFF00][B]*[/B][/COLOR] GPU : $INFO[System.GPUTemperature] $INFO[System.TemperatureUnits]</label>
+				<label>[COLOR FFFFFF00][B]*[/B][/COLOR] GPU    : $INFO[System.GPUTemperature] $INFO[System.TemperatureUnits]</label>
 				<font>Lirabiefont_Rg</font>
 				<textcolor>B3BDC3C7</textcolor>
 			</control>
@@ -553,7 +553,7 @@
 				<left>1100</left>
 				<width>700</width>
 				<height>90</height>
-				<label>[COLOR FFFFFF00][B]* [/B][/COLOR]IP : $INFO[Network.IPAddress]</label>
+				<label>[COLOR FFFFFF00][B]* [/B][/COLOR]IP     : $INFO[Network.IPAddress]</label>
 				<font>Lirabiefont_Rg</font>
 				<textcolor>B3BDC3C7</textcolor>
 			</control>
@@ -564,7 +564,7 @@
 				<width>700</width>
 				<height>90</height>
 				<font>Lirabiefont_Rg</font>
-				<label>[COLOR FFFFFF00][B]*[/B][/COLOR] Fan : $INFO[System.FanSpeed] RPM</label>
+				<label>[COLOR FFFFFF00][B]*[/B][/COLOR] Fan    : $INFO[System.FanSpeed] RPM</label>
 				<textcolor>B3BDC3C7</textcolor>
 			</control>
 			<control type="label">
@@ -574,7 +574,7 @@
 				<width>700</width>
 				<height>90</height>
 				<font>Lirabiefont_Rg</font>
-				<label>[COLOR FFFFFF00][B]*[/B][/COLOR] HDD : $INFO[System.HddTemperature] $INFO[System.TemperatureUnits]</label>
+				<label>[COLOR FFFFFF00][B]*[/B][/COLOR] HDD    : $INFO[System.HddTemperature] $INFO[System.TemperatureUnits]</label>
 				<textcolor>B3BDC3C7</textcolor>
 			</control>
 			<control type="label">
@@ -605,7 +605,7 @@
 				<width>570</width>
 				<height>90</height>
 				<font>Lirabiefont_Rg</font>
-				<label>[COLOR FFFFFF00][B]*[/B][/COLOR] $INFO[System.VideoEncoderInfo]</label>
+				<label>[COLOR FFFFFF00][B]*[/B][/COLOR]  $INFO[System.VideoEncoderInfo]</label>
 				<textcolor>B3BDC3C7</textcolor>
 			</control>
 			<control type="label">
@@ -615,7 +615,7 @@
 				<width>570</width>
 				<height>450</height>
 				<font>Lirabiefont_Rg</font>
-				<label>[COLOR FFFFFF00][B]*[/B][/COLOR] $INFO[System.OSVersionInfo]</label>
+				<label>[COLOR FFFFFF00][B]*[/B][/COLOR]  $INFO[System.OSVersionInfo]</label>
 				<textcolor>B3BDC3C7</textcolor>
 			</control>
 			<control type="label">
@@ -625,7 +625,7 @@
 				<width>570</width>
 				<height>520</height>
 				<font>Lirabiefont_Rg</font>
-				<label>[COLOR FFFFFF00][B]*[/B][/COLOR] Adres Mac : $INFO[Network.MacAddress]</label>
+				<label>[COLOR FFFFFF00][B]*[/B][/COLOR]  Adres Mac   : $INFO[Network.MacAddress]</label>
 				<textcolor>B3BDC3C7</textcolor>
 			</control>
 			<control type="label">
@@ -635,7 +635,7 @@
 				<width>570</width>
 				<height>520</height>
 				<font>Lirabiefont_Rg</font>
-				<label>[COLOR FFFFFF00][B]*[/B][/COLOR] Ekran : $INFO[System.ScreenWidth] x $INFO[System.ScreenHeight]</label>
+				<label>[COLOR FFFFFF00][B]*[/B][/COLOR]  Ekran       : $INFO[System.ScreenWidth] x $INFO[System.ScreenHeight]</label>
 				<textcolor>B3BDC3C7</textcolor>
 			</control>
 			<control type="label">
@@ -646,7 +646,7 @@
 				<width>570</width>
 				<height>90</height>
 				<font>Lirabiefont_Rg</font>
-				<label>[COLOR FFFFFF00][B]*[/B][/COLOR] Build Date : $INFO[System.BuildDate]</label>
+				<label>[COLOR FFFFFF00][B]*[/B][/COLOR]  Build Date  : $INFO[System.BuildDate]</label>
 				<textcolor>B3BDC3C7</textcolor>
 			</control>
 			<control type="label">
@@ -656,7 +656,7 @@
 				<width>570</width>
 				<height>40</height>
 				<font>Lirabiefont_Rg</font>
-				<label>[COLOR FFFFFF00][B]*[/B][/COLOR] Czas Pracy : $INFO[System.TotalUptime]</label>
+				<label>[COLOR FFFFFF00][B]*[/B][/COLOR]  Czas Pracy  : $INFO[System.TotalUptime]</label>
 				<textcolor>B3BDC3C7</textcolor>
 			</control>
 			<control type="label">
@@ -736,7 +736,7 @@
 				<description>Bateria %</description>
 				<top>740</top>
 				<left>1778</left>
-				<!-- PROCENT NAŁADOWANIA / ROZŁADOWANIA BATERII	 -->
+				<!-- PROCENT NAŁADOWANIA / ROZŁADOWANIA BATERII  -->
 				<width>350</width>
 				<height>100</height>
 				<textcolor>green</textcolor>
@@ -748,11 +748,11 @@
 			<control type="label">
 				<top>595</top>
 				<left>45</left>
-				<!-- RDZENIE PROCESORA 0,1,2,3 etc.	 -->
+				<!-- RDZENIE PROCESORA 0,1,2,3 etc.  -->
 				<width>500</width>
 				<height>420</height>
 				<textcolor>FF517F83</textcolor>
-				<label>[B]$INFO[System.CoreUsage(0)] $INFO[System.CoreUsage(1)] $INFO[System.CoreUsage(2)] $INFO[System.CoreUsage(3)][CR][CR]$INFO[System.CoreUsage(4)] $INFO[System.CoreUsage(5)] $INFO[System.CoreUsage(6)] $INFO[System.CoreUsage(7)][/B]</label>
+				<label>[B]$INFO[System.CoreUsage(0)]   $INFO[System.CoreUsage(1)]     $INFO[System.CoreUsage(2)]    $INFO[System.CoreUsage(3)][CR][CR]$INFO[System.CoreUsage(4)]    $INFO[System.CoreUsage(5)]   $INFO[System.CoreUsage(6)]   $INFO[System.CoreUsage(7)][/B]</label>
 				<font>Lirabiefont_Rg</font>
 				<align>center</align>
 				<font/>

@@ -6,10 +6,10 @@
 			<include>HiddenList</include>
 		</control>
 		<control type="group">
-			<animation type="WindowOpen">
-				<effect type="zoom" start="150" end="100" center="auto" time="0" tween="cubic" easing="out"/>
-				<effect type="fade" end="100" time="0"/>
-			</animation>
+		<animation type="WindowOpen">
+			<effect type="zoom" start="150" end="100" center="auto" time="0" tween="cubic" easing="out" />
+			<effect type="fade" end="100" time="0" />
+		</animation>
 			<top>60</top>
 			<control type="group">
 				<control type="image">
@@ -205,18 +205,18 @@
 					</control>
 					<control type="button">
 						<height>45</height>
-						<label>[COLOR $VAR[ThemeLabelColor]]Origin: [/COLOR]$INFO[ListItem.AddonOrigin]</label>
-						<include>SettingsPanelButtonsValues</include>
-						<visible>!String.IsEmpty(ListItem.AddonOrigin)</visible>
-					</control>
+				    	<label>[COLOR $VAR[ThemeLabelColor]]Origin:       [/COLOR]$INFO[ListItem.AddonOrigin]</label>
+                        <include>SettingsPanelButtonsValues</include>
+				    	<visible>!String.IsEmpty(ListItem.AddonOrigin)</visible>
+				    </control>
 					<control type="image">
-						<top>-50</top>
-						<left>110</left>
+					    <top>-50</top>
+					    <left>110</left>
 						<height>37</height>
 						<width>37</width>
 						<aspectratio>keep</aspectratio>
-						<texture>$VAR[AddonsOriginVar]</texture>
-						<visible>!String.IsEmpty(ListItem.AddonOrigin)</visible>
+                        <texture>$VAR[AddonsOriginVar]</texture>
+                        <visible>!String.IsEmpty(ListItem.AddonOrigin)</visible>
 					</control>
 				</control>
 				<control type="grouplist">

@@ -16,7 +16,7 @@
 					<font>dialogpvrinfotitle</font>
 					<textcolor>blue</textcolor>
 					<shadowcolor>white</shadowcolor>
-					<label>$LOCALIZE[31526]</label>
+					<label>$LOCALIZE[31526] </label>
 					<label>$LOCALIZE[31526] ►►►</label>
 					<label>$LOCALIZE[31526] ►►►►►►►</label>
 					<label>$LOCALIZE[31526] ►►►►►►►►►►►</label>

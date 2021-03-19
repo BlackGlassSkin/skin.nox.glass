@@ -166,7 +166,7 @@
 					<scroll>true</scroll>
 					<top>200</top>
 					<textcolor>FFBEBEBE</textcolor>
-					<label>$INFO[ListItem.NextTitle,$LOCALIZE[19031]: [COLOR grey2],[/COLOR]][CR]$LOCALIZE[32000]: $INFO[ListItem.NextStartTime] $LOCALIZE[32001]: $INFO[ListItem.NextEndTime] $LOCALIZE[31009]: $INFO[Listitem.NextDuration]</label>
+					<label>$INFO[ListItem.NextTitle,$LOCALIZE[19031]: [COLOR grey2],[/COLOR]][CR]$LOCALIZE[32000]: $INFO[ListItem.NextStartTime] $LOCALIZE[32001]: $INFO[ListItem.NextEndTime]  $LOCALIZE[31009]: $INFO[Listitem.NextDuration]</label>
 				</control>
 				<control type="label">
 					<left>430</left>
@@ -176,7 +176,7 @@
 					<scroll>true</scroll>
 					<top>255</top>
 					<textcolor>FFBEBEBE</textcolor>
-					<label>$INFO[Pvr.BackendChannels,[COLOR grey]$LOCALIZE[19019]:[/COLOR] ]$INFO[Pvr.BackendRecordings,[COLOR grey] | $LOCALIZE[19163]:[/COLOR] ]</label>
+					<label>$INFO[Pvr.BackendChannels,[COLOR grey]$LOCALIZE[19019]:[/COLOR] ]$INFO[Pvr.BackendRecordings,[COLOR grey]  |  $LOCALIZE[19163]:[/COLOR] ]</label>
 				</control>
 				<control type="image">
 					<width>350</width>

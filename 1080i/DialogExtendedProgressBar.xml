@@ -40,7 +40,7 @@
 					<font>font24_title</font>
 					<textcolor>grey</textcolor>
 					<align>center</align>
-					<label>$INFO[Control.GetLabel(31),,:]$INFO[Control.GetLabel(30), ]$INFO[Control.GetLabel(32), - ,%]</label>
+					<label>$INFO[Control.GetLabel(31),,:]$INFO[Control.GetLabel(30), ]$INFO[Control.GetLabel(32),   -   ,%]</label>
 				</control>
 				<control type="label" id="31">
 					<include>HiddenObject</include>

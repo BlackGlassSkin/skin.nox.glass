@@ -35,7 +35,7 @@
 		<control type="fixedlist" id="591">
 			<include>contents591list</include>
 		</control>
-</include>
+	</include>
 	<include name="View_591_BigFan">
 		<control type="group">
 			<visible>Control.IsVisible(591) + !Window.IsActive(addoninformation)</visible>

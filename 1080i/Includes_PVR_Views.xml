@@ -291,7 +291,7 @@
 						<top>8</top>
 						<width>750</width>
 						<height>40</height>
-						<label>[I]$INFO[VideoPlayer.Title,$LOCALIZE[31040]: ][/I] | $VAR[PremieredLabel]</label>
+						<label>[I]$INFO[VideoPlayer.Title,$LOCALIZE[31040]:  ][/I] | $VAR[PremieredLabel]</label>
 						<font>font13</font>
 						<scroll>true</scroll>
 					</control>
@@ -416,7 +416,7 @@
 						<height>58</height>
 						<font>font13b</font>
 						<textcolor>grey</textcolor>
-						<label>[B]$INFO[ListItem.ChannelNumberLabel]$INFO[ListItem.Label, ][/B]</label>
+						<label>[B]$INFO[ListItem.ChannelNumberLabel]$INFO[ListItem.Label,  ][/B]</label>
 					</control>
 					<control type="progress">
 						<left>16</left>
@@ -484,7 +484,7 @@
 							<height>30</height>
 							<font>font11</font>
 							<textcolor>grey3</textcolor>
-							<label>$INFO[ListItem.NextTitle,$LOCALIZE[19031]: ]</label>
+							<label>$INFO[ListItem.NextTitle,$LOCALIZE[19031]:  ]</label>
 						</control>
 					</control>
 				</itemlayout>
@@ -514,7 +514,7 @@
 							<height>58</height>
 							<font>font13b</font>
 							<textcolor>FF3366CC</textcolor>
-							<label>[B]$INFO[ListItem.ChannelNumberLabel]$INFO[ListItem.Label, ][/B]</label>
+							<label>[B]$INFO[ListItem.ChannelNumberLabel]$INFO[ListItem.Label,  ][/B]</label>
 						</control>
 						<control type="progress">
 							<left>16</left>
@@ -580,7 +580,7 @@
 								<height>30</height>
 								<font>font11</font>
 								<textcolor>grey2</textcolor>
-								<label>$INFO[ListItem.NextTitle,$LOCALIZE[19031]: ]</label>
+								<label>$INFO[ListItem.NextTitle,$LOCALIZE[19031]:  ]</label>
 							</control>
 						</control>
 					</control>
@@ -699,7 +699,7 @@
 						<font>font14</font>
 						<textcolor>$VAR[ThemeHomeLabelColor]</textcolor>
 						<textoffsetx>15</textoffsetx>
-						<label>$INFO[Container(51).ListItem.StartTime]$INFO[Container(51).ListItem.EndTime, - ,: ][COLOR grey2]$INFO[Container(51).ListItem.Title][/COLOR]$INFO[Container(51).ListItem.Genre, $LOCALIZE[515]: [COLOR grey2],[/COLOR]]</label>
+						<label>$INFO[Container(51).ListItem.StartTime]$INFO[Container(51).ListItem.EndTime, - ,: ][COLOR grey2]$INFO[Container(51).ListItem.Title][/COLOR]$INFO[Container(51).ListItem.Genre,   $LOCALIZE[515]: [COLOR grey2],[/COLOR]]</label>
 					</control>
 					<control type="textbox" id="71">
 						<label>[B]$VAR[EpisodeCountVar,, - ]$INFO[Container(51).ListItem.EpisodeName,,[CR]][/B]$INFO[Container(51).ListItem.Plot]</label>
@@ -801,7 +801,7 @@
 								<font>font14</font>
 								<width>860</width>
 								<height>63</height>
-								<label>[B][COLOR white]$INFO[ListItem.Label][/COLOR][/B]$INFO[ListItem.Title, ]</label>
+								<label>[B][COLOR white]$INFO[ListItem.Label][/COLOR][/B]$INFO[ListItem.Title,  ]</label>
 							</control>
 							<control type="label">
 								<visible>Skin.HasSetting(Enable.DefaulLogo)</visible>
@@ -810,7 +810,7 @@
 								<font>font14</font>
 								<width>665</width>
 								<height>63</height>
-								<label>[B][COLOR white]$INFO[ListItem.Label][/COLOR][/B]$INFO[ListItem.Title, ]</label>
+								<label>[B][COLOR white]$INFO[ListItem.Label][/COLOR][/B]$INFO[ListItem.Title,  ]</label>
 							</control>
 							<control type="image">
 								<visible>!Skin.HasSetting(Enable.DefaulLogo)</visible>
@@ -878,7 +878,7 @@
 								<font>font14</font>
 								<width>854</width>
 								<height>63</height>
-								<label>[B][COLOR white]$INFO[ListItem.Label][/COLOR][/B]$INFO[ListItem.Title, ]</label>
+								<label>[B][COLOR white]$INFO[ListItem.Label][/COLOR][/B]$INFO[ListItem.Title,  ]</label>
 							</control>
 							<control type="label">
 								<visible>Skin.HasSetting(Enable.DefaulLogo)</visible>
@@ -887,7 +887,7 @@
 								<font>font14</font>
 								<width>665</width>
 								<height>63</height>
-								<label>[B][COLOR white]$INFO[ListItem.Label][/COLOR][/B]$INFO[ListItem.Title, ]</label>
+								<label>[B][COLOR white]$INFO[ListItem.Label][/COLOR][/B]$INFO[ListItem.Title,  ]</label>
 							</control>
 							<control type="image">
 								<visible>!Skin.HasSetting(Enable.DefaulLogo)</visible>
@@ -983,7 +983,7 @@
 									<top>-5</top>
 									<width>655</width>
 									<height>40</height>
-									<label>[I]$INFO[VideoPlayer.Title,$LOCALIZE[31040]: ][/I]</label>
+									<label>[I]$INFO[VideoPlayer.Title,$LOCALIZE[31040]:  ][/I]</label>
 									<font>font13</font>
 									<scroll>true</scroll>
 								</control>
@@ -1107,7 +1107,7 @@
 							<height>50</height>
 							<width>700</width>
 							<textcolor>$VAR[ThemeLabelColor]</textcolor>
-							<label>$INFO[Container(52).ListItem.NextStartTime,$LOCALIZE[19031]: [COLOR grey2],[/COLOR]]$INFO[Container(52).ListItem.NextEndTime, [COLOR grey2]- ,[/COLOR]]$INFO[Container(52).ListItem.NextTitle, [COLOR grey2],[/COLOR]]</label>
+							<label>$INFO[Container(52).ListItem.NextStartTime,$LOCALIZE[19031]: [COLOR grey2],[/COLOR]]$INFO[Container(52).ListItem.NextEndTime, [COLOR grey2]- ,[/COLOR]]$INFO[Container(52).ListItem.NextTitle,   [COLOR grey2],[/COLOR]]</label>
 							<wrapmultiline>true</wrapmultiline>
 						</control>
 					</control>
@@ -1308,7 +1308,7 @@
 									<left>10</left>
 									<height>50</height>
 									<width>580</width>
-									<label>[COLOR $VAR[ThemeLabelColor]]$INFO[ListItem.Duration(mins),, $LOCALIZE[12391]][/COLOR] - $INFO[ListItem.Label]</label>
+									<label>[COLOR $VAR[ThemeLabelColor]]$INFO[ListItem.Duration(mins),, $LOCALIZE[12391]][/COLOR]  -  $INFO[ListItem.Label]</label>
 									<font>font12</font>
 								</control>
 							</itemlayout>
@@ -1317,7 +1317,7 @@
 									<left>10</left>
 									<height>50</height>
 									<width>580</width>
-									<label>[COLOR $VAR[ThemeLabelColor]]$INFO[ListItem.Duration(mins),, $LOCALIZE[12391]][/COLOR] - $INFO[ListItem.Label]</label>
+									<label>[COLOR $VAR[ThemeLabelColor]]$INFO[ListItem.Duration(mins),, $LOCALIZE[12391]][/COLOR]  -  $INFO[ListItem.Label]</label>
 									<font>font12</font>
 								</control>
 							</focusedlayout>

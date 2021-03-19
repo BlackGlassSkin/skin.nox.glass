@@ -28,7 +28,7 @@
 			<onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
 			<animation effect="fade" end="100" time="5950">Focus</animation>
 		</control>
-		<control type="image">
+				<control type="image">
 			<texture>common/black.png</texture>
 			<include>FullscreenDimensions</include>
 		</control>
