@@ -10,11 +10,15 @@ A modded version of [Aeon Nox 5 & SiLVO]
 
 https://github.com/AnonTester/kodi-repo/tree/master/repository.anontester
 
-and from repository install ***script.skin.helper.service*** after install skin
+and from repository install
+***script.skin.helper.service*** from Kontext menus
+***script.skin.helper.widgets*** from Music add-ons or Video add-ons
 
-weather icon , weather fanart code ***"reduced package size"***
+*after install skin*
 
-http://kim.cherrytv.webd.pl/MultiRepo/All/repository.Kim.Multi/repository.Kim.Multi-2.1.6.zip
+weather icon , weather fanart code ***"reduced package size"*** and more install the repo below 
+
+http://kim.cherrytv.webd.pl/MultiRepo/All/repository.Kim.Multi/repository.Kim.Multi-2.1.9.zip
 
 
 
