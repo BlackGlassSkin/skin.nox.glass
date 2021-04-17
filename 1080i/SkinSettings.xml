@@ -633,12 +633,13 @@
 							<selected>Skin.HasSetting(Enable.MyWeather)</selected>
 							<onclick condition="!System.HasAddon(resource.images.weathericons.hd.animatedmods)">InstallAddon(resource.images.weathericons.hd.animatedmods)</onclick>
 						</control>
-						<!--<control type="radiobutton" id="6012">
+						<control type="radiobutton" id="6012">
 							<include>SettingsButtonCommonValues</include>
 							<label>$LOCALIZE[32009]</label>
-							<onclick>Skin.ToggleSetting(DisableWidgerBackround)</onclick>
-							<selected>!Skin.HasSetting(DisableWidgerBackround)</selected>
-						</control>-->
+							<onclick>Skin.ToggleSetting(Enable.MyWeatherFanartCode)</onclick>
+							<selected>Skin.HasSetting(Enable.MyWeatherFanartCode)</selected>
+                            <visible>Skin.HasSetting(Enable.MyWeather)</visible>
+						</control>
 						<control type="radiobutton" id="6009">
 							<include>SettingsButtonCommonValues</include>
 							<label>$LOCALIZE[32010]</label>
