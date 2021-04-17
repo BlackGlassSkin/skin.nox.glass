@@ -2219,7 +2219,7 @@
                 <control type="multiimage">
                     <top>30</top>
                     <left>1100</left>
-                    <width>2170</width>
+                    <width>2370</width>
                     <height>820</height>
                     <imagepath flipx="false" colordiffuse="99FFFFFF" diffuse="views/myflix/fanart_diffuse_left.png">$INFO[Skin.String(weatherfanart.path)]$INFO[Window(Weather).Property(Current.FanartCode)]$VAR[WeatherBackgroundTypeVar]</imagepath>
                     <aspectratio scalediffuse="true" align="center" aligny="top">stretch</aspectratio>
