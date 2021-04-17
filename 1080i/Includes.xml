@@ -491,6 +491,8 @@
 					<onclick>Skin.ToggleSetting(Enable.DefaulLogo)</onclick>
 					<selected>Skin.HasSetting(Enable.DefaulLogo)</selected>
 					<onclick condition="!System.HasAddon(resource.images.polishtv.default)">InstallAddon(resource.images.polishtv.default)</onclick>
+                    <visible>[System.Platform.Android | system.platform.linux]</visible>
+                    <visible>System.HasAddon(resource.language.pl_pl)</visible>
 				</control>
 			</control>
 			<include>MediaMenuPlayerControls</include>
