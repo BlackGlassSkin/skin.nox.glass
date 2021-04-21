@@ -352,17 +352,17 @@
 					<visible>!IsEmpty(RadioPlayerCover2Var)</visible>
 				</control>
 				<control type="image">
-					<left>168</left>
-					<top>604.5</top>
-					<width>451</width>
-					<height>451</height>
+					<left>186</left>
+					<top>624</top>
+					<width>411</width>
+					<height>411</height>
 					<aligny>top</aligny>
-					<aspectratio align="left">keep</aspectratio>
+					<aspectratio align="left">stretch</aspectratio>
 					<fadetime>300</fadetime>
 					<animation effect="rotate" end="-360" center="auto" time="40000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
 					<animation effect="slide" tween="cubic" start="-180,0" end="0" time="1000" condition="!Player.Paused">Conditional</animation>
 					<texture background="true" diffuse="thumbs/boxes/cdart_mask.png">$VAR[RadioPlayerCover2Var]/$VAR[PlayerArtworkDiscVar]</texture>
-					<bordersize>30</bordersize>
+					<bordersize>10</bordersize>
 				</control>
 				<control type="image">
 					<left>-20</left>
