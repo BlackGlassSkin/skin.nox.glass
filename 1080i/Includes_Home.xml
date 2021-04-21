@@ -2214,7 +2214,7 @@
                     <width>2999</width>
                     <height>1800</height>
                     <texture flipx="false" colordiffuse="black">views/myflix/fanart_diffuse_left.png</texture>
-                    <visible>Skin.HasSetting(Enable.MyWeatherFanartCode) + !System.AddonIsEnabled(resource.images.weatherfanartcode)</visible>
+                    <visible>Skin.HasSetting(Enable.MyWeatherFanartCode)</visible>
                 </control>
                 <control type="multiimage">
                     <top>30</top>
@@ -2226,7 +2226,7 @@
                     <timeperimage>9000</timeperimage>
                     <fadetime>500</fadetime>
                     <randomize>false</randomize>
-                    <visible>Skin.HasSetting(Enable.MyWeatherFanartCode) + !System.AddonIsEnabled(resource.images.weatherfanartcode)</visible>
+                    <visible>Skin.HasSetting(Enable.MyWeatherFanartCode)</visible>
                 </control>
                 <!--<control type="image">
 					<top>30</top>
