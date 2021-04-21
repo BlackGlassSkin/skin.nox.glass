@@ -119,8 +119,18 @@
 				<width>1091</width>
 				<height>1091</height>
 				<animation effect="rotate" end="-360" center="auto" time="40000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
-				<animation effect="slide" tween="cubic" start="0,0" end="0" time="0" condition="!Player.Paused">Conditional</animation>
+				<animation effect="slide" tween="cubic" start="-600,0" end="0" time="1000" condition="!Player.Paused">Conditional</animation>
 				<texture background="true" colordiffuse="BA666666" diffuse="thumbs/boxes/cdart_mask.png">$VAR[PlayerArtworkDiscVar]</texture>
+				<visible>!IsEmpty(RadioPlayerCover2Var)</visible>
+			</control>
+			<control type="image">
+				<top>175</top>
+				<left>-1200</left>
+				<width>1091</width>
+				<height>1091</height>
+				<animation effect="rotate" end="-360" center="auto" time="40000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
+				<animation effect="slide" tween="cubic" start="-600,0" end="0" time="1000" condition="!Player.Paused">Conditional</animation>
+				<texture background="true" colordiffuse="BA666666" diffuse="thumbs/boxes/cdart_mask.png">$VAR[RadioPlayerCover2Var]/$VAR[PlayerArtworkDiscVar]</texture>
 			</control>
 		</control>
 		<control type="group">
@@ -336,7 +346,22 @@
 					<aspectratio align="left">keep</aspectratio>
 					<fadetime>300</fadetime>
 					<animation effect="rotate" end="-360" center="auto" time="40000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
+					<animation effect="slide" tween="cubic" start="-180,0" end="0" time="1000" condition="!Player.Paused">Conditional</animation>
 					<texture background="true" diffuse="thumbs/boxes/cdart_mask.png">$VAR[PlayerArtworkDiscVar]</texture>
+					<bordersize>30</bordersize>
+					<visible>!IsEmpty(RadioPlayerCover2Var)</visible>
+				</control>
+				<control type="image">
+					<left>168</left>
+					<top>604.5</top>
+					<width>451</width>
+					<height>451</height>
+					<aligny>top</aligny>
+					<aspectratio align="left">keep</aspectratio>
+					<fadetime>300</fadetime>
+					<animation effect="rotate" end="-360" center="auto" time="40000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
+					<animation effect="slide" tween="cubic" start="-180,0" end="0" time="1000" condition="!Player.Paused">Conditional</animation>
+					<texture background="true" diffuse="thumbs/boxes/cdart_mask.png">$VAR[RadioPlayerCover2Var]/$VAR[PlayerArtworkDiscVar]</texture>
 					<bordersize>30</bordersize>
 				</control>
 				<control type="image">
@@ -358,6 +383,16 @@
 					<texture>$INFO[Window(Home).Property(SkinHelper.Player.Art.ClearArt)]</texture>
 					<bordersize>28</bordersize>
 				</control>
+				<control type="image">
+					<left>1790</left>
+					<top>903</top>
+					<width>150</width>
+					<height>150</height>
+					<aspectratio align="center">scale</aspectratio>
+					<texture>$INFO[Player.Art(thumb)]</texture>
+					<bordersize>28</bordersize>
+					<visible>Window.IsActive(MusicOSD)</visible>
+				</control>
 				<control type="group">
 					<left>-130</left>
 					<top>620</top>
@@ -372,18 +407,16 @@
 						<label>$INFO[Window(Home).Property(SkinHelper.Player.Artist)]</label>
 						<scroll>true</scroll>
 						<scrollsuffix>  -  </scrollsuffix>
-						<visible>[!String.IsEmpty(PlayerArtworkLogoVar) + String.IsEmpty(Player.Art(artist.clearlogo)) + String.IsEmpty(Player.Art(clearlogo))] | Skin.HasSetting(Disable.MusicVizLogo)</visible>
-						<include>VisibleFadeAnimation</include>
 					</control>
 					<control type="image">
-						<left>-65</left>
-						<top>0</top>
-						<width>100%</width>
+						<left>235</left>
+						<top>1090</top>
+						<width>120%</width>
 						<height>155</height>
 						<aspectratio aligny="bottom" align="center">keep</aspectratio>
 						<texture background="true">$VAR[PlayerArtworkLogoVar]</texture>
 						<fadetime>300</fadetime>
-						<visible>!Skin.HasSetting(Disable.MusicVizLogo)</visible>
+						<animation effect="rotate" center="-100" start="0" end="30.3" time="0" condition="true">Conditional</animation>
 					</control>
 				</control>
 				<control type="grouplist">
