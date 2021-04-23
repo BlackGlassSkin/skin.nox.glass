@@ -412,53 +412,7 @@
 						<onclick>InstallAddon(script.colorbox)</onclick>
 						<visible>!System.HasAddon(script.colorbox)</visible>
 					</control>
-					<control type="button" id="408">
-						<include>SettingsButtonCommonValues</include>
-						<label>$INFO[System.AddonTitle(script.skin.helper.service)]</label>
-						<label2>$INFO[System.AddonVersion(script.skin.helper.service),v, [COLOR FF00991F]$LOCALIZE[31331][/COLOR]$LOCALIZE[31450]]</label2>
-						<onclick condition="!System.AddonIsEnabled(script.module.metadatautils)">EnableAddon(script.module.metadatautils)</onclick>
-						<onclick condition="!System.HasAddon(script.module.metadatautils)">InstallAddon(script.module.metadatautils)</onclick>
-						<onclick condition="System.HasAddon(script.module.metadatautils)">Addon.OpenSettings(script.module.metadatautils)</onclick>
-						<visible>System.HasAddon(script.skin.helper.service)</visible>
-					</control>
-					<control type="button" id="409">
-						<include>SettingsButtonCommonValues</include>
-						<label>script.skin.helper.service</label>
-						<label2>[COLOR invalid]$LOCALIZE[31332][/COLOR]$LOCALIZE[31451]</label2>
-						<onclick condition="!System.AddonIsEnabled(script.skin.helper.service)">EnableAddon(script.skin.helper.service)</onclick>
-						<onclick>InstallAddon(script.skin.helper.service)</onclick>
-						<visible>!System.HasAddon(script.skin.helper.service) | !System.HasAddon(script.module.metadatautils)</visible>
-					</control>
-					<control type="button" id="410">
-						<include>SettingsButtonCommonValues</include>
-						<label>$INFO[System.AddonTitle(script.skin.helper.widgets)]</label>
-						<label2>$INFO[System.AddonVersion(script.skin.helper.widgets),v, [COLOR FF00991F]$LOCALIZE[31331][/COLOR]$LOCALIZE[31450]]</label2>
-						<onclick>Addon.OpenSettings(script.skin.helper.widgets)</onclick>
-						<visible>System.HasAddon(script.skin.helper.widgets)</visible>
-					</control>
-					<control type="button" id="411">
-						<include>SettingsButtonCommonValues</include>
-						<label>script.skin.helper.widgets</label>
-						<label2>[COLOR invalid]$LOCALIZE[31332][/COLOR]$LOCALIZE[31451]</label2>
-						<onclick condition="!System.AddonIsEnabled(script.skin.helper.widgets)">EnableAddon(script.skin.helper.widgets)</onclick>
-						<onclick>InstallAddon(script.skin.helper.widgets)</onclick>
-						<visible>!System.HasAddon(script.skin.helper.widgets)</visible>
-					</control>
-					<control type="button" id="412">
-						<include>SettingsButtonCommonValues</include>
-						<label>$INFO[System.AddonTitle(script.tv.show.next.aired)]</label>
-						<label2>$INFO[System.AddonVersion(script.tv.show.next.aired),v, [COLOR FF00991F]$LOCALIZE[31331][/COLOR]$LOCALIZE[31450]]</label2>
-						<onclick>Addon.OpenSettings(script.tv.show.next.aired)</onclick>
-						<visible>System.HasAddon(script.tv.show.next.aired)</visible>
-					</control>
-					<control type="button" id="413">
-						<include>SettingsButtonCommonValues</include>
-						<label>script.tv.show.next.aired</label>
-						<label2>[COLOR invalid]$LOCALIZE[31332][/COLOR]$LOCALIZE[31451]</label2>
-						<onclick condition="!System.AddonIsEnabled(script.tv.show.next.aired)">EnableAddon(script.tv.show.next.aired)</onclick>
-						<onclick>InstallAddon(script.tv.show.next.aired)</onclick>
-						<visible>!System.HasAddon(script.tv.show.next.aired)</visible>
-					</control>
+					
 				</control>
 			</control>
 		</control>

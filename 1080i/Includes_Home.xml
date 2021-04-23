@@ -2196,7 +2196,7 @@
         <control type="group">
             <left>30</left>
             <top>1050</top>
-            <visible>!Player.HasMedia + Skin.HasSetting(Enable.MyWeather) + !String.IsEqual(Skin.String(MainMenu.Layout),vertical) + String.IsEqual(Container(9000).ListItem.Property(path),ActivateWindow(weather)) + String.IsEmpty(Container(9000).ListItem.Property(widgetType.2)) + !Skin.HasSetting(centermainmenu)</visible>
+            <visible>!ControlGroup(90010).HasFocus + !Player.HasMedia + Skin.HasSetting(Enable.MyWeather) + !String.IsEqual(Skin.String(MainMenu.Layout),vertical) + String.IsEqual(Container(9000).ListItem.Property(path),ActivateWindow(weather)) + String.IsEmpty(Container(9000).ListItem.Property(widgetType.2)) + !Skin.HasSetting(centermainmenu)</visible>
             <!--<include condition="!String.IsEmpty(Skin.String(Widget.Trans)) + [!Skin.HasSetting(DisableWidgerBackround) | String.IsEmpty(Skin.String(Widget.Trans)]">HomeWidgetFade</include>-->
             <control type="group">
                 <top>-1100</top>
@@ -2205,7 +2205,7 @@
                     <top>30</top>
                     <left>950</left>
                     <width>2999</width>
-                    <height>1100</height>
+                    <height>1000</height>
                     <texture flipx="false" colordiffuse="black">views/myflix/fanart_diffuse_left.png</texture>
                 </control>
                 <control type="image">
@@ -2214,7 +2214,7 @@
                     <width>2999</width>
                     <height>1800</height>
                     <texture flipx="false" colordiffuse="black">views/myflix/fanart_diffuse_left.png</texture>
-                    <visible>Skin.HasSetting(Enable.MyWeatherFanartCode)</visible>
+                    <visible>Skin.HasSetting(Enable.MyWeatherFanartCode) + !String.IsEmpty(Container(9000).ListItem.Property(widgetType.1))</visible>
                 </control>
                 <control type="multiimage">
                     <top>30</top>
@@ -2874,7 +2874,7 @@
                 <include>Clock_Time</include>
             </control>
         </control>
-</include>
+    </include>
     <include name="FanartTitle">
         <control type="button">
             <top>1000</top>

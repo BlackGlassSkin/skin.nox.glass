@@ -338,24 +338,25 @@
 					<texture colordiffuse="$VAR[ThemePanelAudioVideoColor]" border="40">listpanel_back.png</texture>
 				</control>
 				<control type="image">
-					<left>170</left>
-					<top>607.5</top>
-					<width>445</width>
-					<height>445</height>
+					<left>186</left>
+					<top>591</top>
+					<width>468.4</width>
+					<height>468.4</height>
 					<aligny>top</aligny>
 					<aspectratio align="left">keep</aspectratio>
 					<fadetime>300</fadetime>
 					<animation effect="rotate" end="-360" center="auto" time="40000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
-					<animation effect="slide" tween="cubic" start="-180,0" end="0" time="1000" condition="!Player.Paused">Conditional</animation>
+					<animation effect="slide" start="-180,0" end="0" time="1000" condition="!Player.Paused">Conditional</animation>
 					<texture background="true" diffuse="thumbs/boxes/cdart_mask.png">$VAR[PlayerArtworkDiscVar]</texture>
 					<bordersize>30</bordersize>
-					<visible>!IsEmpty(RadioPlayerCover2Var)</visible>
+                    <visible>!IsEmpty(RadioPlayerCover2Var)</visible>
 				</control>
+				
 				<control type="image">
-					<left>186</left>
-					<top>624</top>
-					<width>411</width>
-					<height>411</height>
+					<left>205</left>
+					<top>610</top>
+					<width>430.5</width>
+					<height>430.5</height>
 					<aligny>top</aligny>
 					<aspectratio align="left">stretch</aspectratio>
 					<fadetime>300</fadetime>
@@ -365,10 +366,10 @@
 					<bordersize>10</bordersize>
 				</control>
 				<control type="image">
-					<left>-20</left>
-					<top>610</top>
-					<width>440</width>
-					<height>440</height>
+					<left>-26</left>
+					<top>595</top>
+					<width>460</width>
+					<height>460</height>
 					<aspectratio align="center">scale</aspectratio>
 					<texture diffuse="thumbs/boxes/cdcover_mask2.png" fallback="DefaultAlbumCover.png">$VAR[RadioPlayerCover2Var]</texture>
 					<bordertexture border="28">thumbs/boxes/cd_shadow2.png</bordertexture>
