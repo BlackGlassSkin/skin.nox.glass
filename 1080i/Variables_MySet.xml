@@ -102,7 +102,9 @@
 	<variable name="RadioPlayerCover2Var">
 		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.AlbumThumb))">$INFO[Window(Home).Property(SkinHelper.Player.Art.AlbumThumb)]</value>
 		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.Thumb))">$INFO[Window(Home).Property(SkinHelper.Player.Art.Thumb)]</value>
-		<value condition="!String.IsEmpty(Player.Art(thumb))">DefaultCover.jpg</value>
+		<value condition="[Pvr.IsPlayingRadio | Player.IsInternetStream] + !String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.Thumb))">$INFO[Window(Home).Property(SkinHelper.Player.Art.Thumb)]</value>
+		<value condition="[Pvr.IsPlayingRadio | Player.IsInternetStream] + !String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.AlbumThumb))">$INFO[Window(Home).Property(SkinHelper.Player.Art.AlbumThumb)]</value>
+		<value condition="!String.IsEmpty(Player.Art(thumb))">.jpg</value>
 		<value>$INFO[Player.Art(thumb)]</value>
 	</variable>
 	<variable name="MusicPlayerAtistTitleVar">

@@ -865,6 +865,8 @@
 		<value condition="Integer.IsEqual(ListItem.DiscNumber,7) + !String.IsEmpty(ListItem.Art(album.discart7))">$INFO[ListItem.Art(album.discart7)]</value>
 		<value condition="Integer.IsEqual(ListItem.DiscNumber,8) + !String.IsEmpty(ListItem.Art(album.discart8))">$INFO[ListItem.Art(album.discart8)]</value>
 		<value condition="Integer.IsEqual(ListItem.DiscNumber,9) + !String.IsEmpty(ListItem.Art(album.discart9))">$INFO[ListItem.Art(album.discart9)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.AlbumThumb)) + !Skin.HasSetting(EnableFakeDiscArt)">$INFO[Window(Home).Property(SkinHelper.Player.Art.AlbumThumb)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.Thumb)) + !Skin.HasSetting(EnableFakeDiscArt)">$INFO[Window(Home).Property(SkinHelper.Player.Art.Thumb)]</value>
 		<value condition="Skin.HasSetting(MusicDiscFallback.Vinyl)">special://skin/extras/cdart/vinyl.png</value>
 		<value>special://skin/extras/cdart/default.png</value>
 	</variable>

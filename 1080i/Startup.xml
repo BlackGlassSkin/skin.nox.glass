@@ -6,6 +6,7 @@
 	<onload condition="System.HasAddon(script.skin.info.service)">RunScript(script.skin.info.service)</onload>
 	<onload condition="System.HasAddon(script.artistslideshow)">RunScript(script.artistslideshow,daemon=True)</onload>
 	<onload condition="!Skin.HasSetting(Enable.StartupIntro)">ReplaceWindow($INFO[System.StartupWindow])</onload>
+	<onload>RunScript(script.tv.show.next.aired,silent=True)</onload>
 	<onunload condition="Skin.HasSetting(Enable.StartupIntro)">PlayerControl(Stop)</onunload>
 	<onload>RunScript(special://skin/resources/lib/update.py)</onload>
 	<onload>RunScript(special://skin/resources/lib/publicip.py)</onload>

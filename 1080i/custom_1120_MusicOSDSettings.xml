@@ -141,7 +141,7 @@
 					<label>$LOCALIZE[31268]</label>
 					<onclick>Skin.ToggleSetting(HideMusicVizAlbum)</onclick>
 					<selected>Skin.HasSetting(HideMusicVizAlbum)</selected>
-					<visible>!String.IsEqual(Skin.String(MusicVizLayout),2)</visible>
+					<visible>!String.IsEqual(Skin.String(MusicVizLayout),2) + !String.IsEqual(Skin.String(MusicVizLayout),3)</visible>
 				</control>
 				<control type="radiobutton" id="90913">
 					<description>Hide CD</description>
@@ -150,7 +150,7 @@
 					<label>$LOCALIZE[31347]</label>
 					<onclick>Skin.ToggleSetting(HideMusicVizCD)</onclick>
 					<selected>Skin.HasSetting(HideMusicVizCD)</selected>
-					<visible>!String.IsEqual(Skin.String(MusicVizLayout),2)</visible>
+					<visible>!String.IsEqual(Skin.String(MusicVizLayout),2) + !String.IsEqual(Skin.String(MusicVizLayout),3)</visible>
 				</control>
 				<control type="radiobutton" id="90207">
 					<width>1452</width>
@@ -182,6 +182,19 @@
 					<label>$LOCALIZE[31578]</label>
 					<onclick>Skin.ToggleSetting(Enable.KimVizMod)</onclick>
 					<selected>!Skin.HasSetting(Enable.KimVizMod)</selected>
+				</control>
+				<control type="radiobutton" id="90918">
+					<width>1452</width>
+					<radioposx>1350</radioposx>
+					<label>Enable / Disable Fake Disc Art</label>
+					<onclick>Skin.ToggleSetting(EnableFakeDiscArt)</onclick>
+					<selected>!Skin.HasSetting(EnableFakeDiscArt)</selected>
+				</control>
+				<control type="button" id="90919">
+					<width>1452</width>
+					<label>Set Auto Close Music OSD</label>
+					<label2>[COLOR $VAR[ThemeLabelColor]]$INFO[skin.string(SkinHelper.AutoCloseMusicOSD),( , ) |]  $LOCALIZE[31090][/COLOR]</label2>
+					<onclick>Skin.SetNumeric(SkinHelper.AutoCloseMusicOSD)</onclick>
 				</control>
 				<control type="radiobutton" id="90215">
 					<label>$LOCALIZE[32007]</label>

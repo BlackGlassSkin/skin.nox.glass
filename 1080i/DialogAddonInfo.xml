@@ -199,7 +199,7 @@
 					</control>
 					<control type="button">
 						<height>45</height>
-						<label>[COLOR $VAR[ThemeLabelColor]]Status: [/COLOR]$INFO[ListItem.Property(Addon.Status)]</label>
+						<label>[COLOR $VAR[ThemeLabelColor]]$LOCALIZE[126]: [/COLOR]$INFO[ListItem.Property(Addon.Status)]</label>
 						<include>SettingsPanelButtonsValues</include>
 						<visible>!String.IsEmpty(ListItem.Property(Addon.Status))</visible>
 					</control>

@@ -121,16 +121,6 @@
 				<animation effect="rotate" end="-360" center="auto" time="40000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
 				<animation effect="slide" tween="cubic" start="-600,0" end="0" time="1000" condition="!Player.Paused">Conditional</animation>
 				<texture background="true" colordiffuse="BA666666" diffuse="thumbs/boxes/cdart_mask.png">$VAR[PlayerArtworkDiscVar]</texture>
-				<visible>!IsEmpty(RadioPlayerCover2Var)</visible>
-			</control>
-			<control type="image">
-				<top>175</top>
-				<left>-1200</left>
-				<width>1091</width>
-				<height>1091</height>
-				<animation effect="rotate" end="-360" center="auto" time="40000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
-				<animation effect="slide" tween="cubic" start="-600,0" end="0" time="1000" condition="!Player.Paused">Conditional</animation>
-				<texture background="true" colordiffuse="BA666666" diffuse="thumbs/boxes/cdart_mask.png">$VAR[RadioPlayerCover2Var]/$VAR[PlayerArtworkDiscVar]</texture>
 			</control>
 		</control>
 		<control type="group">
@@ -207,9 +197,12 @@
 			<scrollout>true</scrollout>
 			<font>BigAssFont</font>
 			<pauseatend>200</pauseatend>
-			<label>                      $INFO[Player.Title]</label>
-			<label>                      $INFO[MusicPlayer.Artist]</label>
-			<label>                      $INFO[MusicPlayer.Album]</label>
+			<label>               $INFO[Player.Title]</label>
+			<label>               $INFO[MusicPlayer.Artist]</label>
+			<label>               $INFO[MusicPlayer.Album]</label>
+			<label>               $INFO[Window(Home).Property(SkinHelper.Player.Album)]</label>
+			<label>               $INFO[Window(Home).Property(SkinHelper.Player.Title)]</label>
+			<label>               $INFO[Window(Home).Property(SkinHelper.Player.Artist)]</label>
 			<textcolor>1FFFFFFF</textcolor>
 			<textoffsetx>20</textoffsetx>
 			<resetonlabelchange>true</resetonlabelchange>
@@ -224,6 +217,9 @@
 			<label>               $INFO[MusicPlayer.Artist]</label>
 			<label>               $INFO[MusicPlayer.Album]</label>
 			<label>               $INFO[Player.Title]</label>
+			<label>               $INFO[Window(Home).Property(SkinHelper.Player.Album)]</label>
+			<label>               $INFO[Window(Home).Property(SkinHelper.Player.Title)]</label>
+			<label>               $INFO[Window(Home).Property(SkinHelper.Player.Artist)]</label>
 			<textcolor>1FFFFFFF</textcolor>
 			<textoffsetx>20</textoffsetx>
 			<resetonlabelchange>true</resetonlabelchange>
@@ -338,8 +334,8 @@
 					<texture colordiffuse="$VAR[ThemePanelAudioVideoColor]" border="40">listpanel_back.png</texture>
 				</control>
 				<control type="image">
-					<left>186</left>
-					<top>591</top>
+					<left>182</left>
+					<top>592</top>
 					<width>468.4</width>
 					<height>468.4</height>
 					<aligny>top</aligny>
@@ -349,21 +345,7 @@
 					<animation effect="slide" start="-180,0" end="0" time="1000" condition="!Player.Paused">Conditional</animation>
 					<texture background="true" diffuse="thumbs/boxes/cdart_mask.png">$VAR[PlayerArtworkDiscVar]</texture>
 					<bordersize>30</bordersize>
-                    <visible>!IsEmpty(RadioPlayerCover2Var)</visible>
-				</control>
-				
-				<control type="image">
-					<left>205</left>
-					<top>610</top>
-					<width>430.5</width>
-					<height>430.5</height>
-					<aligny>top</aligny>
-					<aspectratio align="left">stretch</aspectratio>
-					<fadetime>300</fadetime>
-					<animation effect="rotate" end="-360" center="auto" time="40000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
-					<animation effect="slide" tween="cubic" start="-180,0" end="0" time="1000" condition="!Player.Paused">Conditional</animation>
-					<texture background="true" diffuse="thumbs/boxes/cdart_mask.png">$VAR[RadioPlayerCover2Var]/$VAR[PlayerArtworkDiscVar]</texture>
-					<bordersize>10</bordersize>
+					
 				</control>
 				<control type="image">
 					<left>-26</left>
@@ -371,8 +353,7 @@
 					<width>460</width>
 					<height>460</height>
 					<aspectratio align="center">scale</aspectratio>
-					<texture diffuse="thumbs/boxes/cdcover_mask2.png" fallback="DefaultAlbumCover.png">$VAR[RadioPlayerCover2Var]</texture>
-					<bordertexture border="28">thumbs/boxes/cd_shadow2.png</bordertexture>
+					<texture diffuse="thumbs/boxes/cdcover_m_2.png" fallback="DefaultCover.jpg">$VAR[RadioPlayerCover2Var]</texture>
 					<bordersize>28</bordersize>
 				</control>
 				<control type="image">
@@ -399,9 +380,9 @@
 					<top>620</top>
 					<height>200</height>
 					<control type="label">
-						<left>760</left>
+						<left>750</left>
 						<top>30</top>
-						<width>700</width>
+						<width>902</width>
 						<height>80</height>
 						<font>font_musicviz</font>
 						<shadowcolor>black</shadowcolor>
@@ -1010,7 +991,7 @@
 							<width>550</width>
 							<height>550</height>
 							<aspectratio align="right">scale</aspectratio>
-							<texture diffuse="thumbs/boxes/cdcover_mask2.png" fallback="DefaultAlbumCover.png">$VAR[RadioPlayerCover2Var]</texture>
+							<texture diffuse="thumbs/boxes/cdcover_mask2.png" fallback="DefaultCover.jpg">$VAR[RadioPlayerCover2Var]</texture>
 							<bordertexture border="28">thumbs/boxes/cd_shadow2.png</bordertexture>
 							<bordersize>28</bordersize>
 							<visible>!Skin.HasSetting(HideMusicVizAlbum)</visible>
@@ -1099,7 +1080,7 @@
 					<top>599</top>
 					<width>2020</width>
 					<height>960</height>
-					<texture colordiffuse="blue" border="40">listpanel_back.png</texture>
+					<texture colordiffuse="$VAR[ThemePanelAudioVideoColor]" border="40">listpanel_back.png</texture>
 				</control>
 				<control type="image">
 					<left>170</left>
@@ -1119,7 +1100,7 @@
 					<width>440</width>
 					<height>440</height>
 					<aspectratio align="center">scale</aspectratio>
-					<texture diffuse="thumbs/boxes/cdcover_mask2.png" fallback="DefaultAlbumCover.png">$INFO[Player.Art(thumb)]</texture>
+					<texture diffuse="thumbs/boxes/cdcover_mask2.png" fallback="DefaultCover.jpg">$INFO[Player.Art(thumb)]</texture>
 					<bordertexture border="28">thumbs/boxes/cd_shadow2.png</bordertexture>
 					<bordersize>28</bordersize>
 				</control>
@@ -1732,8 +1713,8 @@
 					</control>
 					<!-- Album + CD -->
 					<control type="group">
-						<left>1135</left>
-						<top>-12</top>
+						<left>1085</left>
+						<top>2</top>
 						<visible>!String.IsEqual(Skin.String(MusicVizLayout),2)</visible>
 						<animation effect="slide" end="-1090,0" time="0" condition="String.IsEqual(Skin.String(MusicVizLayout),1)">Conditional</animation>
 						<animation effect="slide" end="235,0" time="400" condition="String.IsEmpty(Skin.String(MusicVizLayout)) + Skin.HasSetting(HideMusicVizCD) + Skin.HasSetting(SlideMusicLabelsRight)">Conditional</animation>
@@ -1747,7 +1728,7 @@
 							<aligny>top</aligny>
 							<aspectratio align="left">keep</aspectratio>
 							<fadetime>300</fadetime>
-							<animation effect="rotate" end="-360" center="auto" time="8333" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
+							<animation effect="rotate" end="-360" center="auto" time="40000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
 							<texture background="true" diffuse="thumbs/boxes/cdart_mask.png">$VAR[PlayerArtworkDiscVar]</texture>
 							<bordersize>30</bordersize>
 							<visible>!Skin.HasSetting(HideMusicVizCD)</visible>
@@ -1784,7 +1765,7 @@
 							<width>550</width>
 							<height>550</height>
 							<aspectratio align="right">scale</aspectratio>
-							<texture diffuse="thumbs/boxes/cdcover_mask2.png" fallback="DefaultAlbumCover.png">$INFO[Player.Art(thumb)]</texture>
+							<texture diffuse="thumbs/boxes/cdcover_mask2.png" fallback="DefaultCover.jpg">$INFO[Player.Art(thumb)]</texture>
 							<bordertexture border="28">thumbs/boxes/cd_shadow2.png</bordertexture>
 							<bordersize>28</bordersize>
 							<visible>!Skin.HasSetting(HideMusicVizAlbum)</visible>

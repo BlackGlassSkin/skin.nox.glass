@@ -12,6 +12,7 @@
 	<onload>Skin.SetBool(SkinHelper.EnableMusicArt)</onload>
 	<onload>Skin.SetBool(SkinHelper.EnablePVRThumbs)</onload>
 	<onload>Skin.SetBool(SkinHelper.EnableAddonsLookups)</onload>
+	<onload>Skin.SetBool(SkinHelper.EnableWallBackgrounds)</onload>
 	<menucontrol>9051</menucontrol>
 	<controls>
 		<control type="button" id="64">

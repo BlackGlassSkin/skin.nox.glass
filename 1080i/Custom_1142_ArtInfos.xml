@@ -1,40 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1142" type="dialog">
+    <defaultcontrol>2</defaultcontrol>
 	<controls>
 		<control type="group">
 			<control type="image">
 				<top>110</top>
-				<right>170</right>
-				<width>1599</width>
-				<height>520</height>
+				<right>5</right>
+				<width>1910</width>
+				<height>532</height>
 				<texture>black-back.png</texture>
 			</control>
 			<control type="textbox">
-				<top>139</top>
-				<right>200</right>
-				<width>1180</width>
-				<height>455</height>
+				<top>134</top>
+				<right>30</right>
+				<width>1530</width>
+				<height>487</height>
 				<font>font12</font>
 				<align>left</align>
 				<label>$INFO[Window(Home).Property(SkinHelper.Player.Plot)]</label>
-				<autoscroll time="4600" delay="6000" repeat="6000">!Skin.HasSetting(Enable.AutoScroll)</autoscroll>
-				<animation effect="fade" start="55400" end="100" time="4600" tween="sine" easing="inout">VisibleChange</animation>
+				<autoscroll time="6333" delay="6000" repeat="6000">!Skin.HasSetting(Enable.AutoScroll)</autoscroll>
+				<animation effect="fade" start="1000" end="100" time="3000" tween="sine" easing="inout">VisibleChange</animation>
 				<animation effect="zoom" start="-120" end="100" time="900" center="860" condition="">WindowOpen</animation>
 				<animation effect="zoom" start="100" end="0" time="220" condition="">WindowClose</animation>
 			</control>
 		</control>
+		<control type="scrollbar">
+			<left>1892</left>
+			<top>140</top>
+			<width>12</width>
+			<height>480</height>
+			<onleft>1</onleft>
+			<texturesliderbackground colordiffuse="1AFFFFFF">colors/white50.png</texturesliderbackground>
+			<texturesliderbar colordiffuse="1AFFFFFF">colors/white.png</texturesliderbar>
+			<texturesliderbarfocus colordiffuse="$VAR[ThemeLabelColor]">colors/white.png</texturesliderbarfocus>
+		</control>
 		<control type="group">
 			<control type="image">
 				<top>280</top>
-				<right>1400</right>
+				<right>1570</right>
 				<width>334</width>
 				<height>334</height>
-				<texture>$VAR[PlayerArtworkDiscVar]</texture>
+				<texture background="true" diffuse="thumbs/boxes/cdart_mask.png">$VAR[PlayerArtworkDiscVar]</texture>
 				<aspectratio align="right">scale</aspectratio>
 			</control>
 			<control type="image">
 				<top>115</top>
-				<right>1400</right>
+				<right>1570</right>
 				<width>340</width>
 				<height>340</height>
 				<texture>$VAR[RadioPlayerCover2Var]</texture>

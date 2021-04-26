@@ -2,6 +2,7 @@
 <window>
 	<onload condition="Skin.HasSetting(Disable.MusicPlayerControlButtons)">SetFocus(703)</onload>
 	<onload condition="!Skin.HasSetting(Disable.MusicPlayerControlButtons)">SetFocus(602)</onload>
+	
 	<controls>
 		<control type="group">
 			<animation effect="slide" end="0,-120" time="0" tween="quadratic" condition="Window.IsVisible(selectdialog)">Conditional</animation>
@@ -12,7 +13,7 @@
 				<top>-40</top>
 				<width>110%</width>
 				<height>147</height>
-				<texture border="40" flipy="true" colordiffuse="$VAR[ThemePanelColor]">dialogs/default/bg.png</texture>
+				<texture border="40" flipy="true" colordiffuse="$VAR[ThemePanelAudioVideoColor]">dialogs/default/bg.png</texture>
 				<visible>!Pvr.IsPlayingRadio + !Player.IsInternetStream + !MusicPlayer.Content(livetv)</visible>
 			</control>
 			<control type="image">
@@ -20,7 +21,7 @@
 				<top>-40</top>
 				<width>920</width>
 				<height>150</height>
-				<texture border="33" flipy="false" colordiffuse="$VAR[ThemePanelColor]">dialogs/default/streamplayer.png</texture>
+				<texture border="33" flipy="false" colordiffuse="$VAR[ThemePanelAudioVideoColor]">dialogs/default/streamplayer.png</texture>
 				<visible>Player.IsInternetStream</visible>
 			</control>
 			<control type="grouplist" id="202">

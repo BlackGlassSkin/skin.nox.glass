@@ -1609,14 +1609,14 @@
 			<texture border="20" flipy="true" colordiffuse="$VAR[ThemePanelAudioVideoColor]">dialogs/default/bg.png</texture>
 			<visible>Skin.HasSetting(VideoOSDOnTop)</visible>
 		</control>
-		<control type="image">
+		<!--<control type="image">
 			<left>5%</left>
 			<top>50</top>
 			<width>1250</width>
 			<height>1420</height>
 			<aspectratio>stretch</aspectratio>
 			<texture background="true">$VAR[OSDInfoImage]</texture>
-		</control>
+		</control> -->
 		<control type="group" id="12000">
 			<left>1</left>
 			<animation effect="slide" end="0,-5" time="0" tween="quadratic" condition="!Skin.HasSetting(VideoOSDOnTop) + !String.IsEqual(Skin.String(LiveTV.InfobarType),1) + Window.IsVisible(DialogPVRInfo.xml)">Conditional</animation>
@@ -1941,10 +1941,10 @@
 				<animation effect="zoom" end="110" time="200">Focus</animation>
 				<font/>
 				<label/>
-				<width>75</width>
-				<height>75</height>
+				<width>65</width>
+				<height>65</height>
 				<onclick>Dialog.Close(all,true)</onclick>
-				<onclick>RunScript(script.extendedinfo,info=extendedinfo,name=$INFO[VideoPlayer.Title])</onclick>
+				<onclick>RunScript(script.extendedinfo,info=extendedinfo,name=$INFO[Player.Title])</onclick>
 				<visible>System.HasAddon(script.extendedinfo)</visible>
 			</control>
 		</control>
@@ -3400,7 +3400,7 @@
 			<top>600</top>
 			<animation effect="slide" end="0,-90" time="0" tween="quadratic" condition="Window.IsActive(videoosd) + !Skin.HasSetting(VideoOSDOnTop)">Conditional</animation>
 			<control type="group">
-				<top>-110</top>
+				<top>-100</top>
 				<visible>!VideoPlayer.Content(musicvideos)</visible>
 				<visible>!Skin.HasSetting(Disable.FullscreenPoster)</visible>
 				<control type="image">
@@ -3432,15 +3432,26 @@
 				<left>250</left>
 				<top>25</top>
 				<control type="image" id="999149">
-					<left>1207</left>
-					<top>-125</top>
+					<centerleft>1465</centerleft>
+					<top>-121</top>
 					<width>450</width>
 					<height>260</height>
 					<aspectratio>keep</aspectratio>
 					<texture background="true">$VAR[PlayerArtworkVar]</texture>
 					<visible>!Skin.HasSetting(Disable.FullscreenInfoLogo)</visible>
-					<animation effect="slide" end="0,259" condition="Skin.HasSetting(Disable.FullscreenPoster)">Conditional</animation>
-					<animation effect="slide" end="-1440" condition="Skin.HasSetting(Disable.FullscreenPoster) + !Skin.HasSetting(SwapFullscreenInfo)">Conditional</animation>
+					<animation effect="slide" end="0,269" condition="Skin.HasSetting(Disable.FullscreenPoster)">Conditional</animation>
+					<animation effect="slide" end="-1490" condition="Skin.HasSetting(Disable.FullscreenPoster) + !Skin.HasSetting(SwapFullscreenInfo)">Conditional</animation>
+				</control>
+				<control type="image" id="999150">
+					<centerleft>1410</centerleft>
+					<top>-90</top>
+					<width>450</width>
+					<height>260</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">$VAR[PlayerArtworkLogoVar]</texture>
+					<visible>Skin.HasSetting(Disable.FullscreenInfoLogo)</visible>
+					<animation effect="slide" end="35,229" condition="Skin.HasSetting(Disable.FullscreenPoster)">Conditional</animation>
+					<animation effect="slide" end="-1490" condition="Skin.HasSetting(Disable.FullscreenPoster) + !Skin.HasSetting(SwapFullscreenInfo)">Conditional</animation>
 				</control>
 				<control type="group">
 					<left>150</left>
