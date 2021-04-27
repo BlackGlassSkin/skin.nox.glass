@@ -1691,7 +1691,7 @@
                         <height>468</height>
                         <bordersize>20</bordersize>
                         <bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
-                        <texture diffuse="thumbs/boxes/cdcover_m_2.png" fallback="DefaultVideoCover.png">$VAR[RadioPlayerCover2Var]</texture>
+                        <texture diffuse="thumbs/boxes/cdcover_m_2.png" fallback="DefaultCover.jpg">$VAR[RadioPlayerCover2Var]</texture>
                     </control>
                     <control type="grouplist">
                         <left>640</left>

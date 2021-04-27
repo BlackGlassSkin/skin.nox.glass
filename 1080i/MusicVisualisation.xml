@@ -345,7 +345,6 @@
 					<animation effect="slide" start="-180,0" end="0" time="1000" condition="!Player.Paused">Conditional</animation>
 					<texture background="true" diffuse="thumbs/boxes/cdart_mask.png">$VAR[PlayerArtworkDiscVar]</texture>
 					<bordersize>30</bordersize>
-					
 				</control>
 				<control type="image">
 					<left>-26</left>
@@ -389,6 +388,17 @@
 						<label>$INFO[Window(Home).Property(SkinHelper.Player.Artist)]</label>
 						<scroll>true</scroll>
 						<scrollsuffix>  -  </scrollsuffix>
+					</control>
+					<control type="label">
+						<left>750</left>
+						<top>30</top>
+						<width>902</width>
+						<height>80</height>
+						<font>font_musicviz</font>
+						<shadowcolor>black</shadowcolor>
+						<label>$INFO[Player.Title]</label>
+						<scroll>true</scroll>
+						<visible>String.IsEmpty(Window(Home).Property(SkinHelper.Player.Artist)) + String.IsEmpty(Window(Home).Property(SkinHelper.Player.Title)) + String.IsEmpty(Window(Home).Property(SkinHelper.Player.Album))</visible>SkinHelper.Player.Album)]SkinHelper.Player.Title
 					</control>
 					<control type="image">
 						<left>235</left>
@@ -1083,25 +1093,25 @@
 					<texture colordiffuse="$VAR[ThemePanelAudioVideoColor]" border="40">listpanel_back.png</texture>
 				</control>
 				<control type="image">
-					<left>170</left>
-					<top>607.5</top>
-					<width>445</width>
-					<height>445</height>
+					<left>182</left>
+					<top>592</top>
+					<width>468.4</width>
+					<height>468.4</height>
 					<aligny>top</aligny>
 					<aspectratio align="left">keep</aspectratio>
 					<fadetime>300</fadetime>
 					<animation effect="rotate" end="-360" center="auto" time="40000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
+					<animation effect="slide" start="-180,0" end="0" time="1000" condition="!Player.Paused">Conditional</animation>
 					<texture background="true" diffuse="thumbs/boxes/cdart_mask.png">$VAR[PlayerArtworkDiscVar]</texture>
 					<bordersize>30</bordersize>
 				</control>
 				<control type="image">
-					<left>-20</left>
-					<top>610</top>
-					<width>440</width>
-					<height>440</height>
+					<left>-26</left>
+					<top>595</top>
+					<width>460</width>
+					<height>460</height>
 					<aspectratio align="center">scale</aspectratio>
-					<texture diffuse="thumbs/boxes/cdcover_mask2.png" fallback="DefaultCover.jpg">$INFO[Player.Art(thumb)]</texture>
-					<bordertexture border="28">thumbs/boxes/cd_shadow2.png</bordertexture>
+					<texture diffuse="thumbs/boxes/cdcover_m_2.png" fallback="DefaultCover.jpg">$INFO[Player.Art(thumb)]</texture>
 					<bordersize>28</bordersize>
 				</control>
 				<control type="group">
