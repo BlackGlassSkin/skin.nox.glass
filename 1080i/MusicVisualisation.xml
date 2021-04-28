@@ -1723,10 +1723,10 @@
 					</control>
 					<!-- Album + CD -->
 					<control type="group">
-						<left>1085</left>
-						<top>2</top>
+						<left>1185</left>
+						<top>32</top>
 						<visible>!String.IsEqual(Skin.String(MusicVizLayout),2)</visible>
-						<animation effect="slide" end="-1090,0" time="0" condition="String.IsEqual(Skin.String(MusicVizLayout),1)">Conditional</animation>
+						<animation effect="slide" end="-1205,0" time="0" condition="String.IsEqual(Skin.String(MusicVizLayout),1)">Conditional</animation>
 						<animation effect="slide" end="235,0" time="400" condition="String.IsEmpty(Skin.String(MusicVizLayout)) + Skin.HasSetting(HideMusicVizCD) + Skin.HasSetting(SlideMusicLabelsRight)">Conditional</animation>
 						<animation effect="slide" end="-235,0" time="400" condition="!Skin.HasSetting(HideMusicVizCD) + Skin.HasSetting(HideMusicVizAlbum) + String.IsEqual(Skin.String(MusicVizLayout),1) + Skin.HasSetting(SlideMusicLabelsLeft)">Conditional</animation>
 						<include>VisibleFadeAnimation</include>
@@ -1754,9 +1754,10 @@
 								<align>center</align>
 								<font>fontCDartist</font>
 								<label>$INFO[MusicPlayer.Artist, ,]</label>
-								<animation effect="rotate" end="-360" center="495,275" time="8000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
+								<animation effect="rotate" end="-360" center="495,275" time="40000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
 								<textcolor>black</textcolor>
 								<wrapmultiline>true</wrapmultiline>
+								<visible>!String.IsEmpty(PlayerArtworkDiscVar)</visible>
 							</control>
 							<control type="label">
 								<left>350</left>
@@ -1766,9 +1767,10 @@
 								<align>center</align>
 								<font>fontCDalbum</font>
 								<label>$INFO[MusicPlayer.Album, ,]</label>
-								<animation effect="rotate" end="-360" center="495,275" time="8000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
+								<animation effect="rotate" end="-360" center="495,275" time="40000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
 								<textcolor>black</textcolor>
 								<wrapmultiline>true</wrapmultiline>
+								<visible>!String.IsEmpty(PlayerArtworkDiscVar)</visible>
 							</control>
 						</control>
 						<control type="image">

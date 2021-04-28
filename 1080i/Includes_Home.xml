@@ -2877,13 +2877,13 @@
     </include>
     <include name="FanartTitle">
         <control type="button">
-            <top>1000</top>
+            <top>1046</top>
             <width min="0" max="450">auto</width>
             <font>font10</font>
             <textcolor>FFDFDFDF</textcolor>
             <shadowcolor/>
             <aligny>top</aligny>
-            <textoffsetx>30</textoffsetx>
+            <textoffsetx>10</textoffsetx>
             <textoffsety>5</textoffsety>
             <label>$VAR[FanartTitleVar]</label>
             <texturenofocus border="30,0,30,30">text_shadow.png</texturenofocus>
