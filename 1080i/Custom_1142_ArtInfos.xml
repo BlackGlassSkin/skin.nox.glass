@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1142" type="dialog">
+	<defaultcontrol always="true">45</defaultcontrol>
 	<controls>
 		<control type="group">
 			<control type="image">
@@ -9,7 +10,7 @@
 				<height>532</height>
 				<texture>black-back.png</texture>
 			</control>
-			<control type="textbox" id="2">
+			<control type="textbox">
 				<top>134</top>
 				<right>30</right>
 				<width>1530</width>
@@ -17,28 +18,28 @@
 				<font>font12</font>
 				<align>left</align>
 				<label>$INFO[Window(Home).Property(SkinHelper.Player.Plot)]</label>
-				<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll) + !Control.HasFocus(45)</autoscroll>
+				<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll) + Control.HasFocus(45)</autoscroll>
 				<animation effect="fade" start="1000" end="100" time="3000" tween="sine" easing="inout">VisibleChange</animation>
 				<animation effect="zoom" start="-120" end="100" time="900" center="860" condition="">WindowOpen</animation>
 				<animation effect="zoom" start="100" end="0" time="220" condition="">WindowClose</animation>
 				<pagecontrol>45</pagecontrol>
 			</control>
-		</control>
-		<control type="scrollbar" id="45">
-			<left>1892</left>
-			<top>140</top>
-			<width>12</width>
-			<height>480</height>
-			<onup>PageUp(2)</onup>
-			<ondown>PageUp(2)</ondown>
-			<texturesliderbackground colordiffuse="1AFFFFFF">colors/white50.png</texturesliderbackground>
-			<texturesliderbar colordiffuse="1AFFFFFF">colors/white.png</texturesliderbar>
-			<texturesliderbarfocus colordiffuse="$VAR[ThemeLabelColor]">colors/white.png</texturesliderbarfocus>
+			<control type="scrollbar" id="45">
+				<left>1900</left>
+				<top>140</top>
+				<width>7</width>
+				<height>480</height>
+				<onleft>close</onleft>
+				<onright>close</onright>
+				<texturesliderbackground colordiffuse="1AFFFFFF">colors/white50.png</texturesliderbackground>
+				<texturesliderbar colordiffuse="1AFFFFFF">colors/white.png</texturesliderbar>
+				<texturesliderbarfocus colordiffuse="$VAR[ThemeLabelColor]">colors/white.png</texturesliderbarfocus>
+			</control>
 		</control>
 		<control type="group">
 			<control type="image">
-				<top>280</top>
-				<right>1570</right>
+				<top>290</top>
+				<right>1573</right>
 				<width>334</width>
 				<height>334</height>
 				<texture background="true" diffuse="thumbs/boxes/cdart_mask.png">$VAR[PlayerArtworkDiscVar]</texture>
@@ -53,6 +54,14 @@
 				<aspectratio align="right">scale</aspectratio>
 				<animation effect="zoom" start="-120" end="100" time="900" center="860" condition="">WindowOpen</animation>
 				<animation effect="zoom" start="100" end="0" time="220" condition="">WindowClose</animation>
+			</control>
+			<control type="image">
+				<top>-210</top>
+				<right>1575</right>
+				<width>340</width>
+				<height>340</height>
+				<aspectratio aligny="bottom" align="center">keep</aspectratio>
+				<texture background="true">$VAR[PlayerArtworkLogoVar]</texture>
 			</control>
 		</control>
 	</controls>
