@@ -6,6 +6,7 @@
 	<controls>
 		<control type="group">
 			<top>540</top>
+			
 			<control type="group">
 				<control type="image">
 					<top>-640</top>
@@ -186,10 +187,12 @@
 					<texture colordiffuse="FFD3D3D3">$INFO[ListItem.Rating,flags/rating/3d/,.png]</texture>
 				</control>
 				<control type="image" id="142099">
-					<width>270</width>
-					<include>MediaFlagValues</include>
+					<width>1350</width>
+					<height>1135</height>
+					<left>424</left>
+					<top>190</top>
 					<bordersize>2</bordersize>
-					<texture>$VAR[PathFlagsStudios,.png]</texture>
+					<texture>$INFO[ListItem.Studio,resource://resource.images.studios.white/,.png</texture>
 				</control>
 			</control>
 			<!--   <control type="label">
@@ -260,7 +263,7 @@
 						<!--<include>Window.IsActive(PVRGuideInfo)</include> -->
 					</control>
 					<control type="button" id="122">
-						<label>Extended</label>
+						<label>Embuary TV</label>
 						<align>center</align>
 						<width>240</width>
 						<height>50</height>
@@ -270,8 +273,22 @@
 						<texturefocus border="2" colordiffuse="white">pvrinfo.png</texturefocus>
 						<texturenofocus border="2" colordiffuse="FF909090">pvrinfo.png</texturenofocus>
 						<onclick>Action(Close)</onclick>
-						<onclick>RunScript(script.extendedinfo,info=extendedinfo,name=$INFO[ListItem.Title])</onclick>
-						<visible>System.HasAddon(script.extendedinfo)</visible>
+						<onclick>RunScript(script.embuary.info,call=tv,query=$INFO[ListItem.Title])</onclick>
+						<visible>System.HasAddon(script.embuary.info)</visible>
+					</control>
+					<control type="button" id="123">
+						<label>Embuary Movie</label>
+						<align>center</align>
+						<width>240</width>
+						<height>50</height>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>ffff8000</focusedcolor>
+						<autoscroll>true</autoscroll>
+						<texturefocus border="2" colordiffuse="white">pvrinfo.png</texturefocus>
+						<texturenofocus border="2" colordiffuse="FF909090">pvrinfo.png</texturenofocus>
+						<onclick>Action(Close)</onclick>
+						<onclick>RunScript(script.embuary.info,call=movie,query=$INFO[ListItem.Title])</onclick>
+						<visible>System.HasAddon(script.embuary.info)</visible>
 					</control>
 					<control type="button" id="4">
 						<description>Similar</description>

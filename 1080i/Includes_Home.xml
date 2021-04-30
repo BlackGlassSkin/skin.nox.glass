@@ -1449,7 +1449,6 @@
                             <shadowcolor>black</shadowcolor>
                             <label>$INFO[MusicPlayer.Artist]</label>
                         </control>
-						
 						<!--<control type="label">
                             <width>950</width>
                             <height>40</height>
@@ -1509,14 +1508,6 @@
                         <texture background="true" diffuse="thumbs/boxes/cdart_mask.png">$VAR[PlayerArtworkDiscVar]</texture>
                         <bordersize>30</bordersize>
                     </control>
-					<item id="10">
-							<label>Repos</label>
-							<icon>views/list/DefaultAddonWebSkin.png</icon>
-							<property name="AppsTarget"/>
-							<property name="AppsContent">addons://repos/</property>
-							<property name="AppsSortBy"/>
-							<onclick>ActivateWindow(10040,addons://repos/)</onclick>
-						</item>
                     <control type="image">
                         <top>-66</top>
                         <left>-52</left>

@@ -109,10 +109,10 @@
                 </content>
             </control>
             <control type="scrollbar" id="60">
-                <left>12</left>
-                <top>35</top>
+                <left>7</left>
+                <top>32</top>
                 <width>14</width>
-                <height>488</height>
+                <height>486</height>
                 <onleft>SetProperty(MediaMenu,True,Home)</onleft>
                 <onleft>SetFocus(9050)</onleft>
                 <onright>9000</onright>

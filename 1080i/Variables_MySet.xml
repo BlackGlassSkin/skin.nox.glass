@@ -373,9 +373,9 @@
 		<value>flags/addonstatus/install-pinned.png</value>
 	</variable>
 	<variable name="SkinDefaultLabelWeathericonsVAR">
-		<value condition="String.IsEmpty(Skin.String(weathericons.name))">$LOCALIZE[409]</value>
+		<value condition="String.IsEmpty(Skin.String(weathericons.name))">$LOCALIZE[16018]</value>
 	</variable>
 	<variable name="SkinDefaultLabelWeatherfanartVAR">
-		<value condition="String.IsEmpty(Skin.String(weatherfanart.name))">$LOCALIZE[409]</value>
+		<value condition="String.IsEmpty(Skin.String(weatherfanart.name))">$LOCALIZE[16018]</value>
 	</variable>
 </includes>

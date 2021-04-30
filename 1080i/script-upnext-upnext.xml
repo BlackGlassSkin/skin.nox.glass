@@ -260,14 +260,14 @@
 						<visible>!Window.IsVisible(extendedprogressdialog)</visible>
 						<animation effect="fade" time="150">VisibleChange</animation>
 						<control type="label">
-							<font>font_clock</font>
+							<font>Lirabiefont_Rg35</font>
 							<shadowcolor>text_shadow</shadowcolor>
-							<top>0</top>
+							<top>-300</top>
 							<right>20</right>
 							<height>200</height>
 							<width>600</width>
 							<align>right</align>
-							<label>$INFO[System.Time]</label>
+							<label>$INFO[System.Time(hh:mm:ss)]</label>
 						</control>
 						<control type="label">
 							<right>24</right>

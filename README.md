@@ -61,8 +61,4 @@ http://kim.cherrytv.webd.pl/MultiRepo/All/repository.Kim.Multi/repository.Kim.Mu
 * - [x] __New DialogPVRChannelGuide__
 * - [x] __Lots of changes from the original that I don't remember anymore__
 * - [x] __visualizations, removed or reduced speeds (much faster)__
-<<<<<<< HEAD
-* - [x] __Custom UpNext__
-=======
-* - [x] __Custom UpNext__
->>>>>>> c97c912204666af9972c3744fd9771e20f8bbb3f
+* - [x] __Custom UpNext (Fancy)__
