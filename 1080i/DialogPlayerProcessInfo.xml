@@ -4,7 +4,6 @@
 	<controls>
 		<control type="button" id="5001">
 			<visible allowhiddenfocus="true">false</visible>
-			<onclick>Close</onclick>
 			<onleft>Close</onleft>
 			<onright>Close</onright>
 			<onup>Close</onup>
@@ -21,7 +20,7 @@
 			<top>10</top>
 			<control type="image">
 				<width>1870</width>
-				<height>240</height>
+				<height>260</height>
 				<colordiffuse>CCFFFFFF</colordiffuse>
 				<texture border="50">listpanel_back.png</texture>
 			</control>
@@ -332,7 +331,7 @@
 						<font>Font_Bold24</font>
 						<textcolor>ffcecece</textcolor>
 						<shadowcolor>ff000000</shadowcolor>
-						<info>System.CpuFrequency(used)</info>
+						<info>System.CpuFrequency</info>
 					</control>
 					<control type="progress">
 						<left>200</left>
@@ -377,6 +376,16 @@
 						<righttexture colordiffuse="red" border="0">media/</righttexture>
 						<info>system.memory(used)</info>
 					</control>
+					<control type="label">
+						<width>200</width>
+						<height>17</height>
+						<top>94</top>
+						<font>Font_Bold24</font>
+						<textcolor>ff7993b0</textcolor>
+						<shadowcolor>ff000000</shadowcolor>
+						<label>[UPPERCASE]$LOCALIZE[13271][/UPPERCASE]</label>
+						<visible>!System.Platform.Android</visible>
+					</control>
 				</control>
 				<control type="group">
 					<height>30</height>
@@ -419,47 +428,107 @@
 						<label>$INFO[Player.CacheLevel,,%]</label>
 					</control>
 				</control>
-				<control type="group">
-					<height>30</height>
-					<control type="textbox">
-						<top>20</top>
-						<width>218</width>
-						<font>Font_Bold24</font>
-						<textcolor>ff7993b0</textcolor>
-						<shadowcolor>ff000000</shadowcolor>
-						<label>ALL CORES:</label>
-					</control>
-					<control type="label">
-						<top>-179</top>
-						<left>141</left>
-						<!-- RDZENIE PROCESORA 0,1,2,3 etc.   -->
-						<width>360</width>
-						<height>420</height>
-						<textcolor>ffcecece</textcolor>
-						<shadowcolor>ff000000</shadowcolor>
-						<label>[B]$INFO[System.CoreUsage(0)]   $INFO[System.CoreUsage(1)]   $INFO[System.CoreUsage(2)]   $INFO[System.CoreUsage(3)][CR][CR]$INFO[System.CoreUsage(4)]   $INFO[System.CoreUsage(5)]   $INFO[System.CoreUsage(6)]   $INFO[System.CoreUsage(7)][/B]</label>
-						<font>Font_Bold24</font>
-						<align>center</align>
-					</control>
-					<control type="progress">
-						<top>24</top>
-						<left>200</left>
-						<width>244</width>
-						<height>15</height>
-						<align>right</align>
-						<texturebg colordiffuse="grey" border="2">media/texturebg_border_white.png</texturebg>
-						<lefttexture border="0">media/</lefttexture>
-						<midtexture colordiffuse="blue" border="3">media/processinfo.png</midtexture>
-						<righttexture colordiffuse="red" border="0">media/</righttexture>
-						<info>System.CpuUsage(used)</info>
-					</control>
+			</control>
+			<control type="grouplist">
+				<visible>!System.Platform.Android</visible>
+				<top>180</top>
+				<left>1550</left>
+				<itemgap>10</itemgap>
+				<control type="image">
+					<include content="CPUANIMATION">
+						<param name="Core" value="0"/>
+					</include>
+					<width>200</width>
+					<height>10</height>
+					<texture background="true">media/processinfo.png</texture>
+					<include>System.CoreUsage(0)</include>
+				</control>
+				<control type="image">
+					<include content="CPUANIMATION">
+						<param name="Core" value="1"/>
+					</include>
+					<width>200</width>
+					<height>10</height>
+					<texture background="true">media/processinfo.png</texture>
+				</control>
+				<control type="image">
+					<include content="CPUANIMATION">
+						<param name="Core" value="2"/>
+					</include>
+					<width>200</width>
+					<height>10</height>
+					<texture background="true">media/processinfo.png</texture>
+				</control>
+				<control type="image">
+					<include content="CPUANIMATION">
+						<param name="Core" value="3"/>
+					</include>
+					<width>200</width>
+					<height>10</height>
+					<texture background="true">media/processinfo.png</texture>
+				</control>
+			</control>
+			<control type="grouplist">
+				<visible>!System.Platform.Android</visible>
+				<top>178</top>
+				<left>1550</left>
+				<itemgap>8.5</itemgap>
+				<control type="image">
+					<width>200</width>
+					<height>12</height>
+					<texture background="true" colordiffuse="grey" border="3">media/texturebg_border_white.png</texture>
+				</control>
+				<control type="image">
+					<width>200</width>
+					<height>12</height>
+					<texture background="true" colordiffuse="grey" border="3">media/texturebg_border_white.png</texture>
+				</control>
+				<control type="image">
+					<width>200</width>
+					<height>12</height>
+					<texture background="true" colordiffuse="grey" border="3">media/texturebg_border_white.png</texture>
+				</control>
+				<control type="image">
+					<width>200</width>
+					<height>12</height>
+					<texture background="true" colordiffuse="grey" border="3">media/texturebg_border_white.png</texture>
+				</control>
+			</control>
+			<control type="grouplist">
+				<visible>!System.Platform.Android</visible>
+				<top>173</top>
+				<left>1762</left>
+				<itemgap>1</itemgap>
+				<control type="label">
+					<width>400</width>
+					<height>20</height>
+					<font>font10_cpu</font>
+					<label>(0)  $INFO[System.CoreUsage(0)]%</label>
+				</control>
+				<control type="label">
+					<width>400</width>
+					<height>20</height>
+					<font>font10_cpu</font>
+					<label>(1)  $INFO[System.CoreUsage(1)]%</label>
+				</control>
+				<control type="label">
+					<width>400</width>
+					<height>20</height>
+					<font>font10_cpu</font>
+					<label>(2)  $INFO[System.CoreUsage(2)]%</label>
+				</control>
+				<control type="label">
+					<width>400</width>
+					<height>20</height>
+					<font>font10_cpu</font>
+					<label>(3)  $INFO[System.CoreUsage(3)]%</label>
 				</control>
 			</control>
 		</control>
 		<control type="group">
 			<visible>[[Pvr.IsPlayingTv + Window.IsActive(FullscreenVideo)]  | [Pvr.IsPlayingRadio | Window.IsActive(visualisation)]] + system.getbool(pvrplayback.signalquality) + ![Player.ShowInfo | Window.IsActive(OSDVideoSettings) | Window.IsActive(OSDAudioSettings) | Window.IsActive(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(pvrchannelguide) | Window.IsActive(subtitlesearch) | Window.IsActive(osdcmssettings)]</visible>
 			<left>25</left>
-			<top>250</top>
+			<top>270</top>
 			<control type="image">
 				<width>1870</width>
 				<height>370</height>

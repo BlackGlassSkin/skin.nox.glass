@@ -170,6 +170,22 @@
 							<property name="AppsSortBy">lastupdated</property>
 							<onclick>ActivateWindow(AddonBrowser,return)</onclick>
 						</item>
+						<item id="9">
+							<label>Outdated</label>
+							<icon>views/list/DefaultAddonInfoProvider.png</icon>
+							<property name="AppsTarget"/>
+							<property name="AppsContent">addons://outdated/</property>
+							<property name="AppsSortBy"/>
+							<onclick>ActivateWindow(10040,addons://outdated/)</onclick>
+						</item>
+						<item id="10">
+							<label>Repos</label>
+							<icon>views/list/DefaultAddonWebSkin.png</icon>
+							<property name="AppsTarget"/>
+							<property name="AppsContent">addons://repos/</property>
+							<property name="AppsSortBy"/>
+							<onclick>ActivateWindow(10040,addons://repos/)</onclick>
+						</item>
 						<item id="8">
 							<label>$LOCALIZE[1036]</label>
 							<icon>views/list/DefaultFavourite.png</icon>

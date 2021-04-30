@@ -218,6 +218,7 @@
 					<width>72</width>
 					<height>72</height>
 					<font/>
+					<onclick>Dialog.Close(all,true)</onclick>
 					<onclick>ActivateWindow(1142)</onclick>
 				</control>
 			</control>
@@ -383,6 +384,7 @@
 					<width>68</width>
 					<height>68</height>
 					<font/>
+					<onclick>Dialog.Close(all,true)</onclick>
 					<onclick>ActivateWindow(1142)</onclick>
 				</control>
 				<control type="button" id="711">
@@ -558,6 +560,7 @@
 					<width>68</width>
 					<height>68</height>
 					<font/>
+					<onclick>Dialog.Close(all,true)</onclick>
 					<onclick>ActivateWindow(1142)</onclick>
 				</control>
 				<control type="button" id="711">

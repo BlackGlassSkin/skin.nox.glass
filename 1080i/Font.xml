@@ -187,6 +187,11 @@
 			<size>21</size>
 		</font>
 		<font>
+			<name>font10_cpu</name>
+			<filename>play.regular.ttf</filename>
+			<size>15</size>
+		</font>
+		<font>
 			<name>fontactorpvr</name>
 			<filename>RobotoCondensed-Regular.ttf</filename>
 			<size>27</size>
@@ -566,6 +571,11 @@
 			<name>font10</name>
 			<filename>arial.ttf</filename>
 			<size>18</size>
+		</font>
+		<font>
+			<name>font10_cpu</name>
+			<filename>play.regular.ttf</filename>
+			<size>15</size>
 		</font>
 		<!-- home weather -->
 		<font>
@@ -988,6 +998,11 @@
 			<filename>NotoSans-Regular.ttf</filename>
 			<size>21</size>
 		</font>
+		<font>
+			<name>font10_cpu</name>
+			<filename>play.regular.ttf</filename>
+			<size>15</size>
+		</font>
 		<!-- home weather -->
 		<font>
 			<name>Lirabiefont_Rg35hweather</name>
@@ -1391,6 +1406,11 @@
 			<size>21</size>
 		</font>
 		<font>
+			<name>font10_cpu</name>
+			<filename>play.regular.ttf</filename>
+			<size>15</size>
+		</font>
+		<font>
 			<name>font12</name>
 			<filename>Raleway-Medium.ttf</filename>
 			<size>26</size>
@@ -1791,6 +1811,11 @@
 			<name>font10</name>
 			<filename>UbuntuCondensed-Regular.ttf</filename>
 			<size>21</size>
+		</font>
+		<font>
+			<name>font10_cpu</name>
+			<filename>play.regular.ttf</filename>
+			<size>15</size>
 		</font>
 		<!-- home weather -->
 		<font>
@@ -2230,6 +2255,11 @@
 			<size>21</size>
 		</font>
 		<font>
+			<name>font10_cpu</name>
+			<filename>play.regular.ttf</filename>
+			<size>15</size>
+		</font>
+		<font>
 			<name>font12</name>
 			<filename>FiraSans-Regular.ttf</filename>
 			<size>26</size>
@@ -2631,6 +2661,11 @@
 			<name>font10</name>
 			<filename>CaviarDreams.ttf</filename>
 			<size>21</size>
+		</font>
+		<font>
+			<name>font10_cpu</name>
+			<filename>play.regular.ttf</filename>
+			<size>15</size>
 		</font>
 		<!-- home weather -->
 		<font>
@@ -3067,6 +3102,11 @@
 			<name>font10</name>
 			<filename>play.regular.ttf</filename>
 			<size>21</size>
+		</font>
+		<font>
+			<name>font10_cpu</name>
+			<filename>play.regular.ttf</filename>
+			<size>15</size>
 		</font>
 		<font>
 			<name>font11_compact</name>

@@ -372,4 +372,10 @@
 		<value condition="ListItem.IsAutoUpdateable">flags/addonstatus/install.png</value>
 		<value>flags/addonstatus/install-pinned.png</value>
 	</variable>
+	<variable name="SkinDefaultLabelWeathericonsVAR">
+		<value condition="String.IsEmpty(Skin.String(weathericons.name))">$LOCALIZE[409]</value>
+	</variable>
+	<variable name="SkinDefaultLabelWeatherfanartVAR">
+		<value condition="String.IsEmpty(Skin.String(weatherfanart.name))">$LOCALIZE[409]</value>
+	</variable>
 </includes>

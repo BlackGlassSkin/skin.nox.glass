@@ -44,6 +44,8 @@ http://kim.cherrytv.webd.pl/MultiRepo/All/repository.Kim.Multi/repository.Kim.Mu
 <img src="https://i.ibb.co/KyN3HTg/9.png">
 <img src="https://i.ibb.co/J5Nh81r/1.png">
 <img src="https://i.ibb.co/DV8YLzw/2020-12-11-18h41-22.png">
+
+<img src="https://i.ibb.co/fFs2wBC/screenshot00003.jpg">
 </p>
 
 
@@ -59,3 +61,4 @@ http://kim.cherrytv.webd.pl/MultiRepo/All/repository.Kim.Multi/repository.Kim.Mu
 * - [x] __New DialogPVRChannelGuide__
 * - [x] __Lots of changes from the original that I don't remember anymore__
 * - [x] __visualizations, removed or reduced speeds (much faster)__
+* - [x] __Custom UpNext__

@@ -598,18 +598,18 @@
 			<onclick>ReloadSkin(),silent</onclick>
 		</item>
 		<item>
-			<label>$LOCALIZE[536]</label>
+			<label>$LOCALIZE[31293]</label>
 			<onclick>Dialog.Close(1129)</onclick>
 			<onclick>Skin.SetString(MainMenu.Layout,icons)</onclick>
 			<onclick>Notification([COLOR FF7FFFD4]$LOCALIZE[32049][/COLOR] ,[COLOR green][B]$LOCALIZE[32049][/B][/COLOR],4000])</onclick>
 			<onclick>ReloadSkin(),silent</onclick>
 		</item>
-		<item>
+		<!--<item>
 			<label>$LOCALIZE[31994]</label>
 			<onclick>Dialog.Close(1129)</onclick>
 			<onclick>Skin.SetString(MainMenu.Layout,vertical)</onclick>
 			<onclick>ReloadSkin(),silent</onclick>
-		</item>
+		</item>-->
 	</include>
 	<include name="SelectFanartTimePerImage">
 		<item>

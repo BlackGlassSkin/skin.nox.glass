@@ -65,199 +65,6 @@
                 <include>skinshortcuts-submenu</include>
             </content>
         </control>
-        <!--<control type="group" id="1">
-			<top>-1040</top>
-			<visible>!Player.HasMedia + !String.IsEqual(Container(9000).ListItem.Property(WidgetType.2),weather) + String.IsEqual(Container(9000).ListItem.Property(path),ActivateWindow(Weather)) + !Skin.HasSetting(centermainmenu) + !ControlGroup(90010).HasFocus + Skin.HasSetting(Enable.MyWeather)</visible>
-			<visible>String.IsEmpty(Window.Property(Daily.IsFetched)) + Weather.IsFetched + !String.IsEmpty(Weather.Plugin)</visible>
-			<visible>String.IsEmpty(Container(9000).ListItem.Property(widgetType.2))</visible>
-			<include condition="!String.IsEmpty(Skin.String(Widget.Trans)) + [!Skin.HasSetting(DisableWidgerBackround) | String.IsEmpty(Skin.String(Widget.Trans)]">HomeWidgetFade</include>
-			<control type="image">
-				<top>-38</top>
-				<left>-130</left>
-				<width>120%</width>
-				<height>630</height>
-				<texture border="10" colordiffuse="E6000000">listpanel_back.png</texture>
-				<visible>!Skin.HasSetting(DisableWidgerBackround)</visible>
-			</control>
-			<control type="image">
-				<top>-10</top>
-				<left>70</left>
-				<width>280</width>
-				<height>100</height>
-				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture>$INFO[Window(Weather).Property(WeatherProviderLogo)]</texture>
-			</control>
-			<control type="multiimage">
-				<top>37</top>
-				<left>10</left>
-				<width>410</width>
-				<height>410</height>
-				<imagepath>resource://resource.images.weathericons.hd.animatedmods/$INFO[Window(Weather).Property(Current.FanartCode)]</imagepath>
-				<timeperimage>70</timeperimage>
-				<fadetime>1</fadetime>
-				<randomize>false</randomize>
-			</control>
-			<control type="group" id="2">
-				<left>-10</left>
-				<control type="label">
-					<top>280</top>
-					<width>450</width>
-					<height>330</height>
-					<align>center</align>
-					<font>Lirabiefont_Rg35hweather</font>
-					<textcolor>$VAR[ThemeLabelColor]</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<label>[B]Dzisiaj:[/B] [CR][B]$INFO[Window(Weather).Property(Location)][CR][B]$INFO[System.Date][CR]$INFO[Window(Weather).Property(Day0.Outlook)][CR][B]Min. [COLOR red]$INFO[Window(Weather).Property(Day0.LowTemp)] $INFO[System.TemperatureUnits] [/COLOR][COLOR green]|[/COLOR] Max. [COLOR red]$INFO[Window(Weather).Property(Day0.HighTemp)] $INFO[System.TemperatureUnits][/COLOR][CR]$LOCALIZE[402]: [COLOR red]$INFO[Window(Weather).Property(Current.FeelsLike)]$INFO[System.TemperatureUnits][/COLOR][CR]Wschód [COLOR green]|[/COLOR] Zachód: [COLOR red]$INFO[Window(weather).Property(Today.Sunrise)] [COLOR green]|[/COLOR] $INFO[Window(weather).Property(Today.Sunset)][/COLOR][/B]</label>
-				</control>
-			</control>
-			<control type="group" id="3">
-				<visible>String.IsEmpty(Window.Property(Daily.IsFetched)) + Weather.IsFetched + !String.IsEmpty(Weather.Plugin)</visible>
-				<left>410</left>
-				<control type="multiimage">
-					<top>-8</top>
-					<left>18</left>
-					<width>300</width>
-					<height>300</height>
-					<imagepath>resource://resource.images.weathericons.hd.animatedmods/$INFO[Window(Weather).Property(Day1.FanartCode)]</imagepath>
-					<timeperimage>70</timeperimage>
-					<fadetime>1</fadetime>
-					<randomize>false</randomize>
-				</control>
-				<control type="multiimage">
-					<top>-8</top>
-					<left>315</left>
-					<width>300</width>
-					<height>300</height>
-					<imagepath>resource://resource.images.weathericons.hd.animatedmods/$INFO[Window(Weather).Property(Day2.FanartCode)]</imagepath>
-					<timeperimage>70</timeperimage>
-					<fadetime>1</fadetime>
-					<randomize>false</randomize>
-				</control>
-				<control type="multiimage">
-					<top>-8</top>
-					<left>612</left>
-					<width>300</width>
-					<height>300</height>
-					<imagepath>resource://resource.images.weathericons.hd.animatedmods/$INFO[Window(Weather).Property(Day3.FanartCode)]</imagepath>
-					<timeperimage>70</timeperimage>
-					<fadetime>1</fadetime>
-					<randomize>false</randomize>
-				</control>
-				<control type="multiimage">
-					<top>-8</top>
-					<left>912</left>
-					<width>300</width>
-					<height>300</height>
-					<imagepath>resource://resource.images.weathericons.hd.animatedmods/$INFO[Window(Weather).Property(Day4.FanartCode)]</imagepath>
-					<timeperimage>70</timeperimage>
-					<fadetime>1</fadetime>
-					<randomize>false</randomize>
-				</control>
-				<control type="multiimage">
-					<top>-8</top>
-					<left>1212</left>
-					<width>300</width>
-					<height>300</height>
-					<imagepath>resource://resource.images.weathericons.hd.animatedmods/$INFO[Window(Weather).Property(Day5.FanartCode)]</imagepath>
-					<timeperimage>70</timeperimage>
-					<fadetime>1</fadetime>
-					<randomize>false</randomize>
-				</control>
-				<control type="textbox">
-					<top>255</top>
-					<width>300</width>
-					<height>700</height>
-					<left>20</left>
-					<align>center</align>
-					<font>Lirabiefont_Rg35TEMP</font>
-					<textcolor>grey</textcolor>
-					<label>[COLOR blue][B]$INFO[Window(Weather).Property(Day1.Title)][/B][/COLOR][CR][COLOR blue][B]Temp.[/B][/COLOR] Min. [COLOR blue]$INFO[Window(Weather).Property(Day1.LowTemp)] $INFO[System.TemperatureUnits] [/COLOR]| Max. [COLOR red]$INFO[Window(Weather).Property(Day1.HighTemp)] $INFO[System.TemperatureUnits][/COLOR][CR][COLOR blue][B]$LOCALIZE[32044]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.1.WindSpeed)][/COLOR][COLOR blue][B] $INFO[Window(Weather).Property(Daily.1.WindDirection)][/B][/COLOR][CR][COLOR blue][B]$LOCALIZE[406]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.1.Humidity)][/COLOR][CR][COLOR blue][B]$LOCALIZE[405]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.1.DewPoint)][/COLOR][CR][COLOR blue][B]$LOCALIZE[33030]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.1.Outlook)][/COLOR][CR][COLOR blue][B]$LOCALIZE[1448]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.1.Precipitation)][/COLOR][CR][COLOR blue][B]$LOCALIZE[1376]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.1.Pressure)][/COLOR][CR][COLOR blue][B]$LOCALIZE[32043]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.1.WindDegree)][/COLOR][CR][COLOR blue][B]Ozone[/B]:[/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.1.Ozone)][/COLOR][CR][COLOR blue][B]$LOCALIZE[387][/B]:[/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.1.Cloudiness)][/COLOR]</label>
-					
-				</control>
-				<control type="textbox">
-					<top>255</top>
-					<width>300</width>
-					<height>700</height>
-					<left>315</left>
-					<align>center</align>
-					<font>Lirabiefont_Rg35TEMP</font>
-					<textcolor>grey</textcolor>
-					<label>[COLOR blue][B]$INFO[Window(Weather).Property(Day2.Title)][/B][/COLOR][CR][COLOR blue][B]Temp.[/B][/COLOR] Min. [COLOR blue]$INFO[Window(Weather).Property(Day2.LowTemp)] $INFO[System.TemperatureUnits] [/COLOR]| Max. [COLOR red]$INFO[Window(Weather).Property(Day2.HighTemp)] $INFO[System.TemperatureUnits][/COLOR][CR][COLOR blue][B]$LOCALIZE[32044]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.2.WindSpeed)][/COLOR][COLOR blue][B] $INFO[Window(Weather).Property(Daily.2.WindDirection)][/B][/COLOR][CR][COLOR blue][B]$LOCALIZE[406]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.2.Humidity)][/COLOR][CR][COLOR blue][B]$LOCALIZE[405]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.2.DewPoint)][/COLOR][CR][COLOR blue][B]$LOCALIZE[33030]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.2.Outlook)][/COLOR][CR][COLOR blue][B]$LOCALIZE[1448]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.2.Precipitation)][/COLOR][CR][COLOR blue][B]$LOCALIZE[1376]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.2.Pressure)][/COLOR][CR][COLOR blue][B]$LOCALIZE[32043]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.2.WindDegree)][/COLOR][CR][COLOR blue][B]Ozone[/B]:[/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.2.Ozone)][/COLOR][CR][COLOR blue][B]$LOCALIZE[387][/B]:[/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.2.Cloudiness)][/COLOR]</label>
-					
-				</control>
-				<control type="textbox">
-					<top>255</top>
-					<width>300</width>
-					<height>700</height>
-					<left>611</left>
-					<align>center</align>
-					<font>Lirabiefont_Rg35TEMP</font>
-					<textcolor>grey</textcolor>
-					<label>[COLOR blue][B]$INFO[Window(Weather).Property(Day3.Title)][/B][/COLOR][CR][COLOR blue][B]Temp.[/B][/COLOR] Min. [COLOR blue]$INFO[Window(Weather).Property(Day3.LowTemp)] $INFO[System.TemperatureUnits] [/COLOR]| Max. [COLOR red]$INFO[Window(Weather).Property(Day3.HighTemp)] $INFO[System.TemperatureUnits][/COLOR][CR][COLOR blue][B]$LOCALIZE[32044]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.3.WindSpeed)][/COLOR][COLOR blue][B] $INFO[Window(Weather).Property(Daily.3.WindDirection)][/B][/COLOR][CR][COLOR blue][B]$LOCALIZE[406]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.3.Humidity)][/COLOR][CR][COLOR blue][B]$LOCALIZE[405]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.3.DewPoint)][/COLOR][CR][COLOR blue][B]$LOCALIZE[33030]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.3.Outlook)][/COLOR][CR][COLOR blue][B]$LOCALIZE[1448]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.3.Precipitation)][/COLOR][CR][COLOR blue][B]$LOCALIZE[1376]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.3.Pressure)][/COLOR][CR][COLOR blue][B]$LOCALIZE[32043]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.3.WindDegree)][/COLOR][CR][COLOR blue][B]Ozone[/B]:[/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.3.Ozone)][/COLOR][CR][COLOR blue][B]$LOCALIZE[387][/B]:[/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.3.Cloudiness)][/COLOR]</label>
-					
-				</control>
-				<control type="textbox">
-					<top>255</top>
-					<width>300</width>
-					<height>700</height>
-					<left>906</left>
-					<align>center</align>
-					<font>Lirabiefont_Rg35TEMP</font>
-					<textcolor>grey</textcolor>
-					<label>[COLOR blue][B]$INFO[Window(Weather).Property(Day4.Title)][/B][/COLOR][CR][COLOR blue][B]Temp.[/B][/COLOR] Min. [COLOR blue]$INFO[Window(Weather).Property(Day4.LowTemp)] $INFO[System.TemperatureUnits] [/COLOR]| Max. [COLOR red]$INFO[Window(Weather).Property(Day4.HighTemp)] $INFO[System.TemperatureUnits][/COLOR][CR][COLOR blue][B]$LOCALIZE[32044]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.4.WindSpeed)][/COLOR][COLOR blue][B] $INFO[Window(Weather).Property(Daily.4.WindDirection)][/B][/COLOR][CR][COLOR blue][B]$LOCALIZE[406]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.4.Humidity)][/COLOR][CR][COLOR blue][B]$LOCALIZE[405]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.4.DewPoint)][/COLOR][CR][COLOR blue][B]$LOCALIZE[33030]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.4.Outlook)][/COLOR][CR][COLOR blue][B]$LOCALIZE[1448]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.4.Precipitation)][/COLOR][CR][COLOR blue][B]$LOCALIZE[1376]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.4.Pressure)][/COLOR][CR][COLOR blue][B]$LOCALIZE[32043]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.4.WindDegree)][/COLOR][CR][COLOR blue][B]Ozone[/B]:[/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.4.Ozone)][/COLOR][CR][COLOR blue][B]$LOCALIZE[387][/B]:[/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.4.Cloudiness)][/COLOR]</label>
-					
-				</control>
-				<control type="textbox">
-					<top>255</top>
-					<width>300</width>
-					<height>700</height>
-					<left>1206</left>
-					<align>center</align>
-					<font>Lirabiefont_Rg35TEMP</font>
-					<textcolor>grey</textcolor>
-					<label>[COLOR blue][B]$INFO[Window(Weather).Property(Day5.Title)][/B][/COLOR][CR][COLOR blue][B]Temp.[/B][/COLOR] Min. [COLOR blue]$INFO[Window(Weather).Property(Day5.LowTemp)] $INFO[System.TemperatureUnits] [/COLOR]| Max. [COLOR red]$INFO[Window(Weather).Property(Day5.HighTemp)] $INFO[System.TemperatureUnits][/COLOR][CR][COLOR blue][B]$LOCALIZE[32044]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.5.WindSpeed)][/COLOR][COLOR blue][B] $INFO[Window(Weather).Property(Daily.5.WindDirection)][/B][/COLOR][CR][COLOR blue][B]$LOCALIZE[406]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.5.Humidity)][/COLOR][CR][COLOR blue][B]$LOCALIZE[405]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.5.DewPoint)][/COLOR][CR][COLOR blue][B]$LOCALIZE[33030]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.5.Outlook)][/COLOR][CR][COLOR blue][B]$LOCALIZE[1448]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.5.Precipitation)][/COLOR][CR][COLOR blue][B]$LOCALIZE[1376]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.5.Pressure)][/COLOR][CR][COLOR blue][B]$LOCALIZE[32043]:[/B][/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.5.WindDegree)][/COLOR][CR][COLOR blue][B]Ozone[/B]:[/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.5.Ozone)][/COLOR][CR][COLOR blue][B]$LOCALIZE[387][/B]:[/COLOR] [COLOR red]$INFO[Window(Weather).Property(Daily.5.Cloudiness)][/COLOR]</label>
-					
-				</control>
-			</control>
-			<control type="group" id="4">
-				<top>-2.2</top>
-				<control type="image">
-					<left>430</left>
-					<width>1</width>
-					<height>593</height>
-					<texture colordiffuse="$VAR[WidgetHighlightBarColor]">separator_vertical.png</texture>
-					<visible>!Skin.HasSetting(DisableWidgerBackround)</visible>
-				</control>
-				<control type="image">
-					<left>726</left>
-					<width>1</width>
-					<height>593</height>
-					<texture colordiffuse="$VAR[WidgetHighlightBarColor]">separator_vertical.png</texture>
-					<visible>!Skin.HasSetting(DisableWidgerBackround)</visible>
-				</control>
-				<control type="image">
-					<left>1020</left>
-					<width>1</width>
-					<height>593</height>
-					<texture colordiffuse="$VAR[WidgetHighlightBarColor]">separator_vertical.png</texture>
-					<visible>!Skin.HasSetting(DisableWidgerBackround)</visible>
-				</control>
-				<control type="image">
-					<left>1318</left>
-					<width>1</width>
-					<height>593</height>
-					<texture colordiffuse="$VAR[WidgetHighlightBarColor]">separator_vertical.png</texture>
-					<visible>!Skin.HasSetting(DisableWidgerBackround)</visible>
-				</control>
-				<control type="image">
-					<left>1615</left>
-					<width>1</width>
-					<height>593</height>
-					<texture colordiffuse="$VAR[WidgetHighlightBarColor]">separator_vertical.png</texture>
-					<visible>!Skin.HasSetting(DisableWidgerBackround)</visible>
-				</control>
-			</control> 
-		</control>-->
         <control type="button">
             <left>15</left>
             <top>8</top>
@@ -1581,6 +1388,7 @@
                     <width>1391</width>
                     <height>1391</height>
                     <animation effect="slide" tween="sine" start="0,180" end="1930,-170" time="0" condition="Skin.HasSetting(centermainmenu) + !String.IsEqual(Skin.String(MainMenu.Layout),vertical)">Conditional</animation>
+					<animation effect="slide" tween="sine" start="0,180" end="1660,-30" time="0" condition="!Skin.HasSetting(centermainmenu) + !String.IsEmpty(Skin.String(MainMenu.Layout))">Conditional</animation>
                     <animation effect="rotate" end="-360" center="auto" time="40000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
                     <animation effect="fade" start="1870,0" end="0,0" delay="0" time="0">Conditional</animation>
                     <texture background="true" colordiffuse="D9666666" diffuse="thumbs/boxes/cdart_mask.png">$VAR[PlayerArtworkDiscVar]</texture>
@@ -1600,12 +1408,12 @@
                     <top>82</top>
                     <visible>!Player.IsInternetStream + !VideoPlayer.Content(livetv)</visible>
                     <control type="image">
-                        <left>90</left>
-                        <top>-30</top>
+                        <left>120</left>
+                        <top>-28</top>
                         <width>360</width>
                         <height>360</height>
                         <aligny>top</aligny>
-                        <aspectratio align="left">keep</aspectratio>
+                        <align>left</align>
                         <fadetime>300</fadetime>
                         <animation effect="rotate" end="-360" center="auto" time="30000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
                         <texture background="true" diffuse="thumbs/boxes/cdart_mask.png">$VAR[PlayerArtworkDiscVar]</texture>
@@ -1617,16 +1425,32 @@
                         <width>356</width>
                         <height>356</height>
                         <aspectratio align="center">scale</aspectratio>
-                        <texture diffuse="thumbs/boxes/cdcover_mask2.png" fallback="DefaultAlbumCover.png">$VAR[RadioPlayerCover2Var]</texture>
-                        <bordertexture border="28">thumbs/boxes/cd_shadow2.png</bordertexture>
+                        <texture diffuse="thumbs/boxes/cdcover_m_2.png" fallback="DefaultCover.jpg">$VAR[RadioPlayerCover2Var]</texture>
                         <bordersize>28</bordersize>
                     </control>
                     <control type="grouplist">
-                        <left>430</left>
+                        <left>490</left>
                         <height>300</height>
                         <itemgap>10</itemgap>
                         <align>center</align>
                         <control type="label">
+                            <width>950</width>
+                            <height>40</height>
+                            <font>font48</font>
+                            <textcolor>white2</textcolor>
+                            <shadowcolor>black</shadowcolor>
+                            <label>$INFO[MusicPlayer.TrackNumber,,. ]$INFO[MusicPlayer.Title]</label>
+                        </control>
+                        <control type="label">
+                            <width>950</width>
+                            <height>40</height>
+                            <font>font15_title</font>
+                            <textcolor>$VAR[ThemeHomeLabelColor]</textcolor>
+                            <shadowcolor>black</shadowcolor>
+                            <label>$INFO[MusicPlayer.Artist]</label>
+                        </control>
+						
+						<!--<control type="label">
                             <width>950</width>
                             <height>40</height>
                             <font>font48</font>
@@ -1641,7 +1465,8 @@
                             <textcolor>$VAR[ThemeHomeLabelColor]</textcolor>
                             <shadowcolor>black</shadowcolor>
                             <label>$VAR[MusicPlayerAtistTitleVar]</label>
-                        </control>
+                        </control>-->
+						
                         <control type="label">
                             <width>950</width>
                             <height>40</height>
@@ -1678,12 +1503,20 @@
                         <width>498</width>
                         <height>498</height>
                         <aligny>top</aligny>
-                        <aspectratio align="left">keep</aspectratio>
+                        <align>left</align>
                         <fadetime>300</fadetime>
                         <animation effect="rotate" end="-360" center="auto" time="30000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
                         <texture background="true" diffuse="thumbs/boxes/cdart_mask.png">$VAR[PlayerArtworkDiscVar]</texture>
                         <bordersize>30</bordersize>
                     </control>
+					<item id="10">
+							<label>Repos</label>
+							<icon>views/list/DefaultAddonWebSkin.png</icon>
+							<property name="AppsTarget"/>
+							<property name="AppsContent">addons://repos/</property>
+							<property name="AppsSortBy"/>
+							<onclick>ActivateWindow(10040,addons://repos/)</onclick>
+						</item>
                     <control type="image">
                         <top>-66</top>
                         <left>-52</left>
@@ -2214,7 +2047,7 @@
                     <width>2999</width>
                     <height>1800</height>
                     <texture flipx="false" colordiffuse="black">views/myflix/fanart_diffuse_left.png</texture>
-                    <visible>Skin.HasSetting(Enable.MyWeatherFanartCode) + !String.IsEmpty(Container(9000).ListItem.Property(widgetType.1))</visible>
+                    <visible>Skin.HasSetting(Enable.MyWeatherFanartCode) + !String.IsEmpty(Container(9000).ListItem.Property(widgetType.1.weather))</visible>
                 </control>
                 <control type="multiimage">
                     <top>30</top>
@@ -2894,7 +2727,7 @@
             <animation effect="slide" end="0,40" time="300" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(MainMenu.Layout),vertical)">Conditional</animation>
             <visible>![Player.HasAudio + Skin.HasSetting(Enable.ArtistSlideshowOnHome) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))]</visible>
             <visible>![ControlGroup(90010).HasFocus() | ControlGroup(90020).HasFocus()] | [!String.IsEmpty(Container(9000).ListItem.Property(widgetDisableFanart)) + ControlGroup(90010).HasFocus() | !ControlGroup(90010).HasFocus()] + [!String.IsEmpty(Container(9000).ListItem.Property(widgetDisableFanart.2)) + ControlGroup(90020).HasFocus() | !ControlGroup(90020).HasFocus()]</visible>
-            <visible>[String.Contains(Container(9000).ListItem.Property(background),i:playlist) | String.EndsWith(Container(9000).ListItem.Property(background),.Fanart)] + !String.IsEqual(Container(9000).ListItem.Property(background),Weather.Fanart) + ![Player.HasVideo + !Skin.HasSetting(Disable.ShowBackgroundVideo)]</visible>
+            <visible>!Player.IsInternetStream + [String.Contains(Container(9000).ListItem.Property(background),i:playlist) | String.EndsWith(Container(9000).ListItem.Property(background),.Fanart)] + !String.IsEqual(Container(9000).ListItem.Property(background),Weather.Fanart) + ![Player.HasVideo + !Skin.HasSetting(Disable.ShowBackgroundVideo)]</visible>
         </control>
     </include>
 </includes>

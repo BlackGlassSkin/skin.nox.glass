@@ -617,14 +617,14 @@
 						<control type="button" id="6007">
 							<include>SettingsButtonCommonValues</include>
 							<label>$LOCALIZE[31470]</label>
-							<label2>[COLOR $VAR[ThemeLabelColor]]$INFO[Skin.String(weatherfanart.name)][/COLOR]</label2>
+							<label2>[COLOR $VAR[ThemeLabelColor]]$INFO[Skin.String(weatherfanart.name)]$VAR[SkinDefaultLabelWeatherfanartVAR][/COLOR]</label2>
 							<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
 							<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=weatherfanart&amp;type=resource.images.weatherfanart)</onclick>
 						</control>
 						<control type="button" id="6008">
 							<include>SettingsButtonCommonValues</include>
 							<label>$LOCALIZE[31471]</label>
-							<label2>[COLOR $VAR[ThemeLabelColor]]$INFO[Skin.String(weathericons.name)][/COLOR]</label2>
+							<label2>[COLOR $VAR[ThemeLabelColor]]$INFO[Skin.String(weathericons.name)]$VAR[SkinDefaultLabelWeathericonsVAR][/COLOR]</label2>
 							<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
 							<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=weathericons&amp;type=resource.images.weathericons)</onclick>
 						</control>
@@ -639,6 +639,7 @@
 							<include>SettingsButtonCommonValues</include>
 							<label>$LOCALIZE[32009]</label>
 							<onclick>Skin.ToggleSetting(Enable.MyWeatherFanartCode)</onclick>
+							<onclick>RunScript(script.image.resource.select,property=weatherfanart&amp;type=resource.images.weatherfanart)</onclick>
 							<selected>Skin.HasSetting(Enable.MyWeatherFanartCode)</selected>
                             <visible>Skin.HasSetting(Enable.MyWeather)</visible>
 						</control>

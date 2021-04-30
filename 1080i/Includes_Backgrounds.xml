@@ -168,7 +168,7 @@
 			<imagepath background="true" colordiffuse="$VAR[ThemeWallpapersColor]">$VAR[HomeBackgroundVar]</imagepath>
 			<include>MultiImageTime</include>
 			<fadetime>1300</fadetime>
-			<visible>![Player.HasAudio + Skin.HasSetting(Enable.ArtistSlideshowOnHome) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image)) + String.IsEmty(VizBackgroundVar)]</visible>
+			<visible>![Player.IsInternetStream + Player.HasAudio + Skin.HasSetting(Enable.ArtistSlideshowOnHome) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image)) + String.IsEmty(VizBackgroundVar)]</visible>
 		</control>
 		<control type="image">
 			<include condition="Skin.HasSetting(Enable.AnimatedBackgrounds)">AnimatedBackgroundAnimation</include>
@@ -180,12 +180,23 @@
 		<control type="multiimage">
 			<include>FullscreenDimensions</include>
 			<include condition="Skin.HasSetting(Enable.AnimatedBackgrounds)">AnimatedBackgroundAnimation</include>
+			<imagepath background="true" colordiffuse="FF666666">$INFO[Window(Visualisation).Property(ArtistSlideshow.Image)]</imagepath>
+			<include>MultiImageTime</include>
+			<fadetime>1300</fadetime>
+			<visible>![Player.IsInternetStream + Player.HasAudio + Skin.HasSetting(Enable.ArtistSlideshowOnHome) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image)) + !String.IsEmty(VizBackgroundVar)]</visible>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),music)</visible>
+		</control>
+		<!-- STREAM -->
+		<control type="multiimage">
+			<include>FullscreenDimensions</include>
+			<include condition="Skin.HasSetting(Enable.AnimatedBackgrounds)">AnimatedBackgroundAnimation</include>
 			<imagepath background="true" colordiffuse="FF666666">$VAR[VizBackgroundVar]</imagepath>
 			<include>MultiImageTime</include>
 			<fadetime>1300</fadetime>
-			<visible>![Player.HasAudio + Skin.HasSetting(Enable.ArtistSlideshowOnHome) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image)) + !String.IsEmty(VizBackgroundVar)]</visible>
+			<visible>Player.IsInternetStream + ![Skin.HasSetting(Enable.ArtistSlideshowOnHome) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image)) + !String.IsEmty(VizBackgroundVar)]</visible>
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),music)</visible>
-		</control> <!-- zmiany -->
+		</control>
+		<!-- STREAM -->
 		<control type="image">
 			<include condition="Skin.HasSetting(Enable.AnimatedBackgrounds)">AnimatedBackgroundAnimation</include>
 			<fadetime>2000</fadetime>
@@ -193,7 +204,6 @@
 			<texture background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow.Image)]</texture>
 			<visible>Player.HasAudio + Skin.HasSetting(Enable.ArtistSlideshowOnHome) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image)) + !String.IsEmty(ArtistSlideshow.Image)</visible>
 		</control>
-		
 		<!--<control type="image">
 			<include condition="Skin.HasSetting(Enable.AnimatedBackgrounds)">AnimatedBackgroundAnimation</include>
 			<fadetime>2000</fadetime>

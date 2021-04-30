@@ -339,7 +339,7 @@
 					<width>468.4</width>
 					<height>468.4</height>
 					<aligny>top</aligny>
-					<aspectratio align="left">keep</aspectratio>
+					<align>left</align>
 					<fadetime>300</fadetime>
 					<animation effect="rotate" end="-360" center="auto" time="40000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
 					<animation effect="slide" start="-180,0" end="0" time="1000" condition="!Player.Paused">Conditional</animation>
@@ -962,7 +962,7 @@
 							<width>545</width>
 							<height>545</height>
 							<aligny>top</aligny>
-							<aspectratio align="left">keep</aspectratio>
+							<align>left</align>
 							<fadetime>300</fadetime>
 							<animation effect="rotate" end="-360" center="auto" time="40000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
 							<texture background="true" diffuse="thumbs/boxes/cdart_mask.png">$VAR[PlayerArtworkDiscVar]</texture>
@@ -1098,7 +1098,7 @@
 					<width>468.4</width>
 					<height>468.4</height>
 					<aligny>top</aligny>
-					<aspectratio align="left">keep</aspectratio>
+					<align>left</align>
 					<fadetime>300</fadetime>
 					<animation effect="rotate" end="-360" center="auto" time="40000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
 					<animation effect="slide" start="-180,0" end="0" time="1000" condition="!Player.Paused">Conditional</animation>
@@ -1736,7 +1736,7 @@
 							<width>545</width>
 							<height>545</height>
 							<aligny>top</aligny>
-							<aspectratio align="left">keep</aspectratio>
+							<align>left</align>
 							<fadetime>300</fadetime>
 							<animation effect="rotate" end="-360" center="auto" time="40000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
 							<texture background="true" diffuse="thumbs/boxes/cdart_mask.png">$VAR[PlayerArtworkDiscVar]</texture>
