@@ -186,6 +186,10 @@
 			<visible>![Player.IsInternetStream + Player.HasAudio + Skin.HasSetting(Enable.ArtistSlideshowOnHome) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image)) + !String.IsEmty(VizBackgroundVar)]</visible>
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),music)</visible>
 		</control>
+<<<<<<< HEAD
+=======
+		<!-- zmiany -->
+>>>>>>> c97c912204666af9972c3744fd9771e20f8bbb3f
 		<!-- STREAM -->
 		<control type="multiimage">
 			<include>FullscreenDimensions</include>
