@@ -62,3 +62,4 @@ http://kim.cherrytv.webd.pl/MultiRepo/All/repository.Kim.Multi/repository.Kim.Mu
 * - [x] __Lots of changes from the original that I don't remember anymore__
 * - [x] __visualizations, removed or reduced speeds (much faster)__
 * - [x] __Custom UpNext (Fancy)__
+* - [x] __Custom upnext-stillwatching (Fancy)__

@@ -4,6 +4,12 @@
 	<onload>Dialog.Close(fullscreeninfo,true)</onload>
 	<onload>Dialog.Close(videoosd,true)</onload>
 	<controls>
+		<control type="image">
+			<top>0</top>
+			<width>100%</width>
+			<height>1080</height>
+			<texture colordiffuse="F2000000">media/upnext/bg.png</texture>
+		</control>
 		<control type="group">
 			<animation type="WindowOpen" reversible="false">
 				<effect type="fade" start="0" end="100" time="0"/>
@@ -17,10 +23,11 @@
 				<height>181</height>
 				<!-- Background -->
 				<control type="image">
-					<top>0</top>
-					<width>100%</width>
-					<height>500</height>
-					<texture colordiffuse="dd000000">media/upnext/bg.png</texture>
+					<top>-60</top>
+					<left>-30</left>
+					<width>110%</width>
+					<height>700</height>
+					<texture colordiffuse="FA000000">homewidgets/list_shadow.png</texture>
 				</control>
 				<!-- Thumb -->
 				<control type="group">
@@ -53,58 +60,66 @@
 						<visible>String.IsEmpty(Window.Property(thumb)) + String.IsEmpty(Window.Property(landscape)) + String.IsEmpty(Window.Property(fanart))</visible>
 					</control>
 					<control type="image">
-					    <left>1275</left>
-						<top>25</top>
-						<width>620</width>
-						<height>421</height>
-						<texture>$INFO[Window.Property(landscape)]</texture>
+						<left>902</left>
+						<top>-240</top>
+						<width>1000</width>
+						<height>570</height>
+						<texture diffuse="custom\fanart_diffuse.png">$INFO[Window.Property(landscape)]</texture>
 						<aspectratio>scale</aspectratio>
 					</control>
 					<control type="image">
-						<left>1275</left>
+						<left>1279</left>
 						<top>25</top>
 						<width>620</width>
 						<height>421</height>
-						<texture>$INFO[Window.Property(fanart)]</texture>
+						<texture diffuse="custom\fanart_diffuse.png">$INFO[Window.Property(fanart)]</texture>
 						<aspectratio>scale</aspectratio>
 						<visible>String.IsEmpty(Window.Property(landscape))</visible>
 					</control>
 					<control type="image">
-						<left>1275</left>
+						<left>1279</left>
 						<top>25</top>
 						<width>620</width>
 						<height>421</height>
-						<texture>$INFO[Window.Property(thumb)]</texture>
+						<texture diffuse="custom\fanart_diffuse.png">$INFO[Window.Property(thumb)]</texture>
 						<aspectratio>scale</aspectratio>
 						<visible>String.IsEmpty(Window.Property(landscape)) + String.IsEmpty(Window.Property(fanart))</visible>
 					</control>
 					<control type="image">
-						<left>550</left>
-						<top>3</top>
-						<width>370</width>
-						<height>190</height>
-						<align>right</align>
-						<aspectratio>stretch</aspectratio>
-						<texture>$INFO[Window.Property(clearart)]</texture>
+						<left>30</left>
+						<top>-15</top>
+						<width>300</width>
+						<height>421</height>
+						<texture>$INFO[Window.Property(poster)]</texture>
 					</control>
+					<!--<control type="image">
+						<left>550</left>
+						<top>280</top>
+						<width>470</width>
+						<height>200</height>
+						<align>right</align>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[Window.Property(clearart)]</texture>
+					</control> -->
 					<control type="image">
-						<left>10</left>
-						<top>350</top>
+						<left>30</left>
+						<top>-170</top>
 						<width>300</width>
 						<height>100</height>
 						<aspectratio>scale</aspectratio>
 						<texture>$INFO[Window.Property(clearlogo)]</texture>
 					</control>
 					<control type="progress" id="3014">
-						<width>250</width>
-						<top>136</top>
-						<height>10</height>
+						<top>405</top>
+						<left>30</left>
+						<width>300</width>
+						<height>16</height>
 						<reveal>true</reveal>
 						<righttexture/>
 						<overlaytexture/>
 						<lefttexture/>
-						<texturebg colordiffuse="$VAR[ThemeLabelColorProgres]" border="3">new_pvr/texturebg_border_white.png</texturebg>
-						<midtexture colordiffuse="$VAR[ThemeLabelColorProgresFrame]" border="1">new_pvr/texturebg_white.png</midtexture>
+						<texturebg colordiffuse="C43385ff" border="8">new_pvr/texturebg_border_white.png</texturebg>
+						<midtexture colordiffuse="C480b3ff" border="1">new_pvr/texturebg_white.png</midtexture>
 					</control>
 				</control>
 				<!-- Labels -->
@@ -130,7 +145,7 @@
 						<font>font12</font>
 						<textcolor>eeffffff</textcolor>
 						<shadowcolor>00000000</shadowcolor>
-						<label>To assist with skinning there is a developer mode setting in the settings which will show the selected window (up next/upnextsimple/stillwatching/stillwatchingsimple) immediately upon playback of any media using dummy data (Game of Thrones) and will simply close when any of the buttons are pressed.</label>
+						<label>$INFO[Window.Property(plot)]</label>
 					</control>
 					<!-- Details -->
 					<control type="grouplist">
@@ -140,7 +155,7 @@
 						<itemgap>0</itemgap>
 						<control type="label">
 							<width>auto</width>
-							<height>30</height>
+							<height>35</height>
 							<aligny>center</aligny>
 							<font>font12</font>
 							<textcolor>eeffffff</textcolor>
@@ -159,11 +174,11 @@
 							<visible>!String.IsEmpty(Window.Property(year))</visible>
 						</control>
 						<control type="image">
-							<width>19</width>
-							<height>19</height>
-							<aspect>keep</aspect>
-							<texture colordiffuse="FFFF4081">media/upnext/star.png</texture>
-							<animation effect="slide" end="0,8" time="0" condition="true">Conditional</animation>
+							<width>270</width>
+							<height>44</height>
+							<aspectratio scalediffuse="false" align="left" aligny="top">keep</aspectratio>
+							<texture colordiffuse="FFff9900">$INFO[Window.Property(rating),flags/rating/3d/,.png]</texture>
+							<animation effect="slide" end="-3,6" time="0" condition="true">Conditional</animation>
 							<visible>!String.IsEmpty(Window.Property(rating))</visible>
 						</control>
 						<control type="label">
@@ -261,14 +276,14 @@
 						<visible>!Window.IsVisible(extendedprogressdialog)</visible>
 						<animation effect="fade" time="150">VisibleChange</animation>
 						<control type="label">
-							<font>font_clock</font>
+							<font>Lirabiefont_Rg35</font>
 							<shadowcolor>text_shadow</shadowcolor>
-							<top>0</top>
+							<top>-300</top>
 							<right>20</right>
 							<height>200</height>
 							<width>600</width>
 							<align>right</align>
-							<label>$INFO[System.Time]</label>
+							<label>$INFO[System.Time(hh:mm:ss)]</label>
 						</control>
 						<control type="label">
 							<right>24</right>

@@ -63,7 +63,7 @@
 						<left>902</left>
 						<top>-240</top>
 						<width>1000</width>
-					<height>570</height>
+						<height>570</height>
 						<texture diffuse="custom\fanart_diffuse.png">$INFO[Window.Property(landscape)]</texture>
 						<aspectratio>scale</aspectratio>
 					</control>
@@ -85,7 +85,6 @@
 						<aspectratio>scale</aspectratio>
 						<visible>String.IsEmpty(Window.Property(landscape)) + String.IsEmpty(Window.Property(fanart))</visible>
 					</control>
-					
 					<control type="image">
 						<left>30</left>
 						<top>-15</top>
@@ -111,7 +110,7 @@
 						<texture>$INFO[Window.Property(clearlogo)]</texture>
 					</control>
 					<control type="progress" id="3014">
-					    <top>405</top>
+						<top>405</top>
 						<left>30</left>
 						<width>300</width>
 						<height>16</height>
@@ -186,10 +185,10 @@
 							<visible>!String.IsEmpty(Window.Property(year))</visible>
 						</control>
 						<control type="image">
-							<width>219</width>
-							<height>24</height>
-							<aspect>keep</aspect>
-							<texture colordiffuse="FFD3D3D3">$INFO[Window.Property(rating),flags/rating/3d/,.png]</texture>
+							<width>270</width>
+							<height>44</height>
+							<aspectratio scalediffuse="false" align="left" aligny="top">keep</aspectratio>
+							<texture colordiffuse="FFff9900">$INFO[Window.Property(rating),flags/rating/3d/,.png]</texture>
 							<animation effect="slide" end="-3,6" time="0" condition="true">Conditional</animation>
 							<visible>!String.IsEmpty(Window.Property(rating))</visible>
 						</control>

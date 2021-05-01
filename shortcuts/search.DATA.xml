@@ -1,11 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<shortcuts>
-	<shortcut>
-		<defaultID>noid</defaultID>
-		<label>wiew changer</label>
-		<label2 />
-		<icon />
-		<thumb />
-		<action>ActivateWindow(1145)</action>
-	</shortcut>
-</shortcuts>
+<shortcuts />

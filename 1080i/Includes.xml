@@ -1578,18 +1578,6 @@
 				<onclick>ActivateWindow(1115)</onclick>
 				<oninfo>ActivateWindow(1115)</oninfo>
 			</control>
-			<control type="button" id="122">
-				<texturefocus colordiffuse="$VAR[AVButtonColorFo]">osd/buttons/extended.png</texturefocus>
-				<texturenofocus colordiffuse="$VAR[AVButtonColorNoFo]">osd/buttons/extended.png</texturenofocus>
-				<animation effect="zoom" end="110" time="200">Focus</animation>
-				<font/>
-				<label/>
-				<width>70</width>
-				<height>70</height>
-				<onclick>Dialog.Close(all,true)</onclick>
-				<onclick>RunScript(script.extendedinfo,info=extendedinfo,name=$ESCINFO[Player.Title])</onclick>
-				<visible>System.HasAddon(script.extendedinfo)</visible>
-			</control>
 		</control>
 	</include>
 	<include name="PVRVideoOSD">
@@ -1934,18 +1922,6 @@
 				<height>65</height>
 				<font/>
 				<onclick>SetProperty(ADZapperPrompt, true, 10000)</onclick>
-			</control>
-			<control type="button" id="818">
-				<texturefocus colordiffuse="$VAR[AVButtonColorFo]">osd/buttons/extended.png</texturefocus>
-				<texturenofocus colordiffuse="$VAR[AVButtonColorNoFo]">osd/buttons/extended.png</texturenofocus>
-				<animation effect="zoom" end="110" time="200">Focus</animation>
-				<font/>
-				<label/>
-				<width>65</width>
-				<height>65</height>
-				<onclick>Dialog.Close(all,true)</onclick>
-				<onclick>RunScript(script.extendedinfo,info=extendedinfo,name=$INFO[Player.Title])</onclick>
-				<visible>System.HasAddon(script.extendedinfo)</visible>
 			</control>
 		</control>
 	</include>
