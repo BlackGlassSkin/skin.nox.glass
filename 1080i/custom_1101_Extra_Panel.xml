@@ -214,8 +214,8 @@
 					</item>
 					<item>
 						<label>Reset Epg Data</label>
-						<action>ActivateWindowAndFocus(PVRSettings, -98,10, -71,10)</action>
-		                <action>Action(Select)</action>
+						<onclick>ActivateWindowAndFocus(PVRSettings, -98,10, -71,10)</onclick>
+		                <onclick>Action(Select)</onclick>
 						<onclick>ActivateWindow(1101)</onclick>
 						<icon>media/button1.jpg</icon>
 					</item>

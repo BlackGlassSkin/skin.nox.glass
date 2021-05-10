@@ -346,14 +346,6 @@
 				</control>
 			</control>
 		</control>
-		    <control type="image">
-			    <left>70</left>
-			    <top>955</top>
-			    <width>350</width>
-			    <height>110</height>
-				<aspect>keep</aspect>
-			    <texture colordiffuse="E6FFFFFF">skin.nox.glass.png</texture>
-			</control>
 		<include>Topbar</include>
 	</controls>
 </window>

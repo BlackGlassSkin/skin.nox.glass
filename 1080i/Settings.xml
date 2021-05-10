@@ -513,14 +513,6 @@
 				</content>
 			</control>
 			<control type="image">
-			    <left>30</left>
-			    <top>885</top>
-			    <width>350</width>
-			    <height>100</height>
-				<aspect>keep</aspect>
-			    <texture colordiffuse="E6FFFFFF">skin.nox.glass.png</texture>
-			</control>
-			<control type="image">
 				<left>-23</left>
 				<top>835</top>
 				<width>105%</width>

@@ -226,7 +226,6 @@
 							<label>$LOCALIZE[31157]</label>
 							<onclick>Skin.ToggleSetting(Enable.VisibleSubmenu)</onclick>
 							<selected>Skin.HasSetting(Enable.VisibleSubmenu)</selected>
-							<visible>!String.IsEqual(Skin.String(MainMenu.Layout),vertical)</visible>
 						</control>
 						<control type="radiobutton" id="1010">
 							<include>SettingsButtonCommonValues</include>
