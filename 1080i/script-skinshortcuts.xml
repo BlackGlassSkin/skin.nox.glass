@@ -306,7 +306,7 @@
 									<label>   - $LOCALIZE[31761]</label>
 									<visible>String.IsEqual(Window.Property(groupname),mainmenu) + String.IsEqual(Container(211).ListItem.Property(widgetType.2),custom)</visible>
 								</control>
-								<control type="radiobutton" id="520">
+								<control type="radiobutton" id="519">
 									<description>Show Live TV Widget</description>
 									<width>1125</width>
 									<radioposx>1007</radioposx>
@@ -318,15 +318,6 @@
 									<onclick>SendClick(404)</onclick>
 									<selected>!String.IsEmpty(Container(211).ListItem.Property(widgetLiveTV))</selected>
 									<visible>System.HasPVRAddon + [PVR.HasTVChannels | PVR.HasRadioChannels] + String.IsEqual(Window.Property(groupname),mainmenu)</visible>
-								</control>
-								<control type="radiobutton" id="519">
-									<description>Tidy Widget</description>
-									<width>1125</width>
-									<radioposx>1007</radioposx>
-									<include>SettingsButtonCommonValues</include>
-									<label>Disable Tidy Widget</label>
-									<onclick>Skin.ToggleSetting(Enable.WidgetTidy)</onclick>
-									<selected>!Skin.HasSetting(Enable.WidgetTidy)</selected>
 								</control>
 							</control>
 						</control>

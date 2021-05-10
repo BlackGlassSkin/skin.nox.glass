@@ -6,7 +6,6 @@
 	<controls>
 		<control type="group">
 			<top>540</top>
-			
 			<control type="group">
 				<control type="image">
 					<top>-640</top>

@@ -1039,10 +1039,10 @@
 		<value condition="Skin.HasSetting(centermainmenu)">$LOCALIZE[31259]</value>
 		<value>$LOCALIZE[418]</value>
 	</variable>
-	<!-- <variable name="HorizontalListNavVar">
-        <value condition="Skin.HasSetting(HorizontalListNav)">$LOCALIZE[31005]</value>
-        <value>$LOCALIZE[571]</value>
-    </variable> -->
+	<variable name="centermainmenu1Var">
+		<value condition="Skin.HasSetting(Enable.CenterMainMenu1)"> [B][COLOR FF008000]Enabled[/COLOR][/B]</value>
+		<value> [COLOR FF863013]Disabled[/COLOR]</value>
+	</variable>
 	<variable name="HomeMenuNavVar">
 		<value condition="Skin.HasSetting(HomeMenuNavVar)">$LOCALIZE[31005]</value>
 		<value>$LOCALIZE[571]</value>
@@ -1053,7 +1053,7 @@
 	</variable>
 	<variable name="MainMenuLayoutVar">
 		<value condition="String.IsEqual(Skin.String(MainMenu.Layout),icons)">$LOCALIZE[31293]</value>
-		<!--<value condition="String.IsEqual(Skin.String(MainMenu.Layout),vertical)">$LOCALIZE[31994]</value>-->
+		<value condition="String.IsEqual(Skin.String(MainMenu.Layout),vertical)">$LOCALIZE[31994]</value>
 		<value condition="!String.IsEmpty(Skin.String(MainMenu.Layout))">$INFO[Skin.String(MainMenu.Layout)] $LOCALIZE[31025]</value>
 		<value>5 $LOCALIZE[31025]</value>
 	</variable>

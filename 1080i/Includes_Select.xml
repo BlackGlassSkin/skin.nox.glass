@@ -604,12 +604,16 @@
 			<onclick>Notification([COLOR FF7FFFD4]$LOCALIZE[32049][/COLOR] ,[COLOR green][B]$LOCALIZE[32049][/B][/COLOR],4000])</onclick>
 			<onclick>ReloadSkin(),silent</onclick>
 		</item>
-		<!--<item>
+		<item>
 			<label>$LOCALIZE[31994]</label>
 			<onclick>Dialog.Close(1129)</onclick>
 			<onclick>Skin.SetString(MainMenu.Layout,vertical)</onclick>
 			<onclick>ReloadSkin(),silent</onclick>
-		</item>-->
+		</item>
+		<item>
+			<label>Enable This For Vertical Main-Menu:  $VAR[centermainmenu1Var]</label>
+			<onclick>Skin.ToggleSetting(Enable.CenterMainMenu1)</onclick>
+		</item>
 	</include>
 	<include name="SelectFanartTimePerImage">
 		<item>

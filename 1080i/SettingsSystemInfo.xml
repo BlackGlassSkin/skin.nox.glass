@@ -219,8 +219,9 @@
 				<visible>Control.IsVisible(30)</visible>
 			</control>
 			<control type="group">
-				<left>1250</left>
-				<top>560</top>
+			    <visible>!System.Platform.Android</visible>
+				<left>1600</left>
+				<top>550</top>
 				<control type="image">
 					<left>-800</left>
 					<top>340</top>
@@ -345,6 +346,14 @@
 				</control>
 			</control>
 		</control>
+		    <control type="image">
+			    <left>70</left>
+			    <top>955</top>
+			    <width>350</width>
+			    <height>110</height>
+				<aspect>keep</aspect>
+			    <texture colordiffuse="E6FFFFFF">skin.nox.glass.png</texture>
+			</control>
 		<include>Topbar</include>
 	</controls>
 </window>

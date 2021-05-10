@@ -217,44 +217,47 @@
 					<texture>media/skinhelper.png</texture>
 				</control>
 			</control>
-			<control type="group">
+			<control type="grouplist">
+			    <orientation>horizontal</orientation>
+				<top>960</top>
 				<height>158</height>
 				<align>center</align>
-				<top>960</top>
+				<aligny>buttom</aligny>
+				<itemgap>22</itemgap>
 				<control type="image">
-					<left>80</left>
-					<width>280</width>
-					<height>115</height>
-					<texture colordiffuse="-">xbmc-logo.png</texture>
-				</control>
-				<control type="image">
-					<left>830</left>
 					<width>300</width>
 					<height>115</height>
 					<aspectratio>keep</aspectratio>
-					<texture colordiffuse="-">libreelec/Logo.png</texture>
+					<texture>xbmc-logo.png</texture>
 				</control>
 				<control type="image">
-					<left>1180</left>
 					<width>300</width>
 					<height>115</height>
 					<aspectratio>keep</aspectratio>
-					<texture colordiffuse="-">coreelec/logo.png</texture>
+					<texture>libreelec/Logo.png</texture>
 				</control>
 				<control type="image">
-					<top>12</top>
-					<left>460</left>
-					<width>300</width>
+					<width>320</width>
 					<height>115</height>
 					<aspectratio>keep</aspectratio>
-					<texture colordiffuse="-">custom/aeon-nox-logo.png</texture>
+					<texture>coreelec/logo.png</texture>
 				</control>
 				<control type="image">
-					<top>10</top>
-					<left>1560</left>
+					<width>300</width>
+					<height>135</height>
+					<aspectratio>keep</aspectratio>
+					<texture>custom/aeon-nox-logo.png</texture>
+				</control>
+				<control type="image">
 					<width>270</width>
-					<height>95</height>
-					<texture colordiffuse="-">skin.nox.glass.png</texture>
+					<height>100</height>
+					<texture>skin.nox.glass.png</texture>
+				</control>
+				<control type="image">
+					<width>300</width>
+					<height>115</height>
+					<aspectratio>keep</aspectratio>
+					<texture>custom/BigNoid.png</texture>
 				</control>
 			</control>
 		</control>

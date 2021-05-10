@@ -66,13 +66,12 @@
 				<animation effect="slide" start="0,0" end="0,94" time="320" tween="cubic" easing="out" condition="Control.IsVisible(506) | Window.IsActive(script-globalsearch.xml)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,151" time="320" tween="cubic" easing="out" condition="Window.IsActive(addoninformation)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,50" time="320" tween="cubic" easing="out" condition="Control.IsVisible(509) | Window.IsVisible(weather) | Window.IsVisible(SettingsCategory.xml) | Window.IsActive(skinsettings) | Window.IsActive(systeminfo) | Window.IsActive(profiles) | Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(script-NextAired-TVGuide2.xml)">Conditional</animation>
-				<!--   <control type="image">
-                    <top>825</top>
-                    <left>-13.6</left>
-                    <width>101.5%</width>
-                    <height>280</height>
-                    <texture colordiffuse="$VAR[ThemePanelColor]" border="40">floor.png</texture>
-                </control> -->
+				<control type="image">
+					<width>100%</width>
+					<height>1266</height>
+					<texture border="40" colordiffuse="$VAR[ThemePanelColor]">floor.png</texture>
+					<visible>!Window.IsActive(weather)</visible>
+				</control>
 			</control>
 			<control type="group">
 				<visible>Window.IsActive(settings) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(1140) | Window.IsActive(1117) | Window.IsActive(systeminfo) | Window.IsActive(profiles) <!--| Window.IsActive(weather)--> | Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(script-NextAired-TVGuide2.xml)</visible>
@@ -80,13 +79,13 @@
 				<animation effect="slide" end="30" condition="Window.IsActive(profiles)">Conditional</animation>
 				<animation effect="slide" end="0,-25" condition="Window.IsActive(settings)">Conditional</animation>
 				<top>64</top>
-				<control type="image">
+				<!--<control type="image">
 					<left>8</left>
 					<top>887</top>
 					<width>400</width>
 					<height>130</height>
 					<texture>aeon-nox-logo.png</texture>
-				</control>
+				</control>-->
 			</control>
 			<control type="image">
 				<include>FullscreenDimensions</include>

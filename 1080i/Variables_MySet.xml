@@ -29,6 +29,7 @@
 		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.tvshow.clearlogo))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.tvshow.clearlogo)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(tvshow.Clearlogo))">$INFO[ListItem.Art(tvshow.Clearlogo)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(Clearlogo))">$INFO[ListItem.Art(Clearlogo)]</value>
+		<value condition="String.Contains(Container.FolderPath,pvr://) + String.IsEqual(Container.ListItem.Label,ListItem.Label)">$VAR[PVRThumb]</value>
 	</variable>
 	<variable name="PVRNoPlayerClearArtVar">
 		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.ClearArt))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.ClearArt)]</value>

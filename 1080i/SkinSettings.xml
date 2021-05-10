@@ -38,21 +38,22 @@
 		<include>Topbar</include>
 		<control type="group">
 			<include>WindowOpenCloseAnimation</include>
-			<top>44</top>
+			<top>74</top>
 			<height>150</height>
-			<!--<control type="image">
-                <top>334</top>
-                <width>100%</width>
-                <height>820</height>
-                <texture colordiffuse="$VAR[ThemeLabelColor]">floor.png</texture>
-            </control> -->
+			<control type="image">
+				<top>300</top>
+				<width>100%</width>
+				<height>820</height>
+				<texture border="10" colordiffuse="$VAR[ThemePanelColor]">floor.png</texture>
+			</control>
 			<include>SystemPanel</include>
 			<control type="image">
-				<left>10</left>
-				<top>890</top>
-				<width>400</width>
-				<height>180</height>
-				<texture>aeon-nox-logo_set.png</texture>
+				<left>80</left>
+				<top>900</top>
+				<width>320</width>
+				<height>90</height>
+				<aspect>keep</aspect>
+				<texture>skin.nox.glass.png</texture>
 			</control>
 			<control type="group">
 				<visible>!Window.IsActive(script-skinshortcuts.xml)</visible>
@@ -178,32 +179,25 @@
 							<selected>Skin.HasSetting(Disable.IconsMenuLabel)</selected>
 							<visible>String.IsEqual(Skin.String(MainMenu.Layout),icons)</visible>
 						</control>
-						<control type="button" id="1004">
+						<control type="button" id="1015">
 							<include>SettingsButtonCommonValues</include>
 							<label>$LOCALIZE[31603]</label>
 							<label2>[COLOR $VAR[ThemeLabelColor]]$VAR[HomeMenuNavVar][/COLOR]</label2>
 							<onclick>Skin.ToggleSetting(HomeMenuNavVar)</onclick>
 						</control>
-						<control type="radiobutton" id="1015">
+						<control type="radiobutton" id="1004">
 							<include>SettingsButtonCommonValues</include>
 							<label>$LOCALIZE[31436]</label>
 							<onclick>Skin.ToggleSetting(CenteredInfoLine)</onclick>
 							<selected>Skin.HasSetting(CenteredInfoLine)</selected>
 							<visible>!String.IsEqual(Skin.String(MainMenu.Layout),vertical)</visible>
 						</control>
-						<control type="button" id="1005">
+						<control type="button" id="1008">
 							<include>SettingsButtonCommonValues</include>
 							<label>$LOCALIZE[13305]</label>
 							<label2>[COLOR $VAR[ThemeLabelColor]]$VAR[HorizontalRSSLabelOnclickVar][/COLOR]</label2>
 							<onclick>$VAR[HorizontalRSSPositionOnclickVar]</onclick>
 							<visible>System.GetBool(lookandfeel.enablerssfeeds) + !String.IsEqual(Skin.String(MainMenu.Layout),vertical)</visible>
-						</control>
-						<control type="radiobutton" id="1008">
-							<include>SettingsButtonCommonValues</include>
-							<label>   - $LOCALIZE[31157]</label>
-							<onclick>Skin.ToggleSetting(Enable.VisibleSubmenu)</onclick>
-							<selected>Skin.HasSetting(Enable.VisibleSubmenu)</selected>
-							<visible>[system.getbool(lookandfeel.enablerssfeeds) + !String.IsEqual(Skin.String(MainMenu.Layout),vertical) + !String.IsEmpty(Skin.String(HorizontalRSSPosition))]</visible>
 						</control>
 						<control type="radiobutton" id="1018">
 							<include>SettingsButtonCommonValues</include>
@@ -231,16 +225,10 @@
 							<include>SettingsButtonCommonValues</include>
 							<label>$LOCALIZE[31157]</label>
 							<onclick>Skin.ToggleSetting(Enable.VisibleSubmenu)</onclick>
-							<selected>!Skin.HasSetting(Enable.VisibleSubmenu)</selected>
-							<visible>!String.IsEqual(Skin.String(MainMenu.Layout),vertical) + !system.getbool(lookandfeel.enablerssfeeds)</visible>
+							<selected>Skin.HasSetting(Enable.VisibleSubmenu)</selected>
+							<visible>!String.IsEqual(Skin.String(MainMenu.Layout),vertical)</visible>
 						</control>
-						<!--<control type="radiobutton" id="10101">
-							<include>SettingsButtonCommonValues</include>
-							<label>[***32052***]</label>
-							<onclick>Skin.ToggleSetting(Enable.TRripleMemu)</onclick>
-							<selected>!Skin.HasSetting(Enable.TRripleMemu)</selected>
-						</control> -->
-						<control type="radiobutton" id="1019">
+						<control type="radiobutton" id="1010">
 							<include>SettingsButtonCommonValues</include>
 							<label>$LOCALIZE[31158]</label>
 							<onclick>Skin.ToggleSetting(Disable.SearchButton)</onclick>
@@ -641,7 +629,7 @@
 							<onclick>Skin.ToggleSetting(Enable.MyWeatherFanartCode)</onclick>
 							<onclick>RunScript(script.image.resource.select,property=weatherfanart&amp;type=resource.images.weatherfanart)</onclick>
 							<selected>Skin.HasSetting(Enable.MyWeatherFanartCode)</selected>
-                            <visible>Skin.HasSetting(Enable.MyWeather)</visible>
+							<visible>Skin.HasSetting(Enable.MyWeather)</visible>
 						</control>
 						<control type="radiobutton" id="6009">
 							<include>SettingsButtonCommonValues</include>
@@ -697,7 +685,7 @@
 					<control type="grouplist" id="9007">
 						<left>437</left>
 						<top>25</top>
-						<width>1401</width>
+						<width>1411</width>
 						<height>900</height>
 						<onleft>9000</onleft>
 						<visible>Container(9000).HasFocus(7)</visible>
@@ -722,20 +710,21 @@
 							<height>148</height>
 							<left>-250</left>
 							<control type="image" id="7002">
-								<left>250</left>
-								<width>300</width>
+								<left>243</left>
+								<width>270</width>
 								<height>115</height>
+								<aspectratio>keep</aspectratio>
 								<texture colordiffuse="grey">xbmc-logo.png</texture>
 							</control>
 							<control type="image" id="7020">
-								<left>1000</left>
-								<width>300</width>
+								<left>830</left>
+								<width>280</width>
 								<height>115</height>
 								<aspectratio>keep</aspectratio>
 								<texture colordiffuse="grey">libreelec/Logo.png</texture>
 							</control>
 							<control type="image" id="7021">
-								<left>1350</left>
+								<left>1120</left>
 								<width>300</width>
 								<height>115</height>
 								<aspectratio>keep</aspectratio>
@@ -743,11 +732,18 @@
 							</control>
 							<control type="image" id="7021">
 								<top>12</top>
-								<left>630</left>
+								<left>520</left>
 								<width>300</width>
 								<height>115</height>
 								<aspectratio>keep</aspectratio>
 								<texture colordiffuse="grey">custom/aeon-nox-logo.png</texture>
+							</control>
+							<control type="image">
+								<left>1430</left>
+								<width>230</width>
+								<height>115</height>
+								<aspectratio>keep</aspectratio>
+								<texture colordiffuse="grey">custom/BigNoid.png</texture>
 							</control>
 						</control>
 						<control type="label" id="7003">

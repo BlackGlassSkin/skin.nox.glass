@@ -480,7 +480,7 @@
             <animation effect="slide" end="-480,0" time="0">WindowClose</animation>
             <animation effect="slide" start="-480,0" end="0,0" delay="300" time="0" condition="!Window.Previous(startup)">WindowOpen</animation>
             <animation effect="slide" start="-480,0" end="0,0" delay="800" time="0" condition="Window.Previous(startup)">WindowOpen</animation>
-            <animation effect="slide" end="-410,0" time="320" tween="cubic" easing="inout" condition="$EXP[HasVerticalMenuWithExtended]">Conditional</animation>
+            <animation effect="slide" end="-426,0" time="320" tween="cubic" easing="inout" condition="$EXP[HasVerticalMenuWithExtended]">Conditional</animation>
             <control type="group">
                 <left>-11</left>
                 <top>-11</top>
@@ -496,6 +496,13 @@
                     <animation effect="fade" start="100" end="80" condition="true">Conditional</animation>
                     <visible>!String.IsEmpty(Skin.String(ThemeHomeMenuBarColor)) + !String.IsEqual(Skin.String(ThemeHomeMenuBarColor),None)</visible>
                 </control>
+				<control type="image">
+					<left>430</left>
+					<width>20</width>
+					<height>1100</height>
+					<texture colordiffuse="$VAR[ThemePanelColor]">menu_help.png</texture>
+					<animation effect="fade" start="100" end="80" condition="true">Conditional</animation>
+				</control>
             </control>
             <control type="button">
                 <top>528</top>
@@ -524,6 +531,13 @@
                 <width>350</width>
                 <texture colordiffuse="$VAR[ThemePanelColor]">verticalsubmenu_back.png</texture>
             </control>
+			<control type="image">
+				<left>338</left>
+				<width>15</width>
+				<height>1100</height>
+				<texture colordiffuse="$VAR[ThemePanelColor]">menu_help.png</texture>
+				<animation effect="fade" start="100" end="80" condition="true">Conditional</animation>
+			</control>
             <control type="list" id="9010">
                 <animation effect="slide" end="0,300" condition="Integer.IsLessOrEqual(Container(9010).NumItems,7)">Conditional</animation>
                 <animation effect="slide" end="0,200" condition="Integer.IsGreaterOrEqual(Container(9010).NumItems,8) + Integer.IsLess(Container(9010).NumItems,10)">Conditional</animation>
@@ -548,7 +562,7 @@
                 </itemlayout>
                 <focusedlayout height="60" width="375">
                     <control type="image">
-                        <width>338</width>
+                        <width>332</width>
                         <height>60</height>
                         <texture colordiffuse="$VAR[HighlightBarColor]">listselect_fo.png</texture>
                     </control>
@@ -943,7 +957,7 @@
         <animation effect="fade" time="200" start="100" end="50" reversible="true" condition="Control.HasFocus(9010)">Conditional</animation>
         <itemlayout height="140" width="420">
             <control type="label">
-                <left>30</left>
+                <left>20</left>
                 <width>390</width>
                 <height>140</height>
                 <font>font_VerticalMainMenu</font>
@@ -967,7 +981,7 @@
                 </control>
             </control>
             <control type="label">
-                <left>30</left>
+                <left>11</left>
                 <width>390</width>
                 <height>140</height>
                 <font>font_VerticalMainMenu</font>
@@ -976,7 +990,7 @@
                 <label>$INFO[ListItem.Label]</label>
             </control>
             <control type="label">
-                <left>30</left>
+                <left>10</left>
                 <width>390</width>
                 <height>140</height>
                 <font>font_VerticalMainMenu</font>
