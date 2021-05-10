@@ -8,7 +8,7 @@
 				<left>-14</left>
 				<width>103%</width>
 				<height>103%</height>
-				<texture colordiffuse="$VAR[ThemePanelColor]" border="40">mediamenu_back.png</texture>
+				<texture border="40">mediamenu_back.png</texture>
 			</control>
 			<control type="image">
 				<left>1110</left>

@@ -56,7 +56,7 @@
 		<control type="group">
 			<include>WindowOpenCloseAnimation</include>
 			<control type="group">
-				<visible>![Window.IsVisible(weather) | Window.IsVisible(settings) | Window.IsVisible(home) | Control.IsVisible(51) + Skin.HasSetting(Enable.AlternateInfowall) | Control.IsVisible(59) | Control.IsVisible(501) | Control.IsVisible(502) | Control.IsVisible(503) | Control.IsVisible(504) | Control.IsVisible(505) | Control.IsVisible(506) + Container.Content(movies) + !String.IsEmpty(Skin.String(506.movies.ViewFloorStatus)) | Control.IsVisible(506) + Container.Content(sets) + !String.IsEmpty(Skin.String(506.sets.ViewFloorStatus)) | Control.IsVisible(506) + [Container.Content(tvshows) | Container.Content(seasons)] + !String.IsEmpty(Skin.String(506.tvshows.ViewFloorStatus)) | Control.IsVisible(506) + Container.Content(episodes) + !String.IsEmpty(Skin.String(506.episodes.ViewFloorStatus)) | Control.IsVisible(506) + Window.IsActive(music) | Control.IsVisible(507) + Skin.HasSetting(alternatebiglistlayout)]</visible>
+				<visible>![Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(weather) | Window.IsVisible(settings) | Window.IsVisible(home) | Control.IsVisible(51) + Skin.HasSetting(Enable.AlternateInfowall) | Control.IsVisible(59) | Control.IsVisible(501) | Control.IsVisible(502) | Control.IsVisible(503) | Control.IsVisible(504) | Control.IsVisible(505) | Control.IsVisible(506) + Container.Content(movies) + !String.IsEmpty(Skin.String(506.movies.ViewFloorStatus)) | Control.IsVisible(506) + Container.Content(sets) + !String.IsEmpty(Skin.String(506.sets.ViewFloorStatus)) | Control.IsVisible(506) + [Container.Content(tvshows) | Container.Content(seasons)] + !String.IsEmpty(Skin.String(506.tvshows.ViewFloorStatus)) | Control.IsVisible(506) + Container.Content(episodes) + !String.IsEmpty(Skin.String(506.episodes.ViewFloorStatus)) | Control.IsVisible(506) + Window.IsActive(music) | Control.IsVisible(507) + Skin.HasSetting(alternatebiglistlayout)]</visible>
 				<include>ViewAnimation</include>
 				<animation effect="slide" end="0,57" time="0" tween="cubic" easing="out" condition="![Control.IsVisible(52) | Control.IsVisible(53) | Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(58)] | Window.IsActive(1140)">Conditional</animation>
 				<animation effect="slide" end="0,42" time="0" tween="cubic" easing="out" condition="Control.IsVisible(53)">Conditional</animation>
@@ -76,7 +76,7 @@
 			</control>
 			<control type="group">
 				<visible>Window.IsActive(settings) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(1140) | Window.IsActive(1117) | Window.IsActive(systeminfo) | Window.IsActive(profiles) | !Window.IsActive(weather)</visible>
-				<visible>!Window.IsActive(service-LibreELEC-Settings-mainWindow.xml) + !Window.IsActive(service-CoreELEC-Settings-mainWindow.xml)</visible>
+				<visible>!Window.IsActive(service-LibreELEC-Settings-mainWindow.xml) + !Window.IsActive(service-CoreELEC-Settings-mainWindow.xml) + !Window.IsVisible(MyPVRChannels.xml)</visible>
 				<animation effect="slide" end="30,-5" condition="Window.IsActive(profiles)">Conditional</animation>
 				<animation effect="slide" end="-50,-16" condition="Window.IsActive(settings)">Conditional</animation>
 				<top>64</top>

@@ -11,7 +11,7 @@
 				<left>-5.6</left>
 				<width>1161</width>
 				<height>1120</height>
-				<texture colordiffuse="$VAR[ThemePanelColor]" border="40">listpanel_back.png</texture>
+				<texture border="40">listpanel_back.png</texture>
 			</control>
 			<control type="list" id="50">
 				<left>3</left>
@@ -202,7 +202,7 @@
 				<control type="image">
 					<width>776</width>
 					<height>1120</height>
-					<texture colordiffuse="$VAR[ThemePanelColor]" border="40">listpanel_back.png</texture>
+					<texture border="40">listpanel_back.png</texture>
 				</control>
 				<control type="image">
 					<left>32</left>
@@ -384,6 +384,7 @@
 			<visible>Control.IsVisible(51)</visible>
 			<!-- <include>VisibleFadeAnimation</include> -->
 			<control type="image">
+			    <top>-5</top>
 				<width>1840</width>
 				<height>1012</height>
 				<texture colordiffuse="B3303030" border="40">listpanel_back.png</texture>
@@ -404,8 +405,9 @@
 				<scrolltime tween="quadratic" easing="out">0</scrolltime>
 				<itemlayout height="185" width="445">
 					<control type="image">
+					    <top>-5</top>
 						<width>440</width>
-						<height>175</height>
+						<height>185</height>
 						<aspectratio>stretch</aspectratio>
 						<texture colordiffuse="grey" border="40" background="true">listpanel_back.png</texture>
 					</control>
@@ -416,7 +418,7 @@
 						<height>58</height>
 						<font>font13b</font>
 						<textcolor>grey</textcolor>
-						<label>[B]$INFO[ListItem.ChannelNumberLabel]$INFO[ListItem.Label,  ][/B]</label>
+						<label>[B]$INFO[ListItem.ChannelNumberLabel,,.]$INFO[ListItem.Label,  ][/B]</label>
 					</control>
 					<control type="progress">
 						<left>16</left>
@@ -494,8 +496,9 @@
 							<effect type="fade" start="80" end="100" time="120" tween="sine" easing="in"/>
 						</animation>
 						<control type="image">
+						    <top>-5</top>
 							<width>440</width>
-							<height>175</height>
+							<height>184</height>
 							<aspectratio>stretch</aspectratio>
 							<texture colordiffuse="FFFFFFFF" border="40" background="true">listpanel_back.png</texture>
 						</control>
@@ -514,7 +517,7 @@
 							<height>58</height>
 							<font>font13b</font>
 							<textcolor>FF3366CC</textcolor>
-							<label>[B]$INFO[ListItem.ChannelNumberLabel]$INFO[ListItem.Label,  ][/B]</label>
+							<label>[B]$INFO[ListItem.ChannelNumberLabel,,.]$INFO[ListItem.Label,  ][/B]</label>
 						</control>
 						<control type="progress">
 							<left>16</left>
@@ -598,7 +601,7 @@
 				<showonepage>false</showonepage>
 				<texturesliderbackground/>
 				<texturesliderbar colordiffuse="80FFFFFF" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
-				<texturesliderbarfocus border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
+				<texturesliderbarfocus colordiffuse="white" border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
 				<animation effect="fade" start="100" end="0" time="0" delay="500" condition="!Control.HasFocus(62) + !Container.Scrolling">Conditional</animation>
 			</control>
 			<!-- Bottom info-panel -->
@@ -606,10 +609,11 @@
 				<left>30</left>
 				<top>765</top>
 				<control type="image">
+				    <top>3</top>
 					<left>5</left>
 					<width>1768</width>
 					<height>230</height>
-					<texture colordiffuse="60FFFFFF" border="8">dialogs/default/inner.png</texture>
+					<texture colordiffuse="80737373" border="8">dialogs/default/inner.png</texture>
 				</control>
 				<!-- Videopreview and logo -->
 				<control type="group">
@@ -741,13 +745,13 @@
 					<left>-5</left>
 					<width>1161</width>
 					<height>1120</height>
-					<texture colordiffuse="$VAR[ThemePanelColor]" border="40">listpanel_back.png</texture>
+					<texture border="40">listpanel_back.png</texture>
 				</control>
 				<control type="image">
 					<left>1150</left>
 					<width>776</width>
 					<height>1120</height>
-					<texture colordiffuse="$VAR[ThemePanelColor]" border="40">listpanel_back.png</texture>
+					<texture border="40">listpanel_back.png</texture>
 				</control>
 			</control>
 			<control type="group">
