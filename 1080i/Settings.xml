@@ -9,7 +9,7 @@
 			<top>60</top>
 			<include>WindowOpenCloseAnimation</include>
 			<control type="panel" id="9000">
-				<left>100</left>
+				<left>110</left>
 				<top>35</top>
 				<width>1800</width>
 				<height>860</height>
@@ -261,7 +261,7 @@
 				</content>
 			</control>
 			<control type="panel" id="9000">
-				<left>100</left>
+				<left>110</left>
 				<top>35</top>
 				<width>1800</width>
 				<height>860</height>

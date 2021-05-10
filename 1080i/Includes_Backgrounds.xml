@@ -75,7 +75,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>Window.IsActive(settings) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(1140) | Window.IsActive(1117) | Window.IsActive(systeminfo) | Window.IsActive(profiles) | Window.IsActive(weather)</visible>
+				<visible>Window.IsActive(settings) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(1140) | Window.IsActive(1117) | Window.IsActive(systeminfo) | Window.IsActive(profiles) | !Window.IsActive(weather)</visible>
 				<visible>!Window.IsActive(service-LibreELEC-Settings-mainWindow.xml) + !Window.IsActive(service-CoreELEC-Settings-mainWindow.xml)</visible>
 				<animation effect="slide" end="30,-5" condition="Window.IsActive(profiles)">Conditional</animation>
 				<animation effect="slide" end="-50,-16" condition="Window.IsActive(settings)">Conditional</animation>
