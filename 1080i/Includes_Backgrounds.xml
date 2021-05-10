@@ -75,7 +75,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>Window.IsActive(systeminfo) | Window.IsActive(settings) | Window.IsActive(skinsettings) | Window.IsActive(SettingsCategory.xml)</visible>
+				<visible>Window.IsActive(script-NextAired-TVGuide2.xml) | Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(systeminfo) | Window.IsActive(settings) | Window.IsActive(skinsettings) | Window.IsActive(SettingsCategory.xml)</visible>
 				<top>64</top>
 				<control type="image">
 			    <left>75</left>
@@ -88,7 +88,7 @@
 			</control>
 			<control type="image">
 				<include>FullscreenDimensions</include>
-				<texture border="1">.png</texture>
+				<texture border="1">logo_back.png</texture>
 				<visible>Control.IsVisible(59) | Control.IsVisible(591)</visible>
 			</control>
 			<!-- <control type="image">
