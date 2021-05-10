@@ -102,10 +102,10 @@
 			<control type="image">
 				<left>1482</left>
 				<top>940</top>
-				<width>400</width>
-				<height>130</height>
-				<aspectratio align="right">keep</aspectratio>
-				<texture>aeon-nox-logo.png</texture>
+				<width>370</width>
+				<height>120</height>
+				<align>right</align>
+				<texture>skin.nox.glass.png</texture>
 			</control>
 			<control type="button" id="20">
 				<description>Power push button</description>

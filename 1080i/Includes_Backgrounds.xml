@@ -75,10 +75,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>Window.IsActive(settings) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(1140) | Window.IsActive(1117) | Window.IsActive(systeminfo) | Window.IsActive(profiles) | !Window.IsActive(weather)</visible>
-				<visible>!Window.IsActive(service-LibreELEC-Settings-mainWindow.xml) + !Window.IsActive(service-CoreELEC-Settings-mainWindow.xml) + !Window.IsVisible(MyPVRChannels.xml)</visible>
-				<animation effect="slide" end="30,-5" condition="Window.IsActive(profiles)">Conditional</animation>
-				<animation effect="slide" end="-50,-16" condition="Window.IsActive(settings)">Conditional</animation>
+				<visible>Window.IsActive(systeminfo) | Window.IsActive(settings) | Window.IsActive(skinsettings) | Window.IsActive(SettingsCategory.xml)</visible>
 				<top>64</top>
 				<control type="image">
 			    <left>75</left>
@@ -91,7 +88,7 @@
 			</control>
 			<control type="image">
 				<include>FullscreenDimensions</include>
-				<texture border="1">logo_back.png</texture>
+				<texture border="1">.png</texture>
 				<visible>Control.IsVisible(59) | Control.IsVisible(591)</visible>
 			</control>
 			<!-- <control type="image">
