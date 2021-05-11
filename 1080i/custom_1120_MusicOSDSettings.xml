@@ -190,12 +190,12 @@
 					<onclick>Skin.ToggleSetting(EnableFakeDiscArt)</onclick>
 					<selected>!Skin.HasSetting(EnableFakeDiscArt)</selected>
 				</control>
-				<control type="button" id="90919">
+				<!--<control type="button" id="90919">
 					<width>1452</width>
 					<label>Set Auto Close Music OSD</label>
 					<label2>[COLOR $VAR[ThemeLabelColor]]$INFO[skin.string(SkinHelper.AutoCloseMusicOSD),( , ) |]  $LOCALIZE[31090][/COLOR]</label2>
 					<onclick>Skin.SetNumeric(SkinHelper.AutoCloseMusicOSD)</onclick>
-				</control>
+				</control>-->
 				<control type="radiobutton" id="90215">
 					<label>$LOCALIZE[32007]</label>
 					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=ThemePanelAudioVideoColor)</onclick>

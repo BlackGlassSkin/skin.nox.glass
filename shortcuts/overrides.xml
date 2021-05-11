@@ -31,6 +31,22 @@
 	<background label="Live Background: Random songs" condition="String.IsEmpty(Window(Home).Property(No.Cases)) + System.HasAddon(service.library.data.provider)">s:live|i:songs</background>
 	<background label="Live Background: Random albums" condition="String.IsEmpty(Window(Home).Property(No.Cases)) + System.HasAddon(service.library.data.provider)">s:live|i:albums</background>
 	<background label="Live Background: ::PLAYLIST::" condition="String.IsEmpty(Window(Home).Property(No.Cases))">s:live|i:playlist</background>
+	<!-- default backgrounds -->
+	<backgrounddefault defaultID="pictures">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/pictures/pictures.jpg</backgrounddefault>
+	<backgrounddefault defaultID="music">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/music/02-music.jpg</backgrounddefault>
+	<backgrounddefault defaultID="movies">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/movies/10-movies.jpg</backgrounddefault>
+	<backgrounddefault defaultID="tvshows">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/tvshows/23-tvshows.jpg</backgrounddefault>
+	<backgrounddefault defaultID="livetv">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/livetv/livetv.jpg</backgrounddefault>
+	<backgrounddefault defaultID="videos">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/videos/videos.jpg</backgrounddefault>
+	<backgrounddefault defaultID="programs">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/programs/programs.jpg</backgrounddefault>
+	<backgrounddefault defaultID="games">http://dl.dropboxusercontent.com/s/kxx9tw14asy9gyx/game.jpg</backgrounddefault>
+	<backgrounddefault defaultID="settings">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/system/system.jpg</backgrounddefault>
+	<backgrounddefault defaultID="search">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/search/search.jpg</backgrounddefault>
+	<backgrounddefault defaultID="playdisc">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/play_disc/play_disc.jpg</backgrounddefault>
+	<backgrounddefault defaultID="power">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/shutdown/shutdown.jpg</backgrounddefault>
+	<backgrounddefault defaultID="favourites">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/favourites/favourites.jpg</backgrounddefault>
+	<backgrounddefault defaultID="weather">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/weather/weather.jpg</backgrounddefault>
+	<backgrounddefault defaultID="musicvideos">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/musicvideos/musicvideos.jpg</backgrounddefault>
 	<!-- Infolines -->
 	<property property="InfoLine">31052</property>
 	<property property="InfoLine">31053</property>

@@ -361,7 +361,7 @@
 					<width>440</width>
 					<height>440</height>
 					<aspectratio align="center">scale</aspectratio>
-					<texture>$INFO[Window(Home).Property(SkinHelper.Player.Art.ClearArt)]</texture>
+					<texture background="true">$INFO[Window(Home).Property(SkinHelper.Player.Art.ClearArt)]</texture>
 					<bordersize>28</bordersize>
 				</control>
 				<control type="image">
