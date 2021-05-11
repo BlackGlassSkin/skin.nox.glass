@@ -326,7 +326,7 @@
                 <top>-11</top>
                 <width>423</width>
                 <height>102%</height>
-                <texture colordiffuse="$VAR[ThemePanelColor]" border="10">mediamenu_back.png</texture>
+                <texture colordiffuse="F2808080" border="10">mediamenu_back.png</texture>
 			</control>
 			<control type="button" id="8999">
 				<left>358</left>

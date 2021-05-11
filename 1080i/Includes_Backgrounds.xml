@@ -75,7 +75,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>Window.IsActive(script-NextAired-TVGuide2.xml) | Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(systeminfo) | Window.IsActive(settings) | Window.IsActive(skinsettings) | Window.IsActive(SettingsCategory.xml)</visible>
+				<visible>Window.IsActive(profiles) | Window.IsActive(script-NextAired-TVGuide2.xml) | Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(systeminfo) | Window.IsActive(settings) | Window.IsActive(skinsettings) | Window.IsActive(SettingsCategory.xml)</visible>
 				<top>64</top>
 				<control type="image">
 			    <left>75</left>

@@ -38,9 +38,16 @@
 				<top>-25</top>
 				<width>472</width>
 				<height>106%</height>
-				<texture colordiffuse="CC4d4d4d" border="40">mediamenu_back.png</texture>
+				<texture colordiffuse="F2808080" border="40">mediamenu_back.png</texture>
 				<bordersize>5</bordersize>
 			</control>
+			<control type="image">
+		    	<left>18</left>
+		    	<top>15</top>
+		    	<width>350</width>
+		    	<height>60</height>
+		    	<texture>skin.nox.glass.png</texture>
+		    </control>
 			<control type="group">
 				<animation effect="slide" end="0,-115" time="300" tween="sine" easing="inout" condition="Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml)">conditional</animation>
 				<control type="image">

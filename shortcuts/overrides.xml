@@ -338,14 +338,14 @@
 				<shortcut label="19287" icon="logos/kodi.png" widget="pvr" widgetType="pvr" widgetTarget="pvr">pvr://channels/tv/*</shortcut>
 				<shortcut label="31440" icon="logos/kodi.png" widget="pvr" widgetType="pvr" widgetTarget="pvr">pvr://channels/tv/*?view=lastplayed</shortcut>
 				<shortcut label="31536" icon="logos/kodi.png" widget="pvr" widgetType="pvr" widgetTarget="pvr">pvr://recordings/tv/active?view=flat</shortcut>
-				<shortcut label="19173" icon="logos/kodi.png" widget="pvr" widgetType="pvr" widgetTarget="pvr">pvr://channels/tv</shortcut>
+				<shortcut label="19173" icon="logos/kodi.png" widget="pvr" widgetType="pvr" widgetTarget="tvguide">pvr://channels/tv</shortcut>
 			</node>
 			<!-- Radio -->
 			<node label="19024" condition="PVR.HasRadioChannels">
 				<shortcut label="19287" icon="logos/kodi.png" widget="pvr" widgetType="pvr" widgetTarget="pvr">pvr://channels/radio/*</shortcut>
 				<shortcut label="31440" icon="logos/kodi.png" widget="pvr" widgetType="pvr" widgetTarget="pvr">pvr://channels/radio/*?view=lastplayed</shortcut>
 				<shortcut label="31536" icon="logos/kodi.png" widget="pvr" widgetType="pvr" widgetTarget="pvr">pvr://recordings/radio/active?view=flat</shortcut>
-				<shortcut label="19174" icon="logos/kodi.png" widget="pvr" widgetType="pvr" widgetTarget="pvr">pvr://channels/radio</shortcut>
+				<shortcut label="19174" icon="logos/kodi.png" widget="pvr" widgetType="pvr" widgetTarget="radioguide">pvr://channels/radio</shortcut>
 			</node>
 		</node>
 		<!-- Pictures -->

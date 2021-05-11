@@ -100,7 +100,7 @@
 			<top>-10</top>
 			<left>-32</left>
 			<height>102%</height>
-			<texture colordiffuse="$VAR[ThemePanelBgColor]" border="10">mediamenu_back.png</texture>
+			<texture colordiffuse="F2808080" border="10">mediamenu_back.png</texture>
 		</control>
 		<control type="button" id="9051">
 			<include>HiddenObject</include>
