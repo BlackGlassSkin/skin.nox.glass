@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.nox.glass" version="2.4.79" name="Nox Glass" provider-name="Kim">
+<addon id="skin.nox.glass" version="2.4.78" name="Nox Glass" provider-name="Kim">
     <requires> 
         <import addon="xbmc.gui" version="5.14.0"/>
         <import addon="script.skinshortcuts" version="1.0.10"/>
