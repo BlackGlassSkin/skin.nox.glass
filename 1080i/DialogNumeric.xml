@@ -12,6 +12,11 @@
 			<control type="image">
 				<width>300</width>
 				<height>543</height>
+				<texture border="40">homewidgets\transparency_backround.png</texture>
+			</control>
+			<control type="image">
+				<width>300</width>
+				<height>543</height>
 				<texture border="40,100,40,100" colordiffuse="$VAR[ThemePanelBgColor]">dialog_back.png</texture>
 			</control>
 			<control type="label" id="1">
