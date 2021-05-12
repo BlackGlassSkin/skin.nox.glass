@@ -219,7 +219,6 @@
 				<visible>Control.IsVisible(30)</visible>
 			</control>
 			<control type="group">
-			    <visible>!System.Platform.Android</visible>
 				<left>1600</left>
 				<top>550</top>
 				<control type="image">

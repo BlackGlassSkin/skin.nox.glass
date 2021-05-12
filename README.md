@@ -2,7 +2,7 @@
 A modded version of [Aeon Nox 5 & SiLVO]
 
 **Branches guide:**
- - **Leia:** Kodi v18 Codename Leia
+ - **master:** Kodi v19 Codename Matrix
  
 
 # Before Installing skin.nox.glass

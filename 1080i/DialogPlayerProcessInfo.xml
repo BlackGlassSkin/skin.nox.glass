@@ -384,7 +384,6 @@
 						<textcolor>ff7993b0</textcolor>
 						<shadowcolor>ff000000</shadowcolor>
 						<label>[UPPERCASE]$LOCALIZE[13271][/UPPERCASE]</label>
-						<visible>!System.Platform.Android</visible>
 					</control>
 				</control>
 				<control type="group">
@@ -430,7 +429,6 @@
 				</control>
 			</control>
 			<control type="grouplist">
-				<visible>!System.Platform.Android</visible>
 				<top>180</top>
 				<left>1550</left>
 				<itemgap>10</itemgap>
@@ -469,7 +467,6 @@
 				</control>
 			</control>
 			<control type="grouplist">
-				<visible>!System.Platform.Android</visible>
 				<top>178</top>
 				<left>1550</left>
 				<itemgap>8.5</itemgap>
@@ -495,7 +492,6 @@
 				</control>
 			</control>
 			<control type="grouplist">
-				<visible>!System.Platform.Android</visible>
 				<top>173</top>
 				<left>1762</left>
 				<itemgap>1</itemgap>

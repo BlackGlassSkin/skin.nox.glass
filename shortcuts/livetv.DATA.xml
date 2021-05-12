@@ -64,7 +64,7 @@
 		<label2 />
 		<icon />
 		<thumb />
-		<action>ActivateWindowAndFocus(PVRSettings, -98,10, -71,10)</action>
+		<action>ActivateWindowAndFocus(PVRSettings, -98,10, -70,10)</action>
 		<action>Action(Select)</action>
 		<action>ActivateWindow(home)</action>
 	</shortcut>

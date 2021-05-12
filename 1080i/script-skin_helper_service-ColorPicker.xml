@@ -9,6 +9,11 @@
 			<control type="image">
 				<height>800</height>
 				<width>1500</width>
+				<texture border="40">homewidgets\transparency_backround.png</texture>
+			</control>
+			<control type="image">
+				<height>800</height>
+				<width>1500</width>
 				<texture border="40" colordiffuse="$VAR[ThemePanelColor]">dialogs/default/bg.png</texture>
 			</control>
 			<control type="group">

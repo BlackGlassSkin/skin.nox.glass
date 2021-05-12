@@ -636,7 +636,6 @@
 							<onclick>Skin.ToggleSetting(Enable.MysystemWidget)</onclick>
 							<selected>Skin.HasSetting(Enable.MysystemWidget)</selected>
 							<onclick condition="!System.HasAddon(resource.images.cpuprogress)">InstallAddon(resource.images.cpuprogress)</onclick>
-							<visible>!System.Platform.Android</visible>
 						</control>
 					</control>
 					<control type="grouplist" id="9008">

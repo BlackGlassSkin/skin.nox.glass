@@ -76,15 +76,15 @@
 				<texturenofocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturenofocus>
 				<texturefocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturefocus>
 				<onclick>Dialog.Close(1119)</onclick>
-				<onclick condition="Container.Content(movies)">RunScript(script.artwork.dump, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
-				<onclick condition="Container.Content(tvshows)">RunScript(script.artwork.dump, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
-				<onclick condition="Container.Content(episodes)">RunScript(script.artwork.dump, mediatype=episode, dbid=$INFO[ListItem.DBID])</onclick>
-				<onclick condition="String.IsEqual(ListItem.DBTYPE,artist)">RunScript(script.artwork.dump, mediatype=artist, dbid=$INFO[ListItem.DBID])</onclick>
-				<onclick condition="String.IsEqual(ListItem.DBTYPE,album)">RunScript(script.artwork.dump, mediatype=album, dbid=$INFO[ListItem.DBID])</onclick>
-				<onclick condition="String.IsEqual(ListItem.DBTYPE,song)">RunScript(script.artwork.dump, mediatype=song, dbid=$INFO[ListItem.DBID])</onclick>
-				<label>$INFO[System.AddonTitle(script.artwork.dump)]</label>
+				<onclick condition="Container.Content(movies)">RunScript(script.artwork.beef, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
+				<onclick condition="Container.Content(tvshows)">RunScript(script.artwork.beef, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
+				<onclick condition="Container.Content(episodes)">RunScript(script.artwork.beef, mediatype=episode, dbid=$INFO[ListItem.DBID])</onclick>
+				<onclick condition="String.IsEqual(ListItem.DBTYPE,artist)">RunScript(script.artwork.beef, mediatype=artist, dbid=$INFO[ListItem.DBID])</onclick>
+				<onclick condition="String.IsEqual(ListItem.DBTYPE,album)">RunScript(script.artwork.beef, mediatype=album, dbid=$INFO[ListItem.DBID])</onclick>
+				<onclick condition="String.IsEqual(ListItem.DBTYPE,song)">RunScript(script.artwork.beef, mediatype=song, dbid=$INFO[ListItem.DBID])</onclick>
+				<label>$INFO[System.AddonTitle(script.artwork.beef)]</label>
 				<visible>!Skin.HasSetting(KioskMode.Enabled)</visible>
-				<visible>System.HasAddon(script.artwork.dump) + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,artist) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,song)]</visible>
+				<visible>System.HasAddon(script.artwork.beef) + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,artist) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,song)]</visible>
 			</control>
 			<control type="button" id="90206">
 				<description>Artwork beef button</description>
@@ -95,15 +95,15 @@
 				<texturenofocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturenofocus>
 				<texturefocus colordiffuse="$VAR[ThemePanelBgColor]" border="20,-3,20,-3">dialogs\default\bg.png</texturefocus>
 				<onclick>Dialog.Close(1119)</onclick>
-				<onclick condition="String.IsEqual(ListItem.DBTYPE,movie)">RunScript(script.artwork.dump, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
-				<onclick condition="String.IsEqual(ListItem.DBTYPE,tvshow)">RunScript(script.artwork.dump, mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
-				<onclick condition="String.IsEqual(ListItem.DBTYPE,episode)">RunScript(script.artwork.dump, mode=gui, mediatype=episode, dbid=$INFO[ListItem.DBID])</onclick>
-				<onclick condition="String.IsEqual(ListItem.DBTYPE,artist)">RunScript(script.artwork.dump, mode=gui, mediatype=artist, dbid=$INFO[ListItem.DBID])</onclick>
-				<onclick condition="String.IsEqual(ListItem.DBTYPE,album)">RunScript(script.artwork.dump, mode=gui, mediatype=album, dbid=$INFO[ListItem.DBID])</onclick>
-				<onclick condition="String.IsEqual(ListItem.DBTYPE,song)">RunScript(script.artwork.dump, mode=gui, mediatype=song, dbid=$INFO[ListItem.DBID])</onclick>
-				<label>$INFO[System.AddonTitle(script.artwork.dump),,: $LOCALIZE[413]]</label>
+				<onclick condition="String.IsEqual(ListItem.DBTYPE,movie)">RunScript(script.artwork.beef, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
+				<onclick condition="String.IsEqual(ListItem.DBTYPE,tvshow)">RunScript(script.artwork.beef, mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
+				<onclick condition="String.IsEqual(ListItem.DBTYPE,episode)">RunScript(script.artwork.beef, mode=gui, mediatype=episode, dbid=$INFO[ListItem.DBID])</onclick>
+				<onclick condition="String.IsEqual(ListItem.DBTYPE,artist)">RunScript(script.artwork.beef, mode=gui, mediatype=artist, dbid=$INFO[ListItem.DBID])</onclick>
+				<onclick condition="String.IsEqual(ListItem.DBTYPE,album)">RunScript(script.artwork.beef, mode=gui, mediatype=album, dbid=$INFO[ListItem.DBID])</onclick>
+				<onclick condition="String.IsEqual(ListItem.DBTYPE,song)">RunScript(script.artwork.beef, mode=gui, mediatype=song, dbid=$INFO[ListItem.DBID])</onclick>
+				<label>$INFO[System.AddonTitle(script.artwork.beef),,: $LOCALIZE[413]]</label>
 				<visible>!Skin.HasSetting(KioskMode.Enabled)</visible>
-				<visible>System.HasAddon(script.artwork.dump) + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,artist) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,song)]</visible>
+				<visible>System.HasAddon(script.artwork.beef) + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,artist) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,song)]</visible>
 			</control>
 			<control type="button" id="90207">
 				<description>Edit button</description>

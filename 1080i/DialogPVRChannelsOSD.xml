@@ -11,7 +11,12 @@
 			<control type="image">
 				<width>1800</width>
 				<height>985</height>
-				<texture border="40,100,40,100" colordiffuse="D9807986">dialog_back.png</texture>
+				<texture border="40,100,40,100">homewidgets\transparency_backround.png</texture>
+			</control>
+			<control type="image">
+				<width>1800</width>
+				<height>985</height>
+				<texture border="40,100,40,100" colordiffuse="$VAR[ThemePanelColor]">dialog_back.png</texture>
 			</control>
 			<control type="image">
 				<left>44</left>

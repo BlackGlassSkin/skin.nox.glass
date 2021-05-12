@@ -1004,21 +1004,21 @@
         <content>
             <include>skinshortcuts-mainmenu</include>
         </content>
-</include>
+    </include>
     <!-- Fixed/Wrap -->
     <include name="MainMenuListFixed">
         <control type="fixedlist" id="9000">
             <include condition="!String.IsEqual(Skin.String(MainMenu.Layout),vertical)">MainMenuListContent</include>
             <include condition="String.IsEqual(Skin.String(MainMenu.Layout),vertical)">VerticalMainMenuListContent</include>
         </control>
-</include>
+    </include>
     <include name="MainMenuListWrapped">
         <control type="wraplist" id="9000">
             <include condition="!String.IsEqual(Skin.String(MainMenu.Layout),vertical) + !String.IsEqual(Skin.String(MainMenu.Layout),1)">MainMenuListContent</include>
             <include condition="String.IsEqual(Skin.String(MainMenu.Layout),1)">OneMainMenuItemListContent</include>
             <include condition="String.IsEqual(Skin.String(MainMenu.Layout),vertical)">VerticalMainMenuListContent</include>
         </control>
-</include>
+    </include>
     <!-- Focus -->
     <include name="FocusPosition4">
         <focusposition>4</focusposition>
@@ -1368,102 +1368,103 @@
         </control>
     </include>
     <include name="NowPlayingMusicWidget">
-        <!-- Music Info -->
-        <control type="group">
-            <visible>!Window.Next(musicplaylist) + !Window.Next(visualisation)</visible>
-            <control type="group">
-                <visible>Player.HasAudio + !Window.IsActive(script-globalsearch.xml)</visible>
-                <!-- <include>VisibleFadeAnimation</include> -->
-                <animation effect="slide" tween="cubic" time="0" start="0,1080" end="0,0" condition="Skin.HasSetting(centermainmenu) + !String.IsEqual(Skin.String(MainMenu.Layout),vertical)">WindowOpen</animation>
-                <animation effect="slide" tween="cubic" time="0" end="0,1080" start="0,0" condition="Skin.HasSetting(centermainmenu) + !String.IsEqual(Skin.String(MainMenu.Layout),vertical)">WindowClose</animation>
-                <animation effect="slide" tween="cubic" time="0" start="0,-1080" end="0,0" condition="!Skin.HasSetting(centermainmenu) | String.IsEqual(Skin.String(MainMenu.Layout),vertical)">WindowOpen</animation>
-                <animation effect="slide" tween="cubic" time="0" end="0,-1080" start="0,0" condition="!Skin.HasSetting(centermainmenu) | String.IsEqual(Skin.String(MainMenu.Layout),vertical)">WindowClose</animation>
-                <animation effect="slide" end="0,615" time="0" tween="cubic" easing="inout" condition="Skin.HasSetting(centermainmenu) + !String.IsEqual(Skin.String(MainMenu.Layout),vertical)">Conditional</animation>
-                <animation effect="slide" end="425,-30" time="0" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(MainMenu.Layout),vertical)">Conditional</animation>
-                <animation effect="slide" end="-410,0" time="0" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(MainMenu.Layout),vertical) + String.Contains(Container(9000).ListItem.Property(widgetStyle),Extended) + ControlGroup(90010).HasFocus">Conditional</animation>
-                <animation effect="slide" end="-410,0" time="0" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(MainMenu.Layout),vertical) + String.Contains(Container(9000).ListItem.Property(widgetStyle.2),Extended) + ControlGroup(90020).HasFocus">Conditional</animation>
-                <animation effect="fade" start="100" end="0" condition="[!String.IsEqual(Skin.String(MainMenu.Layout),vertical) + ControlGroup(90020).HasFocus] | [!String.IsEqual(Skin.String(MainMenu.Layout),vertical) + ControlGroup(90010).HasFocus + !String.IsEqual(Container(9000).ListItem.Property(widgetStyle),List) + [!String.IsEmpty(Container(9000).ListItem.Property(widgetPanelInfo))]]">Conditional</animation>
-                <control type="image">
-                    <width>1920</width>
-                    <height>600</height>
-                    <texture>gradient_floor.png</texture>
-                    <visible>Skin.HasSetting(centermainmenu) + !String.IsEqual(Skin.String(MainMenu.Layout),vertical)</visible>
-                </control>
-                <control type="image">
-                    <width>1920</width>
-                    <height>600</height>
-                    <texture flipy="true">gradient_floor.png</texture>
-                    <visible>!Skin.HasSetting(centermainmenu) | String.IsEqual(Skin.String(MainMenu.Layout),vertical)</visible>
-                </control>
-                <control type="image">
-                    <visible>Skin.HasSetting(Enable.CDWall)</visible>
-                    <top>-100</top>
-                    <left>-720</left>
-                    <width>1391</width>
-                    <height>1391</height>
-                    <animation effect="slide" tween="sine" start="0,180" end="1930,-170" time="0" condition="Skin.HasSetting(centermainmenu) + !String.IsEqual(Skin.String(MainMenu.Layout),vertical)">Conditional</animation>
-					<animation effect="slide" tween="sine" start="0,180" end="1660,-30" time="0" condition="!Skin.HasSetting(centermainmenu) + !String.IsEmpty(Skin.String(MainMenu.Layout))">Conditional</animation>
-                    <animation effect="rotate" end="-360" center="auto" time="40000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
-                    <animation effect="fade" start="1870,0" end="0,0" delay="0" time="0">Conditional</animation>
-                    <texture background="true" colordiffuse="D9666666" diffuse="thumbs/boxes/cdart_mask.png">$VAR[PlayerArtworkDiscVar]</texture>
-                </control>
-                <control type="image">
-                    <top>760</top>
-                    <left>-720</left>
-                    <width>100%</width>
-                    <height>185</height>
-                    <aspectratio aligny="bottom" align="center">keep</aspectratio>
-                    <animation effect="slide" tween="cubic" time="990" start="0,0" end="0,-1050" condition="Skin.HasSetting(centermainmenu) + !String.IsEqual(Skin.String(MainMenu.Layout),vertical)">Conditional</animation>
-                    <animation effect="slide" start="1470,0" end="0,0" delay="0" time="0" condition="!Player.Paused">Conditional</animation>
-                    <texture background="true">$VAR[PlayerArtworkLogoVar]</texture>
-                </control>
-                <control type="group">
-                    <left>40</left>
-                    <top>82</top>
-                    <visible>!Player.IsInternetStream + !VideoPlayer.Content(livetv)</visible>
-                    <control type="image">
-                        <left>120</left>
-                        <top>-28</top>
-                        <width>360</width>
-                        <height>360</height>
-                        <aligny>top</aligny>
-                        <align>left</align>
-                        <fadetime>300</fadetime>
-                        <animation effect="rotate" end="-360" center="auto" time="30000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
-                        <texture background="true" diffuse="thumbs/boxes/cdart_mask.png">$VAR[PlayerArtworkDiscVar]</texture>
-                        <bordersize>30</bordersize>
-                    </control>
-                    <control type="image">
-                        <left>-28</left>
-                        <top>-28</top>
-                        <width>356</width>
-                        <height>356</height>
-                        <aspectratio align="center">scale</aspectratio>
-                        <texture diffuse="thumbs/boxes/cdcover_m_2.png" fallback="DefaultCover.jpg">$VAR[RadioPlayerCover2Var]</texture>
-                        <bordersize>28</bordersize>
-                    </control>
-                    <control type="grouplist">
-                        <left>490</left>
-                        <height>300</height>
-                        <itemgap>10</itemgap>
-                        <align>center</align>
-                        <control type="label">
-                            <width>950</width>
-                            <height>40</height>
-                            <font>font48</font>
-                            <textcolor>white2</textcolor>
-                            <shadowcolor>black</shadowcolor>
-                            <label>$INFO[MusicPlayer.TrackNumber,,. ]$INFO[MusicPlayer.Title]</label>
-                        </control>
-                        <control type="label">
-                            <width>950</width>
-                            <height>40</height>
-                            <font>font15_title</font>
-                            <textcolor>$VAR[ThemeHomeLabelColor]</textcolor>
-                            <shadowcolor>black</shadowcolor>
-                            <label>$INFO[MusicPlayer.Artist]</label>
-                        </control>
-						<!--<control type="label">
+	<!-- Music Info -->
+	<control type="group">
+		<visible>!Window.Next(musicplaylist) + !Window.Next(visualisation) + !ControlGroup(90020).HasFocus</visible>
+		<control type="group">
+			<visible>Player.HasAudio + !Window.IsActive(script-globalsearch.xml)</visible>
+			<!-- <include>VisibleFadeAnimation</include> -->
+			<animation effect="slide" tween="cubic" time="0" start="0,1080" end="0,0" condition="Skin.HasSetting(centermainmenu) + !String.IsEqual(Skin.String(MainMenu.Layout),vertical)">WindowOpen</animation>
+			<animation effect="slide" tween="cubic" time="0" end="0,1080" start="0,0" condition="Skin.HasSetting(centermainmenu) + !String.IsEqual(Skin.String(MainMenu.Layout),vertical)">WindowClose</animation>
+			<animation effect="slide" tween="cubic" time="0" start="0,-1080" end="0,0" condition="!Skin.HasSetting(centermainmenu) | String.IsEqual(Skin.String(MainMenu.Layout),vertical)">WindowOpen</animation>
+			<animation effect="slide" tween="cubic" time="0" end="0,-1080" start="0,0" condition="!Skin.HasSetting(centermainmenu) | String.IsEqual(Skin.String(MainMenu.Layout),vertical)">WindowClose</animation>
+			<animation effect="slide" end="0,615" time="0" tween="cubic" easing="inout" condition="Skin.HasSetting(centermainmenu) + !String.IsEqual(Skin.String(MainMenu.Layout),vertical)">Conditional</animation>
+			<animation effect="slide" end="440,10" time="0" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(MainMenu.Layout),vertical)">Conditional</animation>
+			<animation effect="slide" end="-410,0" time="0" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(MainMenu.Layout),vertical) + String.Contains(Container(9000).ListItem.Property(widgetStyle),Extended) + ControlGroup(90010).HasFocus">Conditional</animation>
+			<animation effect="slide" end="-410,0" time="0" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(MainMenu.Layout),vertical) + String.Contains(Container(9000).ListItem.Property(widgetStyle.2),Extended) + ControlGroup(90020).HasFocus">Conditional</animation>
+			<animation effect="fade" start="100" end="0" condition="[!String.IsEqual(Skin.String(MainMenu.Layout),vertical) + ControlGroup(90020).HasFocus] | [!String.IsEqual(Skin.String(MainMenu.Layout),vertical) + ControlGroup(90010).HasFocus + !String.IsEqual(Container(9000).ListItem.Property(widgetStyle),List) + [!String.IsEmpty(Container(9000).ListItem.Property(widgetPanelInfo))]]">Conditional</animation>
+			<control type="image">
+				<width>1920</width>
+				<height>600</height>
+				<texture>gradient_floor.png</texture>
+				<visible>Skin.HasSetting(centermainmenu) + !String.IsEqual(Skin.String(MainMenu.Layout),vertical)</visible>
+			</control>
+			<control type="image">
+				<width>1920</width>
+				<height>600</height>
+				<texture flipy="true">gradient_floor.png</texture>
+				<visible>!Skin.HasSetting(centermainmenu) | String.IsEqual(Skin.String(MainMenu.Layout),vertical)</visible>
+			</control>
+			<control type="image">
+				<visible>Skin.HasSetting(Enable.CDWall)</visible>
+				<top>-100</top>
+				<left>-720</left>
+				<width>1391</width>
+				<height>1391</height>
+				<animation effect="slide" tween="sine" start="0,180" end="1930,-170" time="0" condition="Skin.HasSetting(centermainmenu) + !String.IsEqual(Skin.String(MainMenu.Layout),vertical)">Conditional</animation>
+				<animation effect="slide" tween="sine" start="0,180" end="1660,-30" time="0" condition="String.IsEqual(Skin.String(MainMenu.Layout),vertical) + ![Skin.HasSetting(centermainmenu) | String.IsEqual(Skin.String(MainMenu.Layout)) | String.IsEqual(Skin.String(MainMenu.Layout),1) | String.IsEqual(Skin.String(MainMenu.Layout),3) | String.IsEqual(Skin.String(MainMenu.Layout),icons)]">Conditional</animation>
+				<animation effect="rotate" end="-360" center="auto" time="90000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
+				<animation effect="fade" start="1870,0" end="0,0" delay="0" time="0">Conditional</animation>
+				<texture background="true" colordiffuse="D9666666" diffuse="thumbs/boxes/cdart_mask.png">$VAR[PlayerArtworkDiscVar]</texture>
+			</control>
+			<control type="image">
+				<top>760</top>
+				<left>-720</left>
+				<width>100%</width>
+				<height>165</height>
+				<aspectratio aligny="bottom" align="center">keep</aspectratio>
+				<animation effect="slide" tween="cubic" time="990" start="0,0" end="-10,-1050" condition="Skin.HasSetting(centermainmenu) + !String.IsEqual(Skin.String(MainMenu.Layout),vertical)">Conditional</animation>
+				<animation effect="slide" tween="sine" start="0,180" end="1660,-30" time="0" condition="String.IsEqual(Skin.String(MainMenu.Layout),vertical) + ![Skin.HasSetting(centermainmenu) | String.IsEqual(Skin.String(MainMenu.Layout)) | String.IsEqual(Skin.String(MainMenu.Layout),1) | String.IsEqual(Skin.String(MainMenu.Layout),3) | String.IsEqual(Skin.String(MainMenu.Layout),icons)]">Conditional</animation>
+				<animation effect="slide" start="1470,0" end="0,0" delay="0" time="1000" condition="!Player.Paused">Conditional</animation>
+				<texture background="true">$VAR[PlayerArtworkLogoVar]</texture>
+			</control>
+			<control type="group">
+				<left>40</left>
+				<top>82</top>
+				<visible>!Player.IsInternetStream + !VideoPlayer.Content(livetv)</visible>
+				<control type="image">
+					<left>120</left>
+					<top>-28</top>
+					<width>360</width>
+					<height>360</height>
+					<aligny>top</aligny>
+					<align>left</align>
+					<fadetime>300</fadetime>
+					<animation effect="rotate" end="-360" center="auto" time="30000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
+					<texture background="true" diffuse="thumbs/boxes/cdart_mask.png">$VAR[PlayerArtworkDiscVar]</texture>
+					<bordersize>30</bordersize>
+				</control>
+				<control type="image">
+					<left>-28</left>
+					<top>-28</top>
+					<width>356</width>
+					<height>356</height>
+					<aspectratio align="center">scale</aspectratio>
+					<texture diffuse="thumbs/boxes/cdcover_m_2.png" fallback="DefaultCover.jpg">$VAR[RadioPlayerCover2Var]</texture>
+					<bordersize>28</bordersize>
+				</control>
+				<control type="grouplist">
+					<left>490</left>
+					<height>300</height>
+					<itemgap>10</itemgap>
+					<align>center</align>
+					<control type="label">
+						<width>950</width>
+						<height>40</height>
+						<font>font48</font>
+						<textcolor>white2</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>$INFO[MusicPlayer.TrackNumber,,. ]$INFO[MusicPlayer.Title]</label>
+					</control>
+					<control type="label">
+						<width>950</width>
+						<height>40</height>
+						<font>font15_title</font>
+						<textcolor>$VAR[ThemeHomeLabelColor]</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>$INFO[MusicPlayer.Artist]</label>
+					</control>
+					<!--<control type="label">
                             <width>950</width>
                             <height>40</height>
                             <font>font48</font>
@@ -1479,98 +1480,97 @@
                             <shadowcolor>black</shadowcolor>
                             <label>$VAR[MusicPlayerAtistTitleVar]</label>
                         </control>-->
-						
-                        <control type="label">
-                            <width>950</width>
-                            <height>40</height>
-                            <font>font15</font>
-                            <textcolor>white2</textcolor>
-                            <shadowcolor>black</shadowcolor>
-                            <label>$VAR[PlayerAllAlbumsVar]$INFO[musicplayer.discnumber, - $LOCALIZE[427]:]</label>
-                        </control>
-                        <control type="label">
-                            <width>950</width>
-                            <height>40</height>
-                            <font>font15</font>
-                            <textcolor>$VAR[ThemeHomeLabelColor]</textcolor>
-                            <shadowcolor>black</shadowcolor>
-                            <label>$INFO[MusicPlayer.offset(1).TrackNumber,$LOCALIZE[19031]: [COLOR white2],.[/COLOR] ][COLOR white2]$INFO[MusicPlayer.offset(1).Artist,, - ]$INFO[MusicPlayer.offset(1).Title][/COLOR]</label>
-                        </control>
-                        <control type="label">
-                            <height>50</height>
-                            <width>750</width>
-                            <label>[COLOR white2]$INFO[Player.Time][/COLOR]$INFO[Player.Duration, / [COLOR=white2],[/COLOR]]</label>
-                            <font>font48</font>
-                            <textcolor>$VAR[ThemeHomeLabelColor]</textcolor>
-                            <shadowcolor>black</shadowcolor>
-                        </control>
-                    </control>
-                </control>
-                <control type="group">
-                    <left>40</left>
-                    <top>82</top>
-                    <visible>Player.IsInternetStream | VideoPlayer.Content(livetv)</visible>
-                    <control type="image">
-                        <left>159.5</left>
-                        <top>-79.2</top>
-                        <width>498</width>
-                        <height>498</height>
-                        <aligny>top</aligny>
-                        <align>left</align>
-                        <fadetime>300</fadetime>
-                        <animation effect="rotate" end="-360" center="auto" time="30000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
-                        <texture background="true" diffuse="thumbs/boxes/cdart_mask.png">$VAR[PlayerArtworkDiscVar]</texture>
-                        <bordersize>30</bordersize>
-                    </control>
-                    <control type="image">
-                        <top>-66</top>
-                        <left>-52</left>
-                        <width>470</width>
-                        <height>468</height>
-                        <bordersize>20</bordersize>
-                        <bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
-                        <texture diffuse="thumbs/boxes/cdcover_m_2.png" fallback="DefaultCover.jpg">$VAR[RadioPlayerCover2Var]</texture>
-                    </control>
-                    <control type="grouplist">
-                        <left>640</left>
-                        <top>-60</top>
-                        <height>350</height>
-                        <itemgap>10</itemgap>
-                        <align>center</align>
-                        <control type="label">
-                            <width>1130</width>
-                            <height>40</height>
-                            <font>font48</font>
-                            <textcolor>$VAR[ThemeHomeLabelColor]</textcolor>
-                            <shadowcolor>black</shadowcolor>
-                            <label>$VAR[MusicPlayerAtistTitleVar]</label>
-                        </control>
-                        <control type="label">
-                            <width>1130</width>
-                            <height>40</height>
-                            <font>font15_title</font>
-                            <textcolor>white2</textcolor>
-                            <shadowcolor>black</shadowcolor>
-                            <label>$VAR[PlayerAllTitlesVar]</label>
-                        </control>
-                        <control type="label">
-                            <width>1140</width>
-                            <height>40</height>
-                            <font>font15_title</font>
-                            <textcolor>white2</textcolor>
-                            <shadowcolor>black</shadowcolor>
-                            <label>$INFO[Window(Home).Property(SkinHelper.Player.Album)]</label>
-                        </control>
-                        <control type="label">
-                            <width>1130</width>
-                            <height>40</height>
-                            <font>font15</font>
-                            <textcolor>white2</textcolor>
-                            <shadowcolor>black</shadowcolor>
-                            <label>$INFO[MusicPlayer.ChannelNumberLabel,(,).] $INFO[MusicPlayer.ChannelName, ]</label>
-                            <visible>String.IsEmpty(PlayerAllGenresVar)</visible>
-                        </control>
-                        <!--        <control type="textbox">
+					<control type="label">
+						<width>950</width>
+						<height>40</height>
+						<font>font15</font>
+						<textcolor>white2</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>$VAR[PlayerAllAlbumsVar]$INFO[musicplayer.discnumber, - $LOCALIZE[427]:]</label>
+					</control>
+					<control type="label">
+						<width>950</width>
+						<height>40</height>
+						<font>font15</font>
+						<textcolor>$VAR[ThemeHomeLabelColor]</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>$INFO[MusicPlayer.offset(1).TrackNumber,$LOCALIZE[19031]: [COLOR white2],.[/COLOR] ][COLOR white2]$INFO[MusicPlayer.offset(1).Artist,, - ]$INFO[MusicPlayer.offset(1).Title][/COLOR]</label>
+					</control>
+					<control type="label">
+						<height>50</height>
+						<width>750</width>
+						<label>[COLOR white2]$INFO[Player.Time][/COLOR]$INFO[Player.Duration, / [COLOR=white2],[/COLOR]]</label>
+						<font>font48</font>
+						<textcolor>$VAR[ThemeHomeLabelColor]</textcolor>
+						<shadowcolor>black</shadowcolor>
+					</control>
+				</control>
+			</control>
+			<control type="group">
+				<left>40</left>
+				<top>82</top>
+				<visible>Player.IsInternetStream | VideoPlayer.Content(livetv)</visible>
+				<control type="image">
+					<left>159.5</left>
+					<top>-79.2</top>
+					<width>498</width>
+					<height>498</height>
+					<aligny>top</aligny>
+					<align>left</align>
+					<fadetime>300</fadetime>
+					<animation effect="rotate" end="-360" center="auto" time="30000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
+					<texture background="true" diffuse="thumbs/boxes/cdart_mask.png">$VAR[PlayerArtworkDiscVar]</texture>
+					<bordersize>30</bordersize>
+				</control>
+				<control type="image">
+					<top>-66</top>
+					<left>-52</left>
+					<width>470</width>
+					<height>468</height>
+					<bordersize>20</bordersize>
+					<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
+					<texture diffuse="thumbs/boxes/cdcover_m_2.png" fallback="DefaultCover.jpg">$VAR[RadioPlayerCover2Var]</texture>
+				</control>
+				<control type="grouplist">
+					<left>640</left>
+					<top>-60</top>
+					<height>350</height>
+					<itemgap>10</itemgap>
+					<align>center</align>
+					<control type="label">
+						<width>1130</width>
+						<height>40</height>
+						<font>font48</font>
+						<textcolor>$VAR[ThemeHomeLabelColor]</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>$VAR[MusicPlayerAtistTitleVar]</label>
+					</control>
+					<control type="label">
+						<width>1130</width>
+						<height>40</height>
+						<font>font15_title</font>
+						<textcolor>white2</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>$VAR[PlayerAllTitlesVar]</label>
+					</control>
+					<control type="label">
+						<width>1140</width>
+						<height>40</height>
+						<font>font15_title</font>
+						<textcolor>white2</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>$INFO[Window(Home).Property(SkinHelper.Player.Album)]</label>
+					</control>
+					<control type="label">
+						<width>1130</width>
+						<height>40</height>
+						<font>font15</font>
+						<textcolor>white2</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>$INFO[MusicPlayer.ChannelNumberLabel,(,).] $INFO[MusicPlayer.ChannelName, ]</label>
+						<visible>String.IsEmpty(PlayerAllGenresVar)</visible>
+					</control>
+					<!--        <control type="textbox">
                             <width>840</width>
                             <height max="120">auto</height>
                             <font>font15</font>
@@ -1579,16 +1579,16 @@
                             <visible>VideoPlayer.Content(livetv)</visible>
                             <autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
                         </control> -->
-                        <control type="label">
-                            <height>50</height>
-                            <width>830</width>
-                            <label>[COLOR=white2]$INFO[Player.Time][/COLOR]</label>
-                            <font>font15_title</font>
-                            <textcolor>$VAR[ThemeHomeLabelColor]</textcolor>
-                            <shadowcolor>black</shadowcolor>
-                        </control>
-                    </control>
-                    <!--    <control type="label">
+					<control type="label">
+						<height>50</height>
+						<width>830</width>
+						<label>[COLOR=white2]$INFO[Player.Time][/COLOR]</label>
+						<font>font15_title</font>
+						<textcolor>$VAR[ThemeHomeLabelColor]</textcolor>
+						<shadowcolor>black</shadowcolor>
+					</control>
+				</control>
+				<!--    <control type="label">
                             <top>260</top>
                             <width>1730</width>
                             <height>640</height>
@@ -1598,67 +1598,67 @@
                             <label>$INFO[Window(Home).Property(SkinHelper.Player.Plot)]</label>
                             <wrapmultiline>true</wrapmultiline>
                         </control> -->
-                    <control type="grouplist">
-                        <top>260</top>
-                        <left>624</left>
-                        <centerleft>555</centerleft>
-                        <width>auto</width>
-                        <orientation>horizontal</orientation>
-                        <usecontrolcoords>true</usecontrolcoords>
-                        <bordersize>-900</bordersize>
-                        <control type="image">
-                            <width>80</width>
-                            <include>MediaFlagValues</include>
-                            <texture>$VAR[MediaFlagsPathVar]/audiocodec/$VAR[PlayerAudioCodecFlagVar]</texture>
-                        </control>
-                        <control type="image">
-                            <width>80</width>
-                            <include>MediaFlagValues</include>
-                            <texture>$VAR[MediaFlagsPathVar]/audiochannels/$INFO[VideoPlayer.AudioChannels,,.png]</texture>
-                        </control>
-                        <control type="label">
-                            <width>80</width>
-                            <top>-2</top>
-                            <include>MediaFlagValues</include>
-                            <label>[B]$INFO[MusicPlayer.BitRate, ,:][/B]</label>
-                        </control>
-                        <control type="image">
-                            <width>80</width>
-                            <left>-8</left>
-                            <include>MediaFlagValues</include>
-                            <texture>flags/colored/bitrate/128.png</texture>
-                            <visible>!String.IsEmpty(MusicPlayer.BitRate)</visible>
-                        </control>
-                        <control type="label">
-                            <width>80</width>
-                            <top>-2</top>
-                            <include>MediaFlagValues</include>
-                            <label>[B]$INFO[MusicPlayer.BitsPerSample, | ,:][/B]</label>
-                        </control>
-                        <control type="image">
-                            <width>40</width>
-                            <include>MediaFlagValues</include>
-                            <texture>flags/colored/bitrate/32.png</texture>
-                            <visible>!String.IsEmpty(MusicPlayer.BitsPerSample)</visible>
-                        </control>
-                        <control type="label">
-                            <width>112</width>
-                            <top>-2</top>
-                            <include>MediaFlagValues</include>
-                            <label>[B]$INFO[MusicPlayer.Samplerate, | ,: ][/B]</label>
-                        </control>
-                        <control type="image">
-                            <width>56</width>
-                            <left>-8</left>
-                            <include>MediaFlagValues</include>
-                            <texture>flags/colored/bitrate/khz.png</texture>
-                            <visible>!String.IsEmpty(MusicPlayer.Samplerate)</visible>
-                        </control>
-                    </control>
-                </control>
-            </control>
-        </control>
-    </include>
+				<control type="grouplist">
+					<top>260</top>
+					<left>624</left>
+					<centerleft>555</centerleft>
+					<width>auto</width>
+					<orientation>horizontal</orientation>
+					<usecontrolcoords>true</usecontrolcoords>
+					<bordersize>-900</bordersize>
+					<control type="image">
+						<width>80</width>
+						<include>MediaFlagValues</include>
+						<texture>$VAR[MediaFlagsPathVar]/audiocodec/$VAR[PlayerAudioCodecFlagVar]</texture>
+					</control>
+					<control type="image">
+						<width>80</width>
+						<include>MediaFlagValues</include>
+						<texture>$VAR[MediaFlagsPathVar]/audiochannels/$INFO[VideoPlayer.AudioChannels,,.png]</texture>
+					</control>
+					<control type="label">
+						<width>80</width>
+						<top>-2</top>
+						<include>MediaFlagValues</include>
+						<label>[B]$INFO[MusicPlayer.BitRate, ,:][/B]</label>
+					</control>
+					<control type="image">
+						<width>80</width>
+						<left>-8</left>
+						<include>MediaFlagValues</include>
+						<texture>flags/colored/bitrate/128.png</texture>
+						<visible>!String.IsEmpty(MusicPlayer.BitRate)</visible>
+					</control>
+					<control type="label">
+						<width>80</width>
+						<top>-2</top>
+						<include>MediaFlagValues</include>
+						<label>[B]$INFO[MusicPlayer.BitsPerSample, | ,:][/B]</label>
+					</control>
+					<control type="image">
+						<width>40</width>
+						<include>MediaFlagValues</include>
+						<texture>flags/colored/bitrate/32.png</texture>
+						<visible>!String.IsEmpty(MusicPlayer.BitsPerSample)</visible>
+					</control>
+					<control type="label">
+						<width>112</width>
+						<top>-2</top>
+						<include>MediaFlagValues</include>
+						<label>[B]$INFO[MusicPlayer.Samplerate, | ,: ][/B]</label>
+					</control>
+					<control type="image">
+						<width>56</width>
+						<left>-8</left>
+						<include>MediaFlagValues</include>
+						<texture>flags/colored/bitrate/khz.png</texture>
+						<visible>!String.IsEmpty(MusicPlayer.Samplerate)</visible>
+					</control>
+				</control>
+			</control>
+		</control>
+	</control>
+</include>
     <!-- RSS Feed -->
     <include name="RSSFeed">
         <control type="group">
@@ -2056,9 +2056,9 @@
                 </control>
                 <control type="multiimage">
                     <top>50</top>
-                    <left>1100</left>
-                    <width>1930</width>
-                    <height>860</height>
+                    <left>1101</left>
+                    <width>2170</width>
+                    <height>820</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
                     <imagepath flipx="false" colordiffuse="99FFFFFF" diffuse="views/myflix/weather_widget.png">$INFO[Skin.String(weatherfanart.path)]$INFO[Window(Weather).Property(Current.FanartCode)]$VAR[WeatherBackgroundTypeVar]</imagepath>
                     <timeperimage>9000</timeperimage>
@@ -2176,7 +2176,7 @@
     </include>
     <include name="SystemInfoWidget">
         <control type="group">
-            <visible>!Player.HasMedia + [!System.Platform.Android + Skin.HasSetting(Enable.MysystemWidget)]</visible>
+            <visible>!Player.HasMedia + Skin.HasSetting(Enable.MysystemWidget)</visible>
             <left>720r</left>
             <top>45</top>
             <visible>!String.IsEqual(Skin.String(MainMenu.Layout),vertical) + String.IsEqual(Container(9000).ListItem.Property(path),ActivateWindow(Settings)) + String.IsEmpty(Container(9000).ListItem.Property(widgetType.2)) + !Skin.HasSetting(centermainmenu)</visible>
