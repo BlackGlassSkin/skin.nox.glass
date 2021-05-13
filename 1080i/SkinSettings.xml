@@ -360,6 +360,12 @@
 							<onclick>SetProperty(CustomSelectDefaultBackground,True,Home)</onclick>
 							<onclick>ActivateWindow(1129)</onclick>
 						</control>
+						<control type="radiobutton" id="2006">
+							<include>SettingsButtonCommonValues</include>
+							<label>Enable | Disable Default Backround</label>
+							<onclick>Skin.ToggleSetting(Enable.DefaultBackround)</onclick>
+							<selected>!Skin.HasSetting(Enable.DefaultBackround)</selected>
+						</control>
 						<control type="radiobutton" id="2008">
 							<include>SettingsButtonCommonValues</include>
 							<label>$LOCALIZE[31218]</label>

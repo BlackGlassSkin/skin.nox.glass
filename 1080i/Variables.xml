@@ -101,6 +101,21 @@
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(background),Global.Fanart) | Control.HasFocus(9010) + String.IsEqual(Container(9010).ListItem.Property(background),Global.Fanart)">$INFO[Window(Home).Property(script.grab.fanart.Global.FanArt)]</value>
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(background),Weather.Fanart) | Control.HasFocus(9010) + String.IsEqual(Container(9010).ListItem.Property(background),Weather.Fanart)">$INFO[Skin.String(weatherfanart.path)]$INFO[Window(Weather).Property(Current.FanartCode)]$VAR[WeatherBackgroundTypeVar]</value>
 		<value condition="!String.IsEmpty(Container(9000).ListItem.Property(background))">$INFO[Container(9000).ListItem.Property(background)]</value>
+		<value condition="!Skin.HasSetting(Enable.DefaultBackround) + Window.IsActive(home) + String.Contains(ListItem.Label,$LOCALIZE[12600])">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/weather/weather.jpg</value>
+		<value condition="!Skin.HasSetting(Enable.DefaultBackround) + Window.IsActive(home) + String.Contains(ListItem.Label,$LOCALIZE[1213])">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/pictures/pictures.jpg</value>
+		<value condition="!Skin.HasSetting(Enable.DefaultBackround) + Window.IsActive(home) + String.Contains(ListItem.Label,$LOCALIZE[20389])">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/musicvideos/musicvideos.jpg</value>
+		<value condition="!Skin.HasSetting(Enable.DefaultBackround) + Window.IsActive(home) + String.Contains(ListItem.Label,$LOCALIZE[36914])">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/music/02-music.jpg</value>
+		<value condition="!Skin.HasSetting(Enable.DefaultBackround) + Window.IsActive(home) + String.Contains(ListItem.Label,$LOCALIZE[342])">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/movies/10-movies.jpg</value>
+		<value condition="!Skin.HasSetting(Enable.DefaultBackround) + Window.IsActive(home) + String.Contains(ListItem.Label,$LOCALIZE[20343])">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/tvshows/23-tvshows.jpg</value>
+		<value condition="!Skin.HasSetting(Enable.DefaultBackround) + Window.IsActive(home) + String.Contains(ListItem.Label,$LOCALIZE[31502])">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/livetv/livetv.jpg</value>
+		<value condition="!Skin.HasSetting(Enable.DefaultBackround) + Window.IsActive(home) + String.Contains(ListItem.Label,$LOCALIZE[3])">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/videos/videos.jpg</value>
+		<value condition="!Skin.HasSetting(Enable.DefaultBackround) + Window.IsActive(home) + String.Contains(ListItem.Label,$LOCALIZE[31957])">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/programs/programs.jpg</value>
+		<value condition="!Skin.HasSetting(Enable.DefaultBackround) + Window.IsActive(home) + String.Contains(ListItem.Label,$LOCALIZE[15016])">http://dl.dropboxusercontent.com/s/kxx9tw14asy9gyx/game.jpg</value>
+		<value condition="!Skin.HasSetting(Enable.DefaultBackround) + Window.IsActive(home) + String.Contains(ListItem.Label,$LOCALIZE[13000])">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/system/system.jpg</value>
+		<value condition="!Skin.HasSetting(Enable.DefaultBackround) + Window.IsActive(home) + String.Contains(ListItem.Label,$LOCALIZE[137])">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/search/search.jpg</value>
+		<value condition="!Skin.HasSetting(Enable.DefaultBackround) + Window.IsActive(home) + String.Contains(ListItem.Label,$LOCALIZE[31958])">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/play_disc/play_disc.jpg</value>
+		<value condition="!Skin.HasSetting(Enable.DefaultBackround) + Window.IsActive(home) + String.Contains(ListItem.Label,$LOCALIZE[33060])">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/shutdown/shutdown.jpg</value>
+		<value condition="!Skin.HasSetting(Enable.DefaultBackround) + Window.IsActive(home) + String.Contains(ListItem.Label,$LOCALIZE[1036])">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/favourites/favourites.jpg</value>
 		<value condition="!String.IsEmpty(Skin.String(CustomDefaultBackground.path))">$INFO[Skin.String(CustomDefaultBackground.path)]</value>
 	</variable>
 	<variable name="SeasonsBackgroundLabelVar">

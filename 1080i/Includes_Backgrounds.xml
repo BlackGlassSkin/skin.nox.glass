@@ -165,7 +165,7 @@
 			<include condition="Skin.HasSetting(Enable.AnimatedBackgrounds)">AnimatedBackgroundAnimation</include>
 			<imagepath background="true" colordiffuse="$VAR[ThemeWallpapersColor]">$VAR[HomeBackgroundVar]</imagepath>
 			<include>MultiImageTime</include>
-			<fadetime>1300</fadetime>
+			<fadetime>700</fadetime>
 			<visible>![Player.IsInternetStream + Player.HasAudio + Skin.HasSetting(Enable.ArtistSlideshowOnHome) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image)) + String.IsEmty(VizBackgroundVar)]</visible>
 		</control>
 		<control type="image">
