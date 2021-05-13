@@ -2,23 +2,8 @@
 A modded version of [Aeon Nox 5 & SiLVO]
 
 **Branches guide:**
- - **master:** Kodi v19 Codename Matrix
- 
+ - **Leia:** Kodi v18 Codename Leia
 
-# Before Installing skin.nox.glass
-* Install this repository
-
-https://github.com/AnonTester/kodi-repo/tree/master/repository.anontester
-
-or..
-
-~~https://github.com/kodi-community-addons/repository.marcelveldt/tree/master/matrix~~
-
-and from repository install
-***script.skin.helper.service*** from Kontext menus
-***script.skin.helper.widgets*** from Music add-ons or Video add-ons
-
-*after install skin*
 
 weather icon , weather fanart code ***"reduced package size"*** and more install the repo below 
 
