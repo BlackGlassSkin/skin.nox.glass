@@ -141,6 +141,7 @@
 			<width>1536</width>
 			<height>864</height>
 			<include>MultiImageTime</include>
+			<fadetime>700</fadetime>
 			<imagepath background="true" diffuse="views/myflix/fanart_diffuse.png">$VAR[GlobalBackgroundVar]</imagepath>
 			<include condition="Skin.HasSetting(Enable.AnimatedBackgrounds)">AnimatedBackgroundAnimation</include>
 			<visible>Control.IsVisible(509)</visible>
@@ -149,6 +150,7 @@
 			<visible>!Control.IsVisible(509)</visible>
 			<control type="multiimage">
 				<include>MultiImageTime</include>
+				<fadetime>700</fadetime>
 				<include condition="Skin.HasSetting(Enable.AnimatedBackgrounds)">AnimatedBackgroundAnimation</include>
 				<imagepath background="true" colordiffuse="$VAR[ThemeGlobalBackgroundColor]">$VAR[GlobalBackgroundVar]</imagepath>
 			</control>
