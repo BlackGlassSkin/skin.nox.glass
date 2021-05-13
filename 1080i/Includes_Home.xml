@@ -2046,21 +2046,13 @@
 					<height>1000</height>
 					<texture flipx="false" colordiffuse="black">views/myflix/fanart_diffuse_left.png</texture>
 				</control>
-				<control type="image">
-					<top>30</top>
-					<left>950</left>
-					<width>2999</width>
-					<height>1800</height>
-					<texture flipx="false" colordiffuse="black">views/myflix/fanart_diffuse_left.png</texture>
-					<visible>Skin.HasSetting(Enable.MyWeatherFanartCode) + !String.IsEmpty(Container(9000).ListItem.Property(widgetType.1.weather))</visible>
-				</control>
 				<control type="multiimage">
 					<top>50</top>
 					<left>1100</left>
 					<width>1930</width>
 					<height>860</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
-					<imagepath flipx="false" colordiffuse="99FFFFFF" diffuse="views/myflix/weather_widget.png">$INFO[Skin.String(weatherfanart.path)]$INFO[Window(Weather).Property(Current.FanartCode)]$VAR[WeatherBackgroundTypeVar]</imagepath>
+					<imagepath flipx="false" colordiffuse="99FFFFFF" diffuse="sys_info.png">$INFO[Skin.String(weatherfanart.path)]$INFO[Window(Weather).Property(Current.FanartCode)]$VAR[WeatherBackgroundTypeVar]</imagepath>
 					<timeperimage>9000</timeperimage>
 					<fadetime>500</fadetime>
 					<randomize>false</randomize>
@@ -2191,9 +2183,9 @@
 				<control type="image">
 					<top>-3</top>
 					<left>-1220</left>
-					<height>646</height>
+					<height>850</height>
 					<width>1950</width>
-					<texture border="10" colordiffuse="E6000000">listpanel_back.png</texture>
+					<texture border="10" colordiffuse="F2000000">sys_info.png</texture>
 				</control>
 				<control type="grouplist">
 					<!--<visible>![system.hasaddon(service.coreelec.settings) | system.hasaddon(service.libreelec.settings)]</visible>-->

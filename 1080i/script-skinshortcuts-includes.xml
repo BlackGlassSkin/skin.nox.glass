@@ -6,7 +6,6 @@
 			<label2 />
 			<icon>special://skin/extras/icons/DefaultPicture.png</icon>
 			<thumb />
-			<property name="background">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/pictures/pictures.jpg</property>
 			<onclick condition="String.IsEqual(ListItem.Property(path),ActivateWindow(1129))">SetProperty(CustomSelectSearch,True,Home)</onclick>
 			<onclick>ActivateWindow(Pictures,return)</onclick>
 			<property name="path">ActivateWindow(Pictures,return)</property>
@@ -20,7 +19,6 @@
 			<label2 />
 			<icon>special://skin/extras/icons/DefaultAudio.png</icon>
 			<thumb />
-			<property name="background">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/music/02-music.jpg</property>
 			<onclick condition="String.IsEqual(ListItem.Property(path),ActivateWindow(1129))">SetProperty(CustomSelectSearch,True,Home)</onclick>
 			<onclick>ActivateWindow(Music,files)</onclick>
 			<property name="path">ActivateWindow(Music,files)</property>
@@ -34,7 +32,6 @@
 			<label2 />
 			<icon>special://skin/extras/icons/DefaultMovies.png</icon>
 			<thumb />
-			<property name="background">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/movies/10-movies.jpg</property>
 			<onclick condition="String.IsEqual(ListItem.Property(path),ActivateWindow(1129))">SetProperty(CustomSelectSearch,True,Home)</onclick>
 			<onclick condition="Library.HasContent(Movies)">ActivateWindow(Videos,videodb://movies/titles/,return)</onclick>
 			<property name="path">ActivateWindow(Videos,videodb://movies/titles/,return)</property>
@@ -49,7 +46,6 @@
 			<label2 />
 			<icon>special://skin/extras/icons/DefaultTVShows.png</icon>
 			<thumb />
-			<property name="background">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/tvshows/23-tvshows.jpg</property>
 			<onclick condition="String.IsEqual(ListItem.Property(path),ActivateWindow(1129))">SetProperty(CustomSelectSearch,True,Home)</onclick>
 			<onclick condition="Library.HasContent(TVShows)">ActivateWindow(Videos,videodb://tvshows/titles/,return)</onclick>
 			<property name="path">ActivateWindow(Videos,videodb://tvshows/titles/,return)</property>
@@ -64,7 +60,6 @@
 			<label2 />
 			<icon>special://skin/extras/icons/DefaultAddonPVRClient.png</icon>
 			<thumb />
-			<property name="background">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/livetv/livetv.jpg</property>
 			<onclick condition="String.IsEqual(ListItem.Property(path),ActivateWindow(1129))">SetProperty(CustomSelectSearch,True,Home)</onclick>
 			<onclick condition="System.HasPVRAddon">ActivateWindow(TVChannels)</onclick>
 			<property name="path">ActivateWindow(TVChannels)</property>
@@ -79,7 +74,6 @@
 			<label2 />
 			<icon>special://skin/extras/icons/DefaultVideo.png</icon>
 			<thumb />
-			<property name="background">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/videos/videos.jpg</property>
 			<onclick condition="String.IsEqual(ListItem.Property(path),ActivateWindow(1129))">SetProperty(CustomSelectSearch,True,Home)</onclick>
 			<onclick>ActivateWindow(Videos,root)</onclick>
 			<property name="path">ActivateWindow(Videos,root)</property>
@@ -93,7 +87,6 @@
 			<label2 />
 			<icon>special://skin/extras/icons/DefaultAddon.png</icon>
 			<thumb />
-			<property name="background">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/programs/programs.jpg</property>
 			<onclick condition="String.IsEqual(ListItem.Property(path),ActivateWindow(1129))">SetProperty(CustomSelectSearch,True,Home)</onclick>
 			<onclick>ActivateWindow(1133)</onclick>
 			<property name="path">ActivateWindow(1133)</property>
@@ -107,7 +100,6 @@
 			<label2 />
 			<icon>special://skin/extras/icons/DefaultGames.png</icon>
 			<thumb />
-			<property name="background">http://dl.dropboxusercontent.com/s/kxx9tw14asy9gyx/game.jpg</property>
 			<visible>System.GetBool(gamesgeneral.enable)</visible>
 			<onclick condition="String.IsEqual(ListItem.Property(path),ActivateWindow(1129))">SetProperty(CustomSelectSearch,True,Home)</onclick>
 			<onclick>ActivateWindow(Games)</onclick>
@@ -122,7 +114,6 @@
 			<label2 />
 			<icon>special://skin/extras/icons/DefaultAddonService.png</icon>
 			<thumb />
-			<property name="background">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/system/system.jpg</property>
 			<onclick condition="String.IsEqual(ListItem.Property(path),ActivateWindow(1129))">SetProperty(CustomSelectSearch,True,Home)</onclick>
 			<onclick>ActivateWindow(Settings)</onclick>
 			<property name="path">ActivateWindow(Settings)</property>
@@ -136,7 +127,6 @@
 			<label2 />
 			<icon>special://skin/extras/icons/DefaultAddonsSearch.png</icon>
 			<thumb />
-			<property name="background">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/search/search.jpg</property>
 			<onclick condition="String.IsEqual(ListItem.Property(path),ActivateWindow(1129))">SetProperty(CustomSelectSearch,True,Home)</onclick>
 			<onclick>ActivateWindow(1129)</onclick>
 			<property name="path">ActivateWindow(1129)</property>
@@ -150,7 +140,6 @@
 			<label2 />
 			<icon>special://skin/extras/icons/Disc.png</icon>
 			<thumb />
-			<property name="background">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/play_disc/play_disc.jpg</property>
 			<visible>System.HasMediaDVD</visible>
 			<onclick condition="String.IsEqual(ListItem.Property(path),ActivateWindow(1129))">SetProperty(CustomSelectSearch,True,Home)</onclick>
 			<onclick>PlayDisc</onclick>
@@ -165,7 +154,6 @@
 			<label2 />
 			<icon>special://skin/extras/icons/power.png</icon>
 			<thumb />
-			<property name="background">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/shutdown/shutdown.jpg</property>
 			<onclick condition="String.IsEqual(ListItem.Property(path),ActivateWindow(1129))">SetProperty(CustomSelectSearch,True,Home)</onclick>
 			<onclick>ActivateWindow(shutdownmenu)</onclick>
 			<property name="path">ActivateWindow(shutdownmenu)</property>
@@ -179,7 +167,6 @@
 			<label2 />
 			<icon>special://skin/extras/icons/Favorites.png</icon>
 			<thumb />
-			<property name="background">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/favourites/favourites.jpg</property>
 			<onclick condition="String.IsEqual(ListItem.Property(path),ActivateWindow(1129))">SetProperty(CustomSelectSearch,True,Home)</onclick>
 			<onclick>ActivateWindow(Favourites)</onclick>
 			<property name="path">ActivateWindow(Favourites)</property>
@@ -193,7 +180,6 @@
 			<label2 />
 			<icon>special://skin/extras/icons/DefaultAddonWeather.png</icon>
 			<thumb />
-			<property name="background">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/weather/weather.jpg</property>
 			<onclick condition="String.IsEqual(ListItem.Property(path),ActivateWindow(1129))">SetProperty(CustomSelectSearch,True,Home)</onclick>
 			<onclick condition="!String.IsEmpty(Weather.Plugin)">ActivateWindow(Weather)</onclick>
 			<property name="path">ActivateWindow(Weather)</property>
@@ -208,7 +194,6 @@
 			<label2 />
 			<icon>special://skin/extras/icons/DefaultMusicVideos.png</icon>
 			<thumb />
-			<property name="background">http://kim.cherrytv.webd.pl/Tapety/Tapety_Kategorie/musicvideos/musicvideos.jpg</property>
 			<onclick condition="String.IsEqual(ListItem.Property(path),ActivateWindow(1129))">SetProperty(CustomSelectSearch,True,Home)</onclick>
 			<onclick condition="Library.HasContent(MusicVideos)">ActivateWindow(Videos,videodb://musicvideos/titles/,return)</onclick>
 			<property name="path">ActivateWindow(Videos,videodb://musicvideos/titles/,return)</property>
