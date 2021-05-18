@@ -5,7 +5,7 @@
 		<control type="group">
 			<visible>Control.IsVisible(601) + !Window.IsActive(addoninformation)</visible>
 			<include>ViewAnimation</include>
-			<top>-70</top>
+			<top>20</top>
 			<control type="image">
 				<left>90</left>
 				<top>578</top>
@@ -130,18 +130,18 @@
 			<control type="group">
 				<visible>!String.IsEmpty(ListItem.Art(banner)) | String.IsEmpty(ListItem.Art(fanart))</visible>
 				<control type="image">
-					<top>255</top>
-					<left>-30</left>
-					<width>690</width>
-					<height>328</height>
+					<top>355</top>
+					<left>70</left>
+					<width>490</width>
+					<height>228</height>
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<texture background="true">$INFO[ListItem.Art(clearart)]</texture>
 				</control>
 				<control type="image">
-					<top>805</top>
-					<left>1530</left>
-					<width>390</width>
-					<height>328</height>
+					<top>355</top>
+					<left>1470</left>
+					<width>290</width>
+					<height>228</height>
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 				</control>
