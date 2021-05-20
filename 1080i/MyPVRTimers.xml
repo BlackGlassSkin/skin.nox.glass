@@ -189,8 +189,7 @@
 				<width>14</width>
 				<height>840</height>
 				<onleft>50</onleft>
-				<onright>SetProperty(MediaMenu,True,Home)</onright>
-				<onright>SetFocus(9050)</onright>
+				<onright>46</onright>
 				<texturesliderbackground/>
 				<texturesliderbar colordiffuse="80FFFFFF" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
 				<texturesliderbarfocus border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
@@ -200,12 +199,31 @@
 				<left>1196</left>
 				<top>195</top>
 				<control type="image">
+					<left>100</left>
+					<top>-100</top>
+					<width>370</width>
+					<height>535</height>
+					<aspectratio align="center" aligny="top">keep</aspectratio>
+					<texture background="true">$VAR[PVRNoPlayerClearLogoVar]</texture>
+				</control>
+				<control type="image">
 					<width>570</width>
 					<height>835</height>
 					<aspectratio aligny="bottom">keep</aspectratio>
-					<texture background="true" fallback="DefaultVideo.png">$INFO[Container(50).ListItem.Icon]</texture>
+					<texture background="true">$INFO[Container(50).ListItem.Icon]</texture>
 					<fadetime>0</fadetime>
 					<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
+					<bordersize>20</bordersize>
+					<visible>String.IsEmpty(NoPlayerPVRThumbVar)</visible>
+				</control>
+				<control type="image">
+					<left>-36</left>
+					<width>670</width>
+					<height>835</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<texture background="true">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Thumb)]</texture>
+					<fadetime>0</fadetime>
+					<bordertexture border="0">new_pvr/overlay/OverlayDialogBackground.png</bordertexture>
 					<bordersize>20</bordersize>
 				</control>
 				<control type="image">
@@ -216,6 +234,32 @@
 					<fadetime>0</fadetime>
 					<texture diffuse="thumbs/thumb_reflect.png" flipy="true" fallback="DefaultVideo.png" background="true">$INFO[Container(50).ListItem.Icon]</texture>
 					<bordersize>20</bordersize>
+				</control>
+				<control type="group">
+					<control type="textbox">
+						<left>-23</left>
+						<top>-20</top>
+						<width>630</width>
+						<height>377</height>
+						<font>font15</font>
+						<textcolor>grey2</textcolor>
+						<align>center</align>
+						<label>$INFO[ListItem.Plot]</label>
+						<pagecontrol>46</pagecontrol>
+						<autoscroll time="3333" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll) + !Control.HasFocus(46)</autoscroll>
+					</control>
+					<control type="scrollbar" id="46">
+						<left>610</left>
+						<top>-5</top>
+						<width>12</width>
+						<height>338</height>
+						<onleft>50</onleft>
+						<showonepage>false</showonepage>
+						<texturesliderbackground colordiffuse="1AFFFFFF">colors/white50.png</texturesliderbackground>
+						<texturesliderbar colordiffuse="1AFFFFFF">colors/white.png</texturesliderbar>
+						<texturesliderbarfocus colordiffuse="$VAR[ThemeLabelColor]">colors/white.png</texturesliderbarfocus>
+					</control>
+					<animation effect="slide" end="0,80" time="0" condition="![String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.ClearLogo)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.tvshow.clearlogo))]">Conditional</animation>
 				</control>
 			</control>
 		</control>
