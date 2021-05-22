@@ -28,13 +28,6 @@
 					<left>0</left>
 					<width>1000</width>
 					<height>570</height>
-					<texture background="true" colordiffuse="CC909090" diffuse="custom\fanart_diffuse_left.png">$INFO[ListItem.Icon]</texture>
-				</control>
-				<control type="image">
-					<centertop>-254</centertop>
-					<left>0</left>
-					<width>1000</width>
-					<height>570</height>
 					<texture background="true" diffuse="custom\fanart_diffuse_left.png">$VAR[PVRPosterVar]</texture>
 					<visible>!Skin.HasSetting(Enable.PVRThumbs)</visible>
 				</control>
