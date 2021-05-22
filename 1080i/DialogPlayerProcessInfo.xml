@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>5001</defaultcontrol>
+	<onload condition="!System.HasAddon(script.amlogic.displayinfo)">RunScript(script.amlogic.displayinfo)</onload>
 	<controls>
 		<control type="button" id="5001">
 			<visible allowhiddenfocus="true">false</visible>
@@ -70,7 +71,7 @@
 						<font>Font_Bold24</font>
 						<textcolor>ffcecece</textcolor>
 						<shadowcolor>ff000000</shadowcolor>
-						<label>$INFO[Player.Process(videowidth)]$INFO[Player.Process(videoheight),x, px]$INFO[Player.Process(videodar), (, $LOCALIZE[31154])]</label>
+						<label>$INFO[Player.Process(videowidth)]$INFO[Player.Process(videoheight),x,p] $INFO[Player.Process(videodar), (,)]</label>
 					</control>
 				</control>
 				<control type="group">
@@ -107,6 +108,16 @@
 						<textcolor>ffcecece</textcolor>
 						<shadowcolor>ff000000</shadowcolor>
 						<label fallback="31001">[UPPERCASE]$INFO[Player.Process(pixformat)][/UPPERCASE]</label>
+						<visible>String.IsEmpty(Player.Process(amlogic.pixformat))</visible>
+					</control>
+					<control type="label">
+						<left>255</left>
+						<width>600</width>
+						<font>Font_Bold24</font>
+						<textcolor>ffcecece</textcolor>
+						<shadowcolor>ff000000</shadowcolor>
+						<label>[UPPERCASE]$INFO[Player.Process(amlogic.pixformat),[COLOR white],[/COLOR]][/UPPERCASE]</label>
+						<visible>!String.IsEmpty(Player.Process(amlogic.pixformat))</visible>
 					</control>
 				</control>
 				<control type="group">
@@ -146,6 +157,25 @@
 						<shadowcolor>ff000000</shadowcolor>
 						<label>[UPPERCASE]$INFO[System.CPUTemperature][/UPPERCASE]</label>
 					</control>
+				</control>
+				<control type="group">
+					<height>30</height>
+					<control type="label">
+						<width>248</width>
+						<font>Font_Bold24</font>
+						<textcolor>ff7993b0</textcolor>
+						<shadowcolor>ff000000</shadowcolor>
+						<label>COLOUR DEPTH:</label>
+					</control>
+					<control type="label">
+						<left>255</left>
+						<width>600</width>
+						<font>Font_Bold24</font>
+						<textcolor>ffcecece</textcolor>
+						<shadowcolor>ff000000</shadowcolor>
+						<label>$INFO[Player.Process(amlogic.eoft_gamut),[COLOR white],[/COLOR]]</label>
+					</control>
+					<visible>!String.IsEmpty(Player.Process(amlogic.eoft_gamut))</visible>
 				</control>
 			</control>
 			<control type="grouplist">
@@ -249,6 +279,14 @@
 						<textcolor>ffcecece</textcolor>
 						<shadowcolor>ff000000</shadowcolor>
 						<label>[UPPERCASE]$INFO[VideoPlayer.AudioLanguage][/UPPERCASE]</label>
+					</control>
+					<control type="image">
+					    <top>5</top>
+						<left>295</left>
+						<width>35</width>
+						<height>25</height>
+						<texture>$INFO[VideoPlayer.AudioLanguage,flags/language/default/,.png]</texture>
+						<aspect>keep</aspect>
 					</control>
 				</control>
 				<control type="group">
@@ -384,6 +422,7 @@
 						<textcolor>ff7993b0</textcolor>
 						<shadowcolor>ff000000</shadowcolor>
 						<label>[UPPERCASE]$LOCALIZE[13271][/UPPERCASE]</label>
+						<visible>!System.Platform.Android</visible>
 					</control>
 				</control>
 				<control type="group">
@@ -429,6 +468,7 @@
 				</control>
 			</control>
 			<control type="grouplist">
+				<visible>!System.Platform.Android</visible>
 				<top>180</top>
 				<left>1550</left>
 				<itemgap>10</itemgap>
@@ -467,6 +507,7 @@
 				</control>
 			</control>
 			<control type="grouplist">
+				<visible>!System.Platform.Android</visible>
 				<top>178</top>
 				<left>1550</left>
 				<itemgap>8.5</itemgap>
@@ -492,6 +533,7 @@
 				</control>
 			</control>
 			<control type="grouplist">
+				<visible>!System.Platform.Android</visible>
 				<top>173</top>
 				<left>1762</left>
 				<itemgap>1</itemgap>
@@ -534,7 +576,7 @@
 			<control type="label">
 				<description>Header</description>
 				<left>25</left>
-				<top>-750</top>
+				<top>-730</top>
 				<width>1188</width>
 				<font>Font</font>
 				<textcolor>ff1573d4</textcolor>
