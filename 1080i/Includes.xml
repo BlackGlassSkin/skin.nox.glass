@@ -1752,6 +1752,18 @@
 				<width>65</width>
 				<height>65</height>
 				<onclick>PlayerControl(Previous)</onclick>
+				<visible>Player.SeekEnabled</visible>
+			</control>
+			<control type="button" id="803">
+				<texturefocus colordiffuse="$VAR[AVButtonColorFo]">osd/buttons/OSDChannelUPFO.png</texturefocus>
+				<texturenofocus colordiffuse="$VAR[AVButtonColorNoFo]">osd/buttons/OSDChannelUPFO.png</texturenofocus>
+				<animation effect="zoom" end="110" time="200">Focus</animation>
+				<font/>
+				<label/>
+				<width>65</width>
+				<height>65</height>
+				<onclick>ChannelUp</onclick>
+				<visible>!Player.SeekEnabled</visible>
 			</control>
 			<control type="button" id="804">
 				<textoffsety>60</textoffsety>
@@ -1763,6 +1775,19 @@
 				<width>65</width>
 				<height>65</height>
 				<onclick>PlayerControl(Next)</onclick>
+				<visible>Player.SeekEnabled</visible>
+			</control>
+			<control type="button" id="804">
+				<textoffsety>60</textoffsety>
+				<texturefocus colordiffuse="$VAR[AVButtonColorFo]">osd/buttons/OSDChannelDownFO.png</texturefocus>
+				<texturenofocus colordiffuse="$VAR[AVButtonColorNoFo]">osd/buttons/OSDChannelDownFO.png</texturenofocus>
+				<animation effect="zoom" end="110" time="200">Focus</animation>
+				<font/>
+				<label/>
+				<width>65</width>
+				<height>65</height>
+				<onclick>ChannelDown</onclick>
+				<visible>!Player.SeekEnabled</visible>
 			</control>
 			<control type="button" id="805">
 				<texturefocus colordiffuse="$VAR[AVButtonColorFo]">osd/buttons/OSDRewindFO.png</texturefocus>
