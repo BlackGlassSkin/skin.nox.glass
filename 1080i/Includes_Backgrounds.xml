@@ -150,7 +150,7 @@
 			<visible>!Control.IsVisible(509)</visible>
 			<control type="multiimage">
 				<include>MultiImageTime</include>
-				<fadetime>700</fadetime>
+				<fadetime>200</fadetime>
 				<include condition="Skin.HasSetting(Enable.AnimatedBackgrounds)">AnimatedBackgroundAnimation</include>
 				<imagepath background="true" colordiffuse="$VAR[ThemeGlobalBackgroundColor]">$VAR[GlobalBackgroundVar]</imagepath>
 			</control>

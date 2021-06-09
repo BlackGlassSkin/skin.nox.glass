@@ -268,7 +268,7 @@
 							<height>60</height>
 							<font>font15</font>
 							<textcolor>$VAR[ThemeLabelColor]</textcolor>
-							<label>$INFO[ListItem.StartTime, , -]$INFO[ListItem.EndTime]$INFO[ListItem.Label,- ,]</label>
+							<label>$INFO[ListItem.StartTime, , - ]$INFO[ListItem.EndTime]$INFO[ListItem.Label, - ,]</label>
 							<animation effect="slide" end="44" time="220" condition="[ListItem.HasTimer | ListItem.IsRecording]">Conditional</animation>
 						</control>
 						<control type="label">

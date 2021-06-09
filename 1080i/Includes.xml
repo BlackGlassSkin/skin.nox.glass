@@ -1754,7 +1754,7 @@
 				<onclick>PlayerControl(Previous)</onclick>
 				<visible>Player.SeekEnabled</visible>
 			</control>
-			<control type="button" id="803">
+			<control type="button" id="821">
 				<texturefocus colordiffuse="$VAR[AVButtonColorFo]">osd/buttons/OSDChannelUPFO.png</texturefocus>
 				<texturenofocus colordiffuse="$VAR[AVButtonColorNoFo]">osd/buttons/OSDChannelUPFO.png</texturenofocus>
 				<animation effect="zoom" end="110" time="200">Focus</animation>
@@ -1777,7 +1777,7 @@
 				<onclick>PlayerControl(Next)</onclick>
 				<visible>Player.SeekEnabled</visible>
 			</control>
-			<control type="button" id="804">
+			<control type="button" id="822">
 				<textoffsety>60</textoffsety>
 				<texturefocus colordiffuse="$VAR[AVButtonColorFo]">osd/buttons/OSDChannelDownFO.png</texturefocus>
 				<texturenofocus colordiffuse="$VAR[AVButtonColorNoFo]">osd/buttons/OSDChannelDownFO.png</texturenofocus>

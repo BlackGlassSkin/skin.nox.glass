@@ -2,20 +2,57 @@
 <includes>
 	<!-- Video List -->
 	<include name="VideoList">
+		<control type="group" id="1000002">
+			<visible>!String.IsEmpty(ListItem.Plot) + Control.IsVisible(50)</visible>
+			<top>32</top>
+			<left>0</left>
+			<visible>!String.IsEmpty(ListItem.plot) | [Container.Content(movies) | Container.Content(videos) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+			<control type="image">
+				<top>-55</top>
+				<left>-50</left>
+				<width>106%</width>
+				<height>190</height>
+				<texture>homewidgets/list_shadow.png</texture>
+			</control>
+			<!-- <control type="image">
+                <left>15</left>
+                <top>10</top>
+                <width>265</width>
+                <height>90</height>
+                <texture>$VAR[ArtworkLogoVar]</texture> 
+            </control>-->
+			<control type="label">
+				<top>-4</top>
+				<width>1800</width>
+				<height>70</height>
+				<font>font30</font>
+				<textcolor>red</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+				<align>center</align>
+			</control>
+			<control type="label">
+				<top>46</top>
+				<width>1800</width>
+				<height>60</height>
+				<font>font15</font>
+				<label>$VAR[VideoListLabel2Var]</label>
+				<align>center</align>
+			</control>
+		</control>
 		<control type="group">
 			<visible>Control.IsVisible(50) + !Window.IsActive(addoninformation)</visible>
-			<include>ViewAnimation</include>
+			<include/>
 			<centerleft>50%</centerleft>
 			<width>100%</width>
 			<control type="group">
 				<left>100</left>
-				<top>-40</top>
+				<top>-20</top>
 				<control type="image">
 					<left>-32</left>
 					<top>148</top>
 					<width>1204</width>
 					<height>904</height>
-					<texture colordiffuse="E6FFFFFF" border="40">listpanel_back.png</texture>
+					<texture colordiffuse="$VAR[ThemePanelColor]" border="40">listpanel_back.png</texture>
 				</control>
 				<control type="panel" id="50">
 					<top>180</top>
@@ -34,7 +71,7 @@
 					<scrolltime tween="quadratic" easing="out">200</scrolltime>
 					<itemlayout height="120" width="1140" condition="Container.Content(movies) | Container.Content(studios)">
 						<control type="image">
-							<left>15</left>
+							<left>5</left>
 							<top>7.5</top>
 							<width>105</width>
 							<height>105</height>
@@ -42,14 +79,15 @@
 							<texture>$VAR[StudioIconVar]</texture>
 							<colordiffuse>grey2</colordiffuse>
 						</control>
-						<control type="label">
+						<control type="textbox">
 							<left>135</left>
-							<width>790</width>
-							<height>70</height>
-							<font>font30</font>
+							<width>865</width>
+							<height>120</height>
+							<font>font14</font>
 							<textcolor>grey2</textcolor>
 							<label>$INFO[ListItem.Label]</label>
-							<animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(ListItem.Genre)">Conditional</animation>
+							<wrapmultiline>true</wrapmultiline>
+							<animation effect="slide" start="0,0" end="-20,0" time="0" condition="String.IsEmpty(ListItem.Genre)">Conditional</animation>
 						</control>
 						<control type="label">
 							<left>135</left>
@@ -107,23 +145,23 @@
 							<height>120</height>
 							<texture colordiffuse="$VAR[HighlightBarColor]" border="4">listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
-							<include>VisibleFadeAnimation</include>
+							<!-- <include>VisibleFadeAnimation</include> -->
 						</control>
 						<control type="image">
-							<left>15</left>
+							<left>5</left>
 							<top>7.5</top>
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
 							<texture>$VAR[StudioIconVar]</texture>
 						</control>
-						<control type="label">
+						<control type="textbox">
 							<left>135</left>
-							<width>790</width>
-							<height>70</height>
-							<font>font30</font>
+							<width>856</width>
+							<height>120</height>
+							<font>font14</font>
 							<label>$INFO[ListItem.Label]</label>
-							<animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(ListItem.Genre)">Conditional</animation>
+							<animation effect="slide" start="0,0" end="-20,0" time="0" condition="String.IsEmpty(ListItem.Genre)">Conditional</animation>
 						</control>
 						<control type="label">
 							<left>135</left>
@@ -191,14 +229,16 @@
 							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<visible>!String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
-						<control type="label">
-							<left>135</left>
+						<control type="textbox">
+							<left>125</left>
 							<width>790</width>
-							<height>70</height>
-							<font>font30</font>
-							<textcolor>grey2</textcolor>
+							<height>190</height>
+							<font>font14</font>
+							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Label]</label>
-							<animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(ListItem.Premiered)">Conditional</animation>
+							<scroll>true</scroll>
+							<wrapmultiline>true</wrapmultiline>
+							<animation effect="slide" start="0,0" end="0,-8" time="0" condition="String.IsEmpty(ListItem.Premiered)">Conditional</animation>
 						</control>
 						<control type="label">
 							<left>135</left>
@@ -254,7 +294,7 @@
 							<height>120</height>
 							<texture colordiffuse="$VAR[HighlightBarColor]" border="4">listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
-							<include>VisibleFadeAnimation</include>
+							<!-- <include>VisibleFadeAnimation</include> -->
 						</control>
 						<control type="image">
 							<left>15</left>
@@ -274,13 +314,16 @@
 							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<visible>!String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
-						<control type="label">
-							<left>135</left>
+						<control type="textbox">
+							<left>125</left>
 							<width>790</width>
-							<height>70</height>
-							<font>font30</font>
+							<height>190</height>
+							<font>font14</font>
+							<textcolor>white</textcolor>
 							<label>$INFO[ListItem.Label]</label>
-							<animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(ListItem.Premiered)">Conditional</animation>
+							<scroll>true</scroll>
+							<wrapmultiline>true</wrapmultiline>
+							<animation effect="slide" start="0,0" end="0,-8" time="0" condition="String.IsEmpty(ListItem.Premiered)">Conditional</animation>
 						</control>
 						<control type="label">
 							<left>135</left>
@@ -398,7 +441,7 @@
 							<height>120</height>
 							<texture colordiffuse="$VAR[HighlightBarColor]" border="4">listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
-							<include>VisibleFadeAnimation</include>
+							<!-- <include>VisibleFadeAnimation</include> -->
 						</control>
 						<control type="image">
 							<left>15</left>
@@ -532,7 +575,7 @@
 							<height>120</height>
 							<texture colordiffuse="$VAR[HighlightBarColor]" border="4">listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
-							<include>VisibleFadeAnimation</include>
+							<!-- <include>VisibleFadeAnimation</include> -->
 						</control>
 						<control type="image">
 							<left>15</left>
@@ -649,7 +692,7 @@
 							<height>120</height>
 							<texture colordiffuse="$VAR[HighlightBarColor]" border="4">listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
-							<include>VisibleFadeAnimation</include>
+							<!-- <include>VisibleFadeAnimation</include> -->
 						</control>
 						<control type="image">
 							<left>15</left>
@@ -736,7 +779,7 @@
 							<height>120</height>
 							<texture colordiffuse="$VAR[HighlightBarColor]" border="4">listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
-							<include>VisibleFadeAnimation</include>
+							<!-- <include>VisibleFadeAnimation</include> -->
 						</control>
 						<control type="label">
 							<left>30</left>
@@ -840,7 +883,7 @@
 							<height>120</height>
 							<texture colordiffuse="$VAR[HighlightBarColor]" border="4">listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
-							<include>VisibleFadeAnimation</include>
+							<!-- <include>VisibleFadeAnimation</include> -->
 						</control>
 						<control type="image">
 							<left>15</left>
@@ -925,9 +968,9 @@
 			</control>
 			<control type="group">
 				<left>1296</left>
-				<top>175</top>
+				<top>210</top>
 				<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content() | Container.Content(files) | Container.Content(addons)</visible>
-				<include>VisibleFadeAnimation</include>
+				<!-- <include>VisibleFadeAnimation</include> -->
 				<control type="image">
 					<width>570</width>
 					<height>815</height>
@@ -983,12 +1026,12 @@
 				<left>1296</left>
 				<top>155</top>
 				<visible>Container.Content(genres)</visible>
-				<include>VisibleFadeAnimation</include>
+				<!-- <include>VisibleFadeAnimation</include> -->
 				<control type="image">
 					<width>570</width>
 					<height>835</height>
 					<aspectratio aligny="bottom">keep</aspectratio>
-					<texture background="true" fallback="special://skin/extras/moviegenres/default/Default.jpg">$VAR[GenreIconVar]</texture>
+					<texture background="true" diffuse="genrediff.png">$VAR[GenreIconVar]</texture>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
 					<bordersize>20</bordersize>
@@ -999,30 +1042,66 @@
 					<height>835</height>
 					<aspectratio aligny="top">keep</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
-					<texture diffuse="thumbs/thumb_reflect.png" flipy="true" background="true" fallback="special://skin/extras/moviegenres/default/Default.jpg">$VAR[GenreIconVar]</texture>
+					<texture diffuse="thumbs/thumb_reflect.png" flipy="true" background="true" fallback="resource://resource.images.moviegenreicons.noxglass/default/Default.jpg">$VAR[GenreIconVar]</texture>
 					<bordersize>20</bordersize>
 				</control>
 			</control>
+			<!-- plot mods -->
+			<control type="group" id="1000001">
+				<visible>!String.IsEmpty(ListItem.Plot) + !Skin.HasSetting(Enable.ExtraPlot)</visible>
+				<top>750</top>
+				<visable>String.IsEmpty(ListItem.Plot)</visable>
+				<visible>[Control.IsVisible(50) | Container.Content(movies) | Container.Content(videos) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+				<control type="image">
+					<left>1316</left>
+					<width>530</width>
+					<height>270</height>
+					<texture background="true" colordiffuse="E6000000" bordersize="20">black-back.png</texture>
+				</control>
+				<control type="textbox">
+					<label>$INFO[ListItem.Plot]</label>
+					<left>1320</left>
+					<width>529</width>
+					<height>245</height>
+					<font>Lirabiefont_Rgplot</font>
+					<autoscroll time="3000" delay="3300" repeat="6000">!Skin.HasSetting(Enable.AutoScroll)</autoscroll>
+				</control>
+			</control>
+			<!-- plot mods -->
 			<control type="group" id="8001">
+				<!-- prawa strona -->
 				<left>1280</left>
-				<top>-40</top>
+				<top>-20</top>
 				<visible>![Container.Content(movies) | Container.Content(genres) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content() | Container.Content(files) | Container.Content(addons)]</visible>
 				<animation effect="fade" time="250">Visible</animation>
 				<control type="image">
 					<top>148</top>
 					<width>570</width>
 					<height>904</height>
-					<texture colordiffuse="E6FFFFFF" border="40">listpanel_back.png</texture>
+					<texture colordiffuse="$VAR[ThemePanelColor]" border="40">listpanel_back.png</texture>
 				</control>
 				<control type="image">
 					<top>148</top>
 					<width>570</width>
 					<height>348</height>
-					<aspectratio>scale</aspectratio>
-					<texture background="true">$VAR[NoSpoilerIconVar]</texture>
+					<aspectratio>stretch</aspectratio>
+					<texture background="true" fallback="resource://resource.images.moviegenreicons.noxglass/default/Default.jpg">$VAR[NoSpoilerIconVar]</texture>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<bordersize>32</bordersize>
 					<visible>Container.Content(episodes) | Container.Content(videos)</visible>
+				</control>
+				<control type="image">
+					<left>700</left>
+					<top>560</top>
+					<width>520</width>
+					<height>520</height>
+					<aspectratio align="bottom" aligny="bottom">keep</aspectratio>
+					<texture background="true">$INFO[Container(50).ListItem.Label,resource://resource.images.actorart/,.png]</texture>
+					<fadetime>300</fadetime>
+					<animation effect="fade" start="0" end="100" time="300">Visible</animation>
+					<animation effect="fade" start="100" end="0" time="300">Hidden</animation>
+					<animation effect="fade" start="100" end="0" time="0">WindowClose</animation>
+					<visible>Control.HasFocus(50)</visible>
 				</control>
 				<control type="image">
 					<left>32</left>
@@ -1245,7 +1324,6 @@
 	<include name="MusicList">
 		<control type="group">
 			<visible>Control.IsVisible(50) + !Window.IsActive(addoninformation)</visible>
-			<include>ViewAnimation</include>
 			<control type="group">
 				<left>100</left>
 				<top>-40</top>
@@ -1254,7 +1332,7 @@
 					<top>148</top>
 					<width>1204</width>
 					<height>904</height>
-					<texture colordiffuse="E6FFFFFF" border="40">listpanel_back.png</texture>
+					<texture colordiffuse="$VAR[ThemePanelColor]" border="40">listpanel_back.png</texture>
 				</control>
 				<control type="panel" id="50">
 					<top>180</top>
@@ -1367,7 +1445,7 @@
 							<height>120</height>
 							<texture colordiffuse="$VAR[HighlightBarColor]" border="4">listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
-							<include>VisibleFadeAnimation</include>
+							<!-- <include>VisibleFadeAnimation</include> -->
 						</control>
 						<control type="image">
 							<left>15</left>
@@ -1487,7 +1565,7 @@
 							<height>120</height>
 							<texture colordiffuse="$VAR[HighlightBarColor]" border="4">listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
-							<include>VisibleFadeAnimation</include>
+							<!-- <include>VisibleFadeAnimation</include> -->
 						</control>
 						<control type="image">
 							<left>15</left>
@@ -1576,7 +1654,7 @@
 							<height>120</height>
 							<texture colordiffuse="$VAR[HighlightBarColor]" border="4">listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
-							<include>VisibleFadeAnimation</include>
+							<!-- <include>VisibleFadeAnimation</include> -->
 						</control>
 						<control type="image">
 							<left>15</left>
@@ -1623,6 +1701,7 @@
 					<onleft>50</onleft>
 					<onright condition="!Control.IsVisible(615)">4400</onright>
 					<onright condition="Control.IsVisible(615)">615</onright>
+					<onright condition="!Control.IsVisible(videoplaylist)">ActivateWindow(visualisation)</onright>
 					<texturesliderbackground colordiffuse="1AFFFFFF">colors/white50.png</texturesliderbackground>
 					<texturesliderbar colordiffuse="1AFFFFFF">colors/white.png</texturesliderbar>
 					<texturesliderbarfocus colordiffuse="$VAR[ThemeLabelColor]">colors/white.png</texturesliderbarfocus>
@@ -1684,7 +1763,7 @@
 					<top>148</top>
 					<width>570</width>
 					<height>904</height>
-					<texture colordiffuse="E6FFFFFF" border="40">listpanel_back.png</texture>
+					<texture colordiffuse="$VAR[ThemePanelColor]" border="40">listpanel_back.png</texture>
 				</control>
 				<control type="scrollbar" id="95063">
 					<left>540</left>
@@ -1782,7 +1861,7 @@
 	<include name="AddonList">
 		<control type="group">
 			<visible>Control.IsVisible(50) + !Window.IsActive(addoninformation)</visible>
-			<include>ViewAnimation</include>
+			<include/>
 			<control type="group">
 				<left>100</left>
 				<top>-40</top>
@@ -1791,7 +1870,7 @@
 					<top>148</top>
 					<width>1204</width>
 					<height>904</height>
-					<texture border="40">listpanel_back.png</texture>
+					<texture colordiffuse="$VAR[ThemePanelColor]" border="40">listpanel_back.png</texture>
 				</control>
 				<control type="panel" id="50">
 					<top>180</top>
@@ -1859,7 +1938,7 @@
 							<height>120</height>
 							<texture colordiffuse="$VAR[HighlightBarColor]" border="4">listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
-							<include>VisibleFadeAnimation</include>
+							<!-- <include>VisibleFadeAnimation</include> -->
 						</control>
 						<control type="image">
 							<left>15</left>
@@ -1949,7 +2028,7 @@
 	<include name="PictureList">
 		<control type="group">
 			<visible>Control.IsVisible(50) + !Window.IsActive(addoninformation)</visible>
-			<include>ViewAnimation</include>
+			<include/>
 			<control type="group">
 				<left>100</left>
 				<top>-40</top>
@@ -1958,7 +2037,7 @@
 					<top>148</top>
 					<width>1204</width>
 					<height>904</height>
-					<texture border="40">listpanel_back.png</texture>
+					<texture colordiffuse="$VAR[ThemePanelColor]" border="40">listpanel_back.png</texture>
 				</control>
 				<control type="panel" id="50">
 					<top>180</top>
@@ -2026,7 +2105,7 @@
 							<height>120</height>
 							<texture colordiffuse="$VAR[HighlightBarColor]" border="4">listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
-							<include>VisibleFadeAnimation</include>
+							<!-- <include>VisibleFadeAnimation</include> -->
 						</control>
 						<control type="image">
 							<left>15</left>
@@ -2115,7 +2194,7 @@
 							<height>120</height>
 							<texture colordiffuse="$VAR[HighlightBarColor]" border="4">listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
-							<include>VisibleFadeAnimation</include>
+							<!-- <include>VisibleFadeAnimation</include> -->
 						</control>
 						<control type="image">
 							<left>15</left>
@@ -2195,7 +2274,7 @@
 	<include name="SlimVideoList">
 		<control type="group">
 			<visible>Control.IsVisible(50) + !Window.IsActive(addoninformation)</visible>
-			<include>ViewAnimation</include>
+			<include/>
 			<control type="group">
 				<left>100</left>
 				<top>-40</top>
@@ -2204,7 +2283,7 @@
 					<top>148</top>
 					<width>1204</width>
 					<height>904</height>
-					<texture border="40">listpanel_back.png</texture>
+					<texture colordiffuse="$VAR[ThemePanelColor]" border="40">listpanel_back.png</texture>
 				</control>
 				<control type="panel" id="50">
 					<top>180</top>
@@ -2297,7 +2376,7 @@
 							<height>60</height>
 							<texture colordiffuse="$VAR[HighlightBarColor]" border="4">listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
-							<include>VisibleFadeAnimation</include>
+							<!-- <include>VisibleFadeAnimation</include> -->
 						</control>
 						<control type="label">
 							<left>30</left>
@@ -2332,7 +2411,6 @@
 							<font>font15</font>
 							<align>right</align>
 							<label>$INFO[ListItem.Label2]</label>
-							<visible>!ListItem.IsFolder</visible>
 						</control>
 						<control type="image">
 							<left>1076</left>
@@ -2388,7 +2466,7 @@
 							<height>60</height>
 							<texture colordiffuse="$VAR[HighlightBarColor]" border="4">listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
-							<include>VisibleFadeAnimation</include>
+							<!-- <include>VisibleFadeAnimation</include> -->
 						</control>
 						<control type="label">
 							<left>30</left>
@@ -2431,7 +2509,7 @@
 				<left>1296</left>
 				<top>155</top>
 				<visible>!Control.IsVisible(8001)</visible>
-				<include>VisibleFadeAnimation</include>
+				<!-- <include>VisibleFadeAnimation</include> -->
 				<control type="image">
 					<width>570</width>
 					<height>815</height>
@@ -2487,12 +2565,12 @@
 				<left>1280</left>
 				<top>-40</top>
 				<visible>Skin.HasSetting(SlimList.Info) + ![Container.Content(movies) | Container.Content(genres) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content() | Container.Content(files) | Container.Content(addons)]</visible>
-				<include>VisibleFadeAnimation</include>
+				<!-- <include>VisibleFadeAnimation</include> -->
 				<control type="image">
 					<top>148</top>
 					<width>570</width>
 					<height>904</height>
-					<texture colordiffuse="E6FFFFFF" border="40">listpanel_back.png</texture>
+					<texture colordiffuse="$VAR[ThemePanelColor]" border="40">listpanel_back.png</texture>
 				</control>
 				<control type="image">
 					<top>148</top>
@@ -2725,7 +2803,7 @@
 	<include name="SlimMusicList">
 		<control type="group">
 			<visible>Control.IsVisible(50) + !Window.IsActive(addoninformation)</visible>
-			<include>ViewAnimation</include>
+			<include/>
 			<control type="group">
 				<left>100</left>
 				<top>-40</top>
@@ -2734,7 +2812,7 @@
 					<top>148</top>
 					<width>1204</width>
 					<height>904</height>
-					<texture border="40">listpanel_back.png</texture>
+					<texture colordiffuse="$VAR[ThemePanelColor]" border="40">listpanel_back.png</texture>
 				</control>
 				<control type="panel" id="50">
 					<top>180</top>
@@ -2783,7 +2861,7 @@
 							<height>60</height>
 							<texture colordiffuse="$VAR[HighlightBarColor]" border="4">listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
-							<include>VisibleFadeAnimation</include>
+							<!-- <include>VisibleFadeAnimation</include> -->
 						</control>
 						<control type="image">
 							<left>5</left>
@@ -2835,7 +2913,7 @@
 							<height>60</height>
 							<texture colordiffuse="$VAR[HighlightBarColor]" border="4">listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
-							<include>VisibleFadeAnimation</include>
+							<!-- <include>VisibleFadeAnimation</include> -->
 						</control>
 						<control type="label">
 							<left>30</left>
@@ -2898,7 +2976,7 @@
 	<include name="SlimList">
 		<control type="group">
 			<visible>Control.IsVisible(50) + !Window.IsActive(addoninformation)</visible>
-			<include>ViewAnimation</include>
+			<include/>
 			<control type="group">
 				<left>100</left>
 				<top>-40</top>
@@ -2907,7 +2985,7 @@
 					<top>148</top>
 					<width>1204</width>
 					<height>904</height>
-					<texture border="40">listpanel_back.png</texture>
+					<texture colordiffuse="$VAR[ThemePanelColor]" border="40">listpanel_back.png</texture>
 				</control>
 				<control type="panel" id="50">
 					<top>180</top>
@@ -2946,7 +3024,7 @@
 							<height>60</height>
 							<texture colordiffuse="$VAR[HighlightBarColor]" border="4">listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
-							<include>VisibleFadeAnimation</include>
+							<!-- <include>VisibleFadeAnimation</include> -->
 						</control>
 						<control type="label">
 							<left>30</left>

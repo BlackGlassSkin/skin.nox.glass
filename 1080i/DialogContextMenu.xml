@@ -33,6 +33,36 @@
 				<onclick>PlayMedia($VAR[ArtistAlbumInfoPathVar],isdir)</onclick>
 				<visible>Window.IsVisible(musicinformation)</visible>
 			</control>
+			<control type="button" id="11001">
+				<height>60</height>
+				<font>font14</font>
+				<focusedcolor>$VAR[HighlightBarColor]</focusedcolor>
+				<textoffsetx>15</textoffsetx>
+				<onclick>Dialog.Close(1119)</onclick>
+				<onclick>Dialog.Close(MovieInformation)</onclick>
+			    <focusedcolor>$VAR[HighlightBarColor]</focusedcolor>
+				<label>Embuary Movies</label>
+				<texturenofocus border="5">dialogs/default/inner/inner2.png</texturenofocus>
+			    <texturefocus colordiffuse="$VAR[HighlightBarColor]" border="5">dialogs/default/inner/inner.png</texturefocus>
+			    <onclick>RunScript(script.embuary.info,call=movie,query=$INFO[ListItem.Title])</onclick>
+				<visible>System.HasAddon(script.embuary.info)</visible>
+				<!--<visible>Container.Content(movies)</visible>-->
+		    </control>
+			<control type="button" id="11002">
+				<height>60</height>
+				<font>font14</font>
+				<focusedcolor>$VAR[HighlightBarColor]</focusedcolor>
+				<textoffsetx>15</textoffsetx>
+				<onclick>Dialog.Close(1119)</onclick>
+				<onclick>Dialog.Close(MovieInformation)</onclick>
+			    <focusedcolor>$VAR[HighlightBarColor]</focusedcolor>
+				<label>Embuary Serial</label>
+				<texturenofocus border="5">dialogs/default/inner/inner2.png</texturenofocus>
+			    <texturefocus colordiffuse="$VAR[HighlightBarColor]" border="5">dialogs/default/inner/inner.png</texturefocus>
+			    <onclick>RunScript(script.embuary.info,call=tv,query=$INFO[ListItem.Title])</onclick>
+				<visible>System.HasAddon(script.embuary.info)</visible>
+				<!--<visible>Container.Content(episodes) + Container.Content(tvshows)</visible>-->
+		    </control>
 		</control>
 		<control type="button" id="1000">
 			<height>60</height>
@@ -43,5 +73,6 @@
 			<texturenofocus border="5">dialogs/default/inner/inner2.png</texturenofocus>
 			<texturefocus colordiffuse="$VAR[HighlightBarColor]" border="5">dialogs/default/inner/inner.png</texturefocus>
 		</control>
+		
 	</controls>
 </window>

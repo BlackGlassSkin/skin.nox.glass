@@ -2490,41 +2490,75 @@
 						<shadowcolor>black</shadowcolor>
 						<label>[B]$INFO[System.Date][CR]$INFO[Window(Weather).Property(Current.Condition)][CR]Min. [COLOR red]$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits] [/COLOR][COLOR green]|[/COLOR] Max. [COLOR red]$INFO[Window(Weather).Property(Day0.HighTemp)]$INFO[System.TemperatureUnits][/COLOR][/B]</label>
 					</control>
-					<control type="group">
-						<visible>System.HasAddon(script.ezmaintenanceplus)</visible>
-						<control type="image">
-							<left>-170</left>
-							<top>-22</top>
-							<width>190</width>
-							<height>190</height>
-							<texture background="true" border="0">media/bin.png</texture>
-						</control>
-						<top>102</top>
+					<control type="image">
+						<left>-845</left>
+						<top>33</top>
+						<width>216</width>
+						<height>290</height>
+						<texture background="true" border="0">media/bin.png</texture>
+					</control>
+					<control type="grouplist">
+                        <orientation>vertical</orientation>					
+						<top>42</top>
 						<left>-650</left>
-						<itemgap>31</itemgap>
+						<itemgap>21</itemgap>
 						<align>left</align>
 						<control type="label">
 							<height>20</height>
-							<width>500</width>
+							<width>700</width>
 							<font>font12b</font>
 							<textcolor>ff3333ff</textcolor>
-							<label>$INFO[Window().Property(str(count)) ,[COLOR green]Package :[/COLOR] [B],[/B]/Files]</label>
+							<label>$INFO[Window().Property(total_sizetext10),Cache || [COLOR green]Total :[/COLOR] [B],[/B] /MB]</label>
 						</control>
 						<control type="label">
+							<height>20</height>
+							<width>700</width>
+							<font>font12b</font>
+							<textcolor>ff3333ff</textcolor>
+							<label>$INFO[Window().Property(total_sizetext6),Temp || [COLOR green]Total :[/COLOR] [B],[/B] /MB]</label>
+						</control>
+						<control type="label">
+							<height>20</height>
+							<width>700</width>
+							<font>font12b</font>
+							<textcolor>ff3333ff</textcolor>
+							<label>$INFO[Window().Property(total_sizetext4),Database || [COLOR green]Total :[/COLOR] [B],[/B] /MB]</label>
+						</control>
+						<control type="label">
+							<height>20</height>
+							<width>700</width>
+							<font>font12b</font>
+							<textcolor>ff3333ff</textcolor>
+							<label>$INFO[Window().Property(total_sizetext),Package || [COLOR green]Total :[/COLOR] [B],[/B] /MB]   $INFO[Window().Property(str(count)),[COLOR green]Files:[/COLOR] [B],[/B]] </label>
+						</control>
+						<!-- <control type="label">
 							<top>62</top>
 							<height>20</height>
 							<width>500</width>
 							<font>font12b</font>
 							<textcolor>ff3333ff</textcolor>
 							<label>$INFO[Window().Property(total_sizetext),[COLOR green]Package :[/COLOR] [B],[/B]/MB]</label>
-						</control>
+						</control> -->
 						<control type="label">
-							<top>122</top>
 							<height>20</height>
-							<width>500</width>
+							<width>700</width>
 							<font>font12b</font>
 							<textcolor>ff3333ff</textcolor>
-							<label>$INFO[Window().Property(total_sizetext2),[COLOR green]Thumb :[/COLOR] [B],[/B]/MB]</label>
+							<label>$INFO[Window().Property(total_sizetext2),Thumb || [COLOR green]Total:[/COLOR] [B],[/B] /MB]   $INFO[Window().Property(str(folders1)),[COLOR green]Folders :[/COLOR] [B],[/B]]  $INFO[Window().Property(str(files1)), [COLOR green]Images:[/COLOR] [B],[/B]]</label>
+						</control>
+						<control type="label">
+							<height>20</height>
+							<width>700</width>
+							<font>font12b</font>
+							<textcolor>ff3333ff</textcolor>
+							<label>$INFO[Window().Property(total_sizetext5),Addons || [COLOR green]Total:[/COLOR] [B],[/B] /MB]   $INFO[Window().Property(str(files2)) ,[COLOR green]Files:[/COLOR] [B],[/B]]  $INFO[Window().Property(str(folders2)) ,[COLOR green]Folders :[/COLOR] [B],[/B]]</label>
+						</control>
+						<control type="label">
+							<height>20</height>
+							<width>700</width>
+							<font>font12b</font>
+							<textcolor>ff3333ff</textcolor>
+							<label>$INFO[Window().Property(total_sizetext3),Addon Data || [COLOR green]Total:[/COLOR] , /MB]   $INFO[Window().Property(str(files)) ,[COLOR green]Files:[/COLOR] [B],[/B]]  $INFO[Window().Property(str(folders)) ,[COLOR green]Folders :[/COLOR] [B],[/B]]</label>
 						</control>
 					</control>
 					<control type="grouplist">
@@ -2652,9 +2686,12 @@
 							<visible>String.IsEmpty(Window(Home).Property(relative))</visible>
 						</control>
 						<control type="group">
+						        <top>190</top>
+						        <itemgap>15</itemgap>
 							<control type="button" id="90020">
-								<height>20</height>
-								<width>170</width>
+								<height>25</height>
+								<width>190</width>
+								<top>210</top>
 								<centerleft>260</centerleft>
 								<align>center</align>
 								<font>Lirabiefont_Rg</font>
@@ -2666,7 +2703,28 @@
 								<midtexture/>
 								<onright>9000</onright>
 								<onleft>9000</onleft>
+								<onup>900201</onup>
+								<ondown>900201</ondown>
 							</control>
+							<control type="button" id="900201">
+								<height>25</height>
+								<width>210</width>
+								<top>237</top>
+								<centerleft>260</centerleft>
+								<align>center</align>
+								<font>Lirabiefont_Rg</font>
+								<textcolor>ffbfbfbf</textcolor>
+								<label>Clear Rubbish</label>
+								<onclick>RunScript(special://skin/scripts/clean.py)</onclick>
+								<onclick>RunScript(special://skin/scripts/fsize.py)</onclick>
+								<texturebg/>
+								<midtexture/>
+								<onright>9000</onright>
+								<onleft>9000</onleft>
+								<onup>90020</onup>
+								<ondown>90020</ondown>
+							</control>
+							<animation effect="slide" start="1470,0" end="0,-200" delay="0" time="1000" condition="!Window(Home).Property(clients))">Conditional</animation>
 						</control>
 					</control>
 				</control>

@@ -557,7 +557,7 @@
 			<onclick>Dialog.Close(1129)</onclick>
 			<onclick>RunScript(special://skin/scripts/multi_search.py)</onclick>
 			<!-- <onclick condition="System.hasAddon(plugin.video.united.search)">RunScript(plugin.video.united.search)</onclick> -->
-			<onclick condition="!System.hasAddon(context.united.search.learn)">InstallAddon(context.united.search.learn)</onclick>
+			<onclick condition="!System.HasAddon(context.united.search.learn)">InstallAddon(context.united.search.learn)</onclick>
 		</item>
 	</include>
 	<include name="SelectActorName">
