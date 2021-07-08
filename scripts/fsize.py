@@ -8,15 +8,19 @@ except AttributeError:
     translatePath = xbmc.translatePath
 
 packagesdir = translatePath(os.path.join('special://home/addons/packages',''))
+thumbnails1 = translatePath(os.path.join('special://thumbnails',''))
+cache       = translatePath(os.path.join('special://home/cache',''))
+kodi        = translatePath(os.path.join('special://home/',''))
 thumbnails  = translatePath('special://thumbnails')
-thumbnails1  = translatePath(os.path.join('special://thumbnails',''))
+Disk_C      = translatePath('C:')
 addondata   = translatePath('special://home/userdata/addon_data')
 addons      = translatePath('special://home/addons')
 temp        = translatePath('special://home/addons/temp')
 database    = translatePath('special://database')
 purgePath   = translatePath('special://home/addons/packages')
-cache       = translatePath(os.path.join('special://home/cache',''))
 
+total_size12 = 0
+total_size11 = 0
 total_size10 = 0
 total_size6 = 0    
 total_size5 = 0
@@ -28,6 +32,7 @@ count = 0
 files = folders = 0
 files1 = folders1 = 0
 files2 = folders2 = 0
+files3 = folders3 = 0
 
 for dirpath, dirnames, filenames in os.walk(packagesdir):
     count = 0
@@ -81,12 +86,29 @@ for dirpath9, dirnames9, filenames9 in os.walk(addons):
   # ^ this idiom means "we won't be using this value"
         files2 += len(filenames9)
         folders2 += len(dirnames9)
+        
+for dirpath10, dirnames10, filenames10 in os.walk(kodi):
+  # ^ this idiom means "we won't be using this value"
+        files3 += len(filenames10)
+        folders3 += len(dirnames10)      
 
 for dirpath10, dirnames10, filenames10 in os.walk(cache):
     for f10 in filenames10:
         fp10 = os.path.join(dirpath10, f10)
         total_size10 += os.path.getsize(fp10)
 total_sizetext10 = "%.0f" % (total_size10/1024000.0)
+
+for dirpath11, dirnames11, filenames11 in os.walk(kodi):
+    for f11 in filenames11:
+        fp11 = os.path.join(dirpath11, f11)
+        total_size11 += os.path.getsize(fp11)
+total_sizetext11 = "%.0f" % (total_size11/1024000.0)
+
+for dirpath12, dirnames12, filenames12 in os.walk(Disk_C):
+    for f12 in filenames12:
+        fp12 = os.path.join(dirpath12, f12)
+        total_size12 += os.path.getsize(fp12)
+total_sizetext12 = "%.0f" % (total_size12/1024000.0)
 
 xbmcgui.Window(10000).setProperty('total_sizetext', total_sizetext)#packagesdir SIZE
 xbmcgui.Window(10000).setProperty('total_sizetext2', total_sizetext2)#thumbnails SIZE
@@ -95,6 +117,8 @@ xbmcgui.Window(10000).setProperty('total_sizetext4', total_sizetext4)#database S
 xbmcgui.Window(10000).setProperty('total_sizetext5', total_sizetext5)#addons SIZE
 xbmcgui.Window(10000).setProperty('total_sizetext6', total_sizetext6)#temp SIZE
 xbmcgui.Window(10000).setProperty('total_sizetext10', total_sizetext10)#CACHE SIZE
+xbmcgui.Window(10000).setProperty('total_sizetext11', total_sizetext11)#KODI SIZE
+xbmcgui.Window(10000).setProperty('total_sizetext12', "[B]C:// " + total_sizetext12 + " /MB[/B]")#Disk_C SIZE
 xbmcgui.Window(10000).setProperty('str(count)', str(count))#packages FILES
 xbmcgui.Window(10000).setProperty('str(files)', str(files))#addondata FILES
 xbmcgui.Window(10000).setProperty('str(folders)', str(folders))#addondata FOLDERS
@@ -102,6 +126,8 @@ xbmcgui.Window(10000).setProperty('str(files1)', str(files1))#thumbnails FILES
 xbmcgui.Window(10000).setProperty('str(folders1)', str(folders1))#thumbnails FOLDERS
 xbmcgui.Window(10000).setProperty('str(files2)', str(files2))#addons FILES
 xbmcgui.Window(10000).setProperty('str(folders2)', str(folders2))#addons FOLDERS
+xbmcgui.Window(10000).setProperty('str(files3)', str(files3))#addons FILES
+xbmcgui.Window(10000).setProperty('str(folders3)', str(folders3))#addons FOLDERS
 
 
 

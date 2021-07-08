@@ -25,6 +25,7 @@
 	<onload>RunScript(special://skin/resources/lib/update.py)</onload>
 	<onload>RunScript(special://skin/resources/lib/publicip.py)</onload>
 	<onload>RunScript(special://skin/resources/lib/pihole.py)</onload>
+	<onload>RunScript(special://skin/scripts/fsize.py)</onload>
 	<controls>
 		<control type="button" id="10">
 			<include>HiddenObject</include>

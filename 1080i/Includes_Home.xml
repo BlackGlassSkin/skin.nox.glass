@@ -2497,66 +2497,115 @@
 						<height>290</height>
 						<texture background="true" border="0">media/bin.png</texture>
 					</control>
+					
 					<control type="grouplist">
                         <orientation>vertical</orientation>					
-						<top>42</top>
-						<left>-650</left>
-						<itemgap>21</itemgap>
+						<top>48</top>
+						<left>-350</left>
+						<itemgap>30</itemgap>
 						<align>left</align>
 						<control type="label">
 							<height>20</height>
 							<width>700</width>
-							<font>font12b</font>
+							<font>Lirabiefont_Rg35hweather</font>
+							<textcolor>ff3333ff</textcolor>
+							<label>$INFO[Window().Property(total_sizetext12),,]</label>
+							<visible>!Window().Property(total_sizetext12)</visible>
+						</control>
+						<control type="label">
+							<height>20</height>
+							<width>700</width>
+							<font>Lirabiefont_Rg35hweather</font>
+							<textcolor>ff3333ff</textcolor>
+							<label>$INFO[Window().Property(str(total_sizetext13)),[B]D://[/B] [COLOR green][/COLOR] [B],[/B]]</label>
+						</control>
+					</control>
+					
+					
+					<control type="grouplist">
+                        <orientation>vertical</orientation>					
+						<top>44</top>
+						<left>-380</left>
+						<itemgap>10</itemgap>
+						<align>left</align>
+						<control type="image">
+						<width>22</width>
+				        <height>30</height>
+				        <texture>media/hdd.png</texture>
+				        <animation effect="rotatey" center="0" start="-" end="-3" time="0" condition="true">Conditional</animation>
+						<visible>!Window().Property(total_sizetext12)</visible>
+						</control>
+						<control type="image">
+						<width>24</width>
+				        <height>35</height>
+				        <texture>media/hdd.png</texture>
+				        <animation effect="rotatey" center="0" start="-" end="-3" time="0" condition="true">Conditional</animation>
+						<visible>Window().Property(total_sizetext12)</visible>
+						</control>
+					</control>
+					
+					
+					
+					<control type="grouplist">
+                        <orientation>vertical</orientation>					
+						<top>48</top>
+						<left>-650</left>
+						<itemgap>15</itemgap>
+						<align>left</align>
+						<control type="label">
+							<height>20</height>
+							<width>700</width>
+							<font>Lirabiefont_Rg35hweather</font>
 							<textcolor>ff3333ff</textcolor>
 							<label>$INFO[Window().Property(total_sizetext10),Cache || [COLOR green]Total :[/COLOR] [B],[/B] /MB]</label>
 						</control>
 						<control type="label">
 							<height>20</height>
 							<width>700</width>
-							<font>font12b</font>
+							<font>Lirabiefont_Rg35hweather</font>
 							<textcolor>ff3333ff</textcolor>
 							<label>$INFO[Window().Property(total_sizetext6),Temp || [COLOR green]Total :[/COLOR] [B],[/B] /MB]</label>
 						</control>
 						<control type="label">
 							<height>20</height>
 							<width>700</width>
-							<font>font12b</font>
+							<font>Lirabiefont_Rg35hweather</font>
 							<textcolor>ff3333ff</textcolor>
 							<label>$INFO[Window().Property(total_sizetext4),Database || [COLOR green]Total :[/COLOR] [B],[/B] /MB]</label>
 						</control>
 						<control type="label">
 							<height>20</height>
 							<width>700</width>
-							<font>font12b</font>
+							<font>Lirabiefont_Rg35hweather</font>
 							<textcolor>ff3333ff</textcolor>
 							<label>$INFO[Window().Property(total_sizetext),Package || [COLOR green]Total :[/COLOR] [B],[/B] /MB]   $INFO[Window().Property(str(count)),[COLOR green]Files:[/COLOR] [B],[/B]] </label>
 						</control>
-						<!-- <control type="label">
-							<top>62</top>
-							<height>20</height>
-							<width>500</width>
-							<font>font12b</font>
-							<textcolor>ff3333ff</textcolor>
-							<label>$INFO[Window().Property(total_sizetext),[COLOR green]Package :[/COLOR] [B],[/B]/MB]</label>
-						</control> -->
 						<control type="label">
 							<height>20</height>
 							<width>700</width>
-							<font>font12b</font>
+							<font>Lirabiefont_Rg35hweather</font>
 							<textcolor>ff3333ff</textcolor>
-							<label>$INFO[Window().Property(total_sizetext2),Thumb || [COLOR green]Total:[/COLOR] [B],[/B] /MB]   $INFO[Window().Property(str(folders1)),[COLOR green]Folders :[/COLOR] [B],[/B]]  $INFO[Window().Property(str(files1)), [COLOR green]Images:[/COLOR] [B],[/B]]</label>
+							<label>$INFO[Window().Property(total_sizetext2),Thumb || [COLOR green]Total:[/COLOR] [B],[/B] /MB]   $INFO[Window().Property(str(files1)), [COLOR green]Images:[/COLOR] [B],[/B]]  $INFO[Window().Property(str(folders1)),[COLOR green]Folders :[/COLOR] [B],[/B]]</label>
+						</control>
+						<control type="label">
+							<top>62</top>
+							<height>20</height>
+							<width>560</width>
+							<font>Lirabiefont_Rg35hweather</font>
+							<textcolor>ff3333ff</textcolor>
+							<label>$INFO[Window().Property(total_sizetext11),Kodi || [COLOR green]Total:[/COLOR] [B],[/B] /MB]  $INFO[Window().Property(str(files3)), [COLOR green]Files:[/COLOR] [B],[/B]]  $INFO[Window().Property(str(folders3)),[COLOR green]Folders :[/COLOR] [B],[/B]]</label>
 						</control>
 						<control type="label">
 							<height>20</height>
 							<width>700</width>
-							<font>font12b</font>
+							<font>Lirabiefont_Rg35hweather</font>
 							<textcolor>ff3333ff</textcolor>
 							<label>$INFO[Window().Property(total_sizetext5),Addons || [COLOR green]Total:[/COLOR] [B],[/B] /MB]   $INFO[Window().Property(str(files2)) ,[COLOR green]Files:[/COLOR] [B],[/B]]  $INFO[Window().Property(str(folders2)) ,[COLOR green]Folders :[/COLOR] [B],[/B]]</label>
 						</control>
 						<control type="label">
 							<height>20</height>
 							<width>700</width>
-							<font>font12b</font>
+							<font>Lirabiefont_Rg35hweather</font>
 							<textcolor>ff3333ff</textcolor>
 							<label>$INFO[Window().Property(total_sizetext3),Addon Data || [COLOR green]Total:[/COLOR] , /MB]   $INFO[Window().Property(str(files)) ,[COLOR green]Files:[/COLOR] [B],[/B]]  $INFO[Window().Property(str(folders)) ,[COLOR green]Folders :[/COLOR] [B],[/B]]</label>
 						</control>

@@ -132,8 +132,7 @@
 					</item>
 					<item>
 						<label>Cache/Packages/Thumbs</label>
-						<onclick>RunScript(special://skin/scripts/clean.py,return)</onclick>
-						<onclick condition="!System.HasAddon(script.ezmaintenanceplus)">InstallAddon(script.ezmaintenanceplus)</onclick>
+						<onclick>RunScript(special://skin/scripts/clean.py)</onclick>
 						<icon>media/button1.jpg</icon>
 					</item>
 					<item>
