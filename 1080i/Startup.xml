@@ -25,7 +25,8 @@
 	<onload>RunScript(special://skin/resources/lib/update.py)</onload>
 	<onload>RunScript(special://skin/resources/lib/publicip.py)</onload>
 	<onload>RunScript(special://skin/resources/lib/pihole.py)</onload>
-	<onload>RunScript(special://skin/scripts/fsize.py)</onload>
+	<onload condition="![System.Platform.Android | system.platform.windows] + system.platform.linux">RunScript(special://skin/scripts/fsize_linux.py)</onload>
+	<onload condition="system.platform.windows">RunScript(special://skin/scripts/fsize_win.py)</onload>
 	<controls>
 		<control type="button" id="10">
 			<include>HiddenObject</include>

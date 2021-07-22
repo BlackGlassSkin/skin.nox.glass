@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
-	<onload>RunScript(special://skin/scripts/fsize.py)</onload>
+	<onload condition="![System.Platform.Android | system.platform.windows] + system.platform.linux">RunScript(special://skin/scripts/fsize_linux.py)</onload>
+	<onload condition="system.platform.windows">RunScript(special://skin/scripts/fsize_win.py)</onload>
 	<onload>ClearProperty(RunSkinShortcutsAfterInstall,Home)</onload>
 	<onload condition="!System.HasAddon(script.skinshortcuts)">SetProperty(MissingDependency,True,Home)</onload>
 	<onload condition="!System.HasAddon(script.skinshortcuts)">ActivateWindow(1126)</onload>
