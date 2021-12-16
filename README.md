@@ -63,3 +63,6 @@ http://kim.cherrytv.webd.pl/MultiRepo/All/repository.Kim.Multi/repository.Kim.Mu
 * - [x] __visualizations, removed or reduced speeds (much faster)__
 * - [x] __Custom UpNext (Fancy)__
 * - [x] __Custom upnext-stillwatching (Fancy)__
+* - [x] __Support multi search engine added
+          required: repository.Kim.Multi-2.1.9
+          The addon allows you to search for video content in any video add-on that has its own search engine__
