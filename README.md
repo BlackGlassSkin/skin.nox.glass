@@ -46,6 +46,7 @@ http://kim.cherrytv.webd.pl/MultiRepo/All/repository.Kim.Multi/repository.Kim.Mu
 <img src="https://i.ibb.co/DV8YLzw/2020-12-11-18h41-22.png">
 
 <img src="https://i.ibb.co/fFs2wBC/screenshot00003.jpg">
+<img src="https://i.ibb.co/hCLcP5T/sys-widg.png">
 </p>
 
 
@@ -66,3 +67,4 @@ http://kim.cherrytv.webd.pl/MultiRepo/All/repository.Kim.Multi/repository.Kim.Mu
 * - [x] __Support multi search engine added
           required: repository.Kim.Multi-2.1.9
           The addon allows you to search for video content in any video add-on that has its own search engine__
+* - [x] __New system widget (script that allows you to clear folders "thumbnails, packages, etc ...") from the widget__ 
