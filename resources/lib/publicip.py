@@ -20,6 +20,7 @@ capital = None
 currency = None
 currencytwo = None
 directional = None
+flagUrlicon = None
 
 
 if publicip == None:
@@ -36,6 +37,7 @@ if publicip == None:
         currency = result['currency']
         currencytwo = result['currency_name']
         directional = result['country_calling_code'].replace('+','')
+        flagUrlicon = result['country_code'].lower()
     except: pass
 
 if publicip == None:
@@ -51,6 +53,7 @@ if publicip == None:
         currency = result['currencySymbol'] #WALURA SYMBOL
         currencytwo = result['currency']#WALUTA
         directional = result['callingCode']#KIERUNKOWY
+        flagUrlicon = result['country_code'].lower()
     except: pass
 
 if publicip == None: publicip = ''
@@ -63,6 +66,8 @@ if region == None: region = ''
 if capital == None: capital = ''
 if currency == None: currency = ''
 if directional == None: directional = ''
+if flagUrlicon == None: flagUrlicon = ''
+
 
 xbmcgui.Window(10000).setProperty('publicnetwork', '%s %s %s' % (publicip, publiccountry, publiccity))
 xbmcgui.Window(10000).setProperty('publicnetworkformat', '[COLOR FF73FFDE]%s[/COLOR] ||[COLOR FF73FFDE] %s[/COLOR] ||[COLOR FF73FFDE] %s[/COLOR]' % (publicip, publiccountry, publiccity))
@@ -77,3 +82,4 @@ xbmcgui.Window(10000).setProperty('capital', capital)
 xbmcgui.Window(10000).setProperty('currency', currency)
 xbmcgui.Window(10000).setProperty('currencytwo', currencytwo)
 xbmcgui.Window(10000).setProperty('directional', '+%s' % (directional))
+xbmcgui.Window(10000).setProperty('flagUrlicon', flagUrlicon)
