@@ -2588,6 +2588,15 @@
 							<label>$INFO[Window().Property(total_sizetext3),Addon Data || [COLOR green]Total:[/COLOR] [B],[/B]]   $INFO[Window().Property(str(files)) ,[COLOR green]Files:[/COLOR] [B],[/B]]  $INFO[Window().Property(str(folders)) ,[COLOR green]Folders :[/COLOR] [B],[/B]]</label>
 						</control>
 					</control>
+					<control type="image">
+						<top>85</top>
+						<left>452.5</left>
+						<width>70</width>
+						<height>50</height>
+						<align>center</align>
+						<texture>flags/language/default/$INFO[Window(Home).Property(flagUrlicon),].png</texture>
+						<visible>!StringIs.Empty(Window(Home).Property(flagUrlicon))</visible>
+					</control>
 					<control type="grouplist">
 						<left>230</left>
 						<top>130</top>
@@ -2606,7 +2615,7 @@
 							<align>center</align>
 							<font>Lirabiefont_Rg</font>
 							<textcolor>ffbfbfbf</textcolor>
-							<label>$INFO[Window(Home).Property(publicip), [COLOR green][B]IP:[/B][/COLOR] ]</label>
+							<label>$INFO[Window(Home).Property(publicip), [COLOR green][B]Real IP:[/B][/COLOR] ]</label>
 						</control>
 						<control type="label">
 							<height>20</height>
@@ -2625,7 +2634,7 @@
 							<align>center</align>
 							<font>Lirabiefont_Rg</font>
 							<textcolor>ffbfbfbf</textcolor>
-							<label>$INFO[Window(Home).Property(capital), [COLOR green][B]Capital: [/B][/COLOR] ]</label>
+							<label>$INFO[Window(Home).Property(capital), [COLOR green][B]Capital City: [/B][/COLOR] ]</label>
 						</control>
 						<control type="label">
 							<height>20</height>
@@ -2633,7 +2642,7 @@
 							<align>center</align>
 							<font>Lirabiefont_Rg</font>
 							<textcolor>ffbfbfbf</textcolor>
-							<label>$INFO[Window(Home).Property(region),[COLOR green][B]Regon:[/B][/COLOR] ]$INFO[Window(Home).Property(publiccity), [COLOR green][B]| City:[/B][/COLOR] ]</label>
+							<label>$INFO[Window(Home).Property(region),[COLOR green][B]Region:[/B][/COLOR] , [COLOR green][B]|[/B][/COLOR]]$INFO[Window(Home).Property(publiccity),[COLOR green][B] City:[/B][/COLOR] ]</label>
 						</control>
 						<control type="label">
 							<height>20</height>
@@ -2657,7 +2666,7 @@
 							<align>center</align>
 							<font>Lirabiefont_Rg</font>
 							<textcolor>ffbfbfbf</textcolor>
-							<label>$INFO[Network.IPAddress,[COLOR green][B]Ip:[/B][/COLOR](,)][CR]$INFO[Network.MacAddress,[COLOR green][B]Mac:[/B][/COLOR](,)]</label>
+							<label>$INFO[Network.IPAddress,[COLOR green][B]IPv4 Adress:[/B][/COLOR](,)][CR]$INFO[Network.MacAddress,[COLOR green][B]Mac:[/B][/COLOR](,)]</label>
 						</control>
 						<control type="label">
 							<height>10</height>
