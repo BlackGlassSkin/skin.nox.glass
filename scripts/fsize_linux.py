@@ -1,4 +1,4 @@
-import xbmc, xbmcaddon, xbmcgui, xbmcplugin, os, sys, xbmcvfs
+import xbmc, xbmcaddon, xbmcgui, xbmcplugin, os, sys, xbmcvfs, string
 import re
 import time
 import shutil
@@ -13,7 +13,7 @@ thumbnails1 = translatePath(os.path.join('special://thumbnails',''))
 cache       = translatePath(os.path.join('special://home/cache',''))
 kodi        = translatePath(os.path.join('special://home/',''))
 thumbnails  = translatePath('special://thumbnails')
-Disk_C      = translatePath(os.path.join('C:', ''))
+#Disk_C      = translatePath(os.path.join('C:', ''))
 addondata   = translatePath('special://home/userdata/addon_data')
 addons      = translatePath('special://home/addons')
 temp        = translatePath('special://home/addons/temp')
@@ -24,7 +24,7 @@ folder      = '/storage'
 
 
 
-total_size12 = 0
+#total_size12 = 0
 total_size11 = 0
 total_size10 = 0
 total_size6 = 0    
@@ -39,7 +39,7 @@ files1 = folders1 = 0
 files2 = folders2 = 0
 files3 = folders3 = 0
 
-BytesPerGiB = 1000 * 1000 * 1000
+BytesPerGiB = 1024 * 1024 * 1024
 gb = 1024 * 1024 * 1024
 
 for dirpath, dirnames, filenames in os.walk(packagesdir):
@@ -112,11 +112,12 @@ for dirpath11, dirnames11, filenames11 in os.walk(kodi):
         total_size11 += os.path.getsize(fp11)
 total_sizetext11 = "%.2f GiB" % (total_size11/BytesPerGiB)
 
-for dirpath12, dirnames12, filenames12 in os.walk(Disk_C):
-    for f12 in filenames12:
-        fp12 = os.path.join(dirpath12, f12)
-        total_size12 += os.path.getsize(fp12)
-total_sizetext12 = "%.2f GiB" % (total_size12/BytesPerGiB)
+                                                        
+#for dirpath12, dirnames12, filenames12 in os.walk(Disk_C):
+#    for f12 in filenames12:
+#        fp12 = os.path.join(dirpath12, f12)
+#        total_size12 += os.path.getsize(fp12)
+#total_sizetext12 = "%.2f GiB" % (total_size12/BytesPerGiB)
 
 
 total_mem, used_mem, free_mem = shutil.disk_usage(folder)
@@ -152,7 +153,7 @@ xbmcgui.Window(10000).setProperty('total_sizetext5', total_sizetext5)#addons SIZ
 xbmcgui.Window(10000).setProperty('total_sizetext6', total_sizetext6)#temp SIZE
 xbmcgui.Window(10000).setProperty('total_sizetext10', total_sizetext10)#CACHE SIZE
 xbmcgui.Window(10000).setProperty('total_sizetext11', total_sizetext11)#KODI SIZE
-xbmcgui.Window(10000).setProperty('total_sizetext12', "[B]C:// " + total_sizetext12 + "[/B]")#Disk_C SIZE
+#xbmcgui.Window(10000).setProperty('total_sizetext12', "[B]C:// " + total_sizetext12 + "[/B]")#Disk_C SIZE
 xbmcgui.Window(10000).setProperty('str(count)', str(count))#packages FILES
 xbmcgui.Window(10000).setProperty('str(files)', str(files))#addondata FILES
 xbmcgui.Window(10000).setProperty('str(folders)', str(folders))#addondata FOLDERS

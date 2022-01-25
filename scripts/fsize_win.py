@@ -21,9 +21,6 @@ database    = translatePath('special://database')
 purgePath   = translatePath('special://home/addons/packages')
 
 folder      = 'C:'
-#folder1     = 'D:'
-
-
 
 #total_size12 = 0
 total_size11 = 0
@@ -40,7 +37,7 @@ files1 = folders1 = 0
 files2 = folders2 = 0
 files3 = folders3 = 0
 
-BytesPerGiB = 1000 * 1000 * 1000
+BytesPerGiB = 1024 * 1024 * 1024
 gb = 1024 * 1024 * 1024
 
 for dirpath, dirnames, filenames in os.walk(packagesdir):
@@ -113,28 +110,26 @@ for dirpath11, dirnames11, filenames11 in os.walk(kodi):
         total_size11 += os.path.getsize(fp11)
 total_sizetext11 = "%.2f GiB" % (total_size11/BytesPerGiB)
 
+
 #for dirpath12, dirnames12, filenames12 in os.walk(Disk_C):
 #    for f12 in filenames12:
 #        fp12 = os.path.join(dirpath12, f12)
 #        total_size12 += os.path.getsize(fp12)
 #total_sizetext12 = "%.2f GiB" % (total_size12/BytesPerGiB)
 
-available_drives = [('[B]''%s:''[/B]' % d)
-    for d in string.ascii_uppercase
-if os.path.exists('%s:' % d)]
-
 
 total_mem, used_mem, free_mem = shutil.disk_usage(folder)
 print('Folder {}' .  format(folder))
 
-total_mem = 'C://\r\n'+'Total Mem:' + '[B]'" %.2f GiB"'[/B]' % (total_mem/gb)
-used_mem = 'Used Mem:' + '[B]'" %.2f GiB"'[/B]' % (used_mem/gb)
-free_mem = 'Free Mem:' + '[B]'" %.2f GiB"'[/B]\n' % (free_mem/gb)
+total_mem = '[B]C://[/B] Total:' + '[B]'" %.2f GiB"'[/B]' % (total_mem/gb)
+used_mem = '[B]C://[/B] Used:' + '[B]'" %.2f GiB"'[/B]' % (used_mem/gb)
+free_mem = '[B]C://[/B] Free:' + '[B]'" %.2f GiB"'[/B]\n' % (free_mem/gb)
 #total_mem1, used_mem1, free_mem1 = shutil.disk_usage(folder1)
 #print('Folder1 {}' .  format(folder1))
 #total_mem1 = 'D://\r\n'+'Total Mem1:' + '[B]'" %.2f GiB"'[/B]' % (total_mem1/gb)
 #used_mem1 = 'Used Mem:' + '[B]'" %.2f GiB"'[/B]' % (used_mem1/gb)
 #free_mem1 = 'Free Mem:' + '[B]'" %.2f GiB"'[/B]' % (free_mem1/gb)
+
 
 #xbmcgui.Window(10000).setProperty('str(available_drives)', str(available_drives).replace("'", "").replace(":", "://")+'\r\n')
 xbmcgui.Window(10000).setProperty('str(free_mem)', str(free_mem))
