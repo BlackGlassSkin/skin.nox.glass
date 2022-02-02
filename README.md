@@ -8,21 +8,21 @@ A modded version of [Aeon Nox 5 & SiLVO]
 # Before Installing skin.nox.glass
 * Install this repository
 
+### Install the skin from my repository [Download My Repo](http://kim.cherrytv.webd.pl/MultiRepo/All/repository.Kim.Multi/repository.Kim.Multi-2.1.9.zip) ,all dependencies included
+
+### ================================
+
+or optional repo..
+
 https://github.com/AnonTester/kodi-repo/tree/master/repository.anontester
 
-or..
+https://github.com/kodi-community-addons/repository.marcelveldt/tree/master/matrix
 
-~~https://github.com/kodi-community-addons/repository.marcelveldt/tree/master/matrix~~
-
-and from repository install
+from optional repository install
 ***script.skin.helper.service*** from Kontext menus
 ***script.skin.helper.widgets*** from Music add-ons or Video add-ons
 
 *after install skin*
-
-weather icon , weather fanart code ***"reduced package size"*** and more install the repo below 
-
-http://kim.cherrytv.webd.pl/MultiRepo/All/repository.Kim.Multi/repository.Kim.Multi-2.1.9.zip
 
 
 
